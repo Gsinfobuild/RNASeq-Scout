@@ -163,14 +163,21 @@ def generate_modality_insight(metadata) -> ModalityInsight:
 
     if strategy in {
         "SMALL_RNA",
+        "MIRNA_SEQ",
         "NCRNA_SEQ",
     }:
 
-        result.modality = (
-            "Small RNA sequencing"
-            if strategy == "SMALL_RNA"
-            else "Non-coding RNA sequencing"
-        )
+        if strategy in {
+            "SMALL_RNA",
+            "MIRNA_SEQ",
+        }:
+            result.modality = (
+                "miRNA sequencing"
+                if strategy == "MIRNA_SEQ"
+                else "Small RNA sequencing"
+            )
+        else:
+            result.modality = "Non-coding RNA sequencing"
 
         result.workflow_family = "specialized_rna"
         result.rna_seq_compatible = False

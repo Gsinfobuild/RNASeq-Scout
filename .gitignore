@@ -62,3 +62,7 @@ runinfo_raw_response.txt
 
 # Development backup scripts
 *_backup.py
+
+# RNASeq Scout benchmark generated artifacts
+benchmark/evidence/
+benchmark/results/

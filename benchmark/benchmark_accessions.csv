@@ -1,0 +1,4 @@
+accession,accession_type,category,organism,expected_modality,expected_rna_seq_compatibility,publication_identifier,selection_status,notes
+SRR17730393,SRR,clear_bulk_rna_seq,Mycobacterium tuberculosis H37Rv,RNA-seq,TRUE,,existing_regression,Existing positive regression case
+SRX35157977,SRX,non_rna_amplicon,human gut metagenome,Amplicon,FALSE,,existing_regression,Existing negative regression case
+SRP356545,SRP,mixed_assay_study,Mycobacterium tuberculosis H37Rv,Mixed,TRUE,,existing_regression,Existing heterogeneous study case

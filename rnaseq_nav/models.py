@@ -123,6 +123,7 @@ class StudyExperiment:
     biosample_accession: str = ""
     experiment_accession: str = ""
     experiment_title: str = ""
+    library_strategy: str = ""
     run_accessions: List[str] = field(default_factory=list)
     organism: str = ""
     sample_name: str = ""

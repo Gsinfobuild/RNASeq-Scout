@@ -20,22 +20,153 @@ from rnaseq_nav.models import (
 )
 
 
-def _classify_assay_family(title: str) -> str:
+def _clean(value: str) -> str:
+    """Normalize a metadata string for comparison."""
+    return (value or "").strip()
+
+
+def _classify_assay_family(
+    library_strategy: str,
+    title: str,
+) -> str:
     """
-    Classify an experiment title into an observed assay family.
+    Classify an experiment into an observed assay family.
 
-    Classification is based only on the explicit title prefix.
+    Classification hierarchy
+    -------------------------
+    1. Explicit LibraryStrategy provides the primary
+       repository-level modality evidence.
+    2. Experiment title provides finer assay-family
+       resolution when the strategy is broad.
+    3. Title is used as a fallback when LibraryStrategy
+       is unavailable.
+
+    This function intentionally does not infer experimental
+    design such as controls, treatments, or replicates.
     """
 
-    title = title.strip()
+    strategy = _clean(library_strategy)
+    title = _clean(title)
 
-    if title.startswith("sRNA-seq"):
-        return "sRNA-seq"
+    strategy_upper = strategy.upper()
+    title_lower = title.lower()
 
-    if title.startswith("TEX+ RNA-seq"):
+    # ------------------------------------------------------
+    # Explicit specialized RNA strategies
+    # ------------------------------------------------------
+
+    if strategy_upper in {
+        "SMALL_RNA",
+        "SMALL-RNA",
+    }:
+        return "Small RNA sequencing"
+
+    if strategy_upper in {
+        "NCRNA_SEQ",
+        "NCRNA-SEQ",
+    }:
+        # ncRNA-Seq may be represented in SRA titles as
+        # sRNA-seq. Preserve the observed title label when
+        # available; otherwise retain the repository strategy.
+        if "srna-seq" in title_lower:
+            return "sRNA-seq"
+        return "ncRNA-Seq"
+
+    # ------------------------------------------------------
+    # Explicit non-RNA sequencing strategies
+    # ------------------------------------------------------
+
+    if strategy_upper in {
+        "AMPLICON",
+    }:
+        return "Amplicon sequencing"
+
+    if strategy_upper in {
+        "WGS",
+        "WGA",
+    }:
+        return "Whole-genome sequencing"
+
+    if strategy_upper in {
+        "WXS",
+        "EXOME",
+    }:
+        return "Exome sequencing"
+
+    if strategy_upper in {
+        "CHIP_SEQ",
+        "CHIP-SEQ",
+    }:
+        return "ChIP-seq"
+
+    if strategy_upper in {
+        "ATAC_SEQ",
+        "ATAC-SEQ",
+    }:
+        return "ATAC-seq"
+
+    if strategy_upper in {
+        "HI-C",
+        "HIC",
+    }:
+        return "Hi-C"
+
+    if "BISULFITE" in strategy_upper:
+        return "Bisulfite sequencing"
+
+    # ------------------------------------------------------
+    # RNA-Seq strategy
+    # ------------------------------------------------------
+
+    if strategy_upper in {
+        "RNA_SEQ",
+        "RNA-SEQ",
+    }:
+        # Preserve explicit assay-family terminology from
+        # the title when present.
+        if "tex+ rna-seq" in title_lower:
+            return "TEX+ RNA-seq"
+
+        if "srna-seq" in title_lower:
+            return "sRNA-seq"
+
+        if "small rna-seq" in title_lower:
+            return "Small RNA sequencing"
+
+        if "ncrna-seq" in title_lower:
+            return "ncRNA-Seq"
+
+        if "rna-seq" in title_lower:
+            return "RNA-seq"
+
+        return "RNA-seq"
+
+    # ------------------------------------------------------
+    # Title-based fallback
+    # ------------------------------------------------------
+
+    if "tex+ rna-seq" in title_lower:
         return "TEX+ RNA-seq"
 
-    if title.startswith("RNA-seq"):
+    if "srna-seq" in title_lower:
+        return "sRNA-seq"
+
+    if "small rna-seq" in title_lower:
+        return "Small RNA sequencing"
+
+    if "ncrna-seq" in title_lower:
+        return "ncRNA-Seq"
+
+    if "atac-seq" in title_lower:
+        return "ATAC-seq"
+
+    if "amplicon" in title_lower:
+        return "Amplicon sequencing"
+
+    if "wgs" in title_lower:
+        return "Whole-genome sequencing"
+
+    if "rna-seq" in title_lower:
         return "RNA-seq"
 
     return "Unclassified"
@@ -49,7 +180,7 @@ def _extract_context(title: str) -> str:
     No normalization or semantic merging is performed.
     """
 
-    title = title.strip()
+    title = _clean(title)
 
     if ":" not in title:
         return "Unspecified"
@@ -102,7 +233,17 @@ def generate_study_experimental_landscape(
             else ""
         )
 
-        assay_family = _classify_assay_family(title)
+        library_strategy = (
+            record.library_strategy
+            if record.library_strategy
+            else ""
+        )
+
+        assay_family = _classify_assay_family(
+            library_strategy,
+            title,
+        )
+
         context = _extract_context(title)
 
         assay_family_counts[assay_family] += 1
@@ -126,8 +267,9 @@ def generate_study_experimental_landscape(
 
     if "Unclassified" in assay_family_counts:
         warnings.append(
-            "One or more experiment titles could not be "
-            "assigned to a recognized assay family."
+            "One or more experiment records could not be "
+            "assigned to a recognized assay family from "
+            "available repository metadata."
         )
 
     landscape = StudyExperimentalLandscape(

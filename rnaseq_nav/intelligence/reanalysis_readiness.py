@@ -332,6 +332,97 @@ def _add_individual_experiment_evidence(
         )
 
 
+def _add_run_evidence(
+    observed_evidence: list[str],
+    not_established: list[str],
+    metadata,
+) -> None:
+    """
+    Propagate meaningful sequencing-run evidence into the
+    reanalysis-readiness evidence model.
+
+    Run availability is independent of biological replication.
+    """
+
+    run = getattr(
+        metadata,
+        "run",
+        None,
+    )
+
+    if run is None:
+        _append_unique(
+            not_established,
+            "Sequencing run availability could not be established.",
+        )
+        return
+
+    accession = _clean(
+        getattr(run, "accession", "")
+    )
+
+    total_spots = getattr(
+        run,
+        "total_spots",
+        None,
+    )
+
+    total_bases = getattr(
+        run,
+        "total_bases",
+        None,
+    )
+
+    public = getattr(
+        run,
+        "public",
+        None,
+    )
+
+    if accession:
+
+        _append_unique(
+            observed_evidence,
+            f"Sequencing run identified: {accession}.",
+        )
+        return
+
+    if total_spots is not None:
+
+        _append_unique(
+            observed_evidence,
+            (
+                "Sequencing run information is available "
+                f"with {total_spots} spots."
+            ),
+        )
+        return
+
+    if total_bases is not None:
+
+        _append_unique(
+            observed_evidence,
+            (
+                "Sequencing run information is available "
+                f"with {total_bases} bases."
+            ),
+        )
+        return
+
+    if public is True:
+
+        _append_unique(
+            observed_evidence,
+            "Sequencing run is identified as public.",
+        )
+        return
+
+    _append_unique(
+        not_established,
+        "Sequencing run availability could not be established.",
+    )
+
+
 def _add_design_evidence(
     observed_evidence: list[str],
     not_established: list[str],
@@ -358,28 +449,49 @@ def _add_design_evidence(
             getattr(design_insight, field_name, "")
         )
 
-        if _is_established(value):
-            if field_name == "replicate_information":
+        if field_name == "replicate_information":
+
+            replicate_lower = value.lower()
+
+            if value and "could not be established" not in replicate_lower:
+
                 _append_unique(
                     observed_evidence,
-                    f"Replicate information is available: {value}.",
+                    f"Replicate information is available: {value.rstrip('.')}.",
                 )
+
+                if (
+                    "biological or technical replicate status "
+                    "is not established"
+                    in replicate_lower
+                ):
+
+                    _append_unique(
+                        not_established,
+                        "Biological versus technical replicate status "
+                        "could not be established.",
+                    )
+
             else:
-                _append_unique(
-                    observed_evidence,
-                    f"{label} is available: {value}.",
-                )
-        else:
-            if field_name == "replicate_information":
+
                 _append_unique(
                     not_established,
                     "Biological replicate structure could not be established.",
                 )
-            else:
-                _append_unique(
-                    not_established,
-                    f"{label} could not be established.",
-                )
+
+        elif _is_established(value):
+
+            _append_unique(
+                observed_evidence,
+                f"{label} is available: {value.rstrip('.')}.",
+            )
+
+        else:
+
+            _append_unique(
+                not_established,
+                f"{label} could not be established.",
+            )
 
 
 def _add_suitability_evidence(
@@ -649,6 +761,18 @@ def generate_reanalysis_readiness(
 
     experiment_metadata = _get_experiment_metadata(metadata)
     sample_metadata = _get_sample_metadata(metadata)
+
+    # Run availability is orthogonal to assay compatibility.
+    # Record sequencing-run evidence before entering the
+    # compatibility-specific readiness branches so that
+    # incompatible, specialized, unknown, and compatible
+    # datasets all retain documented run-level evidence.
+
+    _add_run_evidence(
+        observed_evidence,
+        not_established,
+        metadata,
+    )
 
     compatibility = _is_rna_seq_compatible(modality_insight)
 

@@ -268,11 +268,14 @@ def _assess_experiment_title(metadata):
 
 def _assess_run(metadata):
     """
-    Assess whether a sequencing run is represented.
+    Assess whether meaningful sequencing-run evidence exists.
 
-    A run is evidence that sequencing data are associated
-    with the accession, but it must not be interpreted as
-    evidence of biological replication.
+    Run-level evidence may be represented by a run accession,
+    total spot count, total base count, or public-status
+    information.
+
+    Run existence must not be interpreted as evidence of
+    biological replication.
     """
 
     run = _get_run(
@@ -287,11 +290,52 @@ def _assess_run(metadata):
         )
     )
 
+    total_spots = getattr(
+        run,
+        "total_spots",
+        None,
+    )
+
+    total_bases = getattr(
+        run,
+        "total_bases",
+        None,
+    )
+
+    public = getattr(
+        run,
+        "public",
+        None,
+    )
+
     if accession:
 
         return (
             True,
             f"Sequencing run identified: {accession}.",
+        )
+
+    if total_spots is not None:
+
+        return (
+            True,
+            "Sequencing run information available "
+            f"with {total_spots} spots.",
+        )
+
+    if total_bases is not None:
+
+        return (
+            True,
+            "Sequencing run information available "
+            f"with {total_bases} bases.",
+        )
+
+    if public is True:
+
+        return (
+            True,
+            "Sequencing run is identified as public.",
         )
 
     return (
@@ -712,20 +756,74 @@ def generate_suitability_insight(
             )
         )
 
+        replicate_lower = replicate_information.lower()
+
         if replicate_information:
 
+            if (
+                "could not be established"
+                in replicate_lower
+            ):
+
+                insight.warnings.append(
+                    "Replicate structure could not be "
+                    "established from the available metadata."
+                )
+
+                if (
+                    "Biological replicate annotation"
+                    not in insight.missing_information
+                ):
+
+                    insight.missing_information.append(
+                        "Biological replicate annotation"
+                    )
+
+            else:
+
+                insight.observed_evidence.append(
+                    "Replicate information established: "
+                    f"{replicate_information}"
+                )
+
+                if (
+                    "biological or technical replicate status "
+                    "is not established"
+                    in replicate_lower
+                ):
+
+                    insight.warnings.append(
+                        "Biological versus technical replicate "
+                        "status could not be established from "
+                        "the available metadata."
+                    )
+
+                    if (
+                        "Biological versus technical "
+                        "replicate status"
+                        not in insight.missing_information
+                    ):
+
+                        insight.missing_information.append(
+                            "Biological versus technical "
+                            "replicate status"
+                        )
+
+        else:
+
             insight.warnings.append(
-                replicate_information
+                "Replicate structure could not be established "
+                "from the available metadata."
             )
 
-        if (
-            "Biological replicate annotation"
-            not in insight.missing_information
-        ):
-
-            insight.missing_information.append(
+            if (
                 "Biological replicate annotation"
-            )
+                not in insight.missing_information
+            ):
+
+                insight.missing_information.append(
+                    "Biological replicate annotation"
+                )
 
     else:
 

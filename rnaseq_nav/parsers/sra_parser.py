@@ -109,6 +109,7 @@ class SRAParser:
             biosample_accession = ""
             experiment_accession = ""
             experiment_title = ""
+            library_strategy = ""
             organism_name = ""
             sample_name = ""
 
@@ -132,6 +133,18 @@ class SRAParser:
                 experiment_title = experiment.attrib.get(
                     "name", ""
                 )
+
+            library_descriptor = root.find(
+                "Library_descriptor"
+            )
+
+            if library_descriptor is not None:
+                strategy = library_descriptor.find(
+                    "LIBRARY_STRATEGY"
+                )
+
+                if strategy is not None and strategy.text:
+                    library_strategy = strategy.text.strip()
 
             if organism is not None:
                 organism_name = organism.attrib.get(
@@ -161,6 +174,7 @@ class SRAParser:
                     biosample_accession=biosample_accession,
                     experiment_accession=experiment_accession,
                     experiment_title=experiment_title,
+                    library_strategy=library_strategy,
                     run_accessions=run_accessions,
                     organism=organism_name,
                     sample_name=sample_name,

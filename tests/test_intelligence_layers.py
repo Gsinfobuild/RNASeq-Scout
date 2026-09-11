@@ -137,6 +137,52 @@ def test_design_does_not_assume_biological_replicates_from_one_run():
     assert "One sequencing run" in insight.replicate_information
 
 
+def test_design_detects_explicit_biological_replicate():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title=(
+            "GSM9401457: Low passage retinoblastoma cell line "
+            "RB028, expressing non-specific shRNA biological "
+            "replicate 2; Homo sapiens; RNA-Seq"
+        ),
+    )
+
+    insight = generate_design_insight(metadata)
+
+    assert (
+        insight.replicate_information
+        == (
+            "Biological replicate 2 is explicitly identified "
+            "in the experiment title."
+        )
+    )
+
+
+def test_design_detects_replicate_without_assigning_biological_status():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title=(
+            "GSM9724256: PC3 SLK-KO cells + MYC, "
+            "replicate C; Homo sapiens; RNA-Seq"
+        ),
+    )
+
+    insight = generate_design_insight(metadata)
+
+    assert (
+        insight.replicate_information
+        == (
+            "Replicate C is explicitly identified in the "
+            "experiment title; biological or technical "
+            "replicate status is not established."
+        )
+    )
+
+    assert "biological replicate" not in (
+        insight.replicate_information.lower()
+    )
+
+
 def test_design_marks_control_as_missing_when_not_explicit():
     metadata = make_metadata(
         strategy="RNA_SEQ",
@@ -175,6 +221,111 @@ def test_amplicon_is_not_suitable_for_rna_seq():
     )
 
     assert suitability.score == 0
+
+
+def test_suitability_recognizes_run_evidence_without_run_accession():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        run_accession="",
+    )
+
+    modality = generate_modality_insight(metadata)
+    design = generate_design_insight(metadata)
+
+    suitability = generate_suitability_insight(
+        metadata,
+        design_insight=design,
+        modality_insight=modality,
+    )
+
+    assert any(
+        "Sequencing run information available"
+        in item
+        for item in suitability.observed_evidence
+    )
+
+    assert (
+        "Sequencing run information"
+        not in suitability.missing_information
+    )
+
+
+def test_suitability_treats_explicit_biological_replicate_as_observed():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title=(
+            "GSM9401457: Low passage retinoblastoma cell line "
+            "RB028, expressing non-specific shRNA biological "
+            "replicate 2; Homo sapiens; RNA-Seq"
+        ),
+    )
+
+    modality = generate_modality_insight(metadata)
+    design = generate_design_insight(metadata)
+
+    suitability = generate_suitability_insight(
+        metadata,
+        design_insight=design,
+        modality_insight=modality,
+    )
+
+    assert any(
+        "Biological replicate 2 is explicitly identified"
+        in item
+        for item in suitability.observed_evidence
+    )
+
+    assert not any(
+        "Biological replicate 2 is explicitly identified"
+        in item
+        for item in suitability.warnings
+    )
+
+    assert (
+        "Biological replicate annotation"
+        not in suitability.missing_information
+    )
+
+
+def test_suitability_preserves_uncertainty_for_generic_replicate():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title=(
+            "GSM9724256: PC3 SLK-KO cells + MYC, "
+            "replicate C; Homo sapiens; RNA-Seq"
+        ),
+    )
+
+    modality = generate_modality_insight(metadata)
+    design = generate_design_insight(metadata)
+
+    suitability = generate_suitability_insight(
+        metadata,
+        design_insight=design,
+        modality_insight=modality,
+    )
+
+    assert any(
+        "Replicate C is explicitly identified"
+        in item
+        for item in suitability.observed_evidence
+    )
+
+    assert any(
+        "Biological versus technical replicate status"
+        in item
+        for item in suitability.warnings
+    )
+
+    assert (
+        "Biological versus technical replicate status"
+        in suitability.missing_information
+    )
+
+    assert (
+        "Biological replicate annotation"
+        not in suitability.missing_information
+    )
 
 
 def test_unknown_modality_does_not_become_suitable():
@@ -582,6 +733,157 @@ def test_reanalysis_readiness_does_not_assume_replicates():
     )
 
 
+def test_reanalysis_readiness_preserves_explicit_biological_replicate():
+    from rnaseq_nav.intelligence.reanalysis_readiness import (
+        generate_reanalysis_readiness,
+    )
+
+    metadata = _make_test_metadata(
+        accession="SRX31545771",
+        organism="Homo sapiens",
+    )
+
+    modality = type(
+        "Modality",
+        (),
+        {
+            "modality": "RNA-seq",
+            "compatibility_status": "Compatible",
+        },
+    )()
+
+    design = type(
+        "Design",
+        (),
+        {
+            "condition": "",
+            "control": "",
+            "treatment": "",
+            "time_point": "",
+            "replicate_information": (
+                "Biological replicate 2 is explicitly identified "
+                "in the experiment title."
+            ),
+            "design_confidence": "Partially characterized",
+        },
+    )()
+
+    result = generate_reanalysis_readiness(
+        metadata,
+        modality,
+        design,
+        None,
+    )
+
+    assert any(
+        "Biological replicate 2 is explicitly identified"
+        in item
+        for item in result.observed_evidence
+    )
+
+    assert not any(
+        "Biological replicate structure could not be established"
+        in item
+        for item in result.not_established
+    )
+
+
+def test_reanalysis_readiness_preserves_generic_replicate_uncertainty():
+    from rnaseq_nav.intelligence.reanalysis_readiness import (
+        generate_reanalysis_readiness,
+    )
+
+    metadata = _make_test_metadata(
+        accession="SRX33270018",
+        organism="Homo sapiens",
+    )
+
+    modality = type(
+        "Modality",
+        (),
+        {
+            "modality": "RNA-seq",
+            "compatibility_status": "Compatible",
+        },
+    )()
+
+    design = type(
+        "Design",
+        (),
+        {
+            "condition": "",
+            "control": "",
+            "treatment": "",
+            "time_point": "",
+            "replicate_information": (
+                "Replicate C is explicitly identified in the "
+                "experiment title; biological or technical "
+                "replicate status is not established."
+            ),
+            "design_confidence": "Partially characterized",
+        },
+    )()
+
+    result = generate_reanalysis_readiness(
+        metadata,
+        modality,
+        design,
+        None,
+    )
+
+    assert any(
+        "Replicate C is explicitly identified"
+        in item
+        for item in result.observed_evidence
+    )
+
+    assert any(
+        "Biological versus technical replicate status could not be established"
+        in item
+        for item in result.not_established
+    )
+
+
+def test_reanalysis_readiness_records_available_run_evidence():
+    from rnaseq_nav.intelligence.reanalysis_readiness import (
+        generate_reanalysis_readiness,
+    )
+    from rnaseq_nav.models import RunMetadata
+
+    metadata = _make_test_metadata(
+        accession="SRR17730393",
+        organism="Mycobacterium tuberculosis H37Rv",
+    )
+
+    metadata.run = RunMetadata(
+        accession="SRR17730393",
+        total_spots=100000,
+        total_bases=10000000,
+        public=True,
+    )
+
+    modality = type(
+        "Modality",
+        (),
+        {
+            "modality": "RNA-seq",
+            "compatibility_status": "Compatible",
+        },
+    )()
+
+    result = generate_reanalysis_readiness(
+        metadata,
+        modality,
+        None,
+        None,
+    )
+
+    assert any(
+        "Sequencing run" in item
+        for item in result.observed_evidence
+    )
+
+
 def test_reanalysis_readiness_rejects_incompatible_modality():
     from rnaseq_nav.intelligence.reanalysis_readiness import (
         generate_reanalysis_readiness,
@@ -693,3 +995,144 @@ def test_reanalysis_readiness_is_not_a_percentage_score():
         "Insufficient evidence",
         "Not suitable",
     }
+
+
+def test_study_landscape_uses_explicit_rna_seq_strategy():
+    record = StudyExperiment(
+        sample_accession="SRS_TEST",
+        biosample_accession="SAMN_TEST",
+        experiment_accession="SRX_TEST",
+        experiment_title="GSM123456: treated sample; Homo sapiens",
+        library_strategy="RNA-Seq",
+    )
+
+    landscape = generate_study_experimental_landscape([record])
+
+    assert landscape.assay_family_counts == {
+        "RNA-seq": 1
+    }
+
+
+def test_study_landscape_uses_explicit_amplicon_strategy():
+    record = StudyExperiment(
+        sample_accession="SRS_TEST",
+        biosample_accession="SAMN_TEST",
+        experiment_accession="SRX_TEST",
+        experiment_title="patient sample 01",
+        library_strategy="AMPLICON",
+    )
+
+    landscape = generate_study_experimental_landscape([record])
+
+    assert landscape.assay_family_counts == {
+        "Amplicon sequencing": 1
+    }
+
+
+def test_study_landscape_uses_explicit_wgs_strategy():
+    record = StudyExperiment(
+        sample_accession="SRS_TEST",
+        biosample_accession="SAMN_TEST",
+        experiment_accession="SRX_TEST",
+        experiment_title="tumor sample 01",
+        library_strategy="WGS",
+    )
+
+    landscape = generate_study_experimental_landscape([record])
+
+    assert landscape.assay_family_counts == {
+        "Whole-genome sequencing": 1
+    }
+
+
+def test_study_landscape_uses_explicit_atac_strategy():
+    record = StudyExperiment(
+        sample_accession="SRS_TEST",
+        biosample_accession="SAMN_TEST",
+        experiment_accession="SRX_TEST",
+        experiment_title="chromatin accessibility sample",
+        library_strategy="ATAC-seq",
+    )
+
+    landscape = generate_study_experimental_landscape([record])
+
+    assert landscape.assay_family_counts == {
+        "ATAC-seq": 1
+    }
+
+
+def test_study_landscape_uses_explicit_small_rna_strategy():
+    record = StudyExperiment(
+        sample_accession="SRS_TEST",
+        biosample_accession="SAMN_TEST",
+        experiment_accession="SRX_TEST",
+        experiment_title="plasma sample",
+        library_strategy="SMALL_RNA",
+    )
+
+    landscape = generate_study_experimental_landscape([record])
+
+    assert landscape.assay_family_counts == {
+        "Small RNA sequencing": 1
+    }
+
+
+def test_study_landscape_uses_explicit_ncrna_strategy():
+    record = StudyExperiment(
+        sample_accession="SRS_TEST",
+        biosample_accession="SAMN_TEST",
+        experiment_accession="SRX_TEST",
+        experiment_title="small RNA sample",
+        library_strategy="ncRNA-Seq",
+    )
+
+    landscape = generate_study_experimental_landscape([record])
+
+    assert landscape.assay_family_counts == {
+        "ncRNA-Seq": 1
+    }
+
+
+def test_study_landscape_falls_back_to_title_when_strategy_is_missing():
+    record = StudyExperiment(
+        sample_accession="SRS_TEST",
+        biosample_accession="SAMN_TEST",
+        experiment_accession="SRX_TEST",
+        experiment_title="RNA-seq of M. tuberculosis H37Rv: kanamycin",
+        library_strategy="",
+    )
+
+    landscape = generate_study_experimental_landscape([record])
+
+    assert landscape.assay_family_counts == {
+        "RNA-seq": 1
+    }
+
+
+def test_study_landscape_keeps_unknown_strategy_unclassified():
+    record = StudyExperiment(
+        sample_accession="SRS_TEST",
+        biosample_accession="SAMN_TEST",
+        experiment_accession="SRX_TEST",
+        experiment_title="patient sample without assay description",
+        library_strategy="UNKNOWN_WORKFLOW",
+    )
+
+    landscape = generate_study_experimental_landscape([record])
+
+    assert landscape.assay_family_counts == {
+        "Unclassified": 1
+    }
+
+    assert landscape.warnings
+
+
+def test_study_landscape_classifies_hic_strategy():
+    record = make_study_experiment("HCC1395BL HiC")
+    record.library_strategy = "Hi-C"
+
+    landscape = generate_study_experimental_landscape([record])
+
+    assert landscape.assay_family_counts["Hi-C"] == 1
+    assert landscape.observed_assay_families == ["Hi-C"]
+    assert landscape.warnings == []
