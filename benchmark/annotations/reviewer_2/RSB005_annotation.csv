@@ -1,0 +1,11 @@
+benchmark_id,accession,accession_type,study_family,field,repository_value,repository_evidence_state,experimental_truth,experimental_evidence_state,evidence_source,evidence_identifier,evidence_location,reviewer_notes,annotation_confidence
+RSB005,ERX15210614,experiment,ERP183101,modality,,,,,,,,,
+RSB005,ERX15210614,experiment,ERP183101,rna_seq_compatibility,,,,,,,,,
+RSB005,ERX15210614,experiment,ERP183101,condition,,,,,,,,,
+RSB005,ERX15210614,experiment,ERP183101,control,,,,,,,,,
+RSB005,ERX15210614,experiment,ERP183101,treatment,,,,,,,,,
+RSB005,ERX15210614,experiment,ERP183101,time_point,,,,,,,,,
+RSB005,ERX15210614,experiment,ERP183101,replicate_information,,,,,,,,,
+RSB005,ERX15210614,experiment,ERP183101,experimental_design,,,,,,,,,
+RSB005,ERX15210614,experiment,ERP183101,batch_information,,,,,,,,,
+RSB005,ERX15210614,experiment,ERP183101,multimodality,,,,,,,,,

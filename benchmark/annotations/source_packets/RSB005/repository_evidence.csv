@@ -1,0 +1,17 @@
+benchmark_id,accession,source_type,source_identifier,field,source_value,evidence_location,evidence_excerpt
+RSB005,ERX15210614,ENA File Report,ERX15210614,library_strategy,RNA-Seq,ENA portal API,library_strategy=RNA-Seq
+RSB005,ERX15210614,ENA File Report,ERX15210614,library_source,TRANSCRIPTOMIC,ENA portal API,library_source=TRANSCRIPTOMIC
+RSB005,ERX15210614,ENA File Report,ERX15210614,library_selection,cDNA_randomPriming,ENA portal API,library_selection=cDNA_randomPriming
+RSB005,ERX15210614,ENA File Report,ERX15210614,library_layout,PAIRED,ENA portal API,library_layout=PAIRED
+RSB005,ERX15210614,ENA File Report,ERX15210614,instrument_platform,ILLUMINA,ENA portal API,instrument_platform=ILLUMINA
+RSB005,ERX15210614,ENA File Report,ERX15210614,instrument_model,Illumina NovaSeq 6000,ENA portal API,instrument_model=Illumina NovaSeq 6000
+RSB005,ERX15210614,ENA File Report,ERX15210614,scientific_name,Arabidopsis thaliana,ENA portal API,scientific_name=Arabidopsis thaliana
+RSB005,ERX15210614,ENA File Report,ERX15210614,run_accession,ERR15811000,ENA portal API,run_accession=ERR15811000
+RSB005,ERX15210614,ENA File Report,ERX15210614,sample_accession,SAMEA120469952,ENA portal API,sample_accession=SAMEA120469952
+RSB005,ERX15210614,BioSamples,SAMEA120469952,sra_accession,ERS27170638,BioSamples record,sraAccession=ERS27170638
+RSB005,ERX15210614,BioSamples,SAMEA120469952,sample_name,36,BioSamples record,name=36
+RSB005,ERX15210614,BioSamples,SAMEA120469952,title,RNAseq_ago1-27.3,BioSamples record,title=RNAseq_ago1-27.3
+RSB005,ERX15210614,BioSamples,SAMEA120469952,description,"RNAseq, ago1-27, biological replica 3",BioSamples record,"description=RNAseq, ago1-27, biological replica 3"
+RSB005,ERX15210614,BioSamples,SAMEA120469952,ecotype,Col-0,BioSamples record,ecotype=Col-0
+RSB005,ERX15210614,BioSamples,SAMEA120469952,tissue_type,Inflorescences,BioSamples record,tissue_type=Inflorescences
+RSB005,ERX15210614,BioSamples,SAMEA120469952,organism,Arabidopsis thaliana,BioSamples record,organism=Arabidopsis thaliana
