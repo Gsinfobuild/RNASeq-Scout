@@ -1,0 +1,13 @@
+benchmark_id,accession,field,value,evidence_state,evidence_type,evidence_source,evidence_identifier,evidence_location,evidence_excerpt,evidence_notes,reviewer
+RSB005,ERX15210614,modality,RNA-Seq,OBSERVED,repository,ENA File Report,ERX15210614,ENA portal API,library_strategy=RNA-Seq,Explicit sequencing strategy.,evidence_dossier
+RSB005,ERX15210614,rna_seq_compatibility,Compatible,OBSERVED,repository,ENA File Report,ERX15210614,ENA portal API,library_strategy=RNA-Seq; library_source=TRANSCRIPTOMIC,Explicit RNA-seq-compatible assay.,evidence_dossier
+RSB005,ERX15210614,organism,Arabidopsis thaliana,OBSERVED,repository,ENA File Report,ERX15210614,ENA portal API,scientific_name=Arabidopsis thaliana,Organism explicitly reported.,evidence_dossier
+RSB005,ERX15210614,genotype,ago1-27,OBSERVED,repository,BioSamples,SAMEA120469952,BioSamples record,"title=RNAseq_ago1-27.3; description=RNAseq, ago1-27, biological replica 3",Accession-specific genotype explicitly reported.,evidence_dossier
+RSB005,ERX15210614,replicate_information,Biological replicate 3,OBSERVED,repository,BioSamples,SAMEA120469952,BioSamples record,"description=RNAseq, ago1-27, biological replica 3",Biological replicate explicitly identified.,evidence_dossier
+RSB005,ERX15210614,ecotype,Col-0,OBSERVED,repository,BioSamples,SAMEA120469952,BioSamples record,ecotype=Col-0,Ecotype explicitly reported; not treated as experimental genotype.,evidence_dossier
+RSB005,ERX15210614,tissue,Inflorescences,OBSERVED,repository,BioSamples,SAMEA120469952,BioSamples record,tissue_type=Inflorescences,Tissue explicitly reported.,evidence_dossier
+RSB005,ERX15210614,treatment,,NOT_ESTABLISHED,repository,BioSamples,SAMEA120469952,BioSamples record,,No accession-specific treatment assignment established.,evidence_dossier
+RSB005,ERX15210614,control,,NOT_ESTABLISHED,repository,BioSamples,SAMEA120469952,BioSamples record,,No accession-specific control assignment established.,evidence_dossier
+RSB005,ERX15210614,time_point,,NOT_ESTABLISHED,repository,BioSamples,SAMEA120469952,BioSamples record,,No accession-specific time point established.,evidence_dossier
+RSB005,ERX15210614,run,ERR15811000,OBSERVED,repository,ENA File Report,ERX15210614,ENA portal API,run_accession=ERR15811000,Run explicitly linked to experiment.,evidence_dossier
+RSB005,ERX15210614,sample,SAMEA120469952 / ERS27170638,OBSERVED,repository,ENA/BioSamples,SAMEA120469952,ENA File Report + BioSamples,sample_accession=SAMEA120469952; sraAccession=ERS27170638,Sample linkage explicitly established.,evidence_dossier
