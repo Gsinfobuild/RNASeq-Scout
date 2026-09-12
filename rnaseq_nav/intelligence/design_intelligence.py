@@ -360,37 +360,34 @@ def _detect_treatment(title):
     """
     Detect an explicit treatment relationship.
 
-    Scientific policy
-    -----------------
     A treatment keyword alone is insufficient.
 
-    For example:
+    Treatment is recognized only when the title contains an explicit
+    linguistic relationship indicating that a sample, organism, culture,
+    plant, or other experimental material received, was exposed to,
+    was treated with, or was inoculated with an agent or intervention.
 
-        "detergent stress"
-
-    establishes experimental context but does not necessarily establish
-    that detergent was assigned as a formal treatment.
-
-    Stronger evidence includes constructions such as:
-
+    Examples:
         treated with isoniazid
         treatment with drug X
         exposed to antibiotic Y
         cells received drug X
         drug-treated cells
+        SynCom-inoculated
+        inoculated with SynCom
+        inoculation with SynCom
 
-    Named agents such as isoniazid or kanamycin are therefore interpreted
-    as treatment only when an explicit treatment relationship is present.
+    The mere presence of an agent name does not establish treatment.
     """
 
     if not title:
         return ""
 
-    # ------------------------------------------------------
-    # Explicit treatment relationships
-    # ------------------------------------------------------
-
     treatment_patterns = [
+
+        # --------------------------------------------------
+        # Standard treatment relationships
+        # --------------------------------------------------
 
         # treated with X
         r"\btreated\s+with\s+([^,;:]+)",
@@ -408,17 +405,36 @@ def _detect_treatment(title):
         r"\breceived\s+([^,;:]+)",
 
         # X-treated cells/samples/etc.
-        r"\b([a-z0-9_-]+(?:\s+[a-z0-9_-]+)?)"
+        r"\b([a-z0-9_/-]+(?:\s+[a-z0-9_/-]+)?)"
         r"[-\s]treated\s+"
         r"(?:cells?|samples?|cultures?|organisms?|bacteria)\b",
 
-        # drug treatment
+        # --------------------------------------------------
+        # Explicit inoculation relationships
+        # --------------------------------------------------
+
+        # inoculated with X
+        r"\binoculated\s+with\s+([^,;:]+)",
+
+        # inoculation with X
+        r"\binoculation\s+with\s+([^,;:]+)",
+
+        # X-inoculated cells/samples/cultures/plants/etc.
+        r"\b([a-z0-9_/-]+(?:\s+[a-z0-9_/-]+)?)"
+        r"[-\s]inoculated\s+"
+        r"(?:cells?|samples?|cultures?|organisms?|plants?|seedlings?)\b",
+
+        # X-inoculated at the end of a title or before another
+        # metadata descriptor, e.g. "SynCom-Inoculated Replication 2"
+        r"\b([a-z0-9_/-]+)"
+        r"-inoculated\b",
+
+        # --------------------------------------------------
+        # Generic explicit treatment terminology
+        # --------------------------------------------------
+
         r"\bdrug\s+treatment\b",
-
-        # antibiotic treatment
         r"\bantibiotic\s+treatment\b",
-
-        # treatment group
         r"\btreatment\s+group\b",
     ]
 
@@ -433,19 +449,56 @@ def _detect_treatment(title):
         if not match:
             continue
 
-        # For phrases such as "treated with isoniazid", return the
-        # treatment agent rather than the whole title.
+        matched_text = match.group(0).strip()
+
+        # --------------------------------------------------
+        # Inoculation with X
+        # --------------------------------------------------
+
+        if re.search(
+            r"\binoculated\s+with\b|"
+            r"\binoculation\s+with\b",
+            matched_text,
+            flags=re.IGNORECASE,
+        ):
+            if match.lastindex:
+                value = _clean(
+                    match.group(match.lastindex)
+                )
+
+                if value:
+                    return value + " inoculation"
+
+        # --------------------------------------------------
+        # X-inoculated
+        # --------------------------------------------------
+
+        if re.search(
+            r"-inoculated\b",
+            matched_text,
+            flags=re.IGNORECASE,
+        ):
+            if match.lastindex:
+                value = _clean(
+                    match.group(match.lastindex)
+                )
+
+                if value:
+                    return value + " inoculation"
+
+        # --------------------------------------------------
+        # Standard treatment relationships
+        # --------------------------------------------------
+
         if match.lastindex:
             value = _clean(
-                match.group(
-                    match.lastindex
-                )
+                match.group(match.lastindex)
             )
 
             if value:
                 return value
 
-        return match.group(0).strip()
+        return matched_text
 
     return ""
 
