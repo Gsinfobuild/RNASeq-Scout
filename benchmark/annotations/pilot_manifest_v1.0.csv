@@ -1,0 +1,6 @@
+pilot_id,benchmark_id,accession,accession_type,modality,study_family,normalized_organism_group,scientific_review_decision
+PILOT01,RSB005,ERX15210614,experiment,RNA-Seq,ERP183101,Arabidopsis,RETAIN
+PILOT02,RSB007,ERX16565911,experiment,RNA-Seq,ERP193087,Drosophila,RETAIN
+PILOT03,RSB044,SRX35166482,experiment,miRNA-Seq,SRP734942,Mus musculus,RETAIN
+PILOT04,RSB036,ERX15160583,experiment,Hi-C,ERP182726,Homo sapiens,RETAIN
+PILOT05,RSB047,SRX35203579,experiment,AMPLICON,SRP507374,Severe acute respiratory syndrome coronavirus 2,RETAIN
