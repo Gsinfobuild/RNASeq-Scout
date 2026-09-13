@@ -277,6 +277,86 @@ class NCBIClient:
             ) from error
 
     # -----------------------------------------------------
+    # Fetch BioSample record
+    # -----------------------------------------------------
+
+    def fetch_biosample(
+        self,
+        accession: str,
+    ):
+        """
+        Retrieve a BioSample XML record for an accession.
+
+        Supports BioSample accessions such as SAMEA, SAMN,
+        and SAMD, as well as SRA sample accessions such as
+        ERS, SRS, and DRS when NCBI resolves them to a
+        BioSample record.
+
+        Parameters
+        ----------
+        accession : str
+            BioSample or SRA sample accession.
+
+        Returns
+        -------
+        bytes
+            Raw BioSample XML returned by NCBI.
+
+        Notes
+        -----
+        This method performs retrieval only. XML interpretation
+        is handled separately by BioSampleParser.
+        """
+
+        self._log(
+            f"Fetching BioSample: {accession}"
+        )
+
+        try:
+
+            handle = Entrez.esearch(
+                db="biosample",
+                term=accession,
+                retmode="xml",
+            )
+
+            try:
+                result = Entrez.read(handle)
+            finally:
+                handle.close()
+
+            ids = result.get("IdList", [])
+
+            if not ids:
+                raise ValueError(
+                    f"No BioSample record found for '{accession}'."
+                )
+
+            uid = ids[0]
+
+            self._log(
+                f"BioSample UID = {uid}"
+            )
+
+            handle = Entrez.efetch(
+                db="biosample",
+                id=uid,
+                retmode="xml",
+            )
+
+            try:
+                return handle.read()
+            finally:
+                handle.close()
+
+        except Exception as error:
+
+            raise RuntimeError(
+                f"Failed to retrieve BioSample '{accession}'. "
+                f"{type(error).__name__}: {error}"
+            ) from error
+
+    # -----------------------------------------------------
     # Search
     # -----------------------------------------------------
 

@@ -3,7 +3,7 @@ RNASeq Scout
 
 Metadata Models
 
-Version 0.1.0
+Version 0.2.0
 
 Defines the core metadata objects used throughout
 RNASeq Scout.
@@ -100,13 +100,40 @@ class RunMetadata:
 
 
 # ==========================================================
+# Sample Attribute
+# ==========================================================
+
+@dataclass
+class SampleAttribute:
+    """
+    Raw attribute reported by an NCBI BioSample record.
+
+    The attribute is preserved as deposited metadata.
+    No biological interpretation is performed here.
+    """
+
+    name: str = ""
+
+    value: str = ""
+
+    harmonized_name: str = ""
+
+    display_name: str = ""
+
+
+# ==========================================================
 # Sample Metadata
 # ==========================================================
 
 @dataclass
 class SampleMetadata:
     """
-    Sample (SRS/SAMN) metadata.
+    Sample (SRS/SAMN/SAMEA/SAMD) metadata.
+
+    Fields obtained from BioSample are preserved as raw
+    repository evidence. Downstream intelligence layers
+    may interpret these fields, but this model does not
+    infer biological meaning.
     """
 
     accession: str = ""
@@ -114,6 +141,20 @@ class SampleMetadata:
     biosample: str = ""
 
     organism: str = ""
+
+    # BioSample title
+    title: str = ""
+
+    # BioSample sample name
+    name: str = ""
+
+    # BioSample description/comment
+    description: str = ""
+
+    # Structured BioSample attributes
+    attributes: List[SampleAttribute] = field(
+        default_factory=list
+    )
 
 
 # ==========================================================
@@ -127,17 +168,26 @@ class StudyExperiment:
     """
 
     sample_accession: str = ""
+
     biosample_accession: str = ""
+
     experiment_accession: str = ""
+
     experiment_title: str = ""
+
     library_strategy: str = ""
-    run_accessions: List[str] = field(default_factory=list)
+
+    run_accessions: List[str] = field(
+        default_factory=list
+    )
+
     organism: str = ""
+
     sample_name: str = ""
 
 
 # ==========================================================
-# Master Metadata Object
+# Reanalysis Readiness
 # ==========================================================
 
 @dataclass
@@ -151,13 +201,35 @@ class ReanalysisReadinessInsight:
     experimental design information. Evidence is explicitly
     classified as observed, inferred, not established, or missing.
     """
+
     verdict: str = "Insufficient evidence"
-    observed_evidence: List[str] = field(default_factory=list)
-    inferred_evidence: List[str] = field(default_factory=list)
-    not_established: List[str] = field(default_factory=list)
-    missing_information: List[str] = field(default_factory=list)
-    warnings: List[str] = field(default_factory=list)
+
+    observed_evidence: List[str] = field(
+        default_factory=list
+    )
+
+    inferred_evidence: List[str] = field(
+        default_factory=list
+    )
+
+    not_established: List[str] = field(
+        default_factory=list
+    )
+
+    missing_information: List[str] = field(
+        default_factory=list
+    )
+
+    warnings: List[str] = field(
+        default_factory=list
+    )
+
     rationale: str = ""
+
+
+# ==========================================================
+# Study Experimental Landscape
+# ==========================================================
 
 @dataclass
 class StudyExperimentalLandscape:
@@ -166,20 +238,41 @@ class StudyExperimentalLandscape:
 
     This model records assay families and experimental context
     labels directly observed in study-level experiment metadata.
+
     It does not infer controls, treatments, replicates, time
     points, or statistical contrasts.
     """
 
     total_experiments: int = 0
-    assay_family_counts: dict[str, int] = field(default_factory=dict)
-    context_counts: dict[str, int] = field(default_factory=dict)
+
+    assay_family_counts: dict[str, int] = field(
+        default_factory=dict
+    )
+
+    context_counts: dict[str, int] = field(
+        default_factory=dict
+    )
+
     assay_context_counts: dict[str, dict[str, int]] = field(
         default_factory=dict
     )
-    observed_assay_families: List[str] = field(default_factory=list)
-    observed_contexts: List[str] = field(default_factory=list)
-    warnings: List[str] = field(default_factory=list)
 
+    observed_assay_families: List[str] = field(
+        default_factory=list
+    )
+
+    observed_contexts: List[str] = field(
+        default_factory=list
+    )
+
+    warnings: List[str] = field(
+        default_factory=list
+    )
+
+
+# ==========================================================
+# Master Metadata Object
+# ==========================================================
 
 @dataclass
 class Metadata:

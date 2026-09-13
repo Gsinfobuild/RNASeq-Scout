@@ -93,6 +93,11 @@ from rnaseq_nav.intelligence.analysis_planner import (
     generate_analysis_plan,
 )
 
+from rnaseq_nav.intelligence.sample_enrichment import (
+    enrich_sample_from_biosample,
+)
+
+
 from rnaseq_nav.core import (
     InspectionResult,
 )
@@ -313,6 +318,7 @@ class RNASeqNavigator:
     def inspect(
         self,
         accession: str,
+        enrich_biosample: bool = False,
     ):
         """
         Execute the complete metadata inspection pipeline.
@@ -339,6 +345,11 @@ class RNASeqNavigator:
         accession : str
             SRA accession such as SRR17730393 or SRP356545.
 
+        enrich_biosample : bool
+            When True, explicitly retrieve and parse the
+            associated NCBI BioSample record before
+            normalization. Defaults to False.
+
         Returns
         -------
         InspectionResult
@@ -357,6 +368,29 @@ class RNASeqNavigator:
             metadata = self.fetch(
                 accession
             )
+
+            # ------------------------------------------------
+            # Step 1.5
+            # Optional BioSample enrichment
+            # ------------------------------------------------
+            #
+            # BioSample enrichment is deliberately opt-in.
+            # The default inspection path remains unchanged.
+            #
+            # Enrichment happens before normalization so that
+            # downstream intelligence layers can access the
+            # richer sample metadata when explicitly requested.
+            #
+            # The enrichment layer performs retrieval and
+            # metadata merging only. It does not infer
+            # experimental groups, treatments, controls,
+            # replicates, or statistical contrasts.
+
+            if enrich_biosample:
+                metadata = enrich_sample_from_biosample(
+                    metadata,
+                    self.discovery.client,
+                )
 
             # ------------------------------------------------
             # Step 2
