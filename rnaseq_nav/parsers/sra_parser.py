@@ -374,6 +374,18 @@ class SRAParser:
                     selection.text.strip()
                 )
 
+            protocol = library.find(
+                "LIBRARY_CONSTRUCTION_PROTOCOL"
+            )
+
+            if (
+                protocol is not None
+                and protocol.text
+            ):
+                metadata.experiment.construction_protocol = (
+                    protocol.text.strip()
+                )
+
             layout = library.find(
                 "LIBRARY_LAYOUT"
             )

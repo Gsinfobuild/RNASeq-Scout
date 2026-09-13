@@ -68,6 +68,13 @@ class ExperimentMetadata:
     # Instrument model
     instrument: str = ""
 
+    # Library construction protocol
+    #
+    # Preserved from the SRA ExpXml record without
+    # interpretation. Downstream intelligence layers may
+    # use this evidence to characterize experimental design.
+    construction_protocol: str = ""
+
 
 # ==========================================================
 # Run Metadata

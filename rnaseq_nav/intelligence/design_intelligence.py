@@ -1,30 +1,50 @@
 """
+RNASeq Scout
+
 Layer 2: Experimental Design Intelligence
+==========================================
 
 This module interprets experimental-design information from publicly
 available sequencing metadata.
+
+Evidence sources
+----------------
+1. Experiment title
+2. Library construction protocol
+3. Run metadata, only for identifying the presence of a sequencing run
 
 Scientific policy
 -----------------
 The module distinguishes:
 
-1. Observed metadata
-2. Cautious inference
-3. Information that is not established
+1. Observed information
+   Explicitly documented in available metadata.
+
+2. Inferred information
+   Reasonably suggested by metadata but not explicitly established.
+
+3. Not-established information
+   Relevant information was examined but cannot be established.
+
+4. Missing information
+   The relevant field is not represented in the available metadata.
 
 The module must not invent:
 
 - biological replicates
 - control groups
-- treatment groups
+- treatment assignments
 - time points
 - statistical contrasts
+- DESeq2 design formulas
 
-An experimental context such as "detergent stress", "starvation", or
-"hypoxia" is not automatically treated as a formal treatment assignment.
+A sequencing run is never treated as a biological replicate.
 
-Treatment inference requires explicit treatment-related language or
-an explicit relationship in the available experiment metadata.
+A contextual word such as "stress", "infection", "iron", or "detergent"
+does not by itself establish a treatment assignment.
+
+Protocol statements are treated as observed evidence only when the
+language explicitly supports the interpretation.
 """
 
 from dataclasses import dataclass, field
@@ -37,17 +57,39 @@ import re
 
 @dataclass
 class ExperimentalDesignInsight:
+    """
+    Structured interpretation of experimental design metadata.
+    """
+
     condition: str = ""
+
     control: str = ""
+
     treatment: str = ""
+
     time_point: str = ""
+
     replicate_information: str = ""
+
     design_description: str = ""
+
     design_confidence: str = "Insufficient information"
-    observed_features: list[str] = field(default_factory=list)
-    inferred_features: list[str] = field(default_factory=list)
-    warnings: list[str] = field(default_factory=list)
-    missing_information: list[str] = field(default_factory=list)
+
+    observed_features: list[str] = field(
+        default_factory=list
+    )
+
+    inferred_features: list[str] = field(
+        default_factory=list
+    )
+
+    warnings: list[str] = field(
+        default_factory=list
+    )
+
+    missing_information: list[str] = field(
+        default_factory=list
+    )
 
 
 # ==========================================================
@@ -80,9 +122,20 @@ def _clean(value):
     return value
 
 
+def _append_unique(items, value):
+    """
+    Append a value only once.
+    """
+
+    value = _clean(value)
+
+    if value and value not in items:
+        items.append(value)
+
+
 def _get_experiment(metadata):
     """
-    Retrieve experiment metadata from the normalized Metadata object.
+    Retrieve experiment metadata safely.
     """
 
     if metadata is None:
@@ -97,7 +150,7 @@ def _get_experiment(metadata):
 
 def _get_sample(metadata):
     """
-    Retrieve sample metadata from the normalized Metadata object.
+    Retrieve sample metadata safely.
     """
 
     if metadata is None:
@@ -110,9 +163,26 @@ def _get_sample(metadata):
     )
 
 
+def _get_run(metadata):
+    """
+    Retrieve run metadata safely.
+    """
+
+    if metadata is None:
+        return None
+
+    return getattr(
+        metadata,
+        "run",
+        None,
+    )
+
+
 def _collect_observed_metadata(metadata):
     """
     Collect directly observed experiment/sample metadata.
+
+    Construction protocol is preserved as a separate evidence source.
     """
 
     observed = {}
@@ -122,61 +192,26 @@ def _collect_observed_metadata(metadata):
 
     if experiment is not None:
 
-        observed["title"] = _clean(
-            getattr(
-                experiment,
-                "title",
-                "",
-            )
-        )
+        fields = [
+            "title",
+            "library_strategy",
+            "layout",
+            "platform",
+            "library_source",
+            "library_selection",
+            "instrument",
+            "construction_protocol",
+        ]
 
-        observed["library_strategy"] = _clean(
-            getattr(
-                experiment,
-                "library_strategy",
-                "",
-            )
-        )
+        for field_name in fields:
 
-        observed["layout"] = _clean(
-            getattr(
-                experiment,
-                "layout",
-                "",
+            observed[field_name] = _clean(
+                getattr(
+                    experiment,
+                    field_name,
+                    "",
+                )
             )
-        )
-
-        observed["platform"] = _clean(
-            getattr(
-                experiment,
-                "platform",
-                "",
-            )
-        )
-
-        observed["library_source"] = _clean(
-            getattr(
-                experiment,
-                "library_source",
-                "",
-            )
-        )
-
-        observed["library_selection"] = _clean(
-            getattr(
-                experiment,
-                "library_selection",
-                "",
-            )
-        )
-
-        observed["instrument"] = _clean(
-            getattr(
-                experiment,
-                "instrument",
-                "",
-            )
-        )
 
     if sample is not None:
 
@@ -200,110 +235,138 @@ def _collect_observed_metadata(metadata):
 
 
 # ==========================================================
-# Condition / Experimental Context Detection
+# Evidence helpers
 # ==========================================================
 
-def _detect_condition(title):
+def _protocol(metadata):
     """
-    Identify an experimental condition or context.
-
-    Scientific policy
-    -----------------
-    Contextual terms such as:
-
-        stress
-        starvation
-        hypoxia
-        nutrient limitation
-        iron stress
-        detergent stress
-        infection
-        antibiotic exposure
-
-    may establish an experimental context.
-
-    They do NOT automatically establish a formal treatment assignment.
-
-    The function attempts to return the relevant contextual phrase rather
-    than the entire experiment title.
+    Return the deposited library construction protocol, if available.
     """
 
-    if not title:
+    experiment = _get_experiment(metadata)
+
+    if experiment is None:
         return ""
 
-    title_lower = title.lower()
-
-    # ------------------------------------------------------
-    # Explicit contextual phrases
-    # ------------------------------------------------------
-
-    context_patterns = [
-        r"\b([a-z0-9_-]+\s+stress)\b",
-        r"\b(stress\s+(?:condition|response))\b",
-        r"\b([a-z0-9_-]+\s+starvation)\b",
-        r"\b(starvation)\b",
-        r"\b(hypoxia)\b",
-        r"\b([a-z0-9_-]+\s+hypoxia)\b",
-        r"\b([a-z0-9_-]+\s+limitation)\b",
-        r"\b(nutrient\s+(?:limitation|deprivation|restriction))\b",
-        r"\b(iron\s+(?:stress|limitation|depletion|exposure))\b",
-        r"\b(detergent\s+stress)\b",
-        r"\b(antibiotic\s+(?:stress|exposure))\b",
-        r"\b(infection)\b",
-        r"\b(infected)\b",
-    ]
-
-    for pattern in context_patterns:
-
-        match = re.search(
-            pattern,
-            title_lower,
-            flags=re.IGNORECASE,
+    return _clean(
+        getattr(
+            experiment,
+            "construction_protocol",
+            "",
         )
+    )
 
-        if match:
-            return match.group(1).strip()
+
+def _evidence_source_label(source):
+    """
+    Human-readable evidence source.
+    """
+
+    if source == "protocol":
+        return "library construction protocol"
+
+    if source == "title":
+        return "experiment title"
+
+    return "available metadata"
+
+
+# ==========================================================
+# Condition / Experimental Context
+# ==========================================================
+
+def _detect_condition(title, protocol=""):
+    """
+    Identify an experimental condition or biological context.
+
+    Context does not automatically establish a treatment assignment.
+
+    Returns a concise phrase rather than an entire title/protocol.
+    """
 
     # ------------------------------------------------------
-    # Explicit named experimental contexts
+    # Title-level contextual phrases
     # ------------------------------------------------------
 
-    context_terms = [
-        "stress",
-        "starvation",
-        "hypoxia",
-        "nutrient",
-        "iron",
-        "infection",
-        "infected",
-    ]
+    if title:
 
-    for term in context_terms:
+        # "infected with ... pathogens" establishes a concise
+        # pathogen-infection context. Do not use the pathogen
+        # descriptor itself as the condition value.
+        if re.search(
+            r"\binfected\s+with\b.*\bpathogen(?:s)?\b",
+            title,
+            flags=re.IGNORECASE,
+        ):
+            return "pathogen infection"
 
-        if term in title_lower:
+        title_patterns = [
+            r"\b([A-Za-z0-9_-]+\s+stress)\b",
+            r"\b(stress\s+(?:condition|response))\b",
+            r"\b([A-Za-z0-9_-]+\s+starvation)\b",
+            r"\b(starvation)\b",
+            r"\b(hypoxia)\b",
+            r"\b([A-Za-z0-9_-]+\s+hypoxia)\b",
+            r"\b([A-Za-z0-9_-]+\s+limitation)\b",
+            r"\b(nutrient\s+(?:limitation|deprivation|restriction))\b",
+            r"\b(iron\s+(?:stress|limitation|depletion|exposure))\b",
+            r"\b(detergent\s+stress)\b",
+            r"\b(antibiotic\s+(?:stress|exposure))\b",
 
-            # Return a short phrase around the contextual term.
-            words = title.split()
+            # Prefer explicit infection context over the generic
+            # adjective "infected".
+            r"\binfected\s+with\s+(?:a\s+)?"
+            r"(?:combination\s+of\s+)?"
+            r"([A-Za-z0-9_.,\-+\s]+?)(?:\s*$)",
 
-            for index, word in enumerate(words):
+            r"\b(infection)\b",
+        ]
 
-                if term in word.lower():
+        for pattern in title_patterns:
 
-                    start = max(
-                        0,
-                        index - 1,
-                    )
+            match = re.search(
+                pattern,
+                title,
+                flags=re.IGNORECASE,
+            )
 
-                    end = min(
-                        len(words),
-                        index + 2,
-                    )
+            if match:
+                return match.group(1).strip()
 
-                    return " ".join(
-                        words[start:end]
-                    ).strip(
-                        " ,;:-"
-                    )
+    # ------------------------------------------------------
+    # Protocol-level explicit contexts
+    # ------------------------------------------------------
+
+    if protocol:
+
+        # Explicit pathogen/infection context.
+        if re.search(
+            r"\b(?:pathogen|pathogens)\b.*\b(?:infect|infection)\b|"
+            r"\b(?:infect|infection)\b.*\b(?:pathogen|pathogens)\b",
+            protocol,
+            flags=re.IGNORECASE | re.DOTALL,
+        ):
+            return "pathogen infection"
+
+        protocol_patterns = [
+            r"\bfirst\s+stressor\b",
+            r"\bsecond\s+stressor\b",
+            r"\bnematode\s+treatment\b",
+            r"\bpathogen\s+(?:infection|treatment)\b",
+            r"\bmock\s+treatment\b",
+            r"\bexperimental\s+treatment\b",
+        ]
+
+        for pattern in protocol_patterns:
+
+            match = re.search(
+                pattern,
+                protocol,
+                flags=re.IGNORECASE,
+            )
+
+            if match:
+                return match.group(0).strip()
 
     return ""
 
@@ -312,42 +375,65 @@ def _detect_condition(title):
 # Control Detection
 # ==========================================================
 
-def _detect_control(title):
+def _detect_control(title, protocol=""):
     """
-    Detect explicit control terminology.
+    Detect explicitly documented control information.
 
-    A control is returned only when control-related language is explicitly
-    present in the title.
+    The existence of a treatment/stressor does not imply a control.
 
-    The existence of another condition does not imply a control group.
+    Control information is returned only when explicit control or mock
+    language is present.
     """
 
-    if not title:
-        return ""
+    texts = []
 
-    title_lower = title.lower()
+    if title:
+        texts.append(("title", title))
 
-    control_patterns = [
-        r"\bvehicle\s+control\b",
-        r"\bmock[-\s]?control\b",
-        r"\bmock[-\s]?treated\b",
-        r"\buntreated\b",
-        r"\bcontrol\s+cells?\b",
-        r"\bcontrol\s+sample\b",
-        r"\bcontrol\s+group\b",
-        r"\bcontrol\b",
+    if protocol:
+        texts.append(("protocol", protocol))
+
+    patterns = [
+        # Mock treatment / mock control
+        (
+            r"\bmock\s+(?:treatment|control|treated|treatment\s+group)\b",
+            "mock treatment",
+        ),
+        (
+            r"\bmock[-\s]?treated\b",
+            "mock-treated",
+        ),
+        (
+            r"\bvehicle\s+control\b",
+            "vehicle control",
+        ),
+        (
+            r"\buntreated\s+(?:control|samples?|cells?|plants?|groups?)\b",
+            "untreated control",
+        ),
+        (
+            r"\bcontrol\s+(?:group|sample|cells?|plants?|condition)\b",
+            "control",
+        ),
     ]
 
-    for pattern in control_patterns:
+    for source, text in texts:
 
-        match = re.search(
-            pattern,
-            title_lower,
-            flags=re.IGNORECASE,
-        )
+        for pattern, label in patterns:
 
-        if match:
-            return match.group(0)
+            match = re.search(
+                pattern,
+                text,
+                flags=re.IGNORECASE,
+            )
+
+            if match:
+
+                if source == "protocol":
+
+                    return label
+
+                return match.group(0).strip()
 
     return ""
 
@@ -356,149 +442,146 @@ def _detect_control(title):
 # Treatment Detection
 # ==========================================================
 
-def _detect_treatment(title):
+def _extract_treatment_agent(value):
+    """
+    Clean an explicitly captured treatment phrase.
+    """
+
+    value = _clean(value)
+
+    if not value:
+        return ""
+
+    value = re.sub(
+        r"\s+for\s+(?:\d+(?:\.\d+)?\s*)?(?:h|hours?|days?)\b.*$",
+        "",
+        value,
+        flags=re.IGNORECASE,
+    )
+
+    value = re.sub(
+        r"\s+at\s+day\s+\d+.*$",
+        "",
+        value,
+        flags=re.IGNORECASE,
+    )
+
+    # "stressor" describes the role of the intervention; it is
+    # not part of the treatment agent itself.
+    value = re.sub(
+        r"^stressor\s+",
+        "",
+        value,
+        flags=re.IGNORECASE,
+    )
+
+    return value.strip(" ,.;:-")
+
+
+def _detect_treatment(title, protocol=""):
     """
     Detect an explicit treatment relationship.
 
     A treatment keyword alone is insufficient.
 
-    Treatment is recognized only when the title contains an explicit
-    linguistic relationship indicating that a sample, organism, culture,
-    plant, or other experimental material received, was exposed to,
-    was treated with, or was inoculated with an agent or intervention.
+    The function recognizes treatment only when language establishes
+    that experimental material received, was exposed to, was treated
+    with, was inoculated with, or otherwise underwent an intervention.
 
-    Examples:
-        treated with isoniazid
-        treatment with drug X
-        exposed to antibiotic Y
-        cells received drug X
-        drug-treated cells
-        SynCom-inoculated
-        inoculated with SynCom
-        inoculation with SynCom
-
-    The mere presence of an agent name does not establish treatment.
+    Protocol evidence has priority over title evidence.
     """
 
-    if not title:
-        return ""
+    texts = []
 
-    treatment_patterns = [
+    if protocol:
+        texts.append(("protocol", protocol))
 
-        # --------------------------------------------------
-        # Standard treatment relationships
-        # --------------------------------------------------
+    if title:
+        texts.append(("title", title))
 
+    patterns = [
         # treated with X
-        r"\btreated\s+with\s+([^,;:]+)",
+        r"\btreated\s+with\s+([^,.;:\n]+)",
 
         # treatment with X
-        r"\btreatment\s+with\s+([^,;:]+)",
+        r"\btreatment\s+with\s+([^,.;:\n]+)",
 
         # exposed to X
-        r"\bexposed\s+to\s+([^,;:]+)",
+        r"\bexposed\s+to\s+([^,.;:\n]+)",
 
         # exposure to X
-        r"\bexposure\s+to\s+([^,;:]+)",
+        r"\bexposure\s+to\s+([^,.;:\n]+)",
 
         # received X
-        r"\breceived\s+([^,;:]+)",
+        r"\breceived\s+([^,.;:\n]+)",
 
-        # X-treated cells/samples/etc.
-        r"\b([a-z0-9_/-]+(?:\s+[a-z0-9_/-]+)?)"
-        r"[-\s]treated\s+"
-        r"(?:cells?|samples?|cultures?|organisms?|bacteria)\b",
+        # X treatment was performed
+        r"\b([A-Za-z0-9_/-]+(?:\s+[A-Za-z0-9_/-]+)?)"
+        r"\s+treatment\s+was\s+(?:performed|applied|administered)\b",
 
-        # --------------------------------------------------
-        # Explicit inoculation relationships
-        # --------------------------------------------------
+        # treatment was performed with X
+        r"\btreatment\s+was\s+(?:performed|applied|administered)"
+        r"\s+(?:with|using)\s+([^,.;:\n]+)",
+
+        # X treatment was given
+        r"\b([A-Za-z0-9_/-]+(?:\s+[A-Za-z0-9_/-]+)?)"
+        r"\s+treatment\s+was\s+given\b",
 
         # inoculated with X
-        r"\binoculated\s+with\s+([^,;:]+)",
+        r"\binoculated\s+with\s+([^,.;:\n]+)",
 
         # inoculation with X
-        r"\binoculation\s+with\s+([^,;:]+)",
+        r"\binoculation\s+with\s+([^,.;:\n]+)",
 
-        # X-inoculated cells/samples/cultures/plants/etc.
-        r"\b([a-z0-9_/-]+(?:\s+[a-z0-9_/-]+)?)"
+        # X-treated cells/samples/plants/etc.
+        r"\b([A-Za-z0-9_/-]+(?:\s+[A-Za-z0-9_/-]+)?)"
+        r"[-\s]treated\s+"
+        r"(?:cells?|samples?|cultures?|organisms?|plants?|seedlings?)\b",
+
+        # X-inoculated
+        r"\b([A-Za-z0-9_/-]+(?:\s+[A-Za-z0-9_/-]+)?)"
         r"[-\s]inoculated\s+"
         r"(?:cells?|samples?|cultures?|organisms?|plants?|seedlings?)\b",
 
-        # X-inoculated at the end of a title or before another
-        # metadata descriptor, e.g. "SynCom-Inoculated Replication 2"
-        r"\b([a-z0-9_/-]+)"
-        r"-inoculated\b",
-
-        # --------------------------------------------------
-        # Generic explicit treatment terminology
-        # --------------------------------------------------
-
-        r"\bdrug\s+treatment\b",
-        r"\bantibiotic\s+treatment\b",
-        r"\btreatment\s+group\b",
+        # X-inoculated as an experiment label
+        r"\b([A-Za-z0-9_/-]+)-inoculated\b",
     ]
 
-    for pattern in treatment_patterns:
+    for source, text in texts:
 
-        match = re.search(
-            pattern,
-            title,
-            flags=re.IGNORECASE,
-        )
+        for pattern in patterns:
 
-        if not match:
-            continue
-
-        matched_text = match.group(0).strip()
-
-        # --------------------------------------------------
-        # Inoculation with X
-        # --------------------------------------------------
-
-        if re.search(
-            r"\binoculated\s+with\b|"
-            r"\binoculation\s+with\b",
-            matched_text,
-            flags=re.IGNORECASE,
-        ):
-            if match.lastindex:
-                value = _clean(
-                    match.group(match.lastindex)
-                )
-
-                if value:
-                    return value + " inoculation"
-
-        # --------------------------------------------------
-        # X-inoculated
-        # --------------------------------------------------
-
-        if re.search(
-            r"-inoculated\b",
-            matched_text,
-            flags=re.IGNORECASE,
-        ):
-            if match.lastindex:
-                value = _clean(
-                    match.group(match.lastindex)
-                )
-
-                if value:
-                    return value + " inoculation"
-
-        # --------------------------------------------------
-        # Standard treatment relationships
-        # --------------------------------------------------
-
-        if match.lastindex:
-            value = _clean(
-                match.group(match.lastindex)
+            match = re.search(
+                pattern,
+                text,
+                flags=re.IGNORECASE,
             )
 
-            if value:
-                return value
+            if not match:
+                continue
 
-        return matched_text
+            if match.lastindex:
+
+                value = _extract_treatment_agent(
+                    match.group(match.lastindex)
+                )
+
+                if value:
+
+                    # Explicit inoculation relationship
+                    if re.search(
+                        r"inoculat",
+                        match.group(0),
+                        flags=re.IGNORECASE,
+                    ):
+                        return value + " inoculation"
+
+                    return value
+
+            matched = match.group(0).strip()
+
+            if matched:
+                return matched
 
     return ""
 
@@ -507,55 +590,101 @@ def _detect_treatment(title):
 # Time Point Detection
 # ==========================================================
 
-def _detect_time_point(title):
+def _detect_time_point(title, protocol=""):
     """
-    Detect simple explicit time-point terminology.
+    Detect explicitly documented sampling time information.
 
-    Examples potentially recognized:
+    Unlike title-only detection, protocol evidence can establish
+    day-based sampling schedules.
+
+    Examples:
 
         6h
-        12h
-        24h
-        6 hours
         24 hours
+        day 3
+        days 1, 2, 3
+        post 1, 2, 3, 4, 5 day
         time point
-
-    The function does not invent a time point.
     """
 
-    if not title:
-        return ""
+    texts = []
 
-    title_lower = title.lower()
+    if protocol:
+        texts.append(("protocol", protocol))
 
-    # ------------------------------------------------------
-    # Compact forms such as 6h, 12h, 24h
-    # ------------------------------------------------------
-
-    match = re.search(
-        r"\b(\d+(?:\.\d+)?\s*h)\b",
-        title_lower,
-        flags=re.IGNORECASE,
-    )
-
-    if match:
-        return match.group(1)
+    if title:
+        texts.append(("title", title))
 
     # ------------------------------------------------------
-    # Explicit hour duration
+    # Protocol: sampling after X days
     # ------------------------------------------------------
 
-    match = re.search(
-        r"\b(\d+(?:\.\d+)?\s+hours?)\b",
-        title_lower,
-        flags=re.IGNORECASE,
-    )
+    for source, text in texts:
 
-    if match:
-        return match.group(1)
+        match = re.search(
+            r"\bpost\s+"
+            r"((?:\d+(?:\s*,\s*|\s+and\s+|\s*-\s*)?)+)"
+            r"\s*day(?:s)?\b",
+            text,
+            flags=re.IGNORECASE,
+        )
 
-    if "time point" in title_lower:
-        return "Time point mentioned"
+        if match:
+
+            values = _clean(
+                match.group(1)
+            )
+
+            if values:
+                return "Post-treatment days " + values
+
+        match = re.search(
+            r"\bsampling\s+(?:at|on)\s+"
+            r"((?:day|days)\s+[^.;\n]+)",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        if match:
+            return _clean(match.group(1))
+
+        match = re.search(
+            r"\b(?:at|on)\s+day\s+(\d+(?:\s*[-,]\s*\d+)*)\b",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        if match:
+            return "Day " + _clean(match.group(1))
+
+        # --------------------------------------------------
+        # Hour-based time points
+        # --------------------------------------------------
+
+        match = re.search(
+            r"\b(\d+(?:\.\d+)?\s*h)\b",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        if match:
+            return match.group(1)
+
+        match = re.search(
+            r"\b(\d+(?:\.\d+)?\s+hours?)\b",
+            text,
+            flags=re.IGNORECASE,
+        )
+
+        if match:
+            return match.group(1)
+
+        if re.search(
+            r"\btime\s+point\b",
+            text,
+            flags=re.IGNORECASE,
+        ):
+            return "Time point mentioned"
 
     return ""
 
@@ -566,22 +695,15 @@ def _detect_time_point(title):
 
 def _assess_replicates(metadata):
     """
-    Assess whether explicit replicate information is available.
+    Assess explicit replicate information.
 
-    Scientific policy
-    -----------------
-    A single sequencing run must NOT be interpreted as a biological
-    replicate.
+    Priority:
 
-    However, an explicit replicate annotation in the experiment title
-    is observed metadata and should be preserved.
+    1. Construction protocol
+    2. Experiment title
+    3. Run metadata
 
-    The function distinguishes:
-
-    - explicit biological replicate labels
-    - explicit replicate labels whose biological/technical nature
-      is not established
-    - absence of explicit replicate information
+    A sequencing run is never interpreted as a biological replicate.
     """
 
     experiment = _get_experiment(metadata)
@@ -597,44 +719,106 @@ def _assess_replicates(metadata):
             )
         )
 
+    protocol = _protocol(metadata)
+
+    # ------------------------------------------------------
+    # Protocol: explicit biological replicates
+    # ------------------------------------------------------
+
+    if protocol:
+
+        patterns = [
+            r"\b(\d+)\s+biological\s+replicates?\b",
+            r"\bthree\s+biological\s+replicates?\b",
+            r"\btwo\s+biological\s+replicates?\b",
+            r"\bfour\s+biological\s+replicates?\b",
+            r"\bfive\s+biological\s+replicates?\b",
+        ]
+
+        for pattern in patterns:
+
+            match = re.search(
+                pattern,
+                protocol,
+                flags=re.IGNORECASE,
+            )
+
+            if match:
+
+                phrase = match.group(0).strip()
+
+                # Normalize common textual number variants.
+                number_map = {
+                    "two": "2",
+                    "three": "3",
+                    "four": "4",
+                    "five": "5",
+                }
+
+                for word, number in number_map.items():
+
+                    phrase = re.sub(
+                        rf"\b{word}\b",
+                        number,
+                        phrase,
+                        flags=re.IGNORECASE,
+                    )
+
+                return (
+                    phrase.capitalize()
+                    + " are explicitly documented in the "
+                    "library construction protocol."
+                )
+
+        # Biological replicate + individual biological material
+        if re.search(
+            r"\bbiological\s+replicate\b",
+            protocol,
+            flags=re.IGNORECASE,
+        ):
+            return (
+                "Biological replicate information is explicitly "
+                "documented in the library construction protocol."
+            )
+
+    # ------------------------------------------------------
+    # Title: explicit biological replicate
+    # ------------------------------------------------------
+
     if title:
 
-        biological_match = re.search(
+        match = re.search(
             r"\bbiological\s+replicate\s+([A-Za-z0-9_-]+)",
             title,
             flags=re.IGNORECASE,
         )
 
-        if biological_match:
-
-            label = biological_match.group(1)
+        if match:
 
             return (
-                f"Biological replicate {label} is explicitly "
+                f"Biological replicate {match.group(1)} is explicitly "
                 "identified in the experiment title."
             )
 
-        replicate_match = re.search(
+        match = re.search(
             r"\breplicate\s+([A-Za-z0-9_-]+)",
             title,
             flags=re.IGNORECASE,
         )
 
-        if replicate_match:
-
-            label = replicate_match.group(1)
+        if match:
 
             return (
-                f"Replicate {label} is explicitly identified "
+                f"Replicate {match.group(1)} is explicitly identified "
                 "in the experiment title; biological or technical "
                 "replicate status is not established."
             )
 
-    run = getattr(
-        metadata,
-        "run",
-        None,
-    )
+    # ------------------------------------------------------
+    # Run: never infer biological replication
+    # ------------------------------------------------------
+
+    run = _get_run(metadata)
 
     accession = ""
 
@@ -662,28 +846,126 @@ def _assess_replicates(metadata):
 
 
 # ==========================================================
+# Design complexity assessment
+# ==========================================================
+
+def _has_complex_design(metadata):
+    """
+    Identify protocol language indicating a multifactorial or
+    sequential experimental design.
+
+    This does not determine the experimental groups. It only prevents
+    Scout from assigning the strongest confidence level when the
+    available evidence indicates that the design is more complex than
+    a simple single-factor treatment/control experiment.
+    """
+
+    protocol = _protocol(metadata)
+
+    if not protocol:
+        return False
+
+    complexity_patterns = [
+        r"\bfirst\s+stressor\b",
+        r"\bsecond\s+stressor\b",
+        r"\bmultiple\s+(?:stressors?|treatments?|pathogens?)\b",
+        r"\bcombination\s+of\s+[^.\n]*pathogens?\b",
+        r"\b(?:above|below)[-\s]ground\s+pathogens?\b",
+        r"\bmock\s+treatment\b",
+    ]
+
+    for pattern in complexity_patterns:
+
+        if re.search(
+            pattern,
+            protocol,
+            flags=re.IGNORECASE,
+        ):
+            return True
+
+    return False
+
+
+# ==========================================================
+# Design description
+# ==========================================================
+
+def _build_design_description(
+    condition,
+    control,
+    treatment,
+    time_point,
+    replicate_information,
+):
+    """
+    Build a conservative natural-language description.
+    """
+
+    established = []
+
+    if condition:
+        established.append("experimental context")
+
+    if control:
+        established.append("control information")
+
+    if treatment:
+        established.append("treatment information")
+
+    if time_point:
+        established.append("time-point information")
+
+    if (
+        replicate_information
+        and "could not be established"
+        not in replicate_information.lower()
+        and "not established"
+        not in replicate_information.lower()
+    ):
+        established.append("replicate information")
+
+    if (
+        condition
+        and control
+        and treatment
+        and replicate_information
+        and "could not be established"
+        not in replicate_information.lower()
+        and "not established"
+        not in replicate_information.lower()
+    ):
+        return (
+            "The available metadata explicitly document key elements "
+            "of the experimental design, including experimental "
+            "context, treatment/control information, and replicate "
+            "structure."
+        )
+
+    if established:
+
+        return (
+            "The available metadata contain explicit experimental "
+            "design information, but the complete experimental group "
+            "structure cannot be established from the inspected "
+            "accession alone."
+        )
+
+    return (
+        "The available metadata do not provide enough information "
+        "to establish the experimental design."
+    )
+
+
+# ==========================================================
 # Main Layer 2 Function
 # ==========================================================
 
 def generate_design_insight(metadata):
     """
-    Generate an experimental design interpretation.
+    Generate an evidence-based experimental design interpretation.
 
-    Scientific policy
-    -----------------
-    The function distinguishes explicit observations from cautious
-    inference.
-
-    It does not claim:
-
-    - biological replicates
-    - experimental controls
-    - treatment groups
-    - statistical design formulas
-
-    unless sufficient metadata supports those claims.
-
-    Explicit metadata labels are recorded as observed evidence.
+    Construction protocol information is treated as observed evidence
+    when it explicitly documents a design feature.
     """
 
     insight = ExperimentalDesignInsight()
@@ -697,89 +979,170 @@ def generate_design_insight(metadata):
         "",
     )
 
+    protocol = observed.get(
+        "construction_protocol",
+        "",
+    )
+
     # ------------------------------------------------------
-    # Record observed metadata
+    # Record basic observed metadata
     # ------------------------------------------------------
 
     if title:
 
-        insight.observed_features.append(
-            f"Experiment title: {title}"
+        _append_unique(
+            insight.observed_features,
+            f"Experiment title: {title}",
         )
 
     if observed.get("library_strategy"):
 
-        insight.observed_features.append(
+        _append_unique(
+            insight.observed_features,
             "Library strategy: "
-            + observed["library_strategy"]
+            + observed["library_strategy"],
         )
 
     if observed.get("layout"):
 
-        insight.observed_features.append(
+        _append_unique(
+            insight.observed_features,
             "Sequencing layout: "
-            + observed["layout"]
+            + observed["layout"],
         )
 
     if observed.get("platform"):
 
-        insight.observed_features.append(
+        _append_unique(
+            insight.observed_features,
             "Sequencing platform: "
-            + observed["platform"]
+            + observed["platform"],
         )
 
     if observed.get("organism"):
 
-        insight.observed_features.append(
+        _append_unique(
+            insight.observed_features,
             "Organism: "
-            + observed["organism"]
+            + observed["organism"],
+        )
+
+    if protocol:
+
+        _append_unique(
+            insight.observed_features,
+            "Library construction protocol is available as an "
+            "experimental-design evidence source.",
         )
 
     # ------------------------------------------------------
-    # Condition / experimental context
+    # Condition
     # ------------------------------------------------------
 
     condition = _detect_condition(
-        title
+        title,
+        protocol,
     )
 
     if condition:
 
         insight.condition = condition
 
-        insight.inferred_features.append(
-            "The experiment title suggests an experimental "
-            "condition or context: "
-            + condition
-            + "."
-        )
+        # If the protocol independently supports the biological
+        # context, record the resulting interpretation as observed
+        # evidence rather than treating it as title-only inference.
+        protocol_support = False
+
+        if protocol:
+
+            if condition.lower() == "pathogen infection":
+
+                protocol_support = bool(
+                    re.search(
+                        r"\b(?:pathogen|pathogens)\b|"
+                        r"\binfect(?:ed|ion|ious)?\b|"
+                        r"\bstressor\b",
+                        protocol,
+                        flags=re.IGNORECASE,
+                    )
+                )
+
+            else:
+
+                protocol_support = bool(
+                    re.search(
+                        re.escape(condition),
+                        protocol,
+                        flags=re.IGNORECASE,
+                    )
+                )
+
+        if protocol_support:
+
+            _append_unique(
+                insight.observed_features,
+                "Experimental context explicitly supported by "
+                "the library construction protocol: "
+                + condition,
+            )
+
+        else:
+
+            _append_unique(
+                insight.inferred_features,
+                "The experiment title suggests an experimental "
+                "condition or context: "
+                + condition
+                + ".",
+            )
 
     # ------------------------------------------------------
     # Control
     # ------------------------------------------------------
 
     control = _detect_control(
-        title
+        title,
+        protocol,
     )
 
     if control:
 
         insight.control = control
 
-        insight.inferred_features.append(
-            "Control terminology is explicitly present "
-            "in the experiment title."
-        )
+        if protocol and re.search(
+            r"\bmock\s+(?:treatment|control)\b|"
+            r"\bvehicle\s+control\b|"
+            r"\buntreated\s+(?:control|samples?|cells?|plants?)\b",
+            protocol,
+            flags=re.IGNORECASE,
+        ):
+            _append_unique(
+                insight.observed_features,
+                "Control information explicitly documented in the "
+                "library construction protocol: "
+                + control,
+            )
+
+        else:
+
+            _append_unique(
+                insight.observed_features,
+                "Control terminology explicitly present in the "
+                "experiment title: "
+                + control,
+            )
 
     else:
 
-        insight.warnings.append(
-            "No explicit control group was identified "
-            "from the available metadata."
+        _append_unique(
+            insight.warnings,
+            "No explicit control group was identified from the "
+            "available metadata.",
         )
 
-        insight.missing_information.append(
-            "Control-group annotation"
+        _append_unique(
+            insight.missing_information,
+            "Control-group annotation",
         )
 
     # ------------------------------------------------------
@@ -787,22 +1150,43 @@ def generate_design_insight(metadata):
     # ------------------------------------------------------
 
     treatment = _detect_treatment(
-        title
+        title,
+        protocol,
     )
 
     if treatment:
 
         insight.treatment = treatment
 
-        insight.inferred_features.append(
-            "An explicit treatment relationship is present "
-            "in the experiment title."
-        )
+        if protocol:
+
+            _append_unique(
+                insight.observed_features,
+                "Treatment/intervention relationship explicitly "
+                "documented in the library construction protocol: "
+                + treatment,
+            )
+
+        else:
+
+            _append_unique(
+                insight.observed_features,
+                "Treatment relationship explicitly present in the "
+                "experiment title: "
+                + treatment,
+            )
 
     else:
 
-        insight.missing_information.append(
-            "Treatment-group annotation, if applicable"
+        _append_unique(
+            insight.warnings,
+            "No unambiguous treatment assignment was identified "
+            "from the available metadata.",
+        )
+
+        _append_unique(
+            insight.missing_information,
+            "Treatment-group annotation, if applicable",
         )
 
     # ------------------------------------------------------
@@ -810,142 +1194,219 @@ def generate_design_insight(metadata):
     # ------------------------------------------------------
 
     time_point = _detect_time_point(
-        title
+        title,
+        protocol,
     )
 
     if time_point:
 
         insight.time_point = time_point
 
-        insight.inferred_features.append(
-            "Explicit time-related information is present "
-            "in the experiment metadata."
-        )
+        if protocol:
+
+            _append_unique(
+                insight.observed_features,
+                "Sampling time information explicitly documented "
+                "in the library construction protocol: "
+                + time_point,
+            )
+
+        else:
+
+            _append_unique(
+                insight.observed_features,
+                "Time-point information explicitly present in the "
+                "experiment title: "
+                + time_point,
+            )
 
     else:
 
-        insight.missing_information.append(
-            "Time-point information, if applicable"
+        _append_unique(
+            insight.missing_information,
+            "Time-point information, if applicable",
         )
 
     # ------------------------------------------------------
     # Replicates
     # ------------------------------------------------------
 
-    insight.replicate_information = (
-        _assess_replicates(
-            metadata
-        )
-    )
-
-    replicate_text = (
-        insight.replicate_information.lower()
+    insight.replicate_information = _assess_replicates(
+        metadata
     )
 
     if (
-        "biological replicate" in replicate_text
-        and "explicitly identified" in replicate_text
+        "could not be established"
+        not in insight.replicate_information.lower()
+        and "not established"
+        not in insight.replicate_information.lower()
     ):
 
-        insight.observed_features.append(
-            "Biological replicate information is explicitly "
-            "documented in the experiment title."
-        )
+        if protocol and (
+            "protocol"
+            in insight.replicate_information.lower()
+        ):
 
-    elif (
-        "replicate " in replicate_text
-        and "explicitly identified" in replicate_text
-    ):
+            _append_unique(
+                insight.observed_features,
+                "Biological replicate information explicitly "
+                "documented in the library construction protocol.",
+            )
 
-        insight.observed_features.append(
-            "Replicate information is explicitly documented "
-            "in the experiment title."
-        )
+        else:
 
-        insight.missing_information.append(
-            "Biological versus technical replicate status"
-        )
+            _append_unique(
+                insight.observed_features,
+                "Replicate information explicitly documented in "
+                "available metadata.",
+            )
 
     else:
 
-        insight.missing_information.append(
-            "Biological replicate annotation"
+        _append_unique(
+            insight.missing_information,
+            "Biological replicate annotation",
         )
 
     # ------------------------------------------------------
-    # Design description
+    # Conservative warning
     # ------------------------------------------------------
 
-    design_features_present = any(
-        [
-            condition,
-            control,
-            treatment,
-            time_point,
-            "explicitly identified" in replicate_text,
-        ]
-    )
+    if _has_complex_design(metadata):
 
-    if design_features_present:
-
-        insight.design_description = (
-            "The available metadata contains explicit or "
-            "suggestive experimental design information, "
-            "but the complete experimental group structure "
-            "cannot be established from the inspected "
-            "accession alone."
+        _append_unique(
+            insight.warnings,
+            "The available protocol indicates a multifactorial or "
+            "sequential experimental design; complete sample-level "
+            "group assignments are not established by this accession "
+            "alone.",
         )
-
-    else:
-
-        insight.design_description = (
-            "The available metadata does not provide "
-            "enough information to establish the "
-            "experimental design."
-        )
-
-    # ------------------------------------------------------
-    # Confidence
-    # ------------------------------------------------------
 
     if (
-        condition
-        and control
-        and treatment
-        and time_point
-    ):
-
-        insight.design_confidence = (
-            "Partially characterized"
-        )
-
-    elif (
         condition
         or control
         or treatment
         or time_point
-        or "explicitly identified" in replicate_text
     ):
 
-        insight.design_confidence = (
-            "Partially characterized"
+        _append_unique(
+            insight.warnings,
+            "Experimental relationships are interpreted from "
+            "explicitly documented metadata; sample-level group "
+            "assignments should be confirmed before downstream "
+            "statistical analysis.",
         )
+
+    # ------------------------------------------------------
+    # Design confidence
+    # ------------------------------------------------------
+
+    established_count = 0
+
+    if condition:
+        established_count += 1
+
+    if control:
+        established_count += 1
+
+    if treatment:
+        established_count += 1
+
+    if time_point:
+        established_count += 1
+
+    if (
+        insight.replicate_information
+        and "could not be established"
+        not in insight.replicate_information.lower()
+        and "not established"
+        not in insight.replicate_information.lower()
+    ):
+        established_count += 1
+
+    if protocol:
+
+        # Rich protocol evidence is not equivalent to a completely
+        # resolved sample-level experimental design. In particular,
+        # unresolved treatment/control relationships should prevent
+        # the strongest confidence label.
+
+        complete_group_structure = (
+            bool(treatment)
+            and bool(control)
+            and (
+                insight.replicate_information
+                and "could not be established"
+                not in insight.replicate_information.lower()
+                and "not established"
+                not in insight.replicate_information.lower()
+            )
+        )
+
+        complex_design = _has_complex_design(metadata)
+
+        # A multifactorial/sequential protocol can contain strong
+        # evidence while still lacking sample-level group mapping.
+        # Do not call such a design "Well characterized" merely
+        # because several metadata fields were detected.
+        if (
+            established_count >= 4
+            and complete_group_structure
+            and not complex_design
+        ):
+
+            insight.design_confidence = (
+                "Well characterized"
+            )
+
+        elif established_count >= 2:
+
+            insight.design_confidence = (
+                "Substantially characterized"
+            )
+
+        elif established_count >= 1:
+
+            insight.design_confidence = (
+                "Partially characterized"
+            )
+
+        else:
+
+            insight.design_confidence = (
+                "Insufficient information"
+            )
 
     else:
 
-        insight.design_confidence = (
-            "Insufficient information"
-        )
+        if established_count >= 3:
+
+            insight.design_confidence = (
+                "Substantially characterized"
+            )
+
+        elif established_count >= 1:
+
+            insight.design_confidence = (
+                "Partially characterized"
+            )
+
+        else:
+
+            insight.design_confidence = (
+                "Insufficient information"
+            )
 
     # ------------------------------------------------------
-    # Final warning
+    # Description
     # ------------------------------------------------------
 
-    insight.warnings.append(
-        "Experimental relationships are interpreted "
-        "conservatively and should be confirmed using "
-        "sample-level metadata before downstream "
-        "statistical analysis."
+    insight.design_description = _build_design_description(
+        condition,
+        control,
+        treatment,
+        time_point,
+        insight.replicate_information,
     )
 
     return insight
