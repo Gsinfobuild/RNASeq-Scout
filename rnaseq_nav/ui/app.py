@@ -313,6 +313,106 @@ st.markdown(
 # ==========================================================
 
 from rnaseq_nav import RNASeqNavigator
+from rnaseq_nav.usage.tracker import UsageTracker
+
+
+# ==========================================================
+# Experimental Design UI Helpers
+# ==========================================================
+
+def _design_evidence_status(value):
+    """
+    Convert a Layer 2 design value into a conservative
+    presentation status.
+
+    The GUI must not invent evidence states that are not
+    represented by the backend. A populated design field
+    therefore receives the neutral status
+    'Established from available metadata', while an empty
+    field is explicitly shown as 'Not established'.
+    """
+
+    value = clean_ui_value(value)
+
+    if not value or value == "—":
+        return "Not established"
+
+    return "Established from available metadata"
+
+
+def _render_design_card(
+    label,
+    value,
+    *,
+    long=False,
+):
+    """
+    Render one experimental-design finding together with
+    its evidence status.
+
+    This is presentation-only. It does not perform any
+    scientific inference.
+    """
+
+    display_value = clean_ui_value(value)
+
+    if not display_value:
+        display_value = "Not established"
+
+    status = _design_evidence_status(
+        value
+    )
+
+    value_html = escape(
+        display_value,
+        quote=True,
+    )
+
+    status_html = escape(
+        status,
+        quote=True,
+    )
+
+    height = "118px" if long else "108px"
+
+    st.html(
+        f"""
+<div style="
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+    background: #ffffff;
+    min-height: {height};
+    box-sizing: border-box;
+">
+    <div style="
+        font-size: 0.78rem;
+        color: #58708f;
+        margin-bottom: 7px;
+    ">
+        {escape(label, quote=True)}
+    </div>
+
+    <div style="
+        font-size: 1.02rem;
+        font-weight: 650;
+        color: #102a56;
+        line-height: 1.35;
+        margin-bottom: 9px;
+    ">
+        {value_html}
+    </div>
+
+    <div style="
+        font-size: 0.73rem;
+        color: #58708f;
+    ">
+        Evidence status: <strong>{status_html}</strong>
+    </div>
+</div>
+        """
+    )
 
 
 # ==========================================================
@@ -793,6 +893,49 @@ st.markdown(
         font-style: italic;
         text-align: right;
     }
+
+    /* ======================================================
+       USAGE TRACKER
+       ====================================================== */
+
+    .rna-usage-tracker {
+        position: fixed;
+        left: 18px;
+        bottom: 18px;
+        z-index: 999999;
+        padding: 9px 13px;
+        border: 1px solid #d8e5f2;
+        border-radius: 9px;
+        background: rgba(255, 255, 255, 0.96);
+        box-shadow: 0 2px 10px rgba(24, 66, 108, 0.12);
+        color: #31527b;
+        font-size: 0.78rem;
+        line-height: 1.4;
+        pointer-events: none;
+        backdrop-filter: blur(5px);
+    }
+
+    .rna-usage-dot {
+        display: inline-block;
+        width: 7px;
+        height: 7px;
+        margin-right: 6px;
+        border-radius: 50%;
+        background: #348545;
+        vertical-align: middle;
+    }
+
+    .rna-usage-count {
+        color: #102a56;
+        font-weight: 700;
+    }
+
+    .rna-usage-sub {
+        margin-left: 13px;
+        color: #58708f;
+        font-size: 0.72rem;
+    }
+
 
     /* ======================================================
        RESPONSIVE
@@ -2046,71 +2189,90 @@ def build_pdf(
 
         render_section_title(
             "Experimental Design",
-            "Interpretation of the experimental structure supported by the available metadata.",
+            "Experimental structure established from the available metadata.",
         )
+
+        condition = get_value(
+            design_insight,
+            "condition",
+            "",
+        )
+
+        control = get_value(
+            design_insight,
+            "control",
+            "",
+        )
+
+        treatment = get_value(
+            design_insight,
+            "treatment",
+            "",
+        )
+
+        time_point = get_value(
+            design_insight,
+            "time_point",
+            "",
+        )
+
+        replicate_information = get_value(
+            design_insight,
+            "replicate_information",
+            "",
+        )
+
+        # --------------------------------------------------
+        # Primary design findings
+        # --------------------------------------------------
 
         col1, col2, col3 = st.columns(3)
 
         with col1:
-
-            render_field(
+            _render_design_card(
                 "Condition",
-                get_value(
-                    design_insight,
-                    "condition",
-                ),
+                condition,
                 long=True,
             )
 
         with col2:
-
-            render_field(
+            _render_design_card(
                 "Control",
-                get_value(
-                    design_insight,
-                    "control",
-                ),
+                control,
                 long=True,
             )
 
         with col3:
-
-            render_field(
+            _render_design_card(
                 "Treatment",
-                get_value(
-                    design_insight,
-                    "treatment",
-                ),
+                treatment,
                 long=True,
             )
 
         col1, col2 = st.columns(2)
 
         with col1:
-
-            render_field(
+            _render_design_card(
                 "Time point",
-                get_value(
-                    design_insight,
-                    "time_point",
-                ),
+                time_point,
             )
 
         with col2:
-
-            render_field(
+            _render_design_card(
                 "Replicate information",
-                get_value(
-                    design_insight,
-                    "replicate_information",
-                ),
+                replicate_information,
                 long=True,
             )
+
+        # --------------------------------------------------
+        # Overall design confidence
+        # --------------------------------------------------
 
         design_confidence = clean_ui_value(
             get_value(
                 design_insight,
                 "design_confidence",
+                "",
             )
         )
 
@@ -2118,6 +2280,10 @@ def build_pdf(
             "Design confidence",
             design_confidence,
         )
+
+        # --------------------------------------------------
+        # Interpretation
+        # --------------------------------------------------
 
         design_description = get_value(
             design_insight,
@@ -2140,6 +2306,10 @@ def build_pdf(
                 unsafe_allow_html=True,
             )
 
+        # --------------------------------------------------
+        # Warnings
+        # --------------------------------------------------
+
         warnings = get_value(
             design_insight,
             "warnings",
@@ -2159,6 +2329,10 @@ def build_pdf(
                     unsafe_allow_html=True,
                 )
 
+        # --------------------------------------------------
+        # Missing information
+        # --------------------------------------------------
+
         missing_information = get_value(
             design_insight,
             "missing_information",
@@ -2168,7 +2342,7 @@ def build_pdf(
         if missing_information:
 
             st.subheader(
-                "Missing information"
+                "Information not established"
             )
 
             for item in missing_information:
@@ -2177,7 +2351,6 @@ def build_pdf(
                     f"- {escape(clean_ui_value(item))}",
                     unsafe_allow_html=True,
                 )
-
 
     # ======================================================
     # Dataset Suitability
@@ -3315,6 +3488,13 @@ NCBI_EMAIL = os.environ.get(
 
 
 # ==========================================================
+# Usage Tracking
+# ==========================================================
+
+usage_tracker = UsageTracker()
+
+
+# ==========================================================
 # Inspect Button
 # ==========================================================
 
@@ -3399,6 +3579,11 @@ if inspect_clicked:
     # Success
     # ------------------------------------------------------
 
+    usage_tracker.record_success(
+        accession
+    )
+
+
     st.success(
         f"Dataset information retrieved for {accession}"
     )
@@ -3430,6 +3615,10 @@ if inspect_clicked:
     # ------------------------------------------------------
     # Accession handling
     # ------------------------------------------------------
+    #
+    # Keep accession types semantically distinct.
+    # An experiment accession must never be displayed as a run.
+    # ------------------------------------------------------
 
     run = get_value(
         report,
@@ -3437,29 +3626,57 @@ if inspect_clicked:
         None,
     )
 
-    if run is None:
-        run = get_value(
-            report,
-            "experiment",
-            accession,
-        )
-
-
     study = get_value(
         report,
         "study",
+        None,
     )
 
     experiment = get_value(
         report,
         "experiment",
+        None,
     )
 
     organism = get_value(
         report,
         "organism",
+        None,
     )
 
+    project = get_value(
+        report,
+        "project",
+        None,
+    )
+
+
+    # ------------------------------------------------------
+    # Accession-aware overview
+    # ------------------------------------------------------
+    #
+    # The overview reflects the type of accession supplied
+    # by the user. Accession types are never substituted for
+    # one another.
+    # ------------------------------------------------------
+
+    accession_upper = accession.strip().upper()
+
+    if accession_upper.startswith(("SRX", "ERX", "DRX")):
+        primary_label = "Experiment"
+        primary_value = experiment
+    elif accession_upper.startswith(("SRR", "ERR", "DRR")):
+        primary_label = "Run"
+        primary_value = run
+    elif accession_upper.startswith(("SRP", "ERP", "DRP")):
+        primary_label = "Study"
+        primary_value = study
+    elif accession_upper.startswith(("PRJNA", "PRJEB", "PRJDB")):
+        primary_label = "Project"
+        primary_value = project
+    else:
+        primary_label = "Accession"
+        primary_value = accession
 
     col1, col2, col3, col4 = st.columns(4)
 
@@ -3467,8 +3684,8 @@ if inspect_clicked:
     with col1:
 
         st.metric(
-            "Run",
-            clean_ui_value(run),
+            primary_label,
+            clean_ui_value(primary_value),
         )
 
 
@@ -3483,8 +3700,8 @@ if inspect_clicked:
     with col3:
 
         st.metric(
-            "Experiment",
-            clean_ui_value(experiment),
+            "BioProject",
+            clean_ui_value(project),
         )
 
 
@@ -3502,12 +3719,6 @@ if inspect_clicked:
 
     render_section_title(
         "Dataset Identity"
-    )
-
-
-    project = get_value(
-        report,
-        "project",
     )
 
 
@@ -3537,8 +3748,8 @@ if inspect_clicked:
     with col1:
 
         render_field(
-            "Input / Run accession",
-            run,
+            "Input accession",
+            accession,
             accession=True,
         )
 
@@ -3569,10 +3780,13 @@ if inspect_clicked:
             accession=True,
         )
 
-        render_field(
-            "Organism",
-            organism,
-        )
+        if run:
+
+            render_field(
+                "Run accession",
+                run,
+                accession=True,
+            )
 
 
     # ======================================================
@@ -4229,6 +4443,36 @@ else:
         "Enter an SRA accession above and click "
         "'Inspect Dataset' to begin."
     )
+
+
+# ==========================================================
+# Usage Tracker Display
+# ==========================================================
+
+usage_summary = usage_tracker.summary()
+
+total_checks = usage_summary[
+    "total_checks"
+]
+
+unique_accessions = usage_summary[
+    "unique_accessions"
+]
+
+render_html(
+    f"""
+<div class="rna-usage-tracker">
+    <span class="rna-usage-dot"></span>
+    <span class="rna-usage-count">
+        {format_number(total_checks)}
+    </span>
+    accessions checked
+    <div class="rna-usage-sub">
+        {format_number(unique_accessions)} unique
+    </div>
+</div>
+    """
+)
 
 
 # ==========================================================
