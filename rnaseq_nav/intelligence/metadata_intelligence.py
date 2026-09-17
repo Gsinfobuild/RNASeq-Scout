@@ -42,7 +42,10 @@ def infer_biological_system(metadata):
     return "Not specified"
 
 
-def infer_experimental_focus(metadata):
+def infer_experimental_focus(
+    metadata,
+    modality_insight=None,
+):
     experiment = getattr(
         metadata,
         "experiment",
@@ -66,7 +69,56 @@ def infer_experimental_focus(metadata):
             "library_strategy",
             "",
         )
-    )
+    ).upper()
+
+    # --------------------------------------------------------
+    # Structured modality evidence takes precedence
+    # --------------------------------------------------------
+    #
+    # When an explicit modality classification exists, do not
+    # allow a contradictory experiment title to redefine the
+    # sequencing modality.
+    #
+
+    if modality_insight is not None:
+        modality = _clean(
+            getattr(
+                modality_insight,
+                "modality",
+                "",
+            )
+        )
+
+        compatibility = getattr(
+            modality_insight,
+            "rna_seq_compatible",
+            None,
+        )
+
+        if (
+            modality
+            and modality != "RNA-seq"
+            and compatibility is False
+        ):
+            return modality
+
+    # --------------------------------------------------------
+    # Explicit RNA-seq
+    # --------------------------------------------------------
+
+    if strategy == "RNA_SEQ":
+        if title:
+            return title
+
+        return "RNA-seq"
+
+    # --------------------------------------------------------
+    # No established modality
+    # --------------------------------------------------------
+    #
+    # Preserve the previous conservative fallback when the
+    # modality layer is unavailable or the strategy is unknown.
+    #
 
     if title:
         return title
@@ -154,12 +206,29 @@ def build_sequencing_summary(metadata):
 def generate_metadata_insight(
     metadata,
     study_type="",
+    modality_insight=None,
 ):
     """
     Generate a biological interpretation from normalized metadata.
 
-    This layer intentionally does not claim experimental relationships
-    that are not explicitly represented in the available metadata.
+    Parameters
+    ----------
+    metadata
+        Normalized dataset metadata.
+
+    study_type
+        Optional study-level classification.
+
+    modality_insight
+        Optional result from the Modality / Workflow Intelligence
+        layer. When supplied, explicit modality evidence is given
+        precedence over contradictory free-text experiment titles.
+
+    Notes
+    -----
+    This layer does not modify source-derived metadata and does not
+    claim experimental relationships that are not explicitly
+    represented in the available metadata.
     """
 
     insight = MetadataInsight()
@@ -175,7 +244,10 @@ def generate_metadata_insight(
     insight.biological_system = insight.organism
 
     insight.experimental_focus = (
-        infer_experimental_focus(metadata)
+        infer_experimental_focus(
+            metadata,
+            modality_insight=modality_insight,
+        )
     )
 
     insight.sequencing_summary = (

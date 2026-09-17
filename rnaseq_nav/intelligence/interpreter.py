@@ -51,7 +51,7 @@ class DatasetInterpreter:
 
     # -----------------------------------------------------
 
-    def describe(self, metadata):
+    def describe(self, metadata, modality_insight=None):
 
         description = DatasetDescription()
 
@@ -120,17 +120,30 @@ class DatasetInterpreter:
                 "ends of each fragment were sequenced."
             )
 
-            description.strengths.append(
+            # Paired-end layout alone does not establish an
+            # RNA-seq expression experiment. RNA-seq-specific
+            # benefits must therefore only be reported when
+            # modality intelligence explicitly identifies
+            # conventional RNA-seq.
 
-                "Improved alignment accuracy"
+            rna_seq_compatible = None
 
-            )
+            if modality_insight is not None:
+                rna_seq_compatible = getattr(
+                    modality_insight,
+                    "rna_seq_compatible",
+                    None,
+                )
 
-            description.strengths.append(
+            if rna_seq_compatible is True:
 
-                "Better transcript quantification"
+                description.strengths.append(
+                    "Improved alignment accuracy"
+                )
 
-            )
+                description.strengths.append(
+                    "Better transcript quantification"
+                )
 
         else:
 
@@ -200,6 +213,14 @@ class DatasetInterpreter:
         # Summary
         # -------------------------------------------------
 
+        if metadata.experiment.layout == "PAIRED":
+
+            layout_summary = "paired-end reads"
+
+        else:
+
+            layout_summary = "single-end reads"
+
         description.summary = (
 
             f"This dataset contains "
@@ -210,11 +231,9 @@ class DatasetInterpreter:
 
             f"{description.organism}. "
 
-            f"The sequencing experiment used "
+            f"The sequencing experiment generated "
 
-            f"{metadata.experiment.layout.lower()} "
-
-            f"libraries on the "
+            f"{layout_summary} on the "
 
             f"{platform} platform."
 

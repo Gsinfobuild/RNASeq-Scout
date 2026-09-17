@@ -325,16 +325,43 @@ def _design_evidence_status(value):
     Convert a Layer 2 design value into a conservative
     presentation status.
 
-    The GUI must not invent evidence states that are not
-    represented by the backend. A populated design field
-    therefore receives the neutral status
-    'Established from available metadata', while an empty
-    field is explicitly shown as 'Not established'.
+    The UI must distinguish between:
+        1. explicitly established evidence,
+        2. explicitly unresolved / not-established information,
+        3. empty information.
+
+    A non-empty explanatory sentence is NOT automatically
+    evidence. For example:
+
+        "Replicate structure could not be established..."
+
+    must remain "Not established".
     """
 
     value = clean_ui_value(value)
 
     if not value or value == "—":
+        return "Not established"
+
+    normalized = value.strip().lower()
+
+    not_established_patterns = (
+        "could not be established",
+        "cannot be established",
+        "can not be established",
+        "not established",
+        "unable to establish",
+        "insufficient information",
+        "not available",
+        "not specified",
+        "unknown",
+        "no information",
+    )
+
+    if any(
+        pattern in normalized
+        for pattern in not_established_patterns
+    ):
         return "Not established"
 
     return "Established from available metadata"
@@ -2187,9 +2214,38 @@ def build_pdf(
 
     if design_insight is not None:
 
+        design_confidence = clean_ui_value(
+            get_value(
+                design_insight,
+                "design_confidence",
+                "",
+            )
+        )
+
+        if design_confidence == "Well characterized":
+            design_subtitle = (
+                "Key elements of the experimental structure are "
+                "established from the available metadata."
+            )
+        elif design_confidence == "Partially characterized":
+            design_subtitle = (
+                "Some elements of the experimental structure are "
+                "established, but the design is incomplete."
+            )
+        elif design_confidence == "Insufficient information":
+            design_subtitle = (
+                "The available metadata are insufficient to establish "
+                "the experimental structure."
+            )
+        else:
+            design_subtitle = (
+                "Experimental structure interpreted from the "
+                "available metadata."
+            )
+
         render_section_title(
             "Experimental Design",
-            "Experimental structure established from the available metadata.",
+            design_subtitle,
         )
 
         condition = get_value(
@@ -2267,14 +2323,6 @@ def build_pdf(
         # --------------------------------------------------
         # Overall design confidence
         # --------------------------------------------------
-
-        design_confidence = clean_ui_value(
-            get_value(
-                design_insight,
-                "design_confidence",
-                "",
-            )
-        )
 
         st.metric(
             "Design confidence",

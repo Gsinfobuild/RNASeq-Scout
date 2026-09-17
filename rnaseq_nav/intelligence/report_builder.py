@@ -100,10 +100,7 @@ class DatasetReportBuilder:
         # Identity
         # ------------------------------------------
 
-        report.run = (
-           metadata.run.accession
-           or metadata.experiment.accession
-        )
+        report.run = metadata.run.accession
 
         report.experiment = metadata.experiment.accession
 

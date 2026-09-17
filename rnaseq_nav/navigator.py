@@ -463,23 +463,32 @@ class RNASeqNavigator:
 
             # ------------------------------------------------
             # Step 6
-            # Metadata Intelligence
+            # Modality / Workflow Intelligence
             # ------------------------------------------------
+            #
+            # Establish sequencing modality from structured
+            # library metadata before generating higher-level
+            # biological interpretation.
 
-            metadata_insight = (
-                generate_metadata_insight(
+            modality_insight = (
+                generate_modality_insight(
                     normalized_metadata,
                 )
             )
 
             # ------------------------------------------------
             # Step 7
-            # Modality / Workflow Intelligence
+            # Metadata Intelligence
             # ------------------------------------------------
+            #
+            # Metadata interpretation can use the established
+            # modality to avoid allowing contradictory free-text
+            # titles to override structured sequencing evidence.
 
-            modality_insight = (
-                generate_modality_insight(
+            metadata_insight = (
+                generate_metadata_insight(
                     normalized_metadata,
+                    modality_insight=modality_insight,
                 )
             )
 
@@ -552,7 +561,8 @@ class RNASeqNavigator:
 
             description = (
                 self.interpreter.describe(
-                    normalized_metadata
+                    normalized_metadata,
+                    modality_insight=modality_insight,
                 )
             )
 

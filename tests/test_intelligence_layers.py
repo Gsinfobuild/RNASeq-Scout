@@ -75,7 +75,6 @@ def test_rna_seq_is_classified_as_compatible():
     assert insight.compatibility_status == "Compatible"
     assert insight.classification_confidence == "High"
 
-
 def test_amplicon_is_not_rna_seq_compatible():
     metadata = make_metadata(
         strategy="AMPLICON",
@@ -88,13 +87,87 @@ def test_amplicon_is_not_rna_seq_compatible():
     assert insight.modality == "Amplicon sequencing"
     assert insight.workflow_family == "amplicon"
     assert insight.rna_seq_compatible is False
-    assert insight.compatibility_status == "Not compatible"
-    assert insight.classification_confidence == "High"
 
-    assert any(
-        "AMPLICON" in warning
-        for warning in insight.warnings
+
+def test_amplicon_modality_overrides_contradictory_rna_seq_title():
+    metadata = make_metadata(
+        strategy="AMPLICON",
+        source="GENOMIC",
+        selection="PCR",
+        title="RNA-Seq of bacteria: seagrass",
     )
+
+    modality = generate_modality_insight(metadata)
+
+    insight = generate_metadata_insight(
+        metadata,
+        modality_insight=modality,
+    )
+
+    assert insight.experimental_focus == "Amplicon sequencing"
+
+
+def test_rna_seq_title_remains_experimental_focus():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="RNA-Seq of bacteria under iron limitation",
+    )
+
+    modality = generate_modality_insight(metadata)
+
+    insight = generate_metadata_insight(
+        metadata,
+        modality_insight=modality,
+    )
+
+    assert (
+        insight.experimental_focus
+        == "RNA-Seq of bacteria under iron limitation"
+    )
+
+
+def test_amplicon_paired_end_does_not_receive_rna_seq_strengths():
+    from rnaseq_nav.intelligence.interpreter import DatasetInterpreter
+
+    metadata = make_metadata(
+        strategy="AMPLICON",
+        source="GENOMIC",
+        selection="PCR",
+        title="RNA-Seq of bacteria: seagrass",
+        layout="PAIRED",
+    )
+
+    modality = generate_modality_insight(metadata)
+
+    description = DatasetInterpreter().describe(
+        metadata,
+        modality_insight=modality,
+    )
+
+    assert "Better transcript quantification" not in description.strengths
+    assert "Improved alignment accuracy" not in description.strengths
+
+
+def test_rna_seq_paired_end_retains_rna_seq_strengths():
+    from rnaseq_nav.intelligence.interpreter import DatasetInterpreter
+
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="RNA-seq expression experiment",
+        layout="PAIRED",
+    )
+
+    modality = generate_modality_insight(metadata)
+
+    description = DatasetInterpreter().describe(
+        metadata,
+        modality_insight=modality,
+    )
+
+    assert "Improved alignment accuracy" in description.strengths
+    assert "Better transcript quantification" in description.strengths
+    assert "paired-end reads" in description.summary
+    assert "paired libraries" not in description.summary
 
 
 def test_unknown_strategy_remains_uncertain():

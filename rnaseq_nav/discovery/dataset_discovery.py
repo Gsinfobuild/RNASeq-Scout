@@ -80,7 +80,12 @@ class DatasetDiscovery:
 
         summary = self.client.fetch(accession)
 
-        return self.parser.parse(summary)
+        record = summary[0]
+
+        return self.parser.parse(
+            record["ExpXml"],
+            record["Runs"],
+        )
 
     # ---------------------------------------------------------
     # Study-level retrieval
