@@ -213,7 +213,10 @@ class MetadataValidator:
         # Statistics
         # --------------------------------------------------
 
-        if metadata.run.total_spots <= 0:
+        if (
+            metadata.run.total_spots is None
+            or metadata.run.total_spots <= 0
+        ):
 
             issues.append(
 
@@ -231,7 +234,10 @@ class MetadataValidator:
 
             )
 
-        if metadata.run.total_bases <= 0:
+        if (
+            metadata.run.total_bases is None
+            or metadata.run.total_bases <= 0
+        ):
 
             issues.append(
 
