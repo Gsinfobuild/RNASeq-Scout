@@ -658,7 +658,10 @@ def generate_suitability_insight(
     # Layer 2 integration
     # ======================================================
 
-    if design_insight is not None:
+    if (
+        design_insight is not None
+        and compatibility == "compatible"
+    ):
 
         # --------------------------------------------------
         # Experimental condition
@@ -825,7 +828,7 @@ def generate_suitability_insight(
                     "Biological replicate annotation"
                 )
 
-    else:
+    elif compatibility == "compatible":
 
         insight.warnings.append(
             "Experimental design information has not "

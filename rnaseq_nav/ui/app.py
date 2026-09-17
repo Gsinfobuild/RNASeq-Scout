@@ -2163,6 +2163,42 @@ def build_pdf(
                 unsafe_allow_html=True,
             )
 
+        # --------------------------------------------------
+        # Metadata consistency
+        # --------------------------------------------------
+        #
+        # A structured library strategy remains authoritative
+        # for modality classification. If the experiment title
+        # contains contradictory assay terminology, surface that
+        # inconsistency explicitly without modifying the source
+        # title or suitability score.
+
+        title_strategy_conflict = get_value(
+            modality_insight,
+            "title_strategy_conflict",
+            False,
+        )
+
+        conflict_description = get_value(
+            modality_insight,
+            "title_conflict_description",
+            "",
+        )
+
+        if title_strategy_conflict:
+            st.subheader(
+                "Metadata consistency"
+            )
+
+            st.warning(
+                clean_ui_value(
+                    conflict_description
+                )
+                + " "
+                + "Structured library strategy is used for "
+                + "modality classification."
+            )
+
         observed_evidence = get_value(
             modality_insight,
             "observed_evidence",

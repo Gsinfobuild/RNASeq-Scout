@@ -306,6 +306,65 @@ def test_amplicon_is_not_suitable_for_rna_seq():
     assert suitability.score == 0
 
 
+def test_incompatible_modality_does_not_report_rna_seq_design_gaps():
+    metadata = make_metadata(
+        strategy="AMPLICON",
+        source="GENOMIC",
+        selection="PCR",
+    )
+
+    modality = generate_modality_insight(metadata)
+    design = generate_design_insight(metadata)
+
+    suitability = generate_suitability_insight(
+        metadata,
+        design_insight=design,
+        modality_insight=modality,
+    )
+
+    assert (
+        suitability.overall
+        == "Not suitable for RNA-seq analysis"
+    )
+
+    assert suitability.score == 0
+
+    assert any(
+        "Amplicon sequencing" in item
+        for item in suitability.warnings
+    )
+
+    assert not any(
+        "control group" in item.lower()
+        for item in suitability.warnings
+    )
+
+    assert not any(
+        "treatment group" in item.lower()
+        for item in suitability.warnings
+    )
+
+    assert not any(
+        "replicate" in item.lower()
+        for item in suitability.warnings
+    )
+
+    assert not any(
+        "control" in item.lower()
+        for item in suitability.missing_information
+    )
+
+    assert not any(
+        "treatment" in item.lower()
+        for item in suitability.missing_information
+    )
+
+    assert not any(
+        "replicate" in item.lower()
+        for item in suitability.missing_information
+    )
+
+
 def test_suitability_recognizes_run_evidence_without_run_accession():
     metadata = make_metadata(
         strategy="RNA_SEQ",
@@ -1219,3 +1278,16 @@ def test_study_landscape_classifies_hic_strategy():
     assert landscape.assay_family_counts["Hi-C"] == 1
     assert landscape.observed_assay_families == ["Hi-C"]
     assert landscape.warnings == []
+
+
+def test_modality_ui_surfaces_metadata_consistency_conflict():
+    from pathlib import Path
+
+    ui_source = Path(
+        "rnaseq_nav/ui/app.py"
+    ).read_text()
+
+    assert '"Metadata consistency"' in ui_source
+    assert "title_strategy_conflict" in ui_source
+    assert "title_conflict_description" in ui_source
+    assert "Structured library strategy is used for" in ui_source

@@ -37,6 +37,14 @@ class ModalityInsight:
     warnings: List[str] = field(default_factory=list)
     rationale: str = ""
 
+    # Metadata-consistency assessment.
+    #
+    # These fields record disagreement between structured sequencing
+    # metadata and free-text experiment titles without changing the
+    # source-derived metadata itself.
+    title_strategy_conflict: bool = False
+    title_conflict_description: str = ""
+
 
 def _clean(value) -> str:
     if value is None:
@@ -103,6 +111,84 @@ def _selection(metadata) -> str:
     ).upper()
 
 
+def _title(metadata) -> str:
+    """
+    Retrieve the raw experiment title without modifying it.
+    """
+
+    experiment = _get_experiment(metadata)
+
+    if experiment is None:
+        return ""
+
+    return _clean(
+        getattr(
+            experiment,
+            "title",
+            "",
+        )
+    )
+
+
+def _title_suggests_rna_seq(title: str) -> bool:
+    """
+    Detect explicit RNA-seq terminology in an experiment title.
+
+    This helper intentionally uses narrow, explicit terminology.
+    It does not infer RNA-seq from general biological language.
+    """
+
+    normalized = _clean(title).lower()
+
+    if not normalized:
+        return False
+
+    indicators = (
+        "rna-seq",
+        "rna seq",
+        "rnaseq",
+        "transcriptome sequencing",
+    )
+
+    return any(
+        indicator in normalized
+        for indicator in indicators
+    )
+
+
+def _detect_title_strategy_conflict(
+    strategy: str,
+    title: str,
+):
+    """
+    Detect a direct conflict between structured library strategy
+    and explicit RNA-seq wording in the experiment title.
+
+    The structured library strategy remains authoritative.
+
+    Returns
+    -------
+    tuple[bool, str]
+        Conflict flag and human-readable description.
+    """
+
+    if not strategy or not title:
+        return False, ""
+
+    if strategy == "RNA_SEQ":
+        return False, ""
+
+    if not _title_suggests_rna_seq(title):
+        return False, ""
+
+    description = (
+        f"Experiment title contains RNA-seq wording, but the "
+        f"structured library strategy is {strategy}."
+    )
+
+    return True, description
+
+
 def generate_modality_insight(metadata) -> ModalityInsight:
     """
     Classify the sequencing modality from explicit experiment metadata.
@@ -116,12 +202,28 @@ def generate_modality_insight(metadata) -> ModalityInsight:
     strategy = _strategy(metadata)
     source = _source(metadata)
     selection = _selection(metadata)
+    title = _title(metadata)
 
     result = ModalityInsight(
         library_strategy=strategy,
         library_source=source,
         library_selection=selection,
     )
+
+    (
+        result.title_strategy_conflict,
+        result.title_conflict_description,
+    ) = _detect_title_strategy_conflict(
+        strategy,
+        title,
+    )
+
+    if result.title_strategy_conflict:
+        result.warnings.append(
+            result.title_conflict_description
+            + " Structured library strategy is used for "
+            "modality classification."
+        )
 
     if strategy:
         result.observed_evidence.append(
