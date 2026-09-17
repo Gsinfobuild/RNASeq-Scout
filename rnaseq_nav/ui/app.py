@@ -2442,9 +2442,16 @@ def build_pdf(
         with col2:
 
             st.metric(
-                "Suitability score",
+                "Evidence strength (0–3)",
                 clean_ui_value(score),
             )
+
+        st.caption(
+            "Evidence strength reflects how much metadata supports "
+            "the RNA-seq suitability assessment. It is not a "
+            "percentage and should not be compared directly with "
+            "the metadata validation score."
+        )
 
         rationale = get_value(
             suitability_insight,

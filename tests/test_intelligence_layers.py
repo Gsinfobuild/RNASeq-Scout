@@ -170,6 +170,16 @@ def test_rna_seq_paired_end_retains_rna_seq_strengths():
     assert "paired libraries" not in description.summary
 
 
+def test_suitability_ui_uses_evidence_strength_label():
+    from pathlib import Path
+
+    ui_source = Path("rnaseq_nav/ui/app.py").read_text()
+
+    assert '"Evidence strength (0–3)"' in ui_source
+    assert '"Suitability score"' not in ui_source
+    assert "should not be compared directly with" in ui_source
+
+
 def test_unknown_strategy_remains_uncertain():
     metadata = make_metadata(strategy="")
 
