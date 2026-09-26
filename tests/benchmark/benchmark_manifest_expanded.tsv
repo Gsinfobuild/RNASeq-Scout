@@ -1,0 +1,35 @@
+accession	source	modality	rna_seq_compatible	library_strategy	layout	organism	condition	control	treatment	time_point	replicate_status	design_confidence	suitability	reanalysis_readiness	curation_basis	curator_notes
+SRR17730393	NCBI SRA	RNA-seq	True	RNA-Seq	PAIRED	Mycobacterium tuberculosis H37Rv	detergent stress				Not established	Not established	Not yet evaluated	Not yet evaluated	NCBI experiment XML	Structured RNA-Seq strategy, transcriptomic source, paired layout, and RNA-seq design description independently establish conventional RNA-seq compatibility. Complete sample-level control/replicate structure is not established from this single run record.
+SRR1039508	NCBI SRA	RNA-seq	True	RNA-Seq	PAIRED	Homo sapiens					Not established	Not established	Not yet evaluated	Not yet evaluated	NCBI SRA experiment metadata	Structured RNA-Seq strategy and transcriptomic source establish conventional RNA-seq compatibility; design fields require separate assessment.
+SRR5127200	NCBI SRA	Specialized RNA sequencing	False	miRNA-Seq	SINGLE						Not applicable	Not applicable	Not suitable	Not applicable	NCBI SRA experiment metadata	Structured miRNA-Seq strategy identifies a specialized RNA sequencing assay rather than conventional bulk RNA-seq.
+SRR17731267	NCBI SRA	Amplicon sequencing	False	AMPLICON	PAIRED	soil metagenome			Acidification	Day30	Partial evidence: biological replicate 2	Not established	Not suitable	Not applicable	NCBI SRA experiment XML	Structured AMPLICON strategy, GENOMIC source, and PCR selection override the contradictory RNA-Seq wording in the experiment title. The BioSample contains a biological replicate attribute, but this single run does not establish the complete replicate structure.
+SRR35754973	NCBI SRA	Whole-genome sequencing	False	WGS	PAIRED						Not applicable	Not applicable	Not suitable	Not applicable	NCBI SRA experiment metadata	Structured WGS strategy establishes whole-genome sequencing rather than RNA-seq.
+SRR29888391	NCBI SRA	Whole-exome sequencing	False	WXS	PAIRED						Not applicable	Not applicable	Not suitable	Not applicable	NCBI SRA experiment metadata	Structured WXS strategy establishes exome sequencing rather than RNA-seq.
+SRR492446	NCBI SRA	ChIP-seq	False	ChIP-Seq	SINGLE						Not applicable	Not applicable	Not suitable	Not applicable	NCBI SRA experiment metadata	Structured ChIP-Seq strategy and ChIP selection establish chromatin immunoprecipitation sequencing rather than RNA-seq.
+SRR13772342	NCBI SRA	ATAC-seq	False	ATAC-seq	PAIRED						Not applicable	Not applicable	Not suitable	Not applicable	NCBI SRA experiment metadata	Structured ATAC-seq strategy establishes chromatin-accessibility sequencing rather than RNA-seq.
+SRR3224768	NCBI SRA	RNA-seq	True	RNA-Seq	SINGLE	Hypophthalmichthys nobilis x Hypophthalmichthys molitrix									NCBI SRA structured metadata	RNA-Seq / TRANSCRIPTOMIC
+SRR14038193	NCBI SRA	RNA-seq	True	RNA-Seq	SINGLE	Homo sapiens									NCBI SRA structured metadata	RNA-Seq / TRANSCRIPTOMIC; whole-transcriptome Iso-Seq
+SRR30774952	NCBI SRA	RNA-seq	True	RNA-Seq	PAIRED	Homo sapiens									NCBI SRA structured metadata	RNA-Seq / TRANSCRIPTOMIC
+SRR35629969	NCBI SRA	RNA-seq	True	RNA-Seq	PAIRED	Mus musculus									NCBI SRA structured metadata	RNA-Seq / TRANSCRIPTOMIC
+SRR22463070	NCBI SRA	RNA-seq	True	RNA-Seq	PAIRED	Mus musculus									NCBI SRA structured metadata	RNA-Seq / TRANSCRIPTOMIC
+SRR10409581	NCBI SRA	RNA-seq	True	RNA-Seq	PAIRED	Mus musculus									NCBI SRA structured metadata	RNA-Seq / TRANSCRIPTOMIC; single-cell experiment
+SRR2096260	NCBI SRA	RNA-seq	True	RNA-Seq	PAIRED	Mycobacterium tuberculosis H37Rv									NCBI SRA structured metadata	RNA-Seq / TRANSCRIPTOMIC
+SRR11411692	NCBI SRA	RNA-seq	True	RNA-Seq	PAIRED	Homo sapiens									NCBI SRA structured metadata	RNA-Seq / TRANSCRIPTOMIC
+SRR13199083	NCBI SRA	RNA-seq	True	RNA-Seq	PAIRED	Homo sapiens									NCBI SRA structured metadata	RNA-Seq / TRANSCRIPTOMIC SINGLE CELL
+SRR25528771	NCBI SRA	RNA-seq	True	RNA-Seq	PAIRED	Homo sapiens									NCBI SRA structured metadata	RNA-Seq / TRANSCRIPTOMIC SINGLE CELL
+SRR5127206	NCBI SRA	Specialized RNA sequencing	False	miRNA-Seq	SINGLE	Homo sapiens									NCBI SRA structured metadata	miRNA-Seq / TRANSCRIPTOMIC
+SRR32477400	NCBI SRA	Specialized RNA sequencing	False	miRNA-Seq	SINGLE	Homo sapiens									NCBI SRA structured metadata	miRNA-Seq / TRANSCRIPTOMIC
+SRR38928046	NCBI SRA	Specialized RNA sequencing	False	miRNA-Seq	PAIRED	Homo sapiens									NCBI SRA structured metadata	miRNA-Seq / TRANSCRIPTOMIC / size fractionation
+SRR38928047	NCBI SRA	Specialized RNA sequencing	False	miRNA-Seq	PAIRED	Homo sapiens									NCBI SRA structured metadata	miRNA-Seq / TRANSCRIPTOMIC / size fractionation
+SRR37431470	NCBI SRA	Amplicon sequencing	False	AMPLICON	PAIRED	Homo sapiens									NCBI SRA structured metadata	AMPLICON / GENOMIC / PCR
+SRR8349397	NCBI SRA	Amplicon sequencing	False	AMPLICON	PAIRED	Cannabis sativa									NCBI SRA structured metadata	AMPLICON / GENOMIC / PCR
+SRR12618464	NCBI SRA	Amplicon sequencing	False	AMPLICON	PAIRED	Severe acute respiratory syndrome coronavirus 2									NCBI SRA structured metadata	AMPLICON / GENOMIC / PCR
+SRR7736519	NCBI SRA	Amplicon sequencing	False	AMPLICON	PAIRED	Homo sapiens									NCBI SRA structured metadata	AMPLICON / GENOMIC / PCR
+SRR11597313	NCBI SRA	Whole-genome sequencing	False	WGS	PAIRED	Staphylococcus aureus									NCBI SRA structured metadata	WGS / GENOMIC
+SRR21031366	NCBI SRA	Whole-genome sequencing	False	WGS	PAIRED	Homo sapiens									NCBI SRA structured metadata	WGS / GENOMIC
+SRR15195526	NCBI SRA	Whole-exome sequencing	False	WXS	PAIRED	Homo sapiens									NCBI SRA structured metadata	WXS / GENOMIC
+SRR17674708	NCBI SRA	Whole-exome sequencing	False	WXS	PAIRED	Homo sapiens									NCBI SRA structured metadata	WXS / GENOMIC
+SRR5383654	NCBI SRA	ChIP-seq	False	ChIP-Seq	SINGLE	Oryza sativa									NCBI SRA structured metadata	ChIP-Seq / GENOMIC / ChIP
+SRR2153408	NCBI SRA	ChIP-seq	False	ChIP-Seq	SINGLE	Homo sapiens									NCBI SRA structured metadata	ChIP-Seq / GENOMIC / ChIP
+SRR12082774	NCBI SRA	ATAC-seq	False	ATAC-seq	PAIRED	Mus musculus									NCBI SRA structured metadata	ATAC-seq / GENOMIC; single-cell ATAC-seq
+SRR12995620	NCBI SRA	ATAC-seq	False	ATAC-seq	PAIRED	Homo sapiens									NCBI SRA structured metadata	ATAC-seq / GENOMIC; single-cell ATAC-seq

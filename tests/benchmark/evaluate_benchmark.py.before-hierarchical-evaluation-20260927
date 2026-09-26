@@ -12,8 +12,6 @@ Evaluation is field-specific and conservative:
   experimental-design and interpretive fields;
 - structured library-strategy representations are compared
   using canonical values;
-- modality is evaluated both strictly and at a broader
-  scientific classification level;
 - no single aggregate scientific accuracy score is produced.
 """
 
@@ -66,26 +64,6 @@ OBJECTIVE_CANONICAL_VALUES = {
     "chip_seq": "chip_seq",
     "atac-seq": "atac_seq",
     "atac_seq": "atac_seq",
-}
-
-
-BROAD_MODALITY_VALUES = {
-    "rna_seq": "rna_seq",
-    "rna-seq": "rna_seq",
-    "mirna_seq": "specialized_rna",
-    "mirna-seq": "specialized_rna",
-    "mirna sequencing": "specialized_rna",
-    "specialized rna sequencing": "specialized_rna",
-    "chip_seq": "chip_seq",
-    "chip-seq": "chip_seq",
-    "atac_seq": "atac_seq",
-    "atac-seq": "atac_seq",
-    "amplicon sequencing": "amplicon",
-    "amplicon": "amplicon",
-    "wgs": "wgs",
-    "whole-genome sequencing": "wgs",
-    "wxs": "wxs",
-    "whole-exome sequencing": "wxs",
 }
 
 
@@ -149,15 +127,6 @@ def normalize_for_field(
     return normalized
 
 
-def normalize_broad_modality(value: str) -> str:
-    normalized = normalize(value)
-
-    if normalized in BROAD_MODALITY_VALUES:
-        return BROAD_MODALITY_VALUES[normalized]
-
-    return normalized
-
-
 def is_scorable_truth(value: str) -> bool:
     return bool((value or "").strip())
 
@@ -177,22 +146,6 @@ def compare(
         field,
         observed,
     ):
-        return "AGREEMENT"
-
-    return "DISAGREEMENT"
-
-
-def compare_broad_modality(
-    truth: str,
-    observed: str,
-) -> str:
-    if not is_scorable_truth(truth):
-        return "NOT SCORED"
-
-    truth_class = normalize_broad_modality(truth)
-    observed_class = normalize_broad_modality(observed)
-
-    if truth_class == observed_class:
         return "AGREEMENT"
 
     return "DISAGREEMENT"
@@ -283,78 +236,6 @@ def print_field_group(
         )
 
 
-def print_modality_summary(
-    truth_rows: dict[str, dict[str, str]],
-    observed_rows: dict[str, dict[str, str]],
-) -> None:
-    print("\n===== MODALITY CLASSIFICATION =====")
-
-    exact_comparisons: list[str] = []
-    broad_comparisons: list[str] = []
-
-    for accession, truth in truth_rows.items():
-        observed = observed_rows.get(accession)
-
-        if observed is None:
-            exact_result = "MISSING OBSERVATION"
-            broad_result = "MISSING OBSERVATION"
-        else:
-            truth_modality = truth.get(
-                "modality",
-                "",
-            )
-            observed_modality = observed.get(
-                "modality",
-                "",
-            )
-
-            exact_result = compare(
-                "modality",
-                truth_modality,
-                observed_modality,
-            )
-
-            broad_result = compare_broad_modality(
-                truth_modality,
-                observed_modality,
-            )
-
-            if (
-                exact_result == "DISAGREEMENT"
-                and broad_result == "AGREEMENT"
-            ):
-                print(
-                    f"{accession}\t"
-                    f"broad-class agreement\t"
-                    f"truth={truth_modality}\t"
-                    f"observed={observed_modality}"
-                )
-
-        exact_comparisons.append(
-            exact_result
-        )
-        broad_comparisons.append(
-            broad_result
-        )
-
-    exact_correct, exact_scored = accuracy_summary(
-        exact_comparisons
-    )
-    broad_correct, broad_scored = accuracy_summary(
-        broad_comparisons
-    )
-
-    print(
-        f"Exact modality: "
-        f"{exact_correct}/{exact_scored} agreement"
-    )
-
-    print(
-        f"Broad modality class: "
-        f"{broad_correct}/{broad_scored} agreement"
-    )
-
-
 def main() -> int:
     args = parse_args()
 
@@ -378,27 +259,6 @@ def main() -> int:
         if row.get("accession", "").strip()
     }
 
-    truth_accessions = set(
-        truth_rows
-    )
-    observed_accessions = set(
-        observed_rows
-    )
-
-    missing = sorted(
-        truth_accessions - observed_accessions
-    )
-
-    unexpected = sorted(
-        observed_accessions - truth_accessions
-    )
-
-    successful = sum(
-        row.get("success", "").strip().lower()
-        == "true"
-        for row in observed_rows.values()
-    )
-
     print(
         "RNA-Seq Scout scientific benchmark evaluation"
     )
@@ -414,32 +274,37 @@ def main() -> int:
     print(
         f"Observed accessions: {len(observed_rows)}"
     )
+
+    missing = sorted(
+        set(truth_rows) - set(observed_rows)
+    )
+
+    unexpected = sorted(
+        set(observed_rows) - set(truth_rows)
+    )
+
     print(
         f"Missing observations: {len(missing)}"
     )
+
+    for accession in missing:
+        print(f"  - {accession}")
+
     print(
         f"Unexpected observations: {len(unexpected)}"
     )
-    print(
-        f"Successful Scout observations: "
-        f"{successful}/{len(observed_rows)}"
+
+    for accession in unexpected:
+        print(f"  - {accession}")
+
+    successful = sum(
+        normalize(row.get("success", "")) == "true"
+        for row in observed_rows.values()
     )
 
-    if missing:
-        print(
-            "Missing accessions: "
-            + ", ".join(missing)
-        )
-
-    if unexpected:
-        print(
-            "Unexpected accessions: "
-            + ", ".join(unexpected)
-        )
-
-    print_modality_summary(
-        truth_rows,
-        observed_rows,
+    print(
+        f"Successful Scout observations: "
+        f"{successful}/{len(truth_rows)}"
     )
 
     print_field_group(
@@ -467,7 +332,7 @@ def main() -> int:
         "\n===== RNA-SEQ COMPATIBILITY CHECK ====="
     )
 
-    compatibility_comparisons: list[str] = []
+    compatibility: list[str] = []
 
     for accession, truth in truth_rows.items():
         observed = observed_rows.get(accession)
@@ -477,57 +342,42 @@ def main() -> int:
 
         result = compare(
             "rna_seq_compatible",
-            truth.get(
-                "rna_seq_compatible",
-                "",
-            ),
-            observed.get(
-                "rna_seq_compatible",
-                "",
-            ),
+            truth.get("rna_seq_compatible", ""),
+            observed.get("rna_seq_compatible", ""),
         )
 
-        compatibility_comparisons.append(
-            result
-        )
+        compatibility.append(result)
 
         print(
-            f"{accession}: "
-            f"{result} "
+            f"{accession}: {result} "
             f"(truth={truth.get('rna_seq_compatible', '')}, "
             f"observed={observed.get('rna_seq_compatible', '')})"
         )
 
     correct, scored = accuracy_summary(
-        compatibility_comparisons
+        compatibility
     )
 
-    print(
-        f"RNA-seq compatibility: "
-        f"{correct}/{scored} agreement"
-    )
+    if scored:
+        print(
+            f"RNA-seq compatibility: "
+            f"{correct}/{scored} agreement"
+        )
+    else:
+        print(
+            "RNA-seq compatibility: "
+            "no scorable values"
+        )
 
-    print(
-        "\n===== NOTE ====="
-    )
+    print("\n===== NOTE =====")
     print(
         "Library-strategy comparisons use canonical "
         "representations so equivalent values such as "
         "'RNA-Seq' and 'RNA_SEQ' are treated as agreement."
     )
     print(
-        "Modality is reported at both exact and broad "
-        "classification levels; broad classification does "
-        "not erase the more specific Scout output."
-    )
-    print(
-        "Experimental-design and interpretive fields remain "
-        "conservative and are not converted into agreement "
-        "merely because two labels are directionally similar."
-    )
-    print(
-        "Agreement percentages are field-specific and must "
-        "not be interpreted as a single overall scientific accuracy."
+        "Agreement percentages are field-specific and must not "
+        "be interpreted as a single overall scientific accuracy."
     )
     print(
         "Interpretive discrepancies require scientific review "
@@ -538,6 +388,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    raise SystemExit(
-        main()
-    )
+    raise SystemExit(main())
