@@ -693,6 +693,201 @@ def _detect_time_point(title, protocol=""):
 # Replicate Assessment
 # ==========================================================
 
+def _biosample_design_annotations(metadata):
+    """
+    Collect explicitly deposited experimental-design attributes
+    from structured BioSample metadata.
+
+    These values are observational evidence only. They are not used
+    here to infer study-level treatment/control groups, contrasts,
+    time-course structure, or statistical design formulas.
+    """
+
+    sample = _get_sample(metadata)
+
+    if sample is None:
+        return []
+
+    attributes = getattr(
+        sample,
+        "attributes",
+        [],
+    )
+
+    annotations = []
+
+    recognized_names = {
+        "condition": "Condition",
+        "experimental condition": "Experimental condition",
+        "experimental_condition": "Experimental condition",
+        "treatment": "Treatment",
+        "control": "Control",
+        "time": "Time",
+        "timepoint": "Time point",
+        "time point": "Time point",
+        "time_point": "Time point",
+    }
+
+    for attribute in attributes:
+        names = [
+            getattr(attribute, "name", ""),
+            getattr(attribute, "harmonized_name", ""),
+            getattr(attribute, "display_name", ""),
+        ]
+
+        normalized_names = {
+            str(name).strip().lower()
+            for name in names
+            if name
+        }
+
+        label = ""
+
+        for name, candidate_label in recognized_names.items():
+            if name in normalized_names:
+                label = candidate_label
+                break
+
+        if not label:
+            continue
+
+        value = _clean(
+            getattr(
+                attribute,
+                "value",
+                "",
+            )
+        )
+
+        if not value:
+            continue
+
+        annotation = (
+            "BioSample structured metadata explicitly reports "
+            f"{label.lower()}: {value}"
+        )
+
+        _append_unique(
+            annotations,
+            annotation,
+        )
+
+    return annotations
+
+
+def _biosample_replicate_annotation(metadata):
+    """
+    Detect an explicitly deposited biological-replicate annotation
+    from structured BioSample attributes.
+
+    This is observational evidence only. It does not establish the
+    complete study-level replicate structure.
+    """
+
+    sample = getattr(
+        metadata,
+        "sample",
+        None,
+    )
+
+    if sample is None:
+        return ""
+
+    attributes = getattr(
+        sample,
+        "attributes",
+        [],
+    )
+
+    for attribute in attributes:
+
+        names = [
+            getattr(
+                attribute,
+                "name",
+                "",
+            ),
+            getattr(
+                attribute,
+                "harmonized_name",
+                "",
+            ),
+            getattr(
+                attribute,
+                "display_name",
+                "",
+            ),
+        ]
+
+        normalized_names = {
+            str(name).strip().lower()
+            for name in names
+            if name
+        }
+
+        value = str(
+            getattr(
+                attribute,
+                "value",
+                "",
+            )
+        ).strip()
+
+        normalized_value = value.lower()
+
+        name_is_biological = any(
+            name in {
+                "biological replicate",
+                "biological_replicate",
+                "biological-replicate",
+            }
+            for name in normalized_names
+        )
+
+        name_is_generic_replicate = any(
+            name in {
+                "replicate",
+                "replicate number",
+                "replicate_number",
+            }
+            for name in normalized_names
+        )
+
+        value_is_biological = bool(
+            re.search(
+                r"\bbiological\s+replicate\b",
+                normalized_value,
+                flags=re.IGNORECASE,
+            )
+        )
+
+        if not (
+            name_is_biological
+            or (
+                name_is_generic_replicate
+                and value_is_biological
+            )
+        ):
+            continue
+
+        if value:
+            return (
+                f"Biological replicate annotation '{value}' "
+                "is explicitly reported in the BioSample metadata. "
+                "This provides partial replicate evidence; complete "
+                "sample-level replicate structure is not established "
+                "from the inspected accession alone."
+            )
+
+        return (
+            "A biological replicate annotation is explicitly "
+            "reported in the BioSample metadata; the replicate "
+            "identifier/value is not specified."
+        )
+
+    return ""
+
+
 def _assess_replicates(metadata):
     """
     Assess explicit replicate information.
@@ -701,9 +896,14 @@ def _assess_replicates(metadata):
 
     1. Construction protocol
     2. Experiment title
-    3. Run metadata
+    3. Structured BioSample biological-replicate annotation
+    4. Run metadata
 
     A sequencing run is never interpreted as a biological replicate.
+
+    BioSample replicate annotations are treated as partial evidence
+    unless the available metadata establishes the complete sample-level
+    replicate structure.
     """
 
     experiment = _get_experiment(metadata)
@@ -747,7 +947,6 @@ def _assess_replicates(metadata):
 
                 phrase = match.group(0).strip()
 
-                # Normalize common textual number variants.
                 number_map = {
                     "two": "2",
                     "three": "3",
@@ -770,7 +969,6 @@ def _assess_replicates(metadata):
                     "library construction protocol."
                 )
 
-        # Biological replicate + individual biological material
         if re.search(
             r"\bbiological\s+replicate\b",
             protocol,
@@ -815,15 +1013,30 @@ def _assess_replicates(metadata):
             )
 
     # ------------------------------------------------------
-    # Run: never infer biological replication
+    # BioSample: structured biological replicate annotation
     # ------------------------------------------------------
 
-    run = _get_run(metadata)
+    biosample_replicate = _biosample_replicate_annotation(
+        metadata
+    )
 
-    accession = ""
+    if biosample_replicate:
+        return biosample_replicate
+
+    # ------------------------------------------------------
+    # Run metadata
+    # ------------------------------------------------------
+
+    run = getattr(
+        metadata,
+        "run",
+        None,
+    )
+
+    run_accession = ""
 
     if run is not None:
-        accession = _clean(
+        run_accession = _clean(
             getattr(
                 run,
                 "accession",
@@ -831,8 +1044,7 @@ def _assess_replicates(metadata):
             )
         )
 
-    if accession:
-
+    if run_accession:
         return (
             "One sequencing run is represented by the inspected "
             "accession; biological replicate status is not "
@@ -840,14 +1052,10 @@ def _assess_replicates(metadata):
         )
 
     return (
-        "Replicate structure could not be established "
-        "from the available metadata."
+        "Replicate structure could not be established from the "
+        "available metadata."
     )
 
-
-# ==========================================================
-# Design complexity assessment
-# ==========================================================
 
 def _has_complex_design(metadata):
     """
@@ -1033,6 +1241,21 @@ def generate_design_insight(metadata):
             insight.observed_features,
             "Library construction protocol is available as an "
             "experimental-design evidence source.",
+        )
+
+    # ------------------------------------------------------
+    # Structured BioSample experimental-design evidence
+    # ------------------------------------------------------
+
+    biosample_design_annotations = _biosample_design_annotations(
+        metadata
+    )
+
+    for annotation in biosample_design_annotations:
+
+        _append_unique(
+            insight.observed_features,
+            annotation,
         )
 
     # ------------------------------------------------------

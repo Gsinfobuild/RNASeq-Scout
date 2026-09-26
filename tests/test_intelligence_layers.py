@@ -21,7 +21,10 @@ from rnaseq_nav.intelligence.metadata_intelligence import (
 from rnaseq_nav.intelligence.study_landscape import (
     generate_study_experimental_landscape,
 )
-from rnaseq_nav.models import StudyExperiment
+from rnaseq_nav.models import (
+    SampleAttribute,
+    StudyExperiment,
+)
 
 
 def make_metadata(
@@ -264,6 +267,82 @@ def test_design_detects_replicate_without_assigning_biological_status():
 
     assert "biological replicate" not in (
         insight.replicate_information.lower()
+    )
+
+
+
+def test_design_detects_biosample_biological_replicate_annotation():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="RNA-seq sample",
+    )
+
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="biological replicate",
+            value="2",
+        )
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert insight.replicate_information == (
+        "Biological replicate annotation '2' is explicitly "
+        "reported in the BioSample metadata. This provides partial "
+        "replicate evidence; complete sample-level replicate "
+        "structure is not established from the inspected accession "
+        "alone."
+    )
+
+
+
+def test_design_detects_biosample_replicate_with_biological_value():
+    metadata = make_metadata(
+        strategy="AMPLICON",
+        title="RNA-Seq of bacteria: seagrass",
+    )
+
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="replicate",
+            value="biological replicate 2",
+        )
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert insight.replicate_information == (
+        "Biological replicate annotation 'biological replicate 2' "
+        "is explicitly reported in the BioSample metadata. This "
+        "provides partial replicate evidence; complete sample-level "
+        "replicate structure is not established from the inspected "
+        "accession alone."
+    )
+
+
+def test_design_does_not_treat_generic_biosample_replicate_as_biological():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="RNA-seq sample",
+    )
+
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="replicate",
+            value="2",
+        )
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert (
+        "biological replicate" in
+        insight.replicate_information.lower()
+    )
+
+    assert (
+        "One sequencing run" in
+        insight.replicate_information
     )
 
 
@@ -1334,3 +1413,103 @@ def test_modality_ui_surfaces_metadata_consistency_conflict():
     assert "title_strategy_conflict" in ui_source
     assert "title_conflict_description" in ui_source
     assert "Structured library strategy is used for" in ui_source
+
+
+def test_design_records_biosample_treatment_as_observed_evidence():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="HCT116 parental cells",
+    )
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="treatment",
+            harmonized_name="treatment",
+            display_name="treatment",
+            value="none (parental control)",
+        )
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert (
+        "BioSample structured metadata explicitly reports "
+        "treatment: none (parental control)"
+        in insight.observed_features
+    )
+
+    # A single structured attribute must not automatically become
+    # a study-level treatment assignment.
+    assert insight.treatment == ""
+
+
+def test_design_records_biosample_control_as_observed_evidence():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="HCT116 parental cells",
+    )
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="control",
+            value="parental",
+        )
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert (
+        "BioSample structured metadata explicitly reports "
+        "control: parental"
+        in insight.observed_features
+    )
+
+    # Do not infer a complete control group from one BioSample.
+    assert insight.control == ""
+
+
+def test_design_records_biosample_timepoint_as_observed_evidence():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="HCT116 cells",
+    )
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="Time",
+            value="Day30",
+        )
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert (
+        "BioSample structured metadata explicitly reports "
+        "time: Day30"
+        in insight.observed_features
+    )
+
+    # Do not silently convert the annotation into a study-level
+    # time-course interpretation.
+    assert insight.time_point == ""
+
+
+def test_design_records_biosample_condition_as_observed_evidence():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="HCT116 cells",
+    )
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="condition",
+            value="hypoxia",
+        )
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert (
+        "BioSample structured metadata explicitly reports "
+        "condition: hypoxia"
+        in insight.observed_features
+    )
+
+    # Condition inference remains separate from structured observation.
+    assert insight.condition == ""
