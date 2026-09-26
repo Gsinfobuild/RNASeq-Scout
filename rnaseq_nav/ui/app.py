@@ -4507,25 +4507,95 @@ if inspect_clicked:
 
 
     # ------------------------------------------------------
-    # Strengths
+    # Technical characteristics
     # ------------------------------------------------------
 
-    strengths = get_value(
-        report,
-        "strengths",
-        [],
+    technical_characteristics = []
+
+    library_strategy = clean_ui_value(
+        get_value(
+            metadata.experiment,
+            "library_strategy",
+            "",
+        )
     )
 
-    if strengths:
+    library_layout = clean_ui_value(
+        get_value(
+            metadata.experiment,
+            "library_layout",
+            "",
+        )
+    )
 
-        st.subheader(
-            "Strengths"
+    platform = clean_ui_value(
+        get_value(
+            metadata.experiment,
+            "platform",
+            "",
+        )
+    )
+
+    instrument = clean_ui_value(
+        get_value(
+            metadata.experiment,
+            "instrument",
+            "",
+        )
+    )
+
+    if library_strategy not in ("", "—"):
+        technical_characteristics.append(
+            f"Library strategy: {library_strategy}"
         )
 
-        for strength in strengths:
+    if library_layout not in ("", "—"):
+        technical_characteristics.append(
+            f"Read layout: {library_layout}"
+        )
+
+    if platform not in ("", "—"):
+        technical_characteristics.append(
+            f"Platform: {platform}"
+        )
+
+    if instrument not in ("", "—"):
+        technical_characteristics.append(
+            f"Instrument: {instrument}"
+        )
+
+    total_spots = get_value(
+        metadata.run,
+        "total_spots",
+        None,
+    )
+
+    if total_spots is not None:
+        technical_characteristics.append(
+            f"Reported reads / spots: {format_number(total_spots)}"
+        )
+
+    public = get_value(
+        metadata.run,
+        "public",
+        None,
+    )
+
+    if isinstance(public, bool):
+        technical_characteristics.append(
+            f"Public: {'Yes' if public else 'No'}"
+        )
+
+    if technical_characteristics:
+
+        st.subheader(
+            "Technical characteristics"
+        )
+
+        for characteristic in technical_characteristics:
 
             st.markdown(
-                f"- {escape(clean_ui_value(strength))}",
+                f"- {escape(characteristic)}",
                 unsafe_allow_html=True,
             )
 
