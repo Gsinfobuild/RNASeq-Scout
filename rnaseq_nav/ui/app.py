@@ -314,6 +314,11 @@ st.markdown(
 
 from rnaseq_nav import RNASeqNavigator
 from rnaseq_nav.usage.tracker import UsageTracker
+from rnaseq_nav.ui.evidence_presentation import (
+    analysis_plan_display,
+    experimental_design_display,
+    inspection_summary_planning_value,
+)
 
 
 # ==========================================================
@@ -1420,11 +1425,9 @@ def render_inspection_summary(result):
         )
     )
 
-    planning_confidence = clean_ui_value(
-        get_value(
-            analysis_plan,
-            "confidence",
-        )
+    planning_confidence = inspection_summary_planning_value(
+        analysis_plan,
+        modality_insight,
     )
 
     render_section_title(
@@ -2415,11 +2418,28 @@ def build_pdf(
 
     if design_insight is not None:
 
-        design_confidence = clean_ui_value(
-            get_value(
-                design_insight,
-                "design_confidence",
-                "",
+        design_display = experimental_design_display(
+            modality_insight,
+        )
+
+        design_not_applicable = (
+            design_display["show_design_warnings"] is False
+        )
+
+        if design_not_applicable:
+            st.info(
+                design_display["interpretation"]
+            )
+
+        design_confidence = (
+            design_display["status"]
+            if design_not_applicable
+            else clean_ui_value(
+                get_value(
+                    design_insight,
+                    "design_confidence",
+                    "",
+                )
             )
         )
 
@@ -2565,7 +2585,7 @@ def build_pdf(
             [],
         )
 
-        if warnings:
+        if warnings and not design_not_applicable:
 
             st.subheader(
                 "Design warnings"
@@ -2588,7 +2608,10 @@ def build_pdf(
             [],
         )
 
-        if missing_information:
+        if (
+            missing_information
+            and not design_not_applicable
+        ):
 
             st.subheader(
                 "Information not established"
@@ -3140,17 +3163,20 @@ def build_pdf(
                 long=True,
             )
 
-        confidence = clean_ui_value(
-            get_value(
-                analysis_plan,
-                "confidence",
-            )
+        plan_display = analysis_plan_display(
+            analysis_plan,
+            modality_insight,
         )
 
         st.metric(
-            "Planning confidence",
-            confidence,
+            plan_display["label"],
+            plan_display["value"],
         )
+
+        if plan_display["explanation"]:
+            st.caption(
+                plan_display["explanation"]
+            )
 
         rationale = get_value(
             analysis_plan,
