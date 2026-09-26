@@ -318,6 +318,7 @@ from rnaseq_nav.ui.evidence_presentation import (
     analysis_plan_display,
     experimental_design_display,
     inspection_summary_planning_value,
+    reanalysis_readiness_display,
 )
 
 
@@ -2447,6 +2448,11 @@ def build_pdf(
             design_subtitle = (
                 "Key elements of the experimental structure are "
                 "established from the available metadata."
+            )
+        elif design_confidence == "Substantially characterized":
+            design_subtitle = (
+                "Several key elements of the experimental structure "
+                "are established, but the design is not fully resolved."
             )
         elif design_confidence == "Partially characterized":
             design_subtitle = (
