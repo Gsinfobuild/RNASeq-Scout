@@ -243,7 +243,10 @@ class DatasetInterpreter:
         # Generic strengths
         # -------------------------------------------------
 
-        if metadata.run.total_spots > 10000000:
+        if (
+            metadata.run.total_spots is not None
+            and metadata.run.total_spots > 10000000
+        ):
 
             description.strengths.append(
 

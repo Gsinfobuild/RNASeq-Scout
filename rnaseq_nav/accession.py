@@ -13,6 +13,13 @@ import re
 
 
 ACCESSION_PATTERNS = {
+    # GEO
+    "GSE": ("GEO", "Series"),
+    "GSM": ("GEO", "Sample"),
+    "GPL": ("GEO", "Platform"),
+    "GDS": ("GEO", "Dataset"),
+
+    # NCBI / ENA / DDBJ
     "PRJNA": ("NCBI", "BioProject"),
     "PRJEB": ("ENA", "BioProject"),
     "PRJDB": ("DDBJ", "BioProject"),

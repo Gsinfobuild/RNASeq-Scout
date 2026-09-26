@@ -280,6 +280,51 @@ class RNASeqNavigator:
 
         from rnaseq_nav.core.results import ExperimentAtGlance
 
+        # --------------------------------------------------
+        # GEO Series
+        # --------------------------------------------------
+
+        if accession.startswith("GSE"):
+            context = self.discovery.fetch_geo_study(
+                accession
+            )
+
+            study_experiments = context["study_experiments"]
+            metadata = context["metadata"]
+
+            unique_samples = {
+                item.sample_accession
+                for item in study_experiments
+                if item.sample_accession
+            }
+
+            unique_biosamples = {
+                item.biosample_accession
+                for item in study_experiments
+                if item.biosample_accession
+            }
+
+            run_accessions = {
+                run_accession
+                for item in study_experiments
+                for run_accession in item.run_accessions
+                if run_accession
+            }
+
+            return ExperimentAtGlance(
+                study_title=metadata.experiment.title,
+                study_description="",
+                unique_sample_count=len(unique_samples),
+                unique_biosample_count=len(unique_biosamples),
+                experiment_count=len(study_experiments),
+                run_count=len(run_accessions),
+                study_experiments=study_experiments,
+            )
+
+        # --------------------------------------------------
+        # NCBI SRA studies
+        # --------------------------------------------------
+
         if not accession.startswith(("SRP", "ERP", "DRP")):
             return None
 

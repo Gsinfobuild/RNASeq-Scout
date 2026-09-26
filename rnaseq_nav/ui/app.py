@@ -4313,8 +4313,8 @@ if inspect_clicked:
     #
     # Study-level context retrieved by the navigator.
     # This section is available for study accessions such as
-    # SRP, ERP, and DRP. Individual run/experiment accessions
-    # intentionally do not trigger study-wide retrieval.
+    # GSE, SRP, ERP, and DRP. Individual run/experiment
+    # accessions intentionally do not trigger study-wide retrieval.
 
     experiment_at_glance = get_value(
         result,
@@ -4375,8 +4375,14 @@ if inspect_clicked:
 
         with col1:
 
+            sample_label = (
+                "GEO samples"
+                if accession_upper.startswith("GSE")
+                else "SRA samples"
+            )
+
             st.metric(
-                "SRA samples",
+                sample_label,
                 clean_ui_value(
                     unique_sample_count
                 ),

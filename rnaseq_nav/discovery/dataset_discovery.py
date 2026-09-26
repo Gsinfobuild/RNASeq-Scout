@@ -33,7 +33,11 @@ from __future__ import annotations
 from typing import Optional
 
 from rnaseq_nav.clients.ncbi import NCBIClient
+from rnaseq_nav.clients.geo import GEOClient
 from rnaseq_nav.parsers.sra_parser import SRAParser
+from rnaseq_nav.parsers.geo_parser import GEOParser
+from rnaseq_nav.models import StudyExperiment
+from rnaseq_nav.accession import detect_accession
 from rnaseq_nav.discovery.diversity import DatasetDiversity
 from rnaseq_nav.discovery.ranker import DatasetRanker
 
@@ -60,6 +64,12 @@ class DatasetDiscovery:
 
         self.parser = SRAParser()
 
+        self.geo_client = GEOClient(
+            email=email,
+        )
+
+        self.geo_parser = GEOParser()
+
     # ---------------------------------------------------------
     # PUBLIC API (STABLE)
     # ---------------------------------------------------------
@@ -78,6 +88,18 @@ class DatasetDiscovery:
         Metadata
         """
 
+        detected = detect_accession(accession)
+
+        if (
+            detected["database"] == "GEO"
+            and detected["type"] in {"Series", "Sample"}
+        ):
+            text = self.geo_client.fetch(
+                detected["accession"]
+            )
+
+            return self.geo_parser.parse(text)
+
         summary = self.client.fetch(accession)
 
         record = summary[0]
@@ -90,6 +112,75 @@ class DatasetDiscovery:
     # ---------------------------------------------------------
     # Study-level retrieval
     # ---------------------------------------------------------
+
+    # GEO study-level retrieval
+
+    def fetch_geo_study(
+        self,
+        accession: str,
+        max_samples: int = 100,
+    ):
+        """
+        Retrieve a GEO Series and its explicitly listed GSM samples.
+        """
+        detected = detect_accession(accession)
+
+        if not (
+            detected["database"] == "GEO"
+            and detected["type"] == "Series"
+        ):
+            raise ValueError(
+                "fetch_geo_study() requires a GEO Series "
+                f"accession (GSE), not '{accession}'."
+            )
+
+        if max_samples < 1:
+            raise ValueError(
+                "max_samples must be at least 1."
+            )
+
+        series_text = self.geo_client.fetch(
+            detected["accession"]
+        )
+
+        series_metadata = self.geo_parser.parse(
+            series_text
+        )
+
+        sample_accessions = self.geo_parser.sample_accessions(
+            series_text
+        )[:max_samples]
+
+        study_experiments = []
+
+        for sample_accession in sample_accessions:
+            sample_text = self.geo_client.fetch(
+                sample_accession
+            )
+
+            metadata = self.geo_parser.parse(
+                sample_text
+            )
+
+            study_experiments.append(
+                StudyExperiment(
+                    sample_accession=metadata.sample.accession,
+                    biosample_accession=metadata.sample.biosample,
+                    experiment_accession=metadata.experiment.accession,
+                    experiment_title=metadata.experiment.title,
+                    library_strategy=metadata.experiment.library_strategy,
+                    organism=metadata.sample.organism,
+                    sample_name=metadata.sample.name,
+                )
+            )
+
+        series_metadata.study_experiments = study_experiments
+
+        return {
+            "metadata": series_metadata,
+            "sample_accessions": sample_accessions,
+            "study_experiments": study_experiments,
+        }
 
     def fetch_study(
         self,
