@@ -763,6 +763,54 @@ st.markdown(
     }
 
     /* ======================================================
+       INSPECTION SUMMARY
+       ====================================================== */
+
+    .inspection-summary {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+        margin: 0.25rem 0 1.1rem 0;
+    }
+
+    .inspection-summary-card {
+        background: #f7fbff;
+        border: 1px solid #d5e4f2;
+        border-radius: 9px;
+        padding: 13px 15px;
+        min-height: 78px;
+        box-sizing: border-box;
+    }
+
+    .inspection-summary-label {
+        font-size: 0.78rem;
+        font-weight: 600;
+        color: #58708f;
+        margin-bottom: 7px;
+        line-height: 1.3;
+    }
+
+    .inspection-summary-value {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #102a56;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
+    }
+
+    @media (max-width: 900px) {
+        .inspection-summary {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 600px) {
+        .inspection-summary {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    /* ======================================================
        INPUTS
        ====================================================== */
 
@@ -1288,6 +1336,123 @@ def render_section_title(
             """,
             unsafe_allow_html=True,
         )
+
+
+# ==========================================================
+# Inspection Summary
+# ==========================================================
+
+def render_inspection_summary(result):
+    """
+    Render a compact, presentation-only summary of the
+    evidence and interpretation layers already calculated
+    by RNASeq Scout.
+
+    This helper does not perform scientific inference.
+    """
+
+    modality_insight = getattr(
+        result,
+        "modality_insight",
+        None,
+    )
+
+    design_insight = getattr(
+        result,
+        "design_insight",
+        None,
+    )
+
+    suitability_insight = getattr(
+        result,
+        "suitability_insight",
+        None,
+    )
+
+    reanalysis_readiness = getattr(
+        result,
+        "reanalysis_readiness",
+        None,
+    )
+
+    analysis_plan = getattr(
+        result,
+        "analysis_plan",
+        None,
+    )
+
+    modality = clean_ui_value(
+        get_value(
+            modality_insight,
+            "modality",
+        )
+    )
+
+    compatible = get_value(
+        modality_insight,
+        "rna_seq_compatible",
+        None,
+    )
+
+    if isinstance(compatible, bool):
+        compatibility = "Yes" if compatible else "No"
+    else:
+        compatibility = clean_ui_value(compatible)
+
+    design_confidence = clean_ui_value(
+        get_value(
+            design_insight,
+            "design_confidence",
+        )
+    )
+
+    suitability = clean_ui_value(
+        get_value(
+            suitability_insight,
+            "overall",
+        )
+    )
+
+    readiness = clean_ui_value(
+        get_value(
+            reanalysis_readiness,
+            "verdict",
+        )
+    )
+
+    planning_confidence = clean_ui_value(
+        get_value(
+            analysis_plan,
+            "confidence",
+        )
+    )
+
+    render_section_title(
+        "Inspection Summary",
+        "Key conclusions from the dataset inspection.",
+    )
+
+    summary_items = [
+        ("Modality", modality),
+        ("RNA-seq compatible", compatibility),
+        ("Experimental design", design_confidence),
+        ("Dataset suitability", suitability),
+        ("Reanalysis readiness", readiness),
+        ("Analysis-plan confidence", planning_confidence),
+    ]
+
+    for row_start in range(0, len(summary_items), 3):
+        row_items = summary_items[row_start:row_start + 3]
+        columns = st.columns(3)
+
+        for column, (label, value) in zip(columns, row_items):
+            with column:
+                st.markdown(
+                    f"**{label}**"
+                )
+                st.markdown(
+                    f"### {value}"
+                )
 
 
 # ==========================================================
@@ -3678,6 +3843,13 @@ if inspect_clicked:
     st.success(
         f"Dataset information retrieved for {accession}"
     )
+
+
+    # ======================================================
+    # Inspection Summary
+    # ======================================================
+
+    render_inspection_summary(result)
 
 
     # ======================================================
