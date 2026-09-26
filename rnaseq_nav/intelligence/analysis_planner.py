@@ -381,15 +381,26 @@ def _determine_confidence(
         else ""
     )
 
+    # Use the vocabulary produced by the experimental-design
+    # and suitability intelligence layers explicitly. Do not rely
+    # on substring matching because the design layer uses
+    # "Well characterized", not "Fully characterized".
     if (
-        "fully" in design_confidence.lower()
-        and "suitable" in suitability.lower()
+        design_confidence == "Well characterized"
+        and suitability == "Suitable"
     ):
         return "High"
 
     if (
-        "partially" in design_confidence.lower()
-        or "potentially" in suitability.lower()
+        design_confidence in {
+            "Well characterized",
+            "Substantially characterized",
+            "Partially characterized",
+        }
+        and suitability in {
+            "Suitable",
+            "Potentially suitable",
+        }
     ):
         return "Moderate"
 

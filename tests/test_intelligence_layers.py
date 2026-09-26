@@ -11,6 +11,7 @@ from rnaseq_nav.intelligence.suitability import (
 )
 from rnaseq_nav.intelligence.analysis_planner import (
     generate_analysis_plan,
+    _determine_confidence,
 )
 from rnaseq_nav.intelligence.metadata_intelligence import (
     generate_metadata_insight,
@@ -488,6 +489,48 @@ def test_unknown_modality_does_not_become_suitable():
     )
 
     assert suitability.score == 0
+
+
+def test_analysis_plan_confidence_is_high_for_well_characterized_suitable_data():
+    design = SimpleNamespace(
+        design_confidence="Well characterized",
+    )
+    suitability = SimpleNamespace(
+        overall="Suitable",
+    )
+
+    assert (
+        _determine_confidence(design, suitability)
+        == "High"
+    )
+
+
+def test_analysis_plan_confidence_is_moderate_for_substantially_characterized_data():
+    design = SimpleNamespace(
+        design_confidence="Substantially characterized",
+    )
+    suitability = SimpleNamespace(
+        overall="Suitable",
+    )
+
+    assert (
+        _determine_confidence(design, suitability)
+        == "Moderate"
+    )
+
+
+def test_analysis_plan_confidence_is_provisional_when_design_is_insufficient():
+    design = SimpleNamespace(
+        design_confidence="Insufficient information",
+    )
+    suitability = SimpleNamespace(
+        overall="Potentially suitable",
+    )
+
+    assert (
+        _determine_confidence(design, suitability)
+        == "Provisional"
+    )
 
 
 def test_rna_seq_receives_rna_seq_analysis_plan():
