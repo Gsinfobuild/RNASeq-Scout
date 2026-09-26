@@ -3846,8 +3846,15 @@ if inspect_clicked:
                 email=NCBI_EMAIL
             )
 
+            # Study-level BioSample evidence is retrieved only for
+            # study accessions. Run/experiment inspection remains unchanged.
+            is_study_accession = accession.upper().startswith(
+                ("SRP", "ERP", "DRP")
+            )
+
             result = navigator.inspect(
-                accession
+                accession,
+                enrich_study_biosamples=is_study_accession,
             )
 
         except Exception as exc:
@@ -4414,6 +4421,279 @@ if inspect_clicked:
                         study_description
                     )
                 )
+
+
+        # --------------------------------------------------
+        # Study BioSample Evidence
+        # --------------------------------------------------
+        #
+        # This section reports retrieved BioSample metadata
+        # as observed evidence. It does not infer biological
+        # conditions, controls, replicates, or contrasts.
+
+        study_biosample_evidence = get_value(
+            result,
+            "study_biosample_evidence",
+            None,
+        )
+
+        if study_biosample_evidence is not None:
+
+            render_section_title(
+                "Study BioSample Evidence",
+                "Observed BioSample metadata retrieved across the study.",
+            )
+
+            total_study_experiments = get_value(
+                study_biosample_evidence,
+                "total_study_experiments",
+                0,
+            )
+
+            unique_biosample_count = get_value(
+                study_biosample_evidence,
+                "unique_biosample_count",
+                0,
+            )
+
+            retrieved_biosample_count = get_value(
+                study_biosample_evidence,
+                "retrieved_biosample_count",
+                0,
+            )
+
+            failed_biosample_count = get_value(
+                study_biosample_evidence,
+                "failed_biosample_count",
+                0,
+            )
+
+            missing_biosample_count = get_value(
+                study_biosample_evidence,
+                "missing_biosample_count",
+                0,
+            )
+
+            evidence_columns = st.columns(5)
+
+            with evidence_columns[0]:
+                st.metric(
+                    "Study experiments",
+                    clean_ui_value(
+                        total_study_experiments
+                    ),
+                )
+
+            with evidence_columns[1]:
+                st.metric(
+                    "Unique BioSamples",
+                    clean_ui_value(
+                        unique_biosample_count
+                    ),
+                )
+
+            with evidence_columns[2]:
+                st.metric(
+                    "Retrieved",
+                    clean_ui_value(
+                        retrieved_biosample_count
+                    ),
+                )
+
+            with evidence_columns[3]:
+                st.metric(
+                    "Failed",
+                    clean_ui_value(
+                        failed_biosample_count
+                    ),
+                )
+
+            with evidence_columns[4]:
+                st.metric(
+                    "Missing",
+                    clean_ui_value(
+                        missing_biosample_count
+                    ),
+                )
+
+            samples = get_value(
+                study_biosample_evidence,
+                "samples",
+                [],
+            )
+
+            if samples:
+
+                for sample in samples:
+
+                    biosample_accession = get_value(
+                        sample,
+                        "biosample_accession",
+                        "",
+                    )
+
+                    sample_accession = get_value(
+                        sample,
+                        "sample_accession",
+                        "",
+                    )
+
+                    organism = get_value(
+                        sample,
+                        "organism",
+                        "",
+                    )
+
+                    retrieval_status = get_value(
+                        sample,
+                        "retrieval_status",
+                        "",
+                    )
+
+                    experiment_accessions = get_value(
+                        sample,
+                        "experiment_accessions",
+                        [],
+                    )
+
+                    run_accessions = get_value(
+                        sample,
+                        "run_accessions",
+                        [],
+                    )
+
+                    attributes = get_value(
+                        sample,
+                        "attributes",
+                        [],
+                    )
+
+                    label = (
+                        biosample_accession
+                        or sample_accession
+                        or "BioSample"
+                    )
+
+                    with st.expander(
+                        f"BioSample {clean_ui_value(label)}",
+                        expanded=False,
+                    ):
+
+                        sample_columns = st.columns(4)
+
+                        with sample_columns[0]:
+                            st.metric(
+                                "BioSample",
+                                clean_ui_value(
+                                    biosample_accession
+                                ),
+                            )
+
+                        with sample_columns[1]:
+                            st.metric(
+                                "SRA sample",
+                                clean_ui_value(
+                                    sample_accession
+                                ),
+                            )
+
+                        with sample_columns[2]:
+                            st.metric(
+                                "Experiments",
+                                clean_ui_value(
+                                    len(
+                                        experiment_accessions
+                                        or []
+                                    )
+                                ),
+                            )
+
+                        with sample_columns[3]:
+                            st.metric(
+                                "Runs",
+                                clean_ui_value(
+                                    len(
+                                        run_accessions
+                                        or []
+                                    )
+                                ),
+                            )
+
+                        if organism:
+                            st.write(
+                                f"**Organism:** "
+                                f"{escape(clean_ui_value(organism))}",
+                            )
+
+                        if retrieval_status:
+                            st.write(
+                                f"**Retrieval status:** "
+                                f"{escape(clean_ui_value(retrieval_status))}",
+                            )
+
+                        if attributes:
+
+                            st.subheader(
+                                "Observed BioSample attributes"
+                            )
+
+                            attribute_rows = []
+
+                            for attribute in attributes:
+
+                                name = get_value(
+                                    attribute,
+                                    "display_name",
+                                    "",
+                                ) or get_value(
+                                    attribute,
+                                    "name",
+                                    "",
+                                )
+
+                                value = get_value(
+                                    attribute,
+                                    "value",
+                                    "",
+                                )
+
+                                if name or value:
+                                    attribute_rows.append(
+                                        {
+                                            "Attribute": clean_ui_value(
+                                                name
+                                            ),
+                                            "Observed value": clean_ui_value(
+                                                value
+                                            ),
+                                        }
+                                    )
+
+                            if attribute_rows:
+                                st.dataframe(
+                                    attribute_rows,
+                                    use_container_width=True,
+                                    hide_index=True,
+                                )
+
+            warnings = get_value(
+                study_biosample_evidence,
+                "warnings",
+                [],
+            )
+
+            if warnings:
+
+                st.warning(
+                    "Some study BioSample evidence could not be "
+                    "retrieved completely."
+                )
+
+                for warning in warnings:
+                    st.markdown(
+                        f"- {escape(clean_ui_value(warning))}",
+                        unsafe_allow_html=True,
+                    )
 
 
     # ======================================================
