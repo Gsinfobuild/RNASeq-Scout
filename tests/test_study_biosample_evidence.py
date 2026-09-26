@@ -64,12 +64,14 @@ def test_duplicate_biosample_is_retrieved_only_once():
             sample_accession="SRS001",
             biosample_accession="SAMN000001",
             experiment_accession="SRX001",
+            run_accessions=["SRR001"],
             organism="Homo sapiens",
         ),
         StudyExperiment(
             sample_accession="SRS002",
             biosample_accession="SAMN000001",
             experiment_accession="SRX002",
+            run_accessions=["SRR002"],
             organism="Homo sapiens",
         ),
     ]
@@ -84,11 +86,64 @@ def test_duplicate_biosample_is_retrieved_only_once():
     )
 
     assert client.calls == ["SAMN000001"]
+
     assert evidence.total_study_experiments == 2
     assert evidence.unique_biosample_count == 1
     assert evidence.retrieved_biosample_count == 1
     assert evidence.failed_biosample_count == 0
+
     assert len(evidence.samples) == 1
+
+
+def test_all_experiment_and_run_references_are_preserved():
+    records = [
+        StudyExperiment(
+            sample_accession="SRS001",
+            biosample_accession="SAMN000001",
+            experiment_accession="SRX001",
+            run_accessions=["SRR001", "SRR002"],
+            organism="Homo sapiens",
+        ),
+        StudyExperiment(
+            sample_accession="SRS001",
+            biosample_accession="SAMN000001",
+            experiment_accession="SRX002",
+            run_accessions=["SRR003"],
+            organism="Homo sapiens",
+        ),
+        StudyExperiment(
+            sample_accession="SRS001",
+            biosample_accession="SAMN000001",
+            experiment_accession="SRX001",
+            run_accessions=["SRR002"],
+            organism="Homo sapiens",
+        ),
+    ]
+
+    client = FakeClient(
+        {"SAMN000001": BIOSAMPLE_XML_1}
+    )
+
+    evidence = generate_study_biosample_evidence(
+        records,
+        client,
+    )
+
+    sample = evidence.samples[0]
+
+    assert sample.biosample_accession == "SAMN000001"
+    assert sample.sample_accession == "SRS001"
+
+    assert sample.experiment_accessions == [
+        "SRX001",
+        "SRX002",
+    ]
+
+    assert sample.run_accessions == [
+        "SRR001",
+        "SRR002",
+        "SRR003",
+    ]
 
 
 def test_raw_biosample_attributes_are_preserved():
@@ -97,6 +152,7 @@ def test_raw_biosample_attributes_are_preserved():
             sample_accession="SRS001",
             biosample_accession="SAMN000001",
             experiment_accession="SRX001",
+            run_accessions=["SRR001"],
             organism="Homo sapiens",
         )
     ]
@@ -114,7 +170,8 @@ def test_raw_biosample_attributes_are_preserved():
 
     assert sample.biosample_accession == "SAMN000001"
     assert sample.sample_accession == "SRS001"
-    assert sample.experiment_accession == "SRX001"
+    assert sample.experiment_accessions == ["SRX001"]
+    assert sample.run_accessions == ["SRR001"]
     assert sample.organism == "Homo sapiens"
     assert sample.title == "Sample 1"
     assert sample.retrieval_status == "Retrieved"
@@ -137,12 +194,14 @@ def test_attribute_values_are_aggregated_as_observed_metadata():
             sample_accession="SRS001",
             biosample_accession="SAMN000001",
             experiment_accession="SRX001",
+            run_accessions=["SRR001"],
             organism="Homo sapiens",
         ),
         StudyExperiment(
             sample_accession="SRS002",
             biosample_accession="SAMN000002",
             experiment_accession="SRX002",
+            run_accessions=["SRR002"],
             organism="Homo sapiens",
         ),
     ]
@@ -179,12 +238,14 @@ def test_missing_biosample_accessions_are_reported():
             sample_accession="SRS001",
             biosample_accession="",
             experiment_accession="SRX001",
+            run_accessions=["SRR001"],
             organism="Homo sapiens",
         ),
         StudyExperiment(
             sample_accession="SRS002",
             biosample_accession="",
             experiment_accession="SRX002",
+            run_accessions=["SRR002"],
             organism="Homo sapiens",
         ),
     ]
@@ -216,12 +277,14 @@ def test_failed_biosample_does_not_stop_other_samples():
             sample_accession="SRS001",
             biosample_accession="SAMN000001",
             experiment_accession="SRX001",
+            run_accessions=["SRR001"],
             organism="Homo sapiens",
         ),
         StudyExperiment(
             sample_accession="SRS002",
             biosample_accession="SAMN000002",
             experiment_accession="SRX002",
+            run_accessions=["SRR002"],
             organism="Homo sapiens",
         ),
     ]

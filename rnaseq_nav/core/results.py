@@ -34,6 +34,10 @@ from rnaseq_nav.intelligence.design_intelligence import (
     ExperimentalDesignInsight,
 )
 
+from rnaseq_nav.intelligence.study_biosample_evidence import (
+    StudyBioSampleEvidence,
+)
+
 from rnaseq_nav.intelligence.suitability import (
     SuitabilityInsight,
 )
@@ -120,6 +124,14 @@ class InspectionResult:
 
     study_experimental_landscape: Optional[
         StudyExperimentalLandscape
+    ] = None
+
+    # ------------------------------------------------------
+    # Study BioSample Evidence
+    # ------------------------------------------------------
+
+    study_biosample_evidence: Optional[
+        StudyBioSampleEvidence
     ] = None
 
     # ------------------------------------------------------

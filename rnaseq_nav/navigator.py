@@ -97,6 +97,10 @@ from rnaseq_nav.intelligence.sample_enrichment import (
     enrich_sample_from_biosample,
 )
 
+from rnaseq_nav.intelligence.study_biosample_evidence import (
+    generate_study_biosample_evidence,
+)
+
 
 from rnaseq_nav.core import (
     InspectionResult,
@@ -319,6 +323,7 @@ class RNASeqNavigator:
         self,
         accession: str,
         enrich_biosample: bool = False,
+        enrich_study_biosamples: bool = False,
     ):
         """
         Execute the complete metadata inspection pipeline.
@@ -349,6 +354,13 @@ class RNASeqNavigator:
             When True, explicitly retrieve and parse the
             associated NCBI BioSample record before
             normalization. Defaults to False.
+
+        enrich_study_biosamples : bool
+            When True, retrieve and aggregate BioSample
+            evidence for study-level accessions using the
+            already retrieved study experiment records.
+            Defaults to False. This does not affect the
+            default inspection path.
 
         Returns
         -------
@@ -458,6 +470,37 @@ class RNASeqNavigator:
                 study_experimental_landscape = (
                     generate_study_experimental_landscape(
                         experiment_at_glance.study_experiments
+                    )
+                )
+
+            # ------------------------------------------------
+            # Optional Study BioSample Evidence
+            # ------------------------------------------------
+            #
+            # This layer is deliberately opt-in. When enabled,
+            # it reuses the StudyExperiment records already
+            # retrieved for Experiment-at-a-Glance rather than
+            # performing a second study-level SRA retrieval.
+            #
+            # The BioSample layer retrieves only the unique
+            # BioSample records represented by those study
+            # experiments and preserves their observed
+            # experiment/run relationships.
+            #
+            # It remains descriptive and does not infer
+            # experimental groups, treatments, controls,
+            # replicates, time points, or statistical contrasts.
+
+            study_biosample_evidence = None
+
+            if (
+                enrich_study_biosamples
+                and experiment_at_glance is not None
+            ):
+                study_biosample_evidence = (
+                    generate_study_biosample_evidence(
+                        experiment_at_glance.study_experiments,
+                        self.discovery.client,
                     )
                 )
 
@@ -599,6 +642,10 @@ class RNASeqNavigator:
                     study_experimental_landscape
                 ),
 
+                study_biosample_evidence=(
+                    study_biosample_evidence
+                ),
+
                 metadata_insight=metadata_insight,
 
                 modality_insight=modality_insight,
@@ -638,6 +685,8 @@ class RNASeqNavigator:
                 experiment_at_glance=None,
 
                 study_experimental_landscape=None,
+
+                study_biosample_evidence=None,
 
                 metadata_insight=None,
 

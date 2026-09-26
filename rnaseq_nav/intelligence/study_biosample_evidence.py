@@ -35,12 +35,23 @@ from rnaseq_nav.parsers.biosample_parser import BioSampleParser
 @dataclass
 class StudyBioSampleRecord:
     """
-    Raw BioSample evidence associated with one study sample.
+    Raw BioSample evidence associated with one unique BioSample.
+
+    A BioSample may be referenced by multiple study experiments
+    and runs. Those repository relationships are preserved here
+    without interpreting them as biological replicates.
     """
 
     biosample_accession: str = ""
     sample_accession: str = ""
-    experiment_accession: str = ""
+
+    experiment_accessions: list[str] = field(
+        default_factory=list
+    )
+
+    run_accessions: list[str] = field(
+        default_factory=list
+    )
 
     organism: str = ""
     title: str = ""
@@ -116,25 +127,35 @@ def _attribute_display_name(attribute: SampleAttribute) -> str:
     )
 
 
+def _append_unique(
+    values: list[str],
+    value: str,
+) -> None:
+    """
+    Append a non-empty value only once while preserving order.
+    """
+
+    value = value.strip()
+
+    if value and value not in values:
+        values.append(value)
+
+
 def _build_study_sample_records(
     records: Iterable[StudyExperiment],
-) -> list[tuple[str, str, str, str]]:
+) -> list[StudyBioSampleRecord]:
     """
     Build unique BioSample work items.
 
-    Returns tuples of:
-        (
-            biosample_accession,
-            sample_accession,
-            experiment_accession,
-            organism,
-        )
+    One StudyBioSampleRecord is created for each unique BioSample
+    accession. All experiment and run references to that BioSample
+    are retained.
 
-    A BioSample is retrieved at most once even if multiple
+    A BioSample is therefore retrieved at most once even if many
     study experiment records reference it.
     """
 
-    unique: dict[str, tuple[str, str, str, str]] = {}
+    unique: dict[str, StudyBioSampleRecord] = {}
 
     for record in records:
 
@@ -147,21 +168,33 @@ def _build_study_sample_records(
         if not biosample:
             continue
 
-        if biosample in unique:
-            continue
+        if biosample not in unique:
+            unique[biosample] = StudyBioSampleRecord(
+                biosample_accession=biosample,
+                sample_accession=(
+                    record.sample_accession.strip()
+                    if record.sample_accession
+                    else ""
+                ),
+                organism=(
+                    record.organism.strip()
+                    if record.organism
+                    else ""
+                ),
+            )
 
-        unique[biosample] = (
-            biosample,
-            record.sample_accession.strip()
-            if record.sample_accession
-            else "",
-            record.experiment_accession.strip()
-            if record.experiment_accession
-            else "",
-            record.organism.strip()
-            if record.organism
-            else "",
+        sample_record = unique[biosample]
+
+        _append_unique(
+            sample_record.experiment_accessions,
+            record.experiment_accession,
         )
+
+        for run_accession in record.run_accessions:
+            _append_unique(
+                sample_record.run_accessions,
+                run_accession,
+            )
 
     return list(unique.values())
 
@@ -217,7 +250,9 @@ def generate_study_biosample_evidence(
             "No BioSample accessions were available "
             "in the study experiment records."
         )
+
         evidence.missing_biosample_count = len(records)
+
         return evidence
 
     attribute_counters: dict[str, Counter[str]] = (
@@ -226,25 +261,12 @@ def generate_study_biosample_evidence(
 
     attribute_display_names: dict[str, str] = {}
 
-    for (
-        biosample_accession,
-        sample_accession,
-        experiment_accession,
-        organism,
-    ) in work_items:
-
-        sample_record = StudyBioSampleRecord(
-            biosample_accession=biosample_accession,
-            sample_accession=sample_accession,
-            experiment_accession=experiment_accession,
-            organism=organism,
-            retrieval_status="Not attempted",
-        )
+    for sample_record in work_items:
 
         try:
 
             xml = client.fetch_biosample(
-                biosample_accession
+                sample_record.biosample_accession
             )
 
             biosample = parser.parse(xml)
