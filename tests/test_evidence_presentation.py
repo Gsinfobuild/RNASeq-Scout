@@ -95,3 +95,48 @@ def test_inspection_summary_uses_applicability():
     )
 
     assert result == "Not applicable"
+
+
+def test_non_rna_seq_readiness_hides_design_gaps():
+
+    from rnaseq_nav.ui.evidence_presentation import (
+        reanalysis_readiness_display,
+    )
+
+    result = reanalysis_readiness_display(
+        None,
+        modality(False),
+    )
+
+    assert result["show_design_gap_evidence"] is False
+    assert "not compatible" in result["explanation"]
+
+
+def test_rna_seq_readiness_keeps_design_gaps():
+
+    from rnaseq_nav.ui.evidence_presentation import (
+        reanalysis_readiness_display,
+    )
+
+    result = reanalysis_readiness_display(
+        None,
+        modality(True),
+    )
+
+    assert result["show_design_gap_evidence"] is True
+    assert result["explanation"] == ""
+
+
+def test_unknown_modality_keeps_readiness_gaps():
+
+    from rnaseq_nav.ui.evidence_presentation import (
+        reanalysis_readiness_display,
+    )
+
+    result = reanalysis_readiness_display(
+        None,
+        modality(None),
+    )
+
+    assert result["show_design_gap_evidence"] is True
+    assert result["explanation"] == ""

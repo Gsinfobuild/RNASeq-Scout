@@ -3010,24 +3010,35 @@ def build_pdf(
                     )
 
         # --------------------------------------------------
-        # Not established
+        # Modality-aware design evidence
         # --------------------------------------------------
 
-        if not_established:
+        readiness_display = reanalysis_readiness_display(
+            reanalysis_readiness,
+            modality_insight,
+        )
 
-            st.subheader(
-                "Not established"
-            )
+        if readiness_display["show_design_gap_evidence"]:
 
-            for item in not_established:
+            # --------------------------------------------------
+            # Not established
+            # --------------------------------------------------
 
-                clean_item = escape(
-                    clean_ui_value(item),
-                    quote=True,
+            if not_established:
+
+                st.subheader(
+                    "Not established"
                 )
 
-                st.html(
-                    f"""
+                for item in not_established:
+
+                    clean_item = escape(
+                        clean_ui_value(item),
+                        quote=True,
+                    )
+
+                    st.html(
+                        f"""
 <div style="
     margin: 5px 0;
     padding: 7px 10px;
@@ -3037,27 +3048,27 @@ def build_pdf(
     ! {clean_item}
 </div>
 """
+                    )
+
+            # --------------------------------------------------
+            # Missing information
+            # --------------------------------------------------
+
+            if missing_information:
+
+                st.subheader(
+                    "Missing information"
                 )
 
-        # --------------------------------------------------
-        # Missing information
-        # --------------------------------------------------
+                for item in missing_information:
 
-        if missing_information:
+                    clean_item = escape(
+                        clean_ui_value(item),
+                        quote=True,
+                    )
 
-            st.subheader(
-                "Missing information"
-            )
-
-            for item in missing_information:
-
-                clean_item = escape(
-                    clean_ui_value(item),
-                    quote=True,
-                )
-
-                st.html(
-                    f"""
+                    st.html(
+                        f"""
 <div style="
     margin: 5px 0;
     padding: 7px 10px;
@@ -3067,7 +3078,13 @@ def build_pdf(
     ? {clean_item}
 </div>
 """
-                )
+                    )
+
+        elif readiness_display["explanation"]:
+
+            st.info(
+                readiness_display["explanation"]
+            )
 
         # --------------------------------------------------
         # Warnings

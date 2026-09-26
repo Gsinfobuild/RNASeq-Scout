@@ -118,3 +118,35 @@ def inspection_summary_planning_value(
         analysis_plan,
         modality_insight,
     )["value"]
+
+
+def reanalysis_readiness_display(
+    reanalysis_readiness,
+    modality_insight,
+):
+    """Make RNA-seq-specific readiness gaps modality-aware."""
+
+    compatible = is_rna_seq_compatible(
+        modality_insight
+    )
+
+    if compatible is False:
+        return {
+            "show_design_gap_evidence": False,
+            "explanation": (
+                "RNA-seq experimental-design completeness is not assessed "
+                "because the identified sequencing modality is not compatible "
+                "with conventional RNA-seq analysis."
+            ),
+        }
+
+    if compatible is True:
+        return {
+            "show_design_gap_evidence": True,
+            "explanation": "",
+        }
+
+    return {
+        "show_design_gap_evidence": True,
+        "explanation": "",
+    }
