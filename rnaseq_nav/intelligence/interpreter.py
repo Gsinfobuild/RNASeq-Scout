@@ -145,7 +145,7 @@ class DatasetInterpreter:
                     "Better transcript quantification"
                 )
 
-        else:
+        elif metadata.experiment.layout == "SINGLE":
 
             layout_text = (
                 "single-end sequencing, where one "
@@ -156,6 +156,13 @@ class DatasetInterpreter:
 
                 "Lower alignment information than paired-end data"
 
+            )
+
+        else:
+
+            layout_text = (
+                "sequencing layout could not be established "
+                "from the available metadata."
             )
 
         # -------------------------------------------------
@@ -189,25 +196,70 @@ class DatasetInterpreter:
 
         )
 
-        description.sequencing = (
+        platform_text = platform.strip() if platform else ""
 
-            f"The dataset was generated using "
+        if metadata.experiment.layout in {"PAIRED", "SINGLE"}:
 
-            f"{layout_text} "
+            if platform_text:
 
-            f"The sequencing platform was {platform}."
+                description.sequencing = (
+                    f"The dataset was generated using "
+                    f"{layout_text} "
+                    f"The sequencing platform was "
+                    f"{platform_text}."
+                )
 
-        )
+            else:
+
+                description.sequencing = (
+                    f"The dataset was generated using "
+                    f"{layout_text} "
+                    f"The sequencing platform could not be "
+                    f"established from the available metadata."
+                )
+
+        else:
+
+            if platform_text:
+
+                description.sequencing = (
+                    "Sequencing layout could not be established "
+                    "from the available metadata. "
+                    f"The sequencing platform was {platform_text}."
+                )
+
+            else:
+
+                description.sequencing = (
+                    "Sequencing layout and platform could not "
+                    "be established from the available metadata."
+                )
 
         # -------------------------------------------------
         # Title
         # -------------------------------------------------
 
-        description.title = (
-
-            f"{description.experiment} dataset"
-
+        experiment_title = (
+            metadata.experiment.title.strip()
+            if metadata.experiment.title
+            else ""
         )
+
+        experiment_text = description.experiment.strip()
+
+        if experiment_text:
+
+            description.title = (
+                f"{experiment_text} dataset"
+            )
+
+        elif experiment_title:
+
+            description.title = experiment_title
+
+        else:
+
+            description.title = "Dataset with incomplete metadata"
 
         # -------------------------------------------------
         # Summary
@@ -217,27 +269,62 @@ class DatasetInterpreter:
 
             layout_summary = "paired-end reads"
 
-        else:
+        elif metadata.experiment.layout == "SINGLE":
 
             layout_summary = "single-end reads"
 
-        description.summary = (
+        else:
 
-            f"This dataset contains "
+            layout_summary = (
+                "reads with an unestablished sequencing layout"
+            )
 
-            f"{description.experiment.lower()} "
+        experiment_text = description.experiment.strip()
+        organism_text = description.organism.strip()
+        platform_text = platform.strip() if platform else ""
 
-            f"data generated from "
+        summary_parts = []
 
-            f"{description.organism}. "
+        if experiment_text and organism_text:
+            summary_parts.append(
+                f"This dataset contains "
+                f"{experiment_text.lower()} data generated from "
+                f"{organism_text}."
+            )
 
-            f"The sequencing experiment generated "
+        elif experiment_text:
+            summary_parts.append(
+                f"This dataset contains "
+                f"{experiment_text.lower()} data."
+            )
 
-            f"{layout_summary} on the "
+        elif organism_text:
+            summary_parts.append(
+                f"This dataset contains data generated from "
+                f"{organism_text}."
+            )
 
-            f"{platform} platform."
+        else:
+            summary_parts.append(
+                "The available metadata does not establish "
+                "the experiment type or organism."
+            )
 
-        )
+        if platform_text:
+            summary_parts.append(
+                f"The sequencing experiment generated "
+                f"{layout_summary} on the "
+                f"{platform_text} platform."
+            )
+
+        else:
+            summary_parts.append(
+                f"The sequencing experiment generated "
+                f"{layout_summary}; the sequencing platform "
+                f"could not be established from the available metadata."
+            )
+
+        description.summary = " ".join(summary_parts)
 
         # -------------------------------------------------
         # Generic strengths
