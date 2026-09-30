@@ -3849,7 +3849,7 @@ if inspect_clicked:
             # Study-level BioSample evidence is retrieved only for
             # study accessions. Run/experiment inspection remains unchanged.
             is_study_accession = accession.upper().startswith(
-                ("SRP", "ERP", "DRP")
+                ("SRP", "ERP", "DRP", "GSE")
             )
 
             result = navigator.inspect(
