@@ -66,3 +66,6 @@ runinfo_raw_response.txt
 # RNASeq Scout benchmark generated artifacts
 benchmark/evidence/
 benchmark/results/
+
+# Local development backup snapshots
+*.before-*
