@@ -3743,7 +3743,7 @@ Accelerate
 </div>
 
 <div class="rna-gateway">
-From SRA accession to experiment-aware analysis plan
+From public sequencing data to evidence-aware analysis plans
 </div>
 
 <div class="rna-impact">
@@ -3770,14 +3770,46 @@ Impact
 # ==========================================================
 
 st.write(
-    "Enter any valid SRA accession to inspect the available "
-    "dataset metadata."
+    "Inspect public SRA and GEO datasets through normalized metadata, "
+    "experimental evidence, suitability assessment, reanalysis readiness, "
+    "and evidence-constrained analysis planning."
 )
 
 st.caption(
-    "Examples: SRR17730393, SRR17730394, SRR17730395, "
-    "SRX35161265"
+    "Examples: SRR17730393, SRX35161265, SRP356545, GSE135553"
 )
+
+
+st.markdown(
+    """
+    <div class="rna-impact">
+        <div class="impact-title">Supported public data sources</div>
+        <div class="impact-grid">
+            <div class="impact-card">
+                <div class="impact-label">SRA</div>
+                <div class="impact-value">
+                    SRR runs · SRX experiments · SRP studies
+                </div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-label">GEO</div>
+                <div class="impact-value">
+                    GSE Series · study-level experimental context
+                </div>
+            </div>
+            <div class="impact-card">
+                <div class="impact-label">Evidence-aware interpretation</div>
+                <div class="impact-value">
+                    Metadata, experimental evidence, suitability,
+                    reanalysis readiness, and analysis planning
+                </div>
+            </div>
+        </div>
+    </div>
+    """,
+    unsafe_allow_html=True,
+)
+
 
 
 # ==========================================================
@@ -3789,7 +3821,7 @@ render_section_title(
 )
 
 accession = st.text_input(
-    "Enter a dataset accession",
+    "Enter a GEO or SRA accession",
     value="SRR17730393",
     placeholder="e.g. SRR17730393 or GSE135553",
 )
@@ -4445,7 +4477,7 @@ if inspect_clicked:
         with col4:
 
             st.metric(
-                "Runs",
+                "SRA runs",
                 clean_ui_value(
                     run_count
                 ),
@@ -5332,7 +5364,7 @@ if inspect_clicked:
 else:
 
     st.info(
-        "Enter an SRA accession above and click "
+        "Enter a GEO or SRA accession above and click "
         "'Inspect Dataset' to begin."
     )
 
