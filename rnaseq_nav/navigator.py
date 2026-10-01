@@ -268,6 +268,77 @@ class RNASeqNavigator:
     # Inspect
     # ======================================================
 
+    def _merge_geo_study_evidence(
+        self,
+        metadata,
+        geo_context,
+    ):
+        """
+        Merge explicitly observed GEO study evidence into the
+        representative metadata object.
+
+        Only evidence that is consistent across the complete study
+        is propagated into representative metadata.
+
+        Multi-valued study evidence is intentionally not collapsed
+        into a single representative value.
+        """
+        if metadata is None or not geo_context:
+            return metadata
+
+        study_experiments = (
+            geo_context.get("study_experiments", [])
+            or []
+        )
+
+        if not study_experiments:
+            return metadata
+
+        # ----------------------------------------------------------
+        # Library strategy
+        # ----------------------------------------------------------
+        strategies = {
+            str(item.library_strategy).strip()
+            for item in study_experiments
+            if getattr(item, "library_strategy", None)
+            and str(item.library_strategy).strip()
+        }
+
+        if len(strategies) == 1:
+            metadata.experiment.library_strategy = (
+                next(iter(strategies))
+            )
+
+        # ----------------------------------------------------------
+        # Organism
+        # ----------------------------------------------------------
+        #
+        # Only propagate organism when the complete study has one
+        # consistent organism.
+        #
+        # If multiple organisms occur, leave the representative
+        # sample organism unchanged rather than inventing a single
+        # organism.
+        # ----------------------------------------------------------
+        organisms = {
+            str(item.organism).strip()
+            for item in study_experiments
+            if getattr(item, "organism", None)
+            and str(item.organism).strip()
+        }
+
+        if len(organisms) == 1:
+            metadata.sample.organism = next(iter(organisms))
+
+        elif len(organisms) > 1:
+            # RNASEQ_SCOUT_GEO_MULTI_ORGANISM_REFINEMENT
+            # Preserve all explicitly observed study organisms.
+            metadata.sample.organism = "; ".join(
+                sorted(organisms)
+            )
+
+        return metadata
+
     def _build_experiment_at_a_glance(
         self,
         accession: str,
@@ -285,9 +356,7 @@ class RNASeqNavigator:
         # --------------------------------------------------
 
         if accession.startswith("GSE"):
-            context = self.discovery.fetch_geo_study(
-                accession
-            )
+            context = self.discovery.fetch_geo_study(accession)
 
             study_experiments = context["study_experiments"]
             metadata = context["metadata"]
@@ -427,6 +496,31 @@ class RNASeqNavigator:
             )
 
             # ------------------------------------------------
+            # GEO study context
+            # ------------------------------------------------
+            #
+            # Resolve the study collection before normalization so
+            # explicitly observed study-level sequencing evidence
+            # can participate in downstream interpretation.
+            #
+            # The study context is retained separately and is never
+            # used to invent run-level metadata or experimental
+            # design.
+            # ------------------------------------------------
+
+            geo_context = None
+
+            if accession.upper().startswith("GSE"):
+                geo_context = self.discovery.fetch_geo_study(
+                    accession
+                )
+
+                metadata = self._merge_geo_study_evidence(
+                    metadata,
+                    geo_context,
+                )
+
+            # ------------------------------------------------
             # Step 1.5
             # Optional BioSample enrichment
             # ------------------------------------------------
@@ -491,7 +585,7 @@ class RNASeqNavigator:
 
             experiment_at_glance = (
                 self._build_experiment_at_a_glance(
-                    accession
+                    accession,
                 )
             )
 
@@ -548,6 +642,22 @@ class RNASeqNavigator:
                         self.discovery.client,
                     )
                 )
+
+            # ------------------------------------------------
+            # Source-aware evidence enrichment
+            # ------------------------------------------------
+            #
+            # This remains separate from normalized metadata.
+            # It records public repository/publication evidence
+            # without inferring experimental design.
+            #
+            from rnaseq_nav.evidence.source_enrichment import (
+                enrich_source_evidence,
+            )
+
+            source_aware_evidence = enrich_source_evidence(
+                accession
+            )
 
             # ------------------------------------------------
             # Step 6
@@ -691,6 +801,8 @@ class RNASeqNavigator:
                     study_biosample_evidence
                 ),
 
+                source_aware_evidence=source_aware_evidence,
+
                 metadata_insight=metadata_insight,
 
                 modality_insight=modality_insight,
@@ -732,6 +844,8 @@ class RNASeqNavigator:
                 study_experimental_landscape=None,
 
                 study_biosample_evidence=None,
+
+                source_aware_evidence=None,
 
                 metadata_insight=None,
 

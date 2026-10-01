@@ -1682,7 +1682,25 @@ def build_pdf(
 
     public = "—"
 
-    if metadata is not None:
+    # GEO Series records represent public study-level records.
+    # They should not be forced through SRA run-level public status.
+    if str(get_value(metadata, "study", None)).strip():
+        study_object = get_value(
+            metadata,
+            "study",
+            None,
+        )
+
+        study_accession = get_value(
+            study_object,
+            "accession",
+            "",
+        )
+
+        if str(study_accession).upper().startswith("GSE"):
+            public = "Yes (GEO)"
+
+    if metadata is not None and public == "—":
 
         run_object = get_value(
             metadata,
@@ -3771,9 +3789,9 @@ render_section_title(
 )
 
 accession = st.text_input(
-    "Enter an SRA accession",
+    "Enter a dataset accession",
     value="SRR17730393",
-    placeholder="e.g. SRR17730393",
+    placeholder="e.g. SRR17730393 or GSE135553",
 )
 
 
@@ -3826,7 +3844,7 @@ if inspect_clicked:
     if not accession:
 
         st.error(
-            "Please enter an SRA accession number."
+            "Please enter a dataset accession."
         )
 
         st.stop()
@@ -4246,7 +4264,25 @@ if inspect_clicked:
 
     public = "—"
 
-    if metadata is not None:
+    # GEO Series records represent public study-level records.
+    # They should not be forced through SRA run-level public status.
+    if str(get_value(metadata, "study", None)).strip():
+        study_object = get_value(
+            metadata,
+            "study",
+            None,
+        )
+
+        study_accession = get_value(
+            study_object,
+            "accession",
+            "",
+        )
+
+        if str(study_accession).upper().startswith("GSE"):
+            public = "Yes (GEO)"
+
+    if metadata is not None and public == "—":
 
         run_object = get_value(
             metadata,
@@ -4783,6 +4819,175 @@ if inspect_clicked:
     # Dataset Report
     # ======================================================
 
+    # ======================================================
+    # Source-Aware Evidence
+    # ======================================================
+
+    source_aware_evidence = get_value(
+        result,
+        "source_aware_evidence",
+        None,
+    )
+
+    if source_aware_evidence is not None:
+        render_section_title(
+            "Source-Aware Evidence",
+            "Public repository and publication evidence discovered for "
+            "this accession. This evidence is retained separately from "
+            "normalized metadata.",
+        )
+
+        status = get_value(
+            source_aware_evidence,
+            "retrieval_status",
+            "—",
+        )
+        publication_count = get_value(
+            source_aware_evidence,
+            "publication_count",
+            0,
+        )
+        pmc_count = get_value(
+            source_aware_evidence,
+            "pmc_count",
+            0,
+        )
+
+        c1, c2, c3 = st.columns(3)
+
+        with c1:
+            st.metric(
+                "Enrichment status",
+                clean_ui_value(status),
+            )
+
+        with c2:
+            st.metric(
+                "PubMed records",
+                clean_ui_value(publication_count),
+            )
+
+        with c3:
+            st.metric(
+                "PMC records",
+                clean_ui_value(pmc_count),
+            )
+
+        items = get_value(
+            source_aware_evidence,
+            "items",
+            [],
+        )
+
+        for item in items:
+            source_type = get_value(
+                item,
+                "source_type",
+                "Source",
+            )
+            source_name = get_value(
+                item,
+                "source_name",
+                "",
+            )
+            identifier = get_value(
+                item,
+                "identifier",
+                "",
+            )
+            title = get_value(
+                item,
+                "title",
+                "",
+            )
+            url = get_value(
+                item,
+                "url",
+                "",
+            )
+            details = get_value(
+                item,
+                "details",
+                {},
+            )
+
+            label = " · ".join(
+                value
+                for value in [
+                    clean_ui_value(source_type),
+                    clean_ui_value(source_name),
+                    clean_ui_value(identifier),
+                ]
+                if value not in ("", "—")
+            )
+
+            with st.expander(
+                label or "Source evidence",
+                expanded=False,
+            ):
+                if title:
+                    st.markdown(
+                        f"**Title:** {escape(clean_ui_value(title))}",
+                        unsafe_allow_html=True,
+                    )
+
+                journal = get_value(
+                    details,
+                    "journal",
+                    "",
+                )
+                pubdate = get_value(
+                    details,
+                    "pubdate",
+                    "",
+                )
+                authors = get_value(
+                    details,
+                    "authors",
+                    [],
+                )
+
+                if journal:
+                    st.write(
+                        f"**Journal:** "
+                        f"{escape(clean_ui_value(journal))}"
+                    )
+
+                if pubdate:
+                    st.write(
+                        f"**Publication date:** "
+                        f"{escape(clean_ui_value(pubdate))}"
+                    )
+
+                if authors:
+                    st.write(
+                        f"**Authors:** "
+                        f"{escape(clean_ui_value(', '.join(authors)))}"
+                    )
+
+                if url:
+                    st.markdown(
+                        f"[Open source record]"
+                        f"({escape(clean_ui_value(url))})"
+                    )
+
+        warnings = get_value(
+            source_aware_evidence,
+            "warnings",
+            [],
+        )
+
+        if warnings:
+            with st.expander(
+                f"Source-enrichment warnings ({len(warnings)})",
+                expanded=False,
+            ):
+                for warning in warnings:
+                    st.markdown(
+                        f"- {escape(clean_ui_value(warning))}",
+                        unsafe_allow_html=True,
+                    )
+
     render_section_title(
         "Dataset Report",
         "Integrated information available from the reporting layer.",
@@ -4916,9 +5121,28 @@ if inspect_clicked:
         None,
     )
 
+    # GEO Series records are public repository records even when the
+    # representative run-level metadata object has no SRR/public flag.
+    input_accession = str(
+        get_value(
+            result,
+            "accession",
+            "",
+        )
+        or ""
+    ).strip().upper()
+
+    if input_accession.startswith("GSE"):
+        public = True
+
+
+    # GEO Series records are public repository records even when representative SRA run-level metadata does not expose the public flag directly.
+    if str(getattr(result, "accession", "")).upper().startswith("GSE"):
+        public = True
+
     if isinstance(public, bool):
         technical_characteristics.append(
-            f"Public: {'Yes' if public else 'No'}"
+            f"Public: {'Yes (GEO)' if input_accession.startswith('GSE') else ('Yes' if public else 'No')}"
         )
 
     if technical_characteristics:

@@ -341,7 +341,17 @@ class DatasetInterpreter:
 
             )
 
-        if metadata.run.public:
+        if (
+            metadata.run.public
+            or str(
+                getattr(
+                    metadata.study,
+                    "accession",
+                    "",
+                )
+            ).upper().startswith("GSE")
+        ):
+            # RNASEQ_SCOUT_GEO_PUBLIC_STATUS_REFINEMENT
 
             description.strengths.append(
 

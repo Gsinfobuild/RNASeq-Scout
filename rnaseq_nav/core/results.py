@@ -135,6 +135,12 @@ class InspectionResult:
     ] = None
 
     # ------------------------------------------------------
+    # Source-aware evidence enrichment
+    # ------------------------------------------------------
+
+    source_aware_evidence: Optional[object] = None
+
+    # ------------------------------------------------------
     # Layer 1 — Metadata Intelligence
     # ------------------------------------------------------
 

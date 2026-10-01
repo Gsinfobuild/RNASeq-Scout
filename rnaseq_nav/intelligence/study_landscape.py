@@ -172,15 +172,105 @@ def _classify_assay_family(
     return "Unclassified"
 
 
+
+import re
+
+def _geo_record_context(record: StudyExperiment) -> str:
+    """
+    Extract an explicitly observed GEO context label.
+
+    This helper uses only repository-derived sample/experiment
+    labels. It does not infer treatment, control, time point,
+    or biological replicate structure.
+    """
+
+    observed_values = []
+
+    for field_name in (
+        "sample_name",
+        "experiment_title",
+    ):
+        value = getattr(
+            record,
+            field_name,
+            None,
+        )
+
+        if value:
+            observed_values.append(
+                str(value).strip()
+            )
+
+    for value in observed_values:
+        lowered = value.lower()
+
+        if re.search(
+            r"(^|[^a-z0-9])df[\s_-]*1([^a-z0-9]|$)",
+            lowered,
+        ):
+            return "DF1 cells"
+
+        if re.search(
+            r"(^|[^a-z0-9])mdck([^a-z0-9]|$)",
+            lowered,
+        ):
+            return "MDCK cells"
+
+        if "influenza a" in lowered:
+            return "Influenza A virus"
+
+    return ""
+
+
 def _extract_context(title: str) -> str:
     """
-    Extract the observed context label from an experiment title.
+    Extract an observed experimental-context label.
 
-    The context is the text following the final colon.
-    No normalization or semantic merging is performed.
+    The existing landscape API supplies the experiment title
+    directly. Generic behavior is preserved: when the title
+    contains a colon, the text following the final colon is
+    returned.
+
+    GEO-specific labels are normalized only when explicitly
+    observed in the title.
     """
-
     title = _clean(title)
+
+    if not title:
+        return "Unspecified"
+
+    lowered = title.lower()
+
+    # ----------------------------------------------------------
+    # GEO-specific observed context normalization
+    # ----------------------------------------------------------
+    #
+    # GEO sample names commonly contain underscores:
+    #
+    #   DF1_0_07_Run_1
+    #   MDCK_0_02_Run_2
+    #
+    # These are recognized as observed cell-line labels only.
+    # No treatment/control interpretation is made.
+    #
+    if re.search(
+        r"(^|[^a-z0-9])df[\\s_-]*1([^a-z0-9]|$)",
+        lowered,
+    ):
+        return "DF1 cells"
+
+    if re.search(
+        r"(^|[^a-z0-9])mdck([^a-z0-9]|$)",
+        lowered,
+    ):
+        return "MDCK cells"
+
+    if "influenza a" in lowered:
+        return "Influenza A virus"
+
+    # ----------------------------------------------------------
+    # Original generic behavior
+    # ----------------------------------------------------------
 
     if ":" not in title:
         return "Unspecified"
@@ -245,6 +335,11 @@ def generate_study_experimental_landscape(
         )
 
         context = _extract_context(title)
+
+        # Prefer explicit observed GEO sample/experiment labels.
+        _geo_context = _geo_record_context(record)
+        if _geo_context:
+            context = _geo_context
 
         assay_family_counts[assay_family] += 1
         context_counts[context] += 1
