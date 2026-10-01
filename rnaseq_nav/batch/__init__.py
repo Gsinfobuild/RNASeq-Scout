@@ -1,11 +1,9 @@
-"""Batch execution layer for RNA-Seq Scout."""
-
-from rnaseq_nav.batch.executor import BatchExecutor
-from rnaseq_nav.batch.models import BatchConfig, BatchItem, BatchResult
+from .models import BatchConfig, BatchItem, BatchResult
+from .executor import BatchExecutor
 
 __all__ = [
-    "BatchExecutor",
     "BatchConfig",
     "BatchItem",
     "BatchResult",
+    "BatchExecutor",
 ]
