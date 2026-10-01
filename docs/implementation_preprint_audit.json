@@ -1,0 +1,21 @@
+{
+  "name": "RNA-Seq Scout Implementation-to-Preprint Audit",
+  "frozen_software_commit": "ebca981",
+  "current_head": "ebca9815ca5c196aab2f858e65684d9756e69ef5",
+  "commit_matches_frozen_baseline": false,
+  "preprint_found": false,
+  "preprint": null,
+  "stale_claims": [],
+  "stale_claims_detected": false,
+  "evaluation_panel_size": 14,
+  "benchmark": {
+    "positive_rnaseq": 9,
+    "negative_non_rnaseq": 4,
+    "stress_rnaseq": 1,
+    "completed": 7,
+    "timeouts": 7,
+    "execution_failures": 0,
+    "timeout_seconds": 120
+  },
+  "required_action": "No stale claims detected by the configured audit patterns."
+}
