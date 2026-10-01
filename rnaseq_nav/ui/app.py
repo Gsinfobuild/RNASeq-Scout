@@ -313,6 +313,8 @@ st.markdown(
 # ==========================================================
 
 from rnaseq_nav import RNASeqNavigator
+from rnaseq_nav.batch import BatchConfig, BatchExecutor
+
 from rnaseq_nav.usage.tracker import UsageTracker
 from rnaseq_nav.ui.evidence_presentation import (
     analysis_plan_display,
@@ -3842,6 +3844,9 @@ NCBI_EMAIL = os.environ.get(
 )
 
 
+
+
+
 # ==========================================================
 # Usage Tracking
 # ==========================================================
@@ -3859,6 +3864,339 @@ inspect_clicked = st.button(
     use_container_width=True,
 )
 
+
+
+
+# ==========================================================
+# Batch Analysis
+# ==========================================================
+
+st.divider()
+
+with st.container(border=True):
+    # ==========================================================
+    # Batch Analysis
+    # ==========================================================
+    #
+    # This section uses the production BatchExecutor.
+    # The existing single-accession inspection workflow below
+    # remains unchanged.
+    #
+
+    render_section_title(
+        "Batch Analysis",
+        "Inspect multiple GEO and SRA accessions using the same "
+        "evidence-aware inspection pipeline.",
+    )
+
+    st.caption(
+        "Enter up to 5 accessions, one per line. "
+        "Duplicates are removed automatically."
+    )
+
+    batch_input = st.text_area(
+        "Batch accessions",
+        value=(
+            "SRR17730393\n"
+            "SRX13893142\n"
+            "SRP356545\n"
+            "GSE135553\n"
+            "SRR17730399"
+        ),
+        height=120,
+        placeholder=(
+            "SRR17730393\n"
+            "SRX13893142\n"
+            "SRP356545\n"
+            "GSE135553\n"
+            "SRR17730399"
+        ),
+        key="batch_accessions",
+    )
+
+    batch_clicked = st.button(
+        "▶ Run Batch Analysis",
+        type="secondary",
+        use_container_width=True,
+        key="run_batch_analysis",
+    )
+
+
+    if batch_clicked:
+
+        # ------------------------------------------------------
+        # Parse accession input
+        # ------------------------------------------------------
+
+        raw_accessions = []
+
+        for line in batch_input.splitlines():
+
+            line = line.strip()
+
+            if not line:
+                continue
+
+            # Permit comma-separated values as a convenience.
+            for value in line.split(","):
+
+                value = value.strip()
+
+                if value:
+                    raw_accessions.append(value.upper())
+
+
+        # ------------------------------------------------------
+        # Remove duplicates while preserving order
+        # ------------------------------------------------------
+
+        unique_accessions = []
+
+        seen = set()
+
+        for accession_value in raw_accessions:
+
+            if accession_value not in seen:
+
+                seen.add(accession_value)
+                unique_accessions.append(accession_value)
+
+
+        # ------------------------------------------------------
+        # Validate batch size
+        # ------------------------------------------------------
+
+        if not unique_accessions:
+
+            st.warning(
+                "Please enter at least one accession."
+            )
+
+            st.stop()
+
+
+        if len(unique_accessions) > 5:
+
+            st.error(
+                "The initial Streamlit batch interface supports "
+                "a maximum of 5 unique accessions."
+            )
+
+            st.stop()
+
+
+        # ------------------------------------------------------
+        # Batch output directory
+        # ------------------------------------------------------
+
+        batch_output_dir = (
+            PROJECT_ROOT / ".streamlit_batch_output"
+        )
+
+        batch_output_dir.mkdir(
+            parents=True,
+            exist_ok=True,
+        )
+
+
+        config = BatchConfig(
+            checkpoint_path=str(
+                batch_output_dir / "checkpoint.json"
+            ),
+            results_jsonl_path=str(
+                batch_output_dir / "results.jsonl"
+            ),
+            summary_csv_path=str(
+                batch_output_dir / "summary.csv"
+            ),
+            max_retries=2,
+            retry_backoff_seconds=2.0,
+        )
+
+
+        # ------------------------------------------------------
+        # Run production batch executor
+        # ------------------------------------------------------
+
+        with st.spinner(
+            f"Running batch analysis for "
+            f"{len(unique_accessions)} accessions..."
+        ):
+
+            try:
+
+                batch_navigator = RNASeqNavigator(
+                    email=NCBI_EMAIL
+                )
+
+                batch_executor = BatchExecutor(
+                    navigator=batch_navigator,
+                    config=config,
+                )
+
+                batch_result = batch_executor.run(
+                    unique_accessions,
+                    resume=True,
+                )
+
+            except Exception as exc:
+
+                st.error(
+                    "RNASeq Scout encountered an unexpected "
+                    "batch execution error."
+                )
+
+                st.exception(exc)
+
+                st.stop()
+
+
+        # ------------------------------------------------------
+        # Batch summary
+        # ------------------------------------------------------
+
+        st.success(
+            "Batch analysis completed."
+        )
+
+
+        metric_columns = st.columns(5)
+
+        metric_columns[0].metric(
+            "Submitted",
+            len(raw_accessions),
+        )
+
+        metric_columns[1].metric(
+            "Unique",
+            len(unique_accessions),
+        )
+
+        metric_columns[2].metric(
+            "Successful",
+            batch_result.successful,
+        )
+
+        metric_columns[3].metric(
+            "Failed",
+            batch_result.failed,
+        )
+
+        metric_columns[4].metric(
+            "Skipped",
+            batch_result.skipped,
+        )
+
+
+        # ------------------------------------------------------
+        # Batch result table
+        # ------------------------------------------------------
+
+        try:
+
+            import pandas as pd
+
+            summary_path = Path(
+                config.summary_csv_path
+            )
+
+            if summary_path.exists():
+
+                summary_df = pd.read_csv(
+                    summary_path
+                )
+
+                display_columns = [
+                    "accession",
+                    "database",
+                    "accession_type",
+                    "success",
+                    "modality",
+                    "library_strategy",
+                    "suitability",
+                    "reanalysis_readiness",
+                    "status",
+                ]
+
+                available_columns = [
+                    column
+                    for column in display_columns
+                    if column in summary_df.columns
+                ]
+
+                st.subheader(
+                    "Batch Results"
+                )
+
+                st.dataframe(
+                    summary_df[available_columns],
+                    use_container_width=True,
+                    hide_index=True,
+                )
+
+                # --------------------------------------------------
+                # Download CSV
+                # --------------------------------------------------
+
+                csv_data = summary_df.to_csv(
+                    index=False
+                )
+
+                st.download_button(
+                    "⬇ Download Batch CSV",
+                    data=csv_data,
+                    file_name="rnaseq_scout_batch_summary.csv",
+                    mime="text/csv",
+                    use_container_width=True,
+                    key="download_batch_csv",
+                )
+
+
+        except Exception as exc:
+
+            st.warning(
+                "Batch completed, but the summary table could "
+                f"not be displayed: {exc}"
+            )
+
+
+        # ------------------------------------------------------
+        # Individual failures
+        # ------------------------------------------------------
+
+        failures = [
+            item
+            for item in batch_result.items
+            if not item.success
+        ]
+
+        if failures:
+
+            st.subheader(
+                "Batch Failures"
+            )
+
+            for item in failures:
+
+                st.error(
+                    f"{item.accession}: "
+                    f"{item.error or 'Unknown error'}"
+                )
+
+
+        # ------------------------------------------------------
+        # Checkpoint information
+        # ------------------------------------------------------
+
+        st.caption(
+            "Batch checkpoint: "
+            f"{config.checkpoint_path}"
+        )
+
+
+    # ==========================================================
+    # End Batch Analysis
+    # ==========================================================
 
 # ==========================================================
 # Inspection
