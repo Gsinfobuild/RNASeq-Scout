@@ -145,15 +145,15 @@ class NCBIClient:
         self,
         accession: str,
         max_results: int = 1000,
+        batch_size: int = 200,
     ) -> List:
 
         """
-        Retrieve all SRA records returned for a study-level
-        accession.
+        Retrieve SRA records belonging to a study accession.
 
-        Unlike fetch(), which preserves the historical
-        single-record behavior, this method retrieves the
-        complete set of SRA records returned by Entrez.
+        NCBI first returns the matching SRA UIDs through ESearch.
+        The UIDs are then retrieved in batches using ESummary rather
+        than issuing one HTTP request per UID.
 
         Parameters
         ----------
@@ -162,6 +162,9 @@ class NCBIClient:
 
         max_results : int
             Maximum number of SRA records to retrieve.
+
+        batch_size : int
+            Number of SRA UIDs sent in each ESummary request.
 
         Returns
         -------
@@ -173,7 +176,21 @@ class NCBIClient:
             f"Searching study accession: {accession}"
         )
 
+        if max_results <= 0:
+            raise ValueError(
+                "max_results must be greater than zero."
+            )
+
+        if batch_size <= 0:
+            raise ValueError(
+                "batch_size must be greater than zero."
+            )
+
         try:
+
+            # -------------------------------------------------
+            # Step 1: retrieve SRA UIDs for the study
+            # -------------------------------------------------
 
             handle = Entrez.esearch(
                 db="sra",
@@ -187,7 +204,9 @@ class NCBIClient:
             finally:
                 handle.close()
 
-            ids = result.get("IdList", [])
+            ids = list(
+                result.get("IdList", [])
+            )
 
             self._log(
                 f"Study records found: {len(ids)}"
@@ -198,18 +217,82 @@ class NCBIClient:
                     f"No SRA records found for '{accession}'."
                 )
 
+            # -------------------------------------------------
+            # Step 2: retrieve ESummary records in batches
+            # -------------------------------------------------
+
             summaries = []
 
-            for uid in ids:
+            for start in range(
+                0,
+                len(ids),
+                batch_size,
+            ):
 
-                summaries.append(
-                    self._fetch_summary(uid)
+                batch_ids = ids[
+                    start:start + batch_size
+                ]
+
+                self._log(
+                    "Retrieving study records "
+                    f"{start + 1}-{start + len(batch_ids)} "
+                    f"of {len(ids)}"
                 )
 
-                if not self.api_key:
-                    time.sleep(0.34)
+                handle = Entrez.esummary(
+                    db="sra",
+                    id=",".join(batch_ids),
+                    retmode="xml",
+                )
+
+                try:
+                    batch_result = Entrez.read(
+                        handle
+                    )
+                finally:
+                    handle.close()
+
+                # Biopython normally returns a list for
+                # multi-record SRA ESummary responses.
+                # Keep the fallback so a single-record response
+                # is also handled safely.
+                if isinstance(
+                    batch_result,
+                    list,
+                ):
+                    batch_summaries = batch_result
+
+                elif isinstance(
+                    batch_result,
+                    tuple,
+                ):
+                    batch_summaries = list(
+                        batch_result
+                    )
+
                 else:
-                    time.sleep(0.11)
+                    batch_summaries = [
+                        batch_result
+                    ]
+
+                summaries.extend(
+                    batch_summaries
+                )
+
+                # NCBI permits higher request rates with an API
+                # key. Without one, retain the existing conservative
+                # delay, but apply it once per HTTP request rather
+                # than once per individual UID.
+                if start + batch_size < len(ids):
+                    if not self.api_key:
+                        time.sleep(0.34)
+                    else:
+                        time.sleep(0.11)
+
+            self._log(
+                "Study summaries retrieved: "
+                f"{len(summaries)}"
+            )
 
             return summaries
 

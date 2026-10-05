@@ -88,7 +88,21 @@ class SRAParser:
             if not summary_wrapper:
                 continue
 
-            record = summary_wrapper[0]
+            # NCBI ESummary responses can have two shapes:
+            # 1. The historical single-record wrapper: [record]
+            # 2. A direct record returned from batched ESummary requests.
+            #
+            # Preserve support for the original representation while
+            # accepting the direct batched representation.
+            if isinstance(summary_wrapper, (list, tuple)):
+                if not summary_wrapper:
+                    continue
+                record = summary_wrapper[0]
+            else:
+                record = summary_wrapper
+
+            if not hasattr(record, "get"):
+                continue
 
             expxml = record.get("ExpXml", "")
             runs_xml = record.get("Runs", "")
