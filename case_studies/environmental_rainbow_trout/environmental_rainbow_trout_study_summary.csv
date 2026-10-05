@@ -1,0 +1,5 @@
+bioproject,geo_series,stress_class,tissue,samples,conditions
+PRJNA1000995,GSE239806,hypoxia,Liver,9,3 mg/L; 4.5 mg/L; 8.5 mg/L
+PRJNA1064938,GSE253274,hypoxia,Muscle,9,3 mg/L; 4.5 mg/L; 8.5 mg/L
+PRJNA1092638,GSE262612,heat stress,Liver,6,18 °C; 24 °C
+PRJNA559610,GSE135668,heat stress,Liver,6,18 °C; 24 °C

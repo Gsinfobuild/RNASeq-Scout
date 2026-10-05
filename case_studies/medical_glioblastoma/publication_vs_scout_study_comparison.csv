@@ -1,0 +1,5 @@
+study_id,published_accessions,published_control,published_gbm,published_paired,published_single,scout_records,scout_potentially_suitable,scout_exploratory_only,scout_design_established,evaluation
+1,30,15,15,30,0,30,30,30,0,Metadata-limited / publication-resolved
+6,6,3,3,6,0,6,6,6,0,Metadata-limited / publication-resolved
+8,4,2,2,4,0,4,4,4,0,Metadata-limited / publication-resolved
+9,42,19,23,0,42,42,42,42,0,Metadata-limited / publication-resolved

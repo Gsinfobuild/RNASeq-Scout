@@ -1,0 +1,31 @@
+accession,study_id,bioproject,geo_id,library_layout,stress,experiment,temperature_hypoxia,weight,tissue,sampling_time,reference_genome,published_inclusion,evidence_location
+SRR28475464,1,PRJNA1092638,GSE262612,Paired-end,Optimum Temperature,Control,18 °C,400 ± 10.5 g,Liver,7 d,Omyk_1.1,yes,Supplementary Table S1
+SRR28475465,1,PRJNA1092638,GSE262612,Paired-end,Optimum Temperature,Control,18 °C,400 ± 10.5 g,Liver,7 d,Omyk_1.1,yes,Supplementary Table S1
+SRR28475466,1,PRJNA1092638,GSE262612,Paired-end,Optimum Temperature,Control,18 °C,400 ± 10.5 g,Liver,7 d,Omyk_1.1,yes,Supplementary Table S1
+SRR28475467,1,PRJNA1092638,GSE262612,Paired-end,Increase Temperature,Treatment,24 °C,400 ± 10.5 g,Liver,7 d,Omyk_1.1,yes,Supplementary Table S1
+SRR28475468,1,PRJNA1092638,GSE262612,Paired-end,Increase Temperature,Treatment,24 °C,400 ± 10.5 g,Liver,7 d,Omyk_1.1,yes,Supplementary Table S1
+SRR28475469,1,PRJNA1092638,GSE262612,Paired-end,Increase Temperature,Treatment,24 °C,400 ± 10.5 g,Liver,7 d,Omyk_1.1,yes,Supplementary Table S1
+SRR9943833,2,PRJNA559610,GSE135668,Paired-end,Optimum Temperature,Control,18 °C,200 ± 5.5 g,Liver,7 d,Omyk_1.0,yes,Supplementary Table S1
+SRR9943834,2,PRJNA559610,GSE135668,Paired-end,Optimum Temperature,Control,18 °C,200 ± 5.5 g,Liver,7 d,Omyk_1.0,yes,Supplementary Table S1
+SRR9943835,2,PRJNA559610,GSE135668,Paired-end,Optimum Temperature,Control,18 °C,200 ± 5.5 g,Liver,7 d,Omyk_1.0,yes,Supplementary Table S1
+SRR9943836,2,PRJNA559610,GSE135668,Paired-end,Increase Temperature,Treatment,24 °C,200 ± 5.5 g,Liver,7 d,Omyk_1.0,yes,Supplementary Table S1
+SRR9943837,2,PRJNA559610,GSE135668,Paired-end,Increase Temperature,Treatment,24 °C,200 ± 5.5 g,Liver,7 d,Omyk_1.0,yes,Supplementary Table S1
+SRR9943838,2,PRJNA559610,GSE135668,Paired-end,Increase Temperature,Treatment,24 °C,200 ± 5.5 g,Liver,7 d,Omyk_1.0,yes,Supplementary Table S1
+SRR27553658,3,PRJNA1064938,GSE253274,Paired-end,Acute Hypoxia,Treatment,4.5 ± 0.1 mg/L,200 ± 10.5 g,Muscle,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR27553659,3,PRJNA1064938,GSE253274,Paired-end,Acute Hypoxia,Treatment,4.5 ± 0.1 mg/L,200 ± 10.5 g,Muscle,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR27553660,3,PRJNA1064938,GSE253274,Paired-end,Acute Hypoxia,Treatment,4.5 ± 0.1 mg/L,200 ± 10.5 g,Muscle,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR27553661,3,PRJNA1064938,GSE253274,Paired-end,Chronic Hypoxia,Treatment,3 ± 0.1 mg/L,200 ± 10.5 g,Muscle,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR27553662,3,PRJNA1064938,GSE253274,Paired-end,Chronic Hypoxia,Treatment,3 ± 0.1 mg/L,200 ± 10.5 g,Muscle,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR27553663,3,PRJNA1064938,GSE253274,Paired-end,Chronic Hypoxia,Treatment,3 ± 0.1 mg/L,200 ± 10.5 g,Muscle,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR27553664,3,PRJNA1064938,GSE253274,Paired-end,Control,Control,8.5 ± 0.1 mg/L,200 ± 10.5 g,Muscle,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR27553665,3,PRJNA1064938,GSE253274,Paired-end,Control,Control,8.5 ± 0.1 mg/L,200 ± 10.5 g,Muscle,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR27553666,3,PRJNA1064938,GSE253274,Paired-end,Control,Control,8.5 ± 0.1 mg/L,200 ± 10.5 g,Muscle,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR25482873,4,PRJNA1000995,GSE239806,Paired-end,Acute Hypoxia,Treatment,4.5 ± 0.1 mg/L,200 ± 10.5 g,Liver,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR25482874,4,PRJNA1000995,GSE239806,Paired-end,Acute Hypoxia,Treatment,4.5 ± 0.1 mg/L,200 ± 10.5 g,Liver,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR25482875,4,PRJNA1000995,GSE239806,Paired-end,Acute Hypoxia,Treatment,4.5 ± 0.1 mg/L,200 ± 10.5 g,Liver,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR25482876,4,PRJNA1000995,GSE239806,Paired-end,Moderate Hypoxia,Treatment,3 ± 0.1 mg/L,200 ± 10.5 g,Liver,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR25482877,4,PRJNA1000995,GSE239806,Paired-end,Moderate Hypoxia,Treatment,3 ± 0.1 mg/L,200 ± 10.5 g,Liver,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR25482878,4,PRJNA1000995,GSE239806,Paired-end,Moderate Hypoxia,Treatment,3 ± 0.1 mg/L,200 ± 10.5 g,Liver,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR25482879,4,PRJNA1000995,GSE239806,Paired-end,Control,Control,8.5 ± 0.1 mg/L,200 ± 10.5 g,Liver,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR25482880,4,PRJNA1000995,GSE239806,Paired-end,Control,Control,8.5 ± 0.1 mg/L,200 ± 10.5 g,Liver,12 h,Omyk_1.1,yes,Supplementary Table S1
+SRR25482881,4,PRJNA1000995,GSE239806,Paired-end,Control,Control,8.5 ± 0.1 mg/L,200 ± 10.5 g,Liver,12 h,Omyk_1.1,yes,Supplementary Table S1

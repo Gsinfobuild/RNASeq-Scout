@@ -1,0 +1,83 @@
+accession,source_excel_row,study_id,sample_code,name_in_study,geGBMer,age,disease_status,pairing,sequencing_instrument,source_occurrences,published_inclusion,evidence_location
+SRR13555212,2,1,GSM5044749,N6,M,54,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555213,3,1,GSM5044750,T6,M,54,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555214,4,1,GSM5044751,N12,M,52,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555215,5,1,GSM5044752,T12,M,52,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555216,6,1,GSM5044753,N13,F,65,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555217,7,1,GSM5044754,T13,F,65,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555218,8,1,GSM5044755,N18,M,73,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555219,9,1,GSM5044756,T18,M,73,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555220,10,1,GSM5044757,N19,M,55,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555221,11,1,GSM5044758,T19,M,55,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555222,12,1,GSM5044759,N20,M,49,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555223,13,1,GSM5044760,T20,M,49,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555224,14,1,GSM5044761,N22,M,59,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555225,15,1,GSM5044762,T22,M,59,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555226,16,1,GSM5044763,N24,M,40,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555227,17,1,GSM5044764,T24,M,40,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555228,18,1,GSM5044765,N25,F,71,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555229,19,1,GSM5044766,T25,F,71,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555230,20,1,GSM5044767,N14,M,68,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555231,21,1,GSM5044768,T14,M,68,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555232,22,1,GSM5044769,N16,F,52,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555233,23,1,GSM5044770,T16,F,52,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555234,24,1,GSM5044771,N21,M,38,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555235,25,1,Sample GSM5044772,T21,M,38,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555236,26,1,GSM5044773,N40,F,52,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555237,27,1,GSM5044774,T40,F,52,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555238,28,1,GSM5044775,N42-1,M,56,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555239,29,1,GSM5044776,T42,M,56,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555240,30,1,GSM5044777,N4,M,55,control,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR13555241,31,1,GSM5044778,T4,M,55,GBM,paired,Illumina HiSeq 4000,1,yes,Supplementary Table S3
+SRR4095542,32,6,GSM2297702,C1,M,NA,GBM,paired,Illumina HiSeq 2500,1,yes,Supplementary Table S3
+SRR4095543,33,6,GSM2297703,C2,M,NA,GBM,paired,Illumina HiSeq 2500,1,yes,Supplementary Table S3
+SRR4095544,34,6,GSM2297704,C3,M,NA,GBM,paired,Illumina HiSeq 2500,1,yes,Supplementary Table S3
+SRR4095545,35,6,GSM2297705,T1,M,NA,control,paired,Illumina HiSeq 2500,1,yes,Supplementary Table S3
+SRR4095546,36,6,GSM2297706,T2,M,NA,control,paired,Illumina HiSeq 2500,1,yes,Supplementary Table S3
+SRR4095547,37,6,GSM2297707,T3,M,NA,control,paired,Illumina HiSeq 2500,1,yes,Supplementary Table S3
+SRR1633194,38,8,GSM1532541,GBM17,NA,NA,GBM,paired,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1633195,39,8,GSM1532542,GBM31,NA,NA,GBM,paired,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1633196,40,8,GSM1532543,GBM16,NA,NA,control,paired,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1633197,41,8,GSM1532544,GBM34,NA,NA,control,paired,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521427,42,9,GSM1440487,BJ025,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521428,43,9,GSM1440488,BJ026,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521429,44,9,GSM1440489,BJ027,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521430,45,9,GSM1440490,BJ028,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521431,46,9,GSM1440491,BJ029,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521432,47,9,GSM1440492,BJ030,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521433,48,9,GSM1440493,BJ031,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521434,49,9,,,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521435,50,9,,,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521436,51,9,GSM1440494,BJ024,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521437,52,9,GSM1440495,JJ015,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521438,53,9,GSM1440496,JJ013,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521439,54,9,GSM1440497,JJ014,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521440,55,9,GSM1440498,AP001,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521441,56,9,GSM1440499,AP002,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521442,57,9,GSM1440500,AP003,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521443,58,9,GSM1440501,AP004,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521444,59,9,GSM1440502,AP005,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521445,60,9,GSM1440503,AP006,NA,NA,control,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521388,61,9,GSM1440448,PC124,F,38,GBM,single,Illumina HiSeq 2000,2,yes,Supplementary Table S3
+SRR1521410,62,9,GSM1440470,PC120 (patient 3375),M,65,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521397,63,9,GSM1440457,PC135 (patient 3381),M,64,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521398,64,9,GSM1440458,PC67 (patient 3382,M,57,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521404,65,9,GSM1440464,PC112 (patient 3396),M,69,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521407,66,9,GSM1440467,PC52 (patient 3399),M,65,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521389,68,9,GSM1440449,PC47  (patient 3402),F,38,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521390,69,9,GSM1440450,PC125  (patient 3402),F,38,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521405,70,9,GSM1440465,PC123  (patient 3402),F,38,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521411,71,9,GSM1440471,BJ001 (patient 3465),F,56,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521412,72,9,GSM1440472,BJ002 (patient 3465),F,56,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521413,73,9,GSM1440473,BJ004 (patient 3467),M,68,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521414,74,9,GSM1440474,BJ005 (patient 3467),M,68,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521415,75,9,GSM1440475,BJ006 (patient 3467),M,68,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521416,76,9,GSM1440476,BJ009 (patient 3494),F,57,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521417,77,9,GSM1440477,BJ010 (patient 3494),F,57,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521418,78,9,GSM1440478,BJ011 (patient 3494),F,57,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521419,79,9,GSM1440479,BJ014 (patient 3469),F,68,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521420,80,9,GSM1440480,BJ017 (patient 3575),M,78,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521421,81,9,GSM1440481,BJ019 (patient 3612),F,69,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521424,82,9,GSM1440484,JJ035 (patient 3759),F,59,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521425,83,9,GSM1440485,JJ037 (patient 3768),F,58,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3
+SRR1521426,84,9,GSM1440486,JJ039 (patient 3776),M,76,GBM,single,Illumina HiSeq 2000,1,yes,Supplementary Table S3

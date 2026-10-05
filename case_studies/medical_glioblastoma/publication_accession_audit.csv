@@ -1,0 +1,7 @@
+metric,value
+source_rows,84
+nonempty_sra_references,83
+unique_sra_accessions,82
+missing_sra_rows,1
+duplicated_accessions,1
+duplicate:SRR1521388,2
