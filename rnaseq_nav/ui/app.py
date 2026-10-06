@@ -4091,10 +4091,10 @@ render_html(
 
 render_html(
     """
-    <div class="scout-section-heading">Start with a public dataset</div>
+    <div class="scout-section-heading">Inspect public sequencing data</div>
     <div class="scout-section-subtitle">
-        Choose a single accession for detailed inspection or process a small
-        batch through the same evidence-aware pipeline.
+        Explore one dataset in detail or process a small batch through the same
+        evidence-aware pipeline.
     </div>
     """
 )
@@ -4128,80 +4128,74 @@ workspace_left, workspace_right = st.columns(
 )
 
 with workspace_left:
-    render_html(
-        """
-        <div class="scout-card primary">
-            <div class="scout-card-title">Inspect a public dataset</div>
-            <div class="scout-card-description">
-                Enter one SRA or GEO accession to retrieve normalized metadata,
-                experimental evidence, suitability, reanalysis readiness,
-                and an evidence-constrained analysis plan.
+    with st.container(border=True):
+        render_html(
+            """
+            <div class="scout-card-content">
+                <div class="scout-card-title">Inspect a public dataset</div>
+                <div class="scout-card-description">
+                    Enter one SRA or GEO accession to retrieve normalized metadata,
+                    experimental evidence, suitability, reanalysis readiness,
+                    and an evidence-constrained analysis plan.
+                </div>
+                <div class="scout-supported">
+                    <strong>Supported:</strong>
+                    SRR · SRX · SRP · ERR · ERX · ERP · DRR · DRX · DRP · GSE
+                </div>
             </div>
-            <div class="scout-supported">
-                <strong>Supported:</strong>
-                SRR · SRX · SRP · ERR · ERX · ERP · DRR · DRX · DRP · GSE
-            </div>
-        </div>
-        """
-    )
+            """
+        )
 
-    accession = st.text_input(
-        "Dataset accession",
-        value="SRR17730393",
-        placeholder="e.g. SRR17730393 or GSE135553",
-        label_visibility="collapsed",
-    )
+        accession = st.text_input(
+            "Dataset accession",
+            value="SRR17730393",
+            placeholder="e.g. SRR17730393 or GSE135553",
+            label_visibility="collapsed",
+        )
 
-    inspect_clicked = st.button(
-        "Inspect Dataset",
-        type="primary",
-        width="stretch",
-    )
+        inspect_clicked = st.button(
+            "Inspect Dataset",
+            type="primary",
+            width="stretch",
+        )
 
 with workspace_right:
-    render_html(
-        """
-        <div class="scout-card">
-            <div class="scout-card-title">Batch inspection</div>
-            <div class="scout-card-description">
-                Inspect up to five GEO or SRA accessions together using the
-                same production BatchExecutor and evidence-aware pipeline.
+    with st.container(border=True):
+        render_html(
+            """
+            <div class="scout-card-content">
+                <div class="scout-card-title">Batch inspection</div>
+                <div class="scout-card-description">
+                    Inspect up to five GEO or SRA accessions together using the
+                    same production BatchExecutor and evidence-aware pipeline.
+                </div>
+                <div class="scout-supported">
+                    <strong>Input:</strong> one accession per line.
+                    Duplicates are removed automatically.
+                </div>
             </div>
-            <div class="scout-supported">
-                <strong>Input:</strong> one accession per line.
-                Duplicates are removed automatically.
-            </div>
-        </div>
-        """
-    )
+            """
+        )
 
-    batch_input = st.text_area(
-        "Batch accessions",
-        value=(
-            "SRR17730393\n"
-            "SRX13893142\n"
-            "SRP356545\n"
-            "GSE135553\n"
-            "SRR17730399"
-        ),
-        height=126,
-        placeholder=(
-            "SRR17730393\n"
-            "SRX13893142\n"
-            "SRP356545\n"
-            "GSE135553\n"
-            "SRR17730399"
-        ),
-        label_visibility="collapsed",
-        key="batch_accessions",
-    )
+        batch_input = st.text_area(
+            "Batch accessions",
+            value="",
+            height=126,
+            placeholder=(
+                "SRR17730393\n"
+                "SRX13893142\n"
+                "GSE135553"
+            ),
+            label_visibility="collapsed",
+            key="batch_accessions",
+        )
 
-    batch_clicked = st.button(
-        "Run Batch Inspection",
-        type="secondary",
-        width="stretch",
-        key="run_batch_analysis",
-    )
+        batch_clicked = st.button(
+            "Run Batch Inspection",
+            type="secondary",
+            width="stretch",
+            key="run_batch_analysis",
+        )
 
 # ----------------------------------------------------------
 # What RNASeq Scout provides
@@ -4210,45 +4204,45 @@ with workspace_right:
 render_html(
     """
     <div class="scout-provides">
-        <div class="scout-section-heading">What RNASeq Scout provides</div>
+        <div class="scout-section-heading">Why RNASeq Scout?</div>
         <div class="scout-section-subtitle">
-            The interface presents evidence and interpretation separately so
-            downstream decisions remain traceable to the available metadata.
+            The workflow keeps evidence, uncertainty, and downstream decisions
+            distinct so users can see what the public record supports.
         </div>
         <div class="scout-provides-grid">
             <div class="scout-provides-card">
-                <div class="scout-provides-title">Metadata intelligence</div>
+                <div class="scout-provides-title">Know what is present</div>
                 <div class="scout-provides-text">
-                    Normalized dataset identity, experiment, sequencing and
-                    repository metadata.
+                    Start from normalized dataset, experiment, sequencing, and
+                    repository information.
                 </div>
             </div>
             <div class="scout-provides-card">
-                <div class="scout-provides-title">Evidence interpretation</div>
+                <div class="scout-provides-title">Separate evidence from gaps</div>
                 <div class="scout-provides-text">
-                    Observed evidence, unresolved information and warnings are
-                    surfaced without silently filling metadata gaps.
+                    Observed evidence and unresolved information remain distinct
+                    instead of being silently inferred.
                 </div>
             </div>
             <div class="scout-provides-card">
-                <div class="scout-provides-title">Suitability</div>
+                <div class="scout-provides-title">Assess dataset fit</div>
                 <div class="scout-provides-text">
-                    Evidence strength and suitability are presented as an
-                    assessment, not as a percentage or unsupported certainty.
+                    Suitability is presented as an evidence-based assessment,
+                    not an unsupported certainty score.
                 </div>
             </div>
             <div class="scout-provides-card">
-                <div class="scout-provides-title">Reanalysis readiness</div>
+                <div class="scout-provides-title">Identify what is missing</div>
                 <div class="scout-provides-text">
-                    Readiness is separated from missing or unestablished
+                    Reanalysis readiness highlights missing or unestablished
                     experimental design information.
                 </div>
             </div>
             <div class="scout-provides-card">
-                <div class="scout-provides-title">Analysis planning</div>
+                <div class="scout-provides-title">Build defensible workflows</div>
                 <div class="scout-provides-text">
-                    A provisional workflow is derived from the available
-                    modality and experimental evidence.
+                    Analysis planning is constrained by the available modality
+                    and experimental evidence.
                 </div>
             </div>
         </div>
@@ -6044,10 +6038,9 @@ if inspect_clicked:
 
 else:
 
-    st.info(
-        "Enter a GEO or SRA accession above and click "
-        "'Inspect Dataset' to begin."
-    )
+    # Keep the landing state clean; actionable status messages are rendered
+    # only after the user starts an inspection workflow.
+    pass
 
 
 
