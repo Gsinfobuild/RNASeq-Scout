@@ -473,7 +473,7 @@ st.set_page_config(
     page_title="RNASeq Scout",
     page_icon="🧬",
     layout="wide",
-    initial_sidebar_state="expanded",
+    initial_sidebar_state="collapsed",
 )
 
 
@@ -1047,6 +1047,340 @@ st.markdown(
         }
     }
 
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
+
+# ==========================================================
+# Landing-page visual system
+# ==========================================================
+#
+# This layer is presentation-only. It does not alter the
+# navigator, evidence logic, suitability logic, batch executor,
+# reporting, or export behavior.
+#
+
+st.markdown(
+    """
+    <style>
+    /* ------------------------------------------------------
+       Clean application shell
+       ------------------------------------------------------ */
+    .stApp {
+        background: #ffffff !important;
+        color: #102a56 !important;
+    }
+
+    section[data-testid="stSidebar"] {
+        display: none !important;
+    }
+
+    .block-container {
+        max-width: 1320px !important;
+        width: calc(100% - 3rem) !important;
+        padding-top: 1.1rem !important;
+        padding-bottom: 1.5rem !important;
+        margin: 0 auto !important;
+    }
+
+    /* ------------------------------------------------------
+       Hero
+       ------------------------------------------------------ */
+    .scout-hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 32px;
+        padding: 26px 30px 24px;
+        margin-bottom: 24px;
+        background: linear-gradient(135deg, #f4f9ff 0%, #ffffff 58%, #f5fbf6 100%);
+        border: 1px solid #dbe8f5;
+        border-radius: 18px;
+        box-shadow: 0 4px 18px rgba(31, 76, 120, 0.06);
+    }
+
+    .scout-hero-left {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        min-width: 0;
+    }
+
+    .scout-hero-logo {
+        width: 64px;
+        height: 64px;
+        flex: 0 0 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        background: #ffffff;
+        border: 1px solid #dce9f5;
+        box-shadow: 0 2px 8px rgba(31, 76, 120, 0.06);
+    }
+
+    .scout-brand {
+        margin: 0;
+        font-size: 2.25rem;
+        line-height: 1.05;
+        font-weight: 760;
+        letter-spacing: -0.8px;
+        color: #1768c8;
+    }
+
+    .scout-brand span {
+        color: #348545;
+    }
+
+    .scout-tagline {
+        margin-top: 7px;
+        font-size: 0.93rem;
+        color: #58708f;
+        line-height: 1.45;
+    }
+
+    .scout-hero-message {
+        max-width: 510px;
+        text-align: right;
+    }
+
+    .scout-hero-message-title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #102a56;
+        margin-bottom: 5px;
+    }
+
+    .scout-hero-message-text {
+        font-size: 0.9rem;
+        line-height: 1.5;
+        color: #58708f;
+    }
+
+    /* ------------------------------------------------------
+       Five capability indicators
+       ------------------------------------------------------ */
+    .scout-capabilities {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+        margin: 0 0 28px;
+    }
+
+    .scout-capability {
+        min-height: 76px;
+        padding: 13px 14px;
+        background: #ffffff;
+        border: 1px solid #dce7f1;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+    .scout-capability-number {
+        font-size: 0.7rem;
+        font-weight: 750;
+        color: #1768c8;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    .scout-capability-title {
+        font-size: 0.88rem;
+        font-weight: 680;
+        color: #102a56;
+        line-height: 1.25;
+    }
+
+    /* ------------------------------------------------------
+       Primary workspace
+       ------------------------------------------------------ */
+    .scout-section-heading {
+        font-size: 1.35rem;
+        line-height: 1.25;
+        font-weight: 720;
+        color: #102a56;
+        margin: 0 0 5px;
+    }
+
+    .scout-section-subtitle {
+        font-size: 0.91rem;
+        line-height: 1.5;
+        color: #58708f;
+        margin: 0 0 14px;
+    }
+
+    .scout-card {
+        height: 100%;
+        min-height: 285px;
+        padding: 22px;
+        background: #ffffff;
+        border: 1px solid #d7e4ef;
+        border-radius: 16px;
+        box-shadow: 0 3px 14px rgba(31, 76, 120, 0.055);
+        box-sizing: border-box;
+    }
+
+    .scout-card.primary {
+        border-color: #c8dcf1;
+        box-shadow: 0 5px 20px rgba(23, 104, 200, 0.08);
+    }
+
+    .scout-card-title {
+        font-size: 1.12rem;
+        font-weight: 720;
+        color: #102a56;
+        margin-bottom: 6px;
+    }
+
+    .scout-card-description {
+        min-height: 48px;
+        font-size: 0.88rem;
+        line-height: 1.5;
+        color: #58708f;
+        margin-bottom: 14px;
+    }
+
+    .scout-supported {
+        margin: 2px 0 12px;
+        padding: 9px 11px;
+        background: #f7fbff;
+        border: 1px solid #e0ebf5;
+        border-radius: 9px;
+        color: #31527b;
+        font-size: 0.78rem;
+        line-height: 1.45;
+    }
+
+    .scout-supported strong {
+        color: #102a56;
+    }
+
+    /* Inputs inside the workspace */
+    .scout-workspace div[data-baseweb="input"] > div,
+    .scout-workspace div[data-baseweb="textarea"] > div {
+        background: #ffffff !important;
+        border-color: #b9cee3 !important;
+        border-radius: 9px !important;
+    }
+
+    .scout-workspace input,
+    .scout-workspace textarea {
+        font-size: 1.02rem !important;
+        color: #102a56 !important;
+    }
+
+    .scout-workspace .stButton > button {
+        min-height: 46px !important;
+        border-radius: 9px !important;
+        font-weight: 700 !important;
+        font-size: 0.96rem !important;
+    }
+
+    /* ------------------------------------------------------
+       Five explanatory cards
+       ------------------------------------------------------ */
+    .scout-provides {
+        margin-top: 30px;
+        padding-top: 4px;
+    }
+
+    .scout-provides-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 10px;
+        margin-top: 12px;
+    }
+
+    .scout-provides-card {
+        min-height: 125px;
+        padding: 16px;
+        background: #fbfdff;
+        border: 1px solid #dce7f1;
+        border-radius: 12px;
+        box-sizing: border-box;
+    }
+
+    .scout-provides-title {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: #102a56;
+        margin-bottom: 7px;
+    }
+
+    .scout-provides-text {
+        font-size: 0.79rem;
+        line-height: 1.5;
+        color: #58708f;
+    }
+
+    /* ------------------------------------------------------
+       Footer
+       ------------------------------------------------------ */
+    .scout-footer {
+        margin-top: 34px;
+        padding: 15px 0 5px;
+        border-top: 1px solid #e0e9f2;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        color: #58708f;
+        font-size: 0.76rem;
+    }
+
+    .scout-footer strong {
+        color: #1768c8;
+    }
+
+    /* ------------------------------------------------------
+       Responsive
+       ------------------------------------------------------ */
+    @media (max-width: 1000px) {
+        .scout-capabilities,
+        .scout-provides-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .scout-hero {
+            align-items: flex-start;
+        }
+
+        .scout-hero-message {
+            text-align: left;
+        }
+    }
+
+    @media (max-width: 700px) {
+        .block-container {
+            width: calc(100% - 1.25rem) !important;
+            padding-top: 0.6rem !important;
+        }
+
+        .scout-hero {
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .scout-brand {
+            font-size: 1.85rem;
+        }
+
+        .scout-capabilities,
+        .scout-provides-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .scout-card {
+            min-height: auto;
+        }
+
+        .scout-footer {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
     </style>
     """,
     unsafe_allow_html=True,
@@ -3678,164 +4012,99 @@ def build_pdf(
 
 
 # ==========================================================
-# Header
+# Header / Landing workspace
 # ==========================================================
 
 render_html(
     """
-<div class="rna-header">
-
-<div class="rna-brand">
-
-<div class="rna-logo">
-<svg viewBox="0 0 80 90" width="62" height="76" xmlns="http://www.w3.org/2000/svg">
-
-<path d="M18 8 C58 25, 58 65, 18 82"
-fill="none"
-stroke="#1768c8"
-stroke-width="5"/>
-
-<path d="M58 8 C18 25, 18 65, 58 82"
-fill="none"
-stroke="#1768c8"
-stroke-width="5"/>
-
-<line x1="27" y1="18" x2="49" y2="25"
-stroke="#1768c8" stroke-width="3"/>
-
-<line x1="22" y1="32" x2="54" y2="39"
-stroke="#1768c8" stroke-width="3"/>
-
-<line x1="22" y1="48" x2="54" y2="41"
-stroke="#1768c8" stroke-width="3"/>
-
-<line x1="27" y1="64" x2="49" y2="57"
-stroke="#1768c8" stroke-width="3"/>
-
-<path d="M48 50
-C61 37, 73 39, 75 37
-C72 54, 62 67, 45 67
-C47 60, 47 55, 48 50Z"
-fill="#4a9d43"/>
-
-<path d="M45 67
-C52 59, 59 51, 70 42"
-fill="none"
-stroke="#2e7734"
-stroke-width="2"/>
-
-</svg>
-</div>
-
-<div class="rna-brand-text">
-
-<div class="rna-title">
-RNASeq <span class="rna-title-green">Scout</span>
-</div>
-
-<div class="rna-tagline">
-Explore <span>•</span>
-Interpret <span>•</span>
-Plan <span>•</span>
-Accelerate
-</div>
-
-</div>
-
-</div>
-
-<div class="rna-gateway">
-From public sequencing data to evidence-aware analysis plans
-</div>
-
-<div class="rna-impact">
-
-<div class="rna-impact-divider"></div>
-
-<div class="rna-leaf">🍃</div>
-
-<div class="rna-impact-text">
-Biology<br>
-Data<br>
-Impact
-</div>
-
-</div>
-
-</div>
-    """
-)
-
-
-# ==========================================================
-# Introduction
-# ==========================================================
-
-st.write(
-    "Inspect public SRA and GEO datasets through normalized metadata, "
-    "experimental evidence, suitability assessment, reanalysis readiness, "
-    "and evidence-constrained analysis planning."
-)
-
-st.caption(
-    "Examples: SRR17730393, SRX35161265, SRP356545, GSE135553"
-)
-
-
-st.markdown(
-    """
-    <div class="rna-impact">
-        <div class="impact-title">Supported public data sources</div>
-        <div class="impact-grid">
-            <div class="impact-card">
-                <div class="impact-label">SRA</div>
-                <div class="impact-value">
-                    SRR runs · SRX experiments · SRP studies
-                </div>
+    <div class="scout-hero">
+        <div class="scout-hero-left">
+            <div class="scout-hero-logo">
+                <svg viewBox="0 0 80 90" width="48" height="54"
+                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M18 8 C58 25, 58 65, 18 82"
+                          fill="none" stroke="#1768c8" stroke-width="5"/>
+                    <path d="M58 8 C18 25, 18 65, 58 82"
+                          fill="none" stroke="#1768c8" stroke-width="5"/>
+                    <line x1="27" y1="18" x2="49" y2="25"
+                          stroke="#1768c8" stroke-width="3"/>
+                    <line x1="22" y1="32" x2="54" y2="39"
+                          stroke="#1768c8" stroke-width="3"/>
+                    <line x1="22" y1="48" x2="54" y2="41"
+                          stroke="#1768c8" stroke-width="3"/>
+                    <line x1="27" y1="64" x2="49" y2="57"
+                          stroke="#1768c8" stroke-width="3"/>
+                    <path d="M48 50 C61 37, 73 39, 75 37
+                             C72 54, 62 67, 45 67
+                             C47 60, 47 55, 48 50Z"
+                          fill="#4a9d43"/>
+                    <path d="M45 67 C52 59, 59 51, 70 42"
+                          fill="none" stroke="#2e7734" stroke-width="2"/>
+                </svg>
             </div>
-            <div class="impact-card">
-                <div class="impact-label">GEO</div>
-                <div class="impact-value">
-                    GSE Series · study-level experimental context
-                </div>
-            </div>
-            <div class="impact-card">
-                <div class="impact-label">Evidence-aware interpretation</div>
-                <div class="impact-value">
-                    Metadata, experimental evidence, suitability,
-                    reanalysis readiness, and analysis planning
+            <div>
+                <div class="scout-brand">RNASeq <span>Scout</span></div>
+                <div class="scout-tagline">
+                    Explore&nbsp;&nbsp;•&nbsp;&nbsp;Interpret&nbsp;&nbsp;•&nbsp;&nbsp;Plan&nbsp;&nbsp;•&nbsp;&nbsp;Accelerate
                 </div>
             </div>
         </div>
+        <div class="scout-hero-message">
+            <div class="scout-hero-message-title">
+                From public sequencing data to evidence-aware analysis plans
+            </div>
+            <div class="scout-hero-message-text">
+                Inspect SRA and GEO records, separate observed evidence from
+                unresolved information, and build defensible downstream workflows.
+            </div>
+        </div>
     </div>
-    """,
-    unsafe_allow_html=True,
+    """
 )
 
-
-
-# ==========================================================
-# Dataset Accession
-# ==========================================================
-
-render_section_title(
-    "Dataset accession"
+render_html(
+    """
+    <div class="scout-capabilities">
+        <div class="scout-capability">
+            <div class="scout-capability-number">01</div>
+            <div class="scout-capability-title">Metadata processing</div>
+        </div>
+        <div class="scout-capability">
+            <div class="scout-capability-number">02</div>
+            <div class="scout-capability-title">Evidence interpretation</div>
+        </div>
+        <div class="scout-capability">
+            <div class="scout-capability-number">03</div>
+            <div class="scout-capability-title">Suitability assessment</div>
+        </div>
+        <div class="scout-capability">
+            <div class="scout-capability-number">04</div>
+            <div class="scout-capability-title">Reanalysis readiness</div>
+        </div>
+        <div class="scout-capability">
+            <div class="scout-capability-number">05</div>
+            <div class="scout-capability-title">Analysis planning</div>
+        </div>
+    </div>
+    """
 )
 
-accession = st.text_input(
-    "Enter a GEO or SRA accession",
-    value="SRR17730393",
-    placeholder="e.g. SRR17730393 or GSE135553",
+render_html(
+    """
+    <div class="scout-section-heading">Start with a public dataset</div>
+    <div class="scout-section-subtitle">
+        Choose a single accession for detailed inspection or process a small
+        batch through the same evidence-aware pipeline.
+    </div>
+    """
 )
 
-
-# ==========================================================
+# ----------------------------------------------------------
 # NCBI Configuration
-# ==========================================================
+# ----------------------------------------------------------
 #
-# IMPORTANT:
-# The email is used internally only.
-# It is NOT displayed anywhere in the Streamlit UI.
+# The email is used internally only. It is not displayed in
+# the Streamlit UI.
 #
 
 NCBI_EMAIL = os.environ.get(
@@ -3843,55 +4112,67 @@ NCBI_EMAIL = os.environ.get(
     "gshankar.bbaul@gmail.com",
 )
 
-
-
-
-
-# ==========================================================
+# ----------------------------------------------------------
 # Usage Tracking
-# ==========================================================
+# ----------------------------------------------------------
 
 usage_tracker = UsageTracker()
 
+# ----------------------------------------------------------
+# Primary workspace
+# ----------------------------------------------------------
 
-# ==========================================================
-# Inspect Button
-# ==========================================================
-
-inspect_clicked = st.button(
-    "🔍 Inspect Dataset",
-    type="primary",
-    use_container_width=True,
+workspace_left, workspace_right = st.columns(
+    [1.15, 1],
+    gap="large",
 )
 
-
-
-
-# ==========================================================
-# Batch Analysis
-# ==========================================================
-
-st.divider()
-
-with st.container(border=True):
-    # ==========================================================
-    # Batch Analysis
-    # ==========================================================
-    #
-    # This section uses the production BatchExecutor.
-    # The existing single-accession inspection workflow below
-    # remains unchanged.
-    #
-
-    render_section_title(
-        "Batch Analysis",
-        "Inspect multiple GEO and SRA accessions using the same "
-        "evidence-aware inspection pipeline.",
+with workspace_left:
+    render_html(
+        """
+        <div class="scout-card primary">
+            <div class="scout-card-title">Inspect a public dataset</div>
+            <div class="scout-card-description">
+                Enter one SRA or GEO accession to retrieve normalized metadata,
+                experimental evidence, suitability, reanalysis readiness,
+                and an evidence-constrained analysis plan.
+            </div>
+            <div class="scout-supported">
+                <strong>Supported:</strong>
+                SRR · SRX · SRP · ERR · ERX · ERP · DRR · DRX · DRP · GSE
+            </div>
+        </div>
+        """
     )
 
-    st.caption(
-        "Enter up to 5 accessions, one per line. "
-        "Duplicates are removed automatically."
+    accession = st.text_input(
+        "Dataset accession",
+        value="SRR17730393",
+        placeholder="e.g. SRR17730393 or GSE135553",
+        label_visibility="collapsed",
+    )
+
+    inspect_clicked = st.button(
+        "Inspect Dataset",
+        type="primary",
+        width="stretch",
+    )
+
+with workspace_right:
+    render_html(
+        """
+        <div class="scout-card">
+            <div class="scout-card-title">Batch inspection</div>
+            <div class="scout-card-description">
+                Inspect up to five GEO or SRA accessions together using the
+                same production BatchExecutor and evidence-aware pipeline.
+            </div>
+            <div class="scout-supported">
+                <strong>Input:</strong> one accession per line.
+                Duplicates are removed automatically.
+            </div>
+        </div>
+        """
     )
 
     batch_input = st.text_area(
@@ -3903,7 +4184,7 @@ with st.container(border=True):
             "GSE135553\n"
             "SRR17730399"
         ),
-        height=120,
+        height=126,
         placeholder=(
             "SRR17730393\n"
             "SRX13893142\n"
@@ -3911,292 +4192,354 @@ with st.container(border=True):
             "GSE135553\n"
             "SRR17730399"
         ),
+        label_visibility="collapsed",
         key="batch_accessions",
     )
 
     batch_clicked = st.button(
-        "▶ Run Batch Analysis",
+        "Run Batch Inspection",
         type="secondary",
-        use_container_width=True,
+        width="stretch",
         key="run_batch_analysis",
     )
 
+# ----------------------------------------------------------
+# What RNASeq Scout provides
+# ----------------------------------------------------------
 
-    if batch_clicked:
+render_html(
+    """
+    <div class="scout-provides">
+        <div class="scout-section-heading">What RNASeq Scout provides</div>
+        <div class="scout-section-subtitle">
+            The interface presents evidence and interpretation separately so
+            downstream decisions remain traceable to the available metadata.
+        </div>
+        <div class="scout-provides-grid">
+            <div class="scout-provides-card">
+                <div class="scout-provides-title">Metadata intelligence</div>
+                <div class="scout-provides-text">
+                    Normalized dataset identity, experiment, sequencing and
+                    repository metadata.
+                </div>
+            </div>
+            <div class="scout-provides-card">
+                <div class="scout-provides-title">Evidence interpretation</div>
+                <div class="scout-provides-text">
+                    Observed evidence, unresolved information and warnings are
+                    surfaced without silently filling metadata gaps.
+                </div>
+            </div>
+            <div class="scout-provides-card">
+                <div class="scout-provides-title">Suitability</div>
+                <div class="scout-provides-text">
+                    Evidence strength and suitability are presented as an
+                    assessment, not as a percentage or unsupported certainty.
+                </div>
+            </div>
+            <div class="scout-provides-card">
+                <div class="scout-provides-title">Reanalysis readiness</div>
+                <div class="scout-provides-text">
+                    Readiness is separated from missing or unestablished
+                    experimental design information.
+                </div>
+            </div>
+            <div class="scout-provides-card">
+                <div class="scout-provides-title">Analysis planning</div>
+                <div class="scout-provides-text">
+                    A provisional workflow is derived from the available
+                    modality and experimental evidence.
+                </div>
+            </div>
+        </div>
+    </div>
+    """
+)
 
-        # ------------------------------------------------------
-        # Parse accession input
-        # ------------------------------------------------------
+# ----------------------------------------------------------
+# Batch execution
+# ----------------------------------------------------------
+#
+# The production BatchExecutor logic is preserved below.
+# Only its landing-page placement has changed.
+#
 
-        raw_accessions = []
+if batch_clicked:
 
-        for line in batch_input.splitlines():
+    # ------------------------------------------------------
+    # Parse accession input
+    # ------------------------------------------------------
 
-            line = line.strip()
+    raw_accessions = []
 
-            if not line:
-                continue
+    for line in batch_input.splitlines():
 
-            # Permit comma-separated values as a convenience.
-            for value in line.split(","):
+        line = line.strip()
 
-                value = value.strip()
+        if not line:
+            continue
 
-                if value:
-                    raw_accessions.append(value.upper())
+        # Permit comma-separated values as a convenience.
+        for value in line.split(","):
 
+            value = value.strip()
 
-        # ------------------------------------------------------
-        # Remove duplicates while preserving order
-        # ------------------------------------------------------
-
-        unique_accessions = []
-
-        seen = set()
-
-        for accession_value in raw_accessions:
-
-            if accession_value not in seen:
-
-                seen.add(accession_value)
-                unique_accessions.append(accession_value)
+            if value:
+                raw_accessions.append(value.upper())
 
 
-        # ------------------------------------------------------
-        # Validate batch size
-        # ------------------------------------------------------
+    # ------------------------------------------------------
+    # Remove duplicates while preserving order
+    # ------------------------------------------------------
 
-        if not unique_accessions:
+    unique_accessions = []
 
-            st.warning(
-                "Please enter at least one accession."
-            )
+    seen = set()
 
-            st.stop()
+    for accession_value in raw_accessions:
 
+        if accession_value not in seen:
 
-        if len(unique_accessions) > 5:
-
-            st.error(
-                "The initial Streamlit batch interface supports "
-                "a maximum of 5 unique accessions."
-            )
-
-            st.stop()
+            seen.add(accession_value)
+            unique_accessions.append(accession_value)
 
 
-        # ------------------------------------------------------
-        # Batch output directory
-        # ------------------------------------------------------
+    # ------------------------------------------------------
+    # Validate batch size
+    # ------------------------------------------------------
 
-        batch_output_dir = (
-            PROJECT_ROOT / ".streamlit_batch_output"
+    if not unique_accessions:
+
+        st.warning(
+            "Please enter at least one accession."
         )
 
-        batch_output_dir.mkdir(
-            parents=True,
-            exist_ok=True,
+        st.stop()
+
+
+    if len(unique_accessions) > 5:
+
+        st.error(
+            "The initial Streamlit batch interface supports "
+            "a maximum of 5 unique accessions."
         )
 
-
-        config = BatchConfig(
-            checkpoint_path=str(
-                batch_output_dir / "checkpoint.json"
-            ),
-            results_jsonl_path=str(
-                batch_output_dir / "results.jsonl"
-            ),
-            summary_csv_path=str(
-                batch_output_dir / "summary.csv"
-            ),
-            max_retries=2,
-            retry_backoff_seconds=2.0,
-        )
+        st.stop()
 
 
-        # ------------------------------------------------------
-        # Run production batch executor
-        # ------------------------------------------------------
+    # ------------------------------------------------------
+    # Batch output directory
+    # ------------------------------------------------------
 
-        with st.spinner(
-            f"Running batch analysis for "
-            f"{len(unique_accessions)} accessions..."
-        ):
+    batch_output_dir = (
+        PROJECT_ROOT / ".streamlit_batch_output"
+    )
 
-            try:
-
-                batch_navigator = RNASeqNavigator(
-                    email=NCBI_EMAIL
-                )
-
-                batch_executor = BatchExecutor(
-                    navigator=batch_navigator,
-                    config=config,
-                )
-
-                batch_result = batch_executor.run(
-                    unique_accessions,
-                    resume=True,
-                )
-
-            except Exception as exc:
-
-                st.error(
-                    "RNASeq Scout encountered an unexpected "
-                    "batch execution error."
-                )
-
-                st.exception(exc)
-
-                st.stop()
+    batch_output_dir.mkdir(
+        parents=True,
+        exist_ok=True,
+    )
 
 
-        # ------------------------------------------------------
-        # Batch summary
-        # ------------------------------------------------------
-
-        st.success(
-            "Batch analysis completed."
-        )
-
-
-        metric_columns = st.columns(5)
-
-        metric_columns[0].metric(
-            "Submitted",
-            len(raw_accessions),
-        )
-
-        metric_columns[1].metric(
-            "Unique",
-            len(unique_accessions),
-        )
-
-        metric_columns[2].metric(
-            "Successful",
-            batch_result.successful,
-        )
-
-        metric_columns[3].metric(
-            "Failed",
-            batch_result.failed,
-        )
-
-        metric_columns[4].metric(
-            "Skipped",
-            batch_result.skipped,
-        )
+    config = BatchConfig(
+        checkpoint_path=str(
+            batch_output_dir / "checkpoint.json"
+        ),
+        results_jsonl_path=str(
+            batch_output_dir / "results.jsonl"
+        ),
+        summary_csv_path=str(
+            batch_output_dir / "summary.csv"
+        ),
+        max_retries=2,
+        retry_backoff_seconds=2.0,
+    )
 
 
-        # ------------------------------------------------------
-        # Batch result table
-        # ------------------------------------------------------
+    # ------------------------------------------------------
+    # Run production batch executor
+    # ------------------------------------------------------
+
+    with st.spinner(
+        f"Running batch analysis for "
+        f"{len(unique_accessions)} accessions..."
+    ):
 
         try:
 
-            import pandas as pd
-
-            summary_path = Path(
-                config.summary_csv_path
+            batch_navigator = RNASeqNavigator(
+                email=NCBI_EMAIL
             )
 
-            if summary_path.exists():
+            batch_executor = BatchExecutor(
+                navigator=batch_navigator,
+                config=config,
+            )
 
-                summary_df = pd.read_csv(
-                    summary_path
-                )
-
-                display_columns = [
-                    "accession",
-                    "database",
-                    "accession_type",
-                    "success",
-                    "modality",
-                    "library_strategy",
-                    "suitability",
-                    "reanalysis_readiness",
-                    "status",
-                ]
-
-                available_columns = [
-                    column
-                    for column in display_columns
-                    if column in summary_df.columns
-                ]
-
-                st.subheader(
-                    "Batch Results"
-                )
-
-                st.dataframe(
-                    summary_df[available_columns],
-                    use_container_width=True,
-                    hide_index=True,
-                )
-
-                # --------------------------------------------------
-                # Download CSV
-                # --------------------------------------------------
-
-                csv_data = summary_df.to_csv(
-                    index=False
-                )
-
-                st.download_button(
-                    "⬇ Download Batch CSV",
-                    data=csv_data,
-                    file_name="rnaseq_scout_batch_summary.csv",
-                    mime="text/csv",
-                    use_container_width=True,
-                    key="download_batch_csv",
-                )
-
+            batch_result = batch_executor.run(
+                unique_accessions,
+                resume=True,
+            )
 
         except Exception as exc:
 
-            st.warning(
-                "Batch completed, but the summary table could "
-                f"not be displayed: {exc}"
+            st.error(
+                "RNASeq Scout encountered an unexpected "
+                "batch execution error."
             )
 
+            st.exception(exc)
 
-        # ------------------------------------------------------
-        # Individual failures
-        # ------------------------------------------------------
+            st.stop()
 
-        failures = [
-            item
-            for item in batch_result.items
-            if not item.success
-        ]
 
-        if failures:
+    # ------------------------------------------------------
+    # Batch summary
+    # ------------------------------------------------------
+
+    st.success(
+        "Batch analysis completed."
+    )
+
+
+    metric_columns = st.columns(5)
+
+    metric_columns[0].metric(
+        "Submitted",
+        len(raw_accessions),
+    )
+
+    metric_columns[1].metric(
+        "Unique",
+        len(unique_accessions),
+    )
+
+    metric_columns[2].metric(
+        "Successful",
+        batch_result.successful,
+    )
+
+    metric_columns[3].metric(
+        "Failed",
+        batch_result.failed,
+    )
+
+    metric_columns[4].metric(
+        "Skipped",
+        batch_result.skipped,
+    )
+
+
+    # ------------------------------------------------------
+    # Batch result table
+    # ------------------------------------------------------
+
+    try:
+
+        import pandas as pd
+
+        summary_path = Path(
+            config.summary_csv_path
+        )
+
+        if summary_path.exists():
+
+            summary_df = pd.read_csv(
+                summary_path
+            )
+
+            display_columns = [
+                "accession",
+                "database",
+                "accession_type",
+                "success",
+                "modality",
+                "library_strategy",
+                "suitability",
+                "reanalysis_readiness",
+                "status",
+            ]
+
+            available_columns = [
+                column
+                for column in display_columns
+                if column in summary_df.columns
+            ]
 
             st.subheader(
-                "Batch Failures"
+                "Batch Results"
             )
 
-            for item in failures:
+            st.dataframe(
+                summary_df[available_columns],
+                width="stretch",
+                hide_index=True,
+            )
 
-                st.error(
-                    f"{item.accession}: "
-                    f"{item.error or 'Unknown error'}"
-                )
+            # --------------------------------------------------
+            # Download CSV
+            # --------------------------------------------------
+
+            csv_data = summary_df.to_csv(
+                index=False
+            )
+
+            st.download_button(
+                "⬇ Download Batch CSV",
+                data=csv_data,
+                file_name="rnaseq_scout_batch_summary.csv",
+                mime="text/csv",
+                width="stretch",
+                key="download_batch_csv",
+            )
 
 
-        # ------------------------------------------------------
-        # Checkpoint information
-        # ------------------------------------------------------
+    except Exception as exc:
 
-        st.caption(
-            "Batch checkpoint: "
-            f"{config.checkpoint_path}"
+        st.warning(
+            "Batch completed, but the summary table could "
+            f"not be displayed: {exc}"
         )
 
 
-    # ==========================================================
-    # End Batch Analysis
-    # ==========================================================
+    # ------------------------------------------------------
+    # Individual failures
+    # ------------------------------------------------------
+
+    failures = [
+        item
+        for item in batch_result.items
+        if not item.success
+    ]
+
+    if failures:
+
+        st.subheader(
+            "Batch Failures"
+        )
+
+        for item in failures:
+
+            st.error(
+                f"{item.accession}: "
+                f"{item.error or 'Unknown error'}"
+            )
+
+
+    # ------------------------------------------------------
+    # Checkpoint information
+    # ------------------------------------------------------
+
+    st.caption(
+        "Batch checkpoint: "
+        f"{config.checkpoint_path}"
+    )
+
+
+# ==========================================================
+# End Batch Analysis
+# ==========================================================
+
 
 # ==========================================================
 # Inspection
@@ -5084,7 +5427,7 @@ if inspect_clicked:
                             if attribute_rows:
                                 st.dataframe(
                                     attribute_rows,
-                                    use_container_width=True,
+                                    width="stretch",
                                     hide_index=True,
                                 )
 
@@ -5657,7 +6000,7 @@ if inspect_clicked:
             data=json_data,
             file_name=f"{accession}_inspection.json",
             mime="application/json",
-            use_container_width=True,
+            width="stretch",
         )
 
 
@@ -5679,7 +6022,7 @@ if inspect_clicked:
                 data=pdf_data,
                 file_name=f"{accession}_inspection.pdf",
                 mime="application/pdf",
-                use_container_width=True,
+                width="stretch",
             )
 
         except RuntimeError as exc:
@@ -5707,35 +6050,6 @@ else:
     )
 
 
-# ==========================================================
-# Usage Tracker Display
-# ==========================================================
-
-usage_summary = usage_tracker.summary()
-
-total_checks = usage_summary[
-    "total_checks"
-]
-
-unique_accessions = usage_summary[
-    "unique_accessions"
-]
-
-render_html(
-    f"""
-<div class="rna-usage-tracker">
-    <span class="rna-usage-dot"></span>
-    <span class="rna-usage-count">
-        {format_number(total_checks)}
-    </span>
-    accessions checked
-    <div class="rna-usage-sub">
-        {format_number(unique_accessions)} unique
-    </div>
-</div>
-    """
-)
-
 
 # ==========================================================
 # Application Footer
@@ -5743,63 +6057,18 @@ render_html(
 
 render_html(
     """
-<div class="rna-footer">
-
-<div class="rna-footer-left">
-
-<span class="rna-footer-brand">
-RNASeq Scout
-</span>
-
-<span class="rna-footer-divider">|</span>
-
-<span>
-v0.1.0
-</span>
-
-<span class="rna-footer-divider">|</span>
-
-<span>
-An open-source project for the scientific community
-</span>
-
-</div>
-
-<div class="rna-footer-center">
-
-<span>
-Developed by
-</span>
-
-<span class="rna-footer-name">
-Dr. G. Shankar
-</span>
-
-<span class="rna-footer-divider">|</span>
-
-<span class="rna-footer-name">
-Dr. Ranjana Soni
-</span>
-
-<span class="rna-footer-divider">|</span>
-
-<span>
-🟢 0000-0002-8972-6670
-</span>
-
-<span class="rna-footer-divider">|</span>
-
-<span>
-✉ gshankar.bbau@gmail.com
-</span>
-
-</div>
-
-<div class="rna-footer-right">
-Data for a healthier planet<br>
-and a brighter tomorrow
-</div>
-
-</div>
+    <div class="scout-footer">
+        <div>
+            <strong>RNASeq Scout</strong>
+            &nbsp;·&nbsp; v0.1.0
+            &nbsp;·&nbsp; Open-source scientific workflow
+        </div>
+        <div>
+            Developed by Dr. G. Shankar &nbsp;·&nbsp; Dr. Ranjana Soni
+        </div>
+        <div>
+            Evidence-aware public RNA-seq dataset inspection
+        </div>
+    </div>
     """
 )
