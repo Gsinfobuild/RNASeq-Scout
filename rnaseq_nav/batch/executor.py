@@ -469,6 +469,12 @@ class BatchExecutor:
         resume: bool = True,
     ) -> BatchResult:
 
+        accessions = self.normalize_accessions(accessions)
+        if len(accessions) > self.config.max_accessions:
+            raise ValueError(
+                f"Batch supports at most {self.config.max_accessions} unique accessions; "
+                f"received {len(accessions)}."
+            )
         normalized = self.normalize_accessions(
             accessions
         )

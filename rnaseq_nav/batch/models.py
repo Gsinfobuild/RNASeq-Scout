@@ -7,6 +7,9 @@ class BatchConfig:
     enrich_biosample: bool = False
     enrich_study_biosamples: bool = False
 
+    # Maximum number of unique accessions accepted by one batch.
+    max_accessions: int = 50
+
     checkpoint_path: str = "batch_checkpoint.json"
     results_jsonl_path: str = "batch_results.jsonl"
     summary_csv_path: str = "batch_summary.csv"

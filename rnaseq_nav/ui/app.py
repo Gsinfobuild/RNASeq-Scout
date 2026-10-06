@@ -4166,11 +4166,11 @@ with workspace_right:
             <div class="scout-card-content">
                 <div class="scout-card-title">Batch inspection</div>
                 <div class="scout-card-description">
-                    Inspect up to five GEO or SRA accessions together using the
+                    Inspect up to 50 GEO or SRA accessions together using the
                     same production BatchExecutor and evidence-aware pipeline.
                 </div>
                 <div class="scout-supported">
-                    <strong>Input:</strong> one accession per line.
+                    <strong>Input:</strong> up to 50 accessions, one per line.
                     Duplicates are removed automatically.
                 </div>
             </div>
@@ -4180,8 +4180,9 @@ with workspace_right:
         batch_input = st.text_area(
             "Batch accessions",
             value="",
-            height=126,
+            height=280,
             placeholder=(
+                "Enter one accession per line (maximum 50 unique accessions)\n"
                 "SRR17730393\n"
                 "SRX13893142\n"
                 "GSE135553"
@@ -4300,6 +4301,8 @@ if batch_clicked:
 
     # ------------------------------------------------------
     # Validate batch size
+
+    batch_limit = BatchConfig().max_accessions
     # ------------------------------------------------------
 
     if not unique_accessions:
@@ -4311,11 +4314,14 @@ if batch_clicked:
         st.stop()
 
 
-    if len(unique_accessions) > 5:
+    MAX_BATCH_ACCESSIONS = 50
+
+    if len(unique_accessions) > batch_limit:
 
         st.error(
-            "The initial Streamlit batch interface supports "
-            "a maximum of 5 unique accessions."
+            f"Batch inspection supports a maximum of "
+            f"{MAX_BATCH_ACCESSIONS} unique accessions. "
+            f"You entered {len(unique_accessions)} unique accessions."
         )
 
         st.stop()
@@ -4336,6 +4342,9 @@ if batch_clicked:
 
 
     config = BatchConfig(
+
+
+        max_accessions=batch_limit,
         checkpoint_path=str(
             batch_output_dir / "checkpoint.json"
         ),
