@@ -124,7 +124,26 @@ class BatchExecutor:
         return str(value)
 
     @staticmethod
-    def _result_summary(result: Any) -> Dict[str, Any]:
+    def _get_value(
+        obj: Any,
+        key: str,
+        default: Any = None,
+    ) -> Any:
+        # Read a field from an object/dataclass or JSON dictionary.
+        if obj is None:
+            return default
+
+        if isinstance(obj, dict):
+            return obj.get(key, default)
+
+        return getattr(obj, key, default)
+
+    @classmethod
+    def _result_summary(
+        cls,
+        result: Any,
+    ) -> Dict[str, Any]:
+        # Extract a compact scientific summary from live or JSON results.
         if result is None:
             return {
                 "accession": "",
@@ -132,36 +151,140 @@ class BatchExecutor:
                 "error": "No inspection result returned.",
             }
 
-        modality = getattr(result, "modality_insight", None)
-        suitability = getattr(result, "suitability_insight", None)
-        readiness = getattr(result, "reanalysis_readiness", None)
-        analysis_plan = getattr(result, "analysis_plan", None)
+        modality = cls._get_value(result, "modality_insight", None)
+        suitability = cls._get_value(result, "suitability_insight", None)
+        readiness = cls._get_value(result, "reanalysis_readiness", None)
+        analysis_plan = cls._get_value(result, "analysis_plan", None)
 
         return {
-            "accession": getattr(result, "accession", ""),
-            "success": bool(getattr(result, "success", False)),
-            "error": getattr(result, "error", None),
-
-            "modality": getattr(
+            "accession": cls._get_value(result, "accession", ""),
+            "success": bool(
+                cls._get_value(result, "success", False)
+            ),
+            "error": cls._get_value(result, "error", None),
+            "modality": cls._get_value(
                 modality, "modality", ""
             ) if modality else "",
-
-            "library_strategy": getattr(
+            "library_strategy": cls._get_value(
                 modality, "library_strategy", ""
             ) if modality else "",
-
-            "suitability": getattr(
+            "suitability": cls._get_value(
                 suitability, "overall", ""
             ) if suitability else "",
-
-            "reanalysis_readiness": getattr(
+            "reanalysis_readiness": cls._get_value(
                 readiness, "verdict", ""
             ) if readiness else "",
-
-            "analysis_goal": getattr(
+            "analysis_goal": cls._get_value(
                 analysis_plan, "workflow", ""
             ) if analysis_plan else "",
         }
+
+    def _load_stored_summaries(
+        self,
+    ) -> Dict[str, Dict[str, Any]]:
+        # Recover previous scientific summaries from append-only JSONL.
+        summaries: Dict[str, Dict[str, Any]] = {}
+
+        path = Path(self.config.results_jsonl_path)
+
+        if not path.exists():
+            return summaries
+
+        try:
+            with path.open("r", encoding="utf-8") as handle:
+                for line in handle:
+                    line = line.strip()
+                    if not line:
+                        continue
+
+                    try:
+                        payload = json.loads(line)
+                    except json.JSONDecodeError:
+                        continue
+
+                    summary = self._result_summary(payload)
+                    accession = str(
+                        summary.get("accession", "")
+                    ).strip().upper()
+
+                    if accession:
+                        summaries[accession] = summary
+
+        except OSError:
+            return summaries
+
+        return summaries
+
+    def _load_existing_summary_csv(
+        self,
+    ) -> Dict[str, Dict[str, Any]]:
+        # Recover non-empty scientific rows from the previous CSV.
+        summaries: Dict[str, Dict[str, Any]] = {}
+
+        path = Path(self.config.summary_csv_path)
+
+        if not path.exists():
+            return summaries
+
+        try:
+            with path.open(
+                "r",
+                newline="",
+                encoding="utf-8",
+            ) as handle:
+                reader = csv.DictReader(handle)
+
+                for row in reader:
+                    accession = str(
+                        row.get("accession", "")
+                    ).strip().upper()
+
+                    if not accession:
+                        continue
+
+                    scientific_fields = (
+                        "modality",
+                        "library_strategy",
+                        "suitability",
+                        "reanalysis_readiness",
+                        "analysis_goal",
+                    )
+
+                    if not any(
+                        str(row.get(field, "")).strip()
+                        for field in scientific_fields
+                    ):
+                        continue
+
+                    summaries[accession] = {
+                        "accession": accession,
+                        "success": str(
+                            row.get("success", "")
+                        ).strip().lower() in {
+                            "true",
+                            "1",
+                            "yes",
+                        },
+                        "error": row.get("error") or None,
+                        "modality": row.get("modality", ""),
+                        "library_strategy": row.get(
+                            "library_strategy", ""
+                        ),
+                        "suitability": row.get(
+                            "suitability", ""
+                        ),
+                        "reanalysis_readiness": row.get(
+                            "reanalysis_readiness", ""
+                        ),
+                        "analysis_goal": row.get(
+                            "analysis_goal", ""
+                        ),
+                    }
+
+        except (OSError, csv.Error):
+            return summaries
+
+        return summaries
 
     def _checkpoint_items(
         self,
@@ -227,6 +350,16 @@ class BatchExecutor:
             exist_ok=True,
         )
 
+        # Recover persisted scientific results before rewriting CSV.
+        # Current-run summaries take precedence.
+        stored_summaries = self._load_stored_summaries()
+        stored_summaries.update(
+            self._load_existing_summary_csv()
+        )
+        stored_summaries.update(
+            summaries
+        )
+
         fields = [
             "accession",
             "success",
@@ -254,7 +387,7 @@ class BatchExecutor:
 
             for item in items:
                 row = dict(
-                    summaries.get(
+                    stored_summaries.get(
                         item.accession,
                         {},
                     )
@@ -297,6 +430,13 @@ class BatchExecutor:
                 [],
             )
 
+            # A completed execution state is resumable only when the
+            # scientific result is also persisted.
+            stored_summaries = self._load_stored_summaries()
+            stored_summaries.update(
+                self._load_existing_summary_csv()
+            )
+
             saved_by_accession = {
                 item["accession"]: item
                 for item in saved_items
@@ -310,6 +450,25 @@ class BatchExecutor:
                     saved = saved_by_accession[
                         accession
                     ]
+
+                    saved_status = str(
+                        saved.get(
+                            "status",
+                            "pending",
+                        )
+                    ).lower()
+
+                    # Old checkpoints may contain "completed" execution
+                    # state without the actual scientific result. Re-run
+                    # those accessions once rather than emitting blank rows.
+                    if (
+                        saved_status == "completed"
+                        and accession not in stored_summaries
+                    ):
+                        items.append(
+                            self._make_item(accession)
+                        )
+                        continue
 
                     item = BatchItem(
                         accession=accession,
