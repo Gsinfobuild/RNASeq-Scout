@@ -4391,7 +4391,8 @@ if batch_clicked:
                 "batch execution error."
             )
 
-            st.exception(exc)
+            with st.expander("Technical details (for troubleshooting)"):
+                st.code(f"{type(exc).__name__}: {exc}")
 
             st.stop()
 
@@ -4500,9 +4501,10 @@ if batch_clicked:
     except Exception as exc:
 
         st.warning(
-            "Batch completed, but the summary table could "
-            f"not be displayed: {exc}"
+            "Batch inspection completed, but its summary could not be displayed."
         )
+        with st.expander("Technical details (for troubleshooting)"):
+            st.code(f"{type(exc).__name__}: {exc}")
 
 
     # ------------------------------------------------------
@@ -4597,7 +4599,8 @@ if inspect_clicked:
                 "RNASeq Scout encountered an unexpected error."
             )
 
-            st.exception(exc)
+            with st.expander("Technical details (for troubleshooting)"):
+                st.code(f"{type(exc).__name__}: {exc}")
 
             st.stop()
 
