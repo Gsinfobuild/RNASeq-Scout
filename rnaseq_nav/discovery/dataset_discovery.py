@@ -280,18 +280,87 @@ class DatasetDiscovery:
         diversity: str = "project",
     ):
         """
-        Search public RNA-seq datasets.
+        Search public sequencing datasets.
 
-        Parameters kept intentionally stable.
-        Unimplemented filters are accepted for
-        forward compatibility.
+        Optional metadata filters use case-insensitive
+        exact matching and are applied after retrieval.
+
+        diversity:
+            "project": best-scoring record per project
+            "study": one record per study
+            "run": preserve individual records
+
+        Filtering occurs after retrieval, so fewer than
+        max_results records may be returned.
         """
+
+
+        allowed_diversity = {"project", "study", "run"}
+        if diversity not in allowed_diversity:
+            raise ValueError(
+                f"Unsupported diversity '{diversity}'. "
+                f"Choose one of: {', '.join(sorted(allowed_diversity))}."
+            )
+
+        if max_results < 1:
+            raise ValueError("max_results must be at least 1.")
 
         query = (
             f'"{organism}"[Organism] '
             f'AND "{strategy}" '
             f'AND public[Access]'
         )
+
+        summaries = self.client.search(
+            query=query,
+            max_results=max_results,
+        )
+
+        metadata_list = []
+
+        for summary in summaries:
+            try:
+                metadata = self.parser.parse(summary)
+                metadata_list.append(metadata)
+            except Exception:
+                continue
+
+        filters = (
+            ("layout", layout),
+            ("platform", platform),
+            ("library_source", source),
+            ("library_selection", selection),
+        )
+
+        for field_name, expected in filters:
+            if expected is None:
+                continue
+
+            expected_value = str(expected).strip().casefold()
+
+            metadata_list = [
+                metadata
+                for metadata in metadata_list
+                if str(
+                    getattr(
+                        metadata.experiment,
+                        field_name,
+                        "",
+                    ) or ""
+                ).strip().casefold() == expected_value
+            ]
+
+        if diversity == "project":
+            metadata_list = DatasetRanker.best_per_project(
+                metadata_list
+            )
+        elif diversity == "study":
+            metadata_list = DatasetDiversity.unique_studies(
+                metadata_list
+            )
+
+        return metadata_list
+
 
         summaries = self.client.search(
             query=query,
