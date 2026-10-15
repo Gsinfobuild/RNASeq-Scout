@@ -54,6 +54,8 @@ if str(PROJECT_ROOT) not in sys.path:
 
 import streamlit as st
 
+from rnaseq_nav.ui.dataset_discovery_panel import render_dataset_discovery_panel
+
 
 # ==========================================================
 # UI ACCESSIBILITY AND TYPOGRAPHY
@@ -4199,6 +4201,9 @@ with workspace_right:
         )
 
 # ----------------------------------------------------------
+render_dataset_discovery_panel(st, NCBI_EMAIL)
+
+
 # What RNASeq Scout provides
 # ----------------------------------------------------------
 
