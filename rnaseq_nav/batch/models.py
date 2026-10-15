@@ -41,6 +41,7 @@ class BatchResult:
     pending: int
     skipped: int
     items: List[BatchItem] = field(default_factory=list)
+    processed_accessions: List[str] = field(default_factory=list)
 
     @property
     def finished(self) -> bool:

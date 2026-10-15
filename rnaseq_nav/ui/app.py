@@ -4015,6 +4015,26 @@ def build_pdf(
 # Header / Landing workspace
 # ==========================================================
 
+# USAGE_COUNTER_TURSO_SETUP
+_turso_url = os.environ.get("TURSO_DATABASE_URL", "").strip()
+_turso_token = os.environ.get("TURSO_AUTH_TOKEN", "").strip()
+
+try:
+    _turso_url = str(
+        st.secrets.get("TURSO_DATABASE_URL", _turso_url)
+    ).strip()
+    _turso_token = str(
+        st.secrets.get("TURSO_AUTH_TOKEN", _turso_token)
+    ).strip()
+except Exception:
+    # Streamlit Secrets may not be configured during local development.
+    pass
+
+usage_tracker = UsageTracker(
+    turso_database_url=_turso_url or None,
+    turso_auth_token=_turso_token or None,
+)
+
 render_html(
     """
     <div class="scout-hero">
@@ -4061,6 +4081,31 @@ render_html(
     </div>
     """
 )
+
+# Public usage counters, shown directly beneath the hero.
+try:
+    _usage_counts = usage_tracker.detailed_summary()
+    st.caption(
+        f"Usage statistics · Backend: {usage_tracker.backend_label}"
+    )
+    _usage_columns = st.columns(4)
+    _usage_columns[0].metric(
+        "Total inspections", _usage_counts["total_inspections"]
+    )
+    _usage_columns[1].metric(
+        "Successful", _usage_counts["successful_inspections"]
+    )
+    _usage_columns[2].metric(
+        "Failed", _usage_counts["failed_inspections"]
+    )
+    _usage_columns[3].metric(
+        "Unique accessions", _usage_counts["unique_accessions"]
+    )
+except Exception as _usage_error:
+    st.warning(
+        "Usage statistics are temporarily unavailable. "
+        "Dataset inspection can continue."
+    )
 
 render_html(
     """
@@ -4397,6 +4442,22 @@ if batch_clicked:
             st.stop()
 
 
+    # Record each accession processed in this invocation once.
+    # Retries are counted once; checkpoint-skipped items are excluded.
+    try:
+        processed = set(batch_result.processed_accessions)
+        for item in batch_result.items:
+            if item.accession not in processed:
+                continue
+            usage_tracker.record_result(
+                item.accession,
+                bool(item.success),
+                source="batch",
+            )
+    except Exception:
+        # Usage telemetry must never prevent scientific results displaying.
+        pass
+
     # ------------------------------------------------------
     # Batch summary
     # ------------------------------------------------------
@@ -4595,6 +4656,11 @@ if inspect_clicked:
 
         except Exception as exc:
 
+            try:
+                usage_tracker.record_failure(accession, source="single")
+            except Exception:
+                pass
+
             st.error(
                 "RNASeq Scout encountered an unexpected error."
             )
@@ -4610,6 +4676,11 @@ if inspect_clicked:
     # ------------------------------------------------------
 
     if not result.success:
+
+        try:
+            usage_tracker.record_failure(accession, source="single")
+        except Exception:
+            pass
 
         st.error(
             f"RNASeq Scout could not inspect {accession}."
@@ -4628,9 +4699,10 @@ if inspect_clicked:
     # Success
     # ------------------------------------------------------
 
-    usage_tracker.record_success(
-        accession
-    )
+    try:
+        usage_tracker.record_success(accession, source="single")
+    except Exception:
+        pass
 
 
     st.success(

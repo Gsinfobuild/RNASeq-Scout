@@ -6,3 +6,5 @@ biopython
 pandas
 reportlab
 supabase==2.31.0
+
+turso_serverless

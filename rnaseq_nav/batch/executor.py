@@ -647,6 +647,7 @@ class BatchExecutor:
 
         summaries: Dict[str, Dict[str, Any]] = {}
         skipped = 0
+        processed_accessions: List[str] = []
 
         for item in items:
 
@@ -658,6 +659,7 @@ class BatchExecutor:
                 continue
 
             result = self._run_one(item)
+            processed_accessions.append(item.accession)
 
             if result is not None:
                 summaries[item.accession] = (
@@ -709,4 +711,5 @@ class BatchExecutor:
             pending=pending,
             skipped=skipped,
             items=items,
+            processed_accessions=processed_accessions,
         )

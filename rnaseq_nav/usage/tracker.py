@@ -7,124 +7,93 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-
 DEFAULT_DATABASE_PATH = Path("data/usage.sqlite3")
 
 
 def classify_accession(accession: str) -> str:
-    """
-    Classify an accession into the semantic category used by
-    RNASeq Scout's usage tracker.
-
-    Returns:
-        run
-        experiment
-        study
-        project
-        sample
-        other
-    """
+    """Classify a public sequencing accession."""
     normalized = accession.strip().upper()
 
-    if re.fullmatch(r"(SRR|ERR)\d+", normalized):
+    if re.fullmatch(r"(SRR|ERR|DRR)\d+", normalized):
         return "run"
-
-    if re.fullmatch(r"(SRX|ERX)\d+", normalized):
+    if re.fullmatch(r"(SRX|ERX|DRX)\d+", normalized):
         return "experiment"
-
-    if re.fullmatch(r"(SRP|ERP|SRA)\d+", normalized):
+    if re.fullmatch(r"(SRP|ERP|DRP|SRA)\d+", normalized):
         return "study"
-
     if re.fullmatch(r"PRJ(NA|EB|DB)\d+", normalized):
         return "project"
-
-    if re.fullmatch(r"(SRS|ERS|SAMN|SAMEA)\d+", normalized):
+    if re.fullmatch(r"(SRS|ERS|DRS|SAMN|SAMEA)\d+", normalized):
         return "sample"
 
     return "other"
 
 
 class UsageTracker:
-    """
-    Persistent usage tracker for RNASeq Scout.
-
-    Backend selection:
-
-    - Default application usage uses Supabase when
-      SUPABASE_URL and SUPABASE_KEY are available.
-    - Supplying a custom database_path forces SQLite.
-      This keeps tests isolated even when Supabase credentials
-      exist in the environment.
-    - use_supabase can explicitly override automatic selection.
-    """
+    """Record inspection outcomes in Turso or a local SQLite database."""
 
     def __init__(
         self,
         database_path: str | Path = DEFAULT_DATABASE_PATH,
         *,
+        turso_database_url: str | None = None,
+        turso_auth_token: str | None = None,
         supabase_client: Any | None = None,
         use_supabase: bool | None = None,
     ) -> None:
+        # Keep legacy constructor arguments accepted for compatibility.
+        # Usage tracking now uses Turso or SQLite, not Supabase.
+        del supabase_client
+        if use_supabase:
+            raise ValueError(
+                "Supabase usage tracking is no longer supported. "
+                "Configure TURSO_DATABASE_URL and TURSO_AUTH_TOKEN."
+            )
+
         self.database_path = Path(database_path)
-        self._supabase = supabase_client
+        self.turso_database_url = (
+            turso_database_url
+            or os.getenv("TURSO_DATABASE_URL", "")
+        ).strip()
+        self.turso_auth_token = (
+            turso_auth_token
+            or os.getenv("TURSO_AUTH_TOKEN", "")
+        ).strip()
 
-        supabase_url = os.getenv("SUPABASE_URL", "").strip()
-        supabase_key = os.getenv("SUPABASE_KEY", "").strip()
-
-        custom_database_path = (
-            self.database_path != DEFAULT_DATABASE_PATH
+        custom_path = self.database_path != DEFAULT_DATABASE_PATH
+        self.using_turso = bool(
+            self.turso_database_url
+            and self.turso_auth_token
+            and not custom_path
         )
+        self.backend_label = "Turso cloud" if self.using_turso else "Local SQLite"
 
-        if use_supabase is None:
-            use_supabase = (
-                self._supabase is not None
-                or (
-                    not custom_database_path
-                    and bool(supabase_url)
-                    and bool(supabase_key)
-                )
+        if not custom_path and bool(self.turso_database_url) != bool(
+            self.turso_auth_token
+        ):
+            raise ValueError(
+                "Configure both TURSO_DATABASE_URL and TURSO_AUTH_TOKEN, "
+                "or leave both unset to use local SQLite."
             )
 
-        self._using_supabase = bool(use_supabase)
+        self._initialize_database()
 
-        if self._using_supabase and self._supabase is None:
-            if not supabase_url or not supabase_key:
-                raise ValueError(
-                    "Supabase backend requested, but "
-                    "SUPABASE_URL and SUPABASE_KEY are not configured."
-                )
+    def _connect(self):
+        if self.using_turso:
+            import turso_serverless
 
-            from supabase import create_client
-
-            self._supabase = create_client(
-                supabase_url,
-                supabase_key,
+            return turso_serverless.connect(
+                self.turso_database_url,
+                auth_token=self.turso_auth_token,
             )
 
-        if not self._using_supabase:
-            self._initialize_sqlite()
-
-    @property
-    def using_supabase(self) -> bool:
-        """Return True when the tracker uses Supabase."""
-        return self._using_supabase
-
-    def _connect(self) -> sqlite3.Connection:
-        self.database_path.parent.mkdir(
-            parents=True,
-            exist_ok=True,
-        )
-
-        connection = sqlite3.connect(
-            self.database_path
-        )
-
+        self.database_path.parent.mkdir(parents=True, exist_ok=True)
+        connection = sqlite3.connect(self.database_path)
         connection.row_factory = sqlite3.Row
-
         return connection
 
-    def _initialize_sqlite(self) -> None:
-        with self._connect() as connection:
+    def _initialize_database(self) -> None:
+        connection = self._connect()
+        try:
             connection.execute(
                 """
                 CREATE TABLE IF NOT EXISTS accession_checks (
@@ -132,193 +101,125 @@ class UsageTracker:
                     checked_at TEXT NOT NULL,
                     accession TEXT NOT NULL,
                     accession_type TEXT NOT NULL,
-                    status TEXT NOT NULL
+                    status TEXT NOT NULL,
+                    source TEXT NOT NULL DEFAULT 'single'
                 )
                 """
             )
+
+            # Migrate existing local databases without deleting their records.
+            if not self.using_turso:
+                columns = {
+                    row["name"]
+                    for row in connection.execute(
+                        "PRAGMA table_info(accession_checks)"
+                    ).fetchall()
+                }
+                if "source" not in columns:
+                    connection.execute(
+                        "ALTER TABLE accession_checks "
+                        "ADD COLUMN source TEXT NOT NULL DEFAULT 'single'"
+                    )
 
             connection.commit()
+        finally:
+            connection.close()
 
-    def record_success(self, accession: str) -> None:
-        """
-        Record one successful accession inspection.
-
-        Repeated checks count as multiple total checks but
-        only contribute once to the unique-accession count.
-        """
-        normalized = accession.strip().upper()
-
+    def record_result(
+        self,
+        accession: str,
+        success: bool,
+        source: str = "single",
+    ) -> None:
+        """Record one terminal inspection outcome, successful or failed."""
+        normalized = str(accession).strip().upper()
         if not normalized:
-            raise ValueError(
-                "Accession cannot be empty."
-            )
+            raise ValueError("Accession cannot be empty.")
 
-        accession_type = classify_accession(
-            normalized
-        )
+        normalized_source = str(source).strip().lower() or "single"
+        timestamp = datetime.now(timezone.utc).isoformat()
+        connection = self._connect()
 
-        timestamp = datetime.now(
-            timezone.utc
-        ).isoformat()
-
-        if self.using_supabase:
-            self._record_supabase(
-                accession=normalized,
-                accession_type=accession_type,
-                timestamp=timestamp,
-            )
-        else:
-            self._record_sqlite(
-                accession=normalized,
-                accession_type=accession_type,
-                timestamp=timestamp,
-            )
-
-    def _record_supabase(
-        self,
-        *,
-        accession: str,
-        accession_type: str,
-        timestamp: str,
-    ) -> None:
-        """
-        Record usage through the protected Supabase RPC function.
-        """
-        if self._supabase is None:
-            raise RuntimeError(
-                "Supabase client is not initialized."
-            )
-
-        self._supabase.rpc(
-            "record_accession_check",
-            {
-                "p_accession": accession,
-                "p_accession_type": accession_type,
-            },
-        ).execute()
-
-    def _usage_summary_supabase(self) -> dict[str, int]:
-        """
-        Retrieve the aggregate usage summary through the
-        protected Supabase RPC function.
-        """
-        if self._supabase is None:
-            raise RuntimeError(
-                "Supabase client is not initialized."
-            )
-
-        response = self._supabase.rpc(
-            "get_usage_summary",
-            {},
-        ).execute()
-
-        data = response.data
-
-        if isinstance(data, dict):
-            return {
-                "total_checks": int(
-                    data.get("total_checks", 0)
-                ),
-                "unique_accessions": int(
-                    data.get("unique_accessions", 0)
-                ),
-            }
-
-        raise RuntimeError(
-            "Supabase returned an invalid usage summary."
-        )
-
-    def _record_sqlite(
-        self,
-        *,
-        accession: str,
-        accession_type: str,
-        timestamp: str,
-    ) -> None:
-        with self._connect() as connection:
+        try:
             connection.execute(
                 """
-                INSERT INTO accession_checks (
-                    checked_at,
-                    accession,
-                    accession_type,
-                    status
-                )
-                VALUES (?, ?, ?, ?)
+                INSERT INTO accession_checks
+                    (checked_at, accession, accession_type, status, source)
+                VALUES (?, ?, ?, ?, ?)
                 """,
                 (
                     timestamp,
-                    accession,
-                    accession_type,
-                    "success",
+                    normalized,
+                    classify_accession(normalized),
+                    "success" if success else "failure",
+                    normalized_source,
                 ),
             )
-
             connection.commit()
+        finally:
+            connection.close()
+
+    def record_success(self, accession: str, source: str = "single") -> None:
+        """Record a successful inspection."""
+        self.record_result(accession, True, source)
+
+    def record_failure(self, accession: str, source: str = "single") -> None:
+        """Record a failed inspection."""
+        self.record_result(accession, False, source)
+
+    def _count(self, sql: str) -> int:
+        connection = self._connect()
+        try:
+            row = connection.execute(sql).fetchone()
+            return int(row[0])
+        finally:
+            connection.close()
 
     def total_checks(self) -> int:
-        """
-        Return the total number of successful accession checks.
-        """
-        if self.using_supabase:
-            return self._usage_summary_supabase()[
-                "total_checks"
-            ]
-
-        with self._connect() as connection:
-            row = connection.execute(
-                """
-                SELECT COUNT(*) AS total
-                FROM accession_checks
-                WHERE status = 'success'
-                """
-            ).fetchone()
-
-        return int(row["total"])
+        """Return successful inspections, preserving the legacy API."""
+        return self._count(
+            "SELECT COUNT(*) FROM accession_checks WHERE status = 'success'"
+        )
 
     def unique_accessions(self) -> int:
-        """
-        Return the number of distinct successfully checked accessions.
-        """
-        if self.using_supabase:
-            return self._usage_summary_supabase()[
-                "unique_accessions"
-            ]
+        """Count distinct accessions with successful inspections."""
+        return self._count(
+            """
+            SELECT COUNT(DISTINCT accession)
+            FROM accession_checks
+            WHERE status = 'success'
+            """
+        )
 
-        with self._connect() as connection:
-            row = connection.execute(
-                """
-                SELECT COUNT(DISTINCT accession) AS total
-                FROM accession_checks
-                WHERE status = 'success'
-                """
-            ).fetchone()
-
-        return int(row["total"])
-
-    def summary(self) -> dict[str, int]:
-        """
-        Return total and unique usage counts.
-        """
-        if self.using_supabase:
-            return self._usage_summary_supabase()
-
-        with self._connect() as connection:
+    def detailed_summary(self) -> dict[str, int]:
+        """Return counters for the visible application usage display."""
+        connection = self._connect()
+        try:
             row = connection.execute(
                 """
                 SELECT
-                    COUNT(*) AS total_checks,
+                    COUNT(*) AS total_inspections,
+                    SUM(CASE WHEN status = 'success' THEN 1 ELSE 0 END)
+                        AS successful_inspections,
+                    SUM(CASE WHEN status = 'failure' THEN 1 ELSE 0 END)
+                        AS failed_inspections,
                     COUNT(DISTINCT accession) AS unique_accessions
                 FROM accession_checks
-                WHERE status = 'success'
                 """
             ).fetchone()
 
+            return {
+                "total_inspections": int(row[0] or 0),
+                "successful_inspections": int(row[1] or 0),
+                "failed_inspections": int(row[2] or 0),
+                "unique_accessions": int(row[3] or 0),
+            }
+        finally:
+            connection.close()
+
+    def summary(self) -> dict[str, int]:
+        """Return the original summary shape for backward compatibility."""
         return {
-            "total_checks": int(
-                row["total_checks"]
-            ),
-            "unique_accessions": int(
-                row["unique_accessions"]
-            ),
+            "total_checks": self.total_checks(),
+            "unique_accessions": self.unique_accessions(),
         }
