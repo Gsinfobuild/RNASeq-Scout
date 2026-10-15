@@ -459,6 +459,34 @@ def generate_modality_insight(metadata) -> ModalityInsight:
         return result
 
     # --------------------------------------------------------
+    # Hi-C
+    # --------------------------------------------------------
+
+    if strategy in {
+        "HI_C",
+        "HI-C",
+        "HIC",
+    }:
+
+        result.modality = "Hi-C"
+        result.workflow_family = "chromatin_conformation"
+        result.rna_seq_compatible = False
+        result.compatibility_status = "Not compatible"
+        result.classification_confidence = "High"
+
+        result.warnings.append(
+            "Hi-C data require a chromatin-conformation analysis "
+            "workflow rather than conventional RNA-seq expression analysis."
+        )
+
+        result.rationale = (
+            "The library strategy identifies Hi-C sequencing rather "
+            "than conventional RNA-seq."
+        )
+
+        return result
+
+    # --------------------------------------------------------
     # Unknown strategy
     # --------------------------------------------------------
 

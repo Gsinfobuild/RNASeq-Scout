@@ -186,6 +186,42 @@ def test_curated_modality_smoke_matrix(
 # Unknown / incomplete metadata
 # ==========================================================
 
+
+@pytest.mark.parametrize("strategy", ["HI_C", "HI-C", "HIC"])
+def test_hic_strategy_requires_chromatin_conformation_workflow(strategy):
+    """Hi-C must not be classified as conventional RNA-seq."""
+    from rnaseq_nav.intelligence.modality_intelligence import (
+        generate_modality_insight,
+    )
+    from rnaseq_nav.models import (
+        ExperimentMetadata,
+        Metadata,
+        SampleMetadata,
+    )
+
+    metadata = Metadata(
+        experiment=ExperimentMetadata(
+            library_strategy=strategy,
+            library_source="GENOMIC",
+            library_selection="other",
+            layout="PAIRED",
+            platform="ILLUMINA",
+        ),
+        sample=SampleMetadata(organism="Homo sapiens"),
+    )
+
+    insight = generate_modality_insight(metadata)
+
+    assert insight.modality == "Hi-C"
+    assert insight.workflow_family == "chromatin_conformation"
+    assert insight.rna_seq_compatible is False
+    assert insight.compatibility_status == "Not compatible"
+    assert insight.classification_confidence == "High"
+    assert any(
+        "chromatin-conformation" in warning
+        for warning in insight.warnings
+    )
+
 def test_unknown_strategy_is_uncertain():
     """
     Verify that missing library strategy remains uncertain
