@@ -185,6 +185,7 @@ class DatasetDiscovery:
     def fetch_study(
         self,
         accession: str,
+        max_results: int = 1000,
     ):
         """
         Retrieve all experiment records belonging to a study.
@@ -200,8 +201,14 @@ class DatasetDiscovery:
             Experiment-level records associated with the study.
         """
 
+        if max_results <= 0:
+            raise ValueError(
+                "max_results must be greater than zero."
+            )
+
         summaries = self.client.fetch_study(
-            accession
+            accession,
+            max_results=max_results,
         )
 
         return self.parser.parse_study_experiments(
@@ -211,6 +218,106 @@ class DatasetDiscovery:
     # ---------------------------------------------------------
     # PUBLIC API (STABLE)
     # ---------------------------------------------------------
+
+    def fetch_linked_sra_records(
+        self,
+        accession: str,
+        max_records: int = 100,
+    ) -> dict:
+        """
+        Discover experiment/run records through the accession's parent study.
+
+        This method uses the study relationship reported by the existing
+        metadata parser. It does not guarantee that every link shown on
+        an NCBI webpage has been retrieved.
+
+        Parameters
+        ----------
+        accession : str
+            Starting SRA accession, such as SRX, SRR, or SRP.
+        max_records : int
+            Maximum number of experiment records returned to the caller.
+
+        Returns
+        -------
+        dict
+            Starting accession, parent study accession, experiment records,
+            unique experiment/run counts, and a truncation indicator.
+        """
+        accession = accession.strip().upper()
+
+        if max_records <= 0:
+            raise ValueError(
+                "max_records must be greater than zero."
+            )
+
+        if not accession:
+            raise ValueError(
+                "A starting accession is required."
+            )
+
+        metadata = self.fetch(accession)
+        study = getattr(metadata, "study", None)
+        study_accession = (
+            getattr(study, "accession", "") or ""
+        ).strip().upper()
+
+        if not study_accession:
+            raise ValueError(
+                f"No parent study accession could be resolved for "
+                f"'{accession}'. Linked-record discovery requires a "
+                "parent study."
+            )
+
+        retrieval_limit = 1000
+        records = self.fetch_study(
+            study_accession,
+            max_results=retrieval_limit,
+        )
+        records = list(records or [])
+
+        # Remove duplicate experiment records while preserving order.
+        unique_records = []
+        seen_experiments = set()
+
+        for record in records:
+            experiment_accession = (
+                getattr(record, "experiment_accession", "") or ""
+            ).strip().upper()
+
+            # Retain records with no accession, but do not deduplicate
+            # them by an empty identifier.
+            if experiment_accession:
+                if experiment_accession in seen_experiments:
+                    continue
+                seen_experiments.add(experiment_accession)
+
+            unique_records.append(record)
+
+        truncated = len(unique_records) > max_records
+        selected_records = unique_records[:max_records]
+
+        unique_runs = {
+            run.strip().upper()
+            for record in selected_records
+            for run in (getattr(record, "run_accessions", []) or [])
+            if isinstance(run, str) and run.strip()
+        }
+
+        return {
+            "starting_accession": accession,
+            "study_accession": study_accession,
+            "experiments": selected_records,
+            "experiment_count": len(selected_records),
+            "run_count": len(unique_runs),
+            "truncated": truncated,
+            "max_records": max_records,
+            "study_records_retrieved": len(records),
+            "study_retrieval_limit": retrieval_limit,
+            "study_retrieval_cap_reached": len(records) >= retrieval_limit,
+            "retrieval_scope": "parent_study",
+            "complete_link_coverage_verified": False,
+        }
 
     def fetch_experiment_at_a_glance(
         self,

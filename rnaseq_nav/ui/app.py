@@ -4198,6 +4198,23 @@ with workspace_left:
             label_visibility="collapsed",
         )
 
+        sra_accession_prefixes = (
+            "SRR", "SRX", "SRP",
+            "ERR", "ERX", "ERP",
+            "DRR", "DRX", "DRP",
+        )
+        explore_linked_records = st.checkbox(
+            "Also explore linked SRA experiments and runs",
+            value=False,
+            disabled=not accession.strip().upper().startswith(
+                sra_accession_prefixes
+            ),
+            help=(
+                "Optional additional NCBI lookup through the parent study. "
+                "Retrieval is limited; complete link coverage is not guaranteed."
+            ),
+        )
+
         inspect_clicked = st.button(
             "Inspect Dataset",
             type="primary",
@@ -4709,6 +4726,25 @@ if inspect_clicked:
         f"Dataset information retrieved for {accession}"
     )
 
+    # Optional linked-record retrieval must not invalidate a
+    # successful standard inspection if the additional lookup fails.
+    linked_records_result = None
+    linked_records_error = None
+
+    if explore_linked_records:
+        with st.spinner("Exploring linked SRA records through the parent study..."):
+            try:
+                linked_records_result = (
+                    navigator.discovery.fetch_linked_sra_records(
+                        accession,
+                        max_records=100,
+                    )
+                )
+            except Exception as exc:
+                linked_records_error = (
+                    f"{type(exc).__name__}: {exc}"
+                )
+
 
     # ======================================================
     # Inspection Summary
@@ -4728,6 +4764,96 @@ if inspect_clicked:
     normalization = result.normalization
 
     validation = result.validation
+
+    # ======================================================
+    # Optional Linked SRA Records
+    # ======================================================
+
+    if explore_linked_records:
+        render_section_title(
+            "Linked SRA Records",
+            "Experiment and run records retrieved through the parent study.",
+        )
+
+        if linked_records_error:
+            st.warning(
+                "The main dataset inspection succeeded, but linked-record "
+                "discovery could not be completed."
+            )
+            with st.expander("Linked-record troubleshooting details"):
+                st.code(linked_records_error)
+
+        elif linked_records_result is not None:
+            linked = linked_records_result
+
+            st.caption(
+                f"Starting accession: {linked['starting_accession']} · "
+                f"Parent study: {linked['study_accession']} · "
+                f"Retrieval scope: parent study"
+            )
+
+            metric_cols = st.columns(2)
+            metric_cols[0].metric(
+                "Experiments retrieved",
+                linked["experiment_count"],
+            )
+            metric_cols[1].metric(
+                "Unique runs retrieved",
+                linked["run_count"],
+            )
+
+            rows = []
+            for record in linked["experiments"]:
+                runs = getattr(record, "run_accessions", []) or []
+                rows.append({
+                    "Experiment accession": (
+                        getattr(record, "experiment_accession", "") or "—"
+                    ),
+                    "Experiment title": (
+                        getattr(record, "experiment_title", "") or "—"
+                    ),
+                    "Organism": getattr(record, "organism", "") or "—",
+                    "Library strategy": (
+                        getattr(record, "library_strategy", "") or "—"
+                    ),
+                    "Sample accession": (
+                        getattr(record, "sample_accession", "") or "—"
+                    ),
+                    "BioSample": (
+                        getattr(record, "biosample_accession", "") or "—"
+                    ),
+                    "Run accessions": ", ".join(str(run) for run in runs) or "—",
+                })
+
+            if rows:
+                st.dataframe(
+                    rows,
+                    use_container_width=True,
+                    hide_index=True,
+                )
+            else:
+                st.info(
+                    "No experiment records were returned for this parent study."
+                )
+
+            if linked["truncated"]:
+                st.warning(
+                    f"The display is limited to {linked['max_records']} "
+                    "experiments. Additional experiments may be available."
+                )
+
+            if linked["study_retrieval_cap_reached"]:
+                st.warning(
+                    "The study retrieval reached its configured cap of "
+                    f"{linked['study_retrieval_limit']} records. "
+                    "Additional records may exist; this does not prove that "
+                    "the study contains more records."
+                )
+
+            st.caption(
+                "These are records retrieved through the parent-study query. "
+                "Complete coverage of all links shown by NCBI has not been verified."
+            )
 
 
     # ======================================================
