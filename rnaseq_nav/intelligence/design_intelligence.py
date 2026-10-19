@@ -1669,6 +1669,17 @@ def generate_design_insight(metadata):
                 "Partially characterized"
             )
 
+        elif (
+            insight.sample_treatment
+            and insight.sample_time_point
+        ):
+
+            # Sample-level annotations support partial evidence only.
+            # They do not establish study-level group assignments.
+            insight.design_confidence = (
+                "Partially characterized"
+            )
+
         else:
 
             insight.design_confidence = (
@@ -1685,6 +1696,17 @@ def generate_design_insight(metadata):
 
         elif established_count >= 2:
 
+            insight.design_confidence = (
+                "Partially characterized"
+            )
+
+        elif (
+            insight.sample_treatment
+            and insight.sample_time_point
+        ):
+
+            # Explicit sample-level annotations support partial
+            # evidence, but do not establish study-level assignments.
             insight.design_confidence = (
                 "Partially characterized"
             )

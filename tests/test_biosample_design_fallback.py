@@ -83,3 +83,68 @@ def test_treatment_value_control_is_not_promoted():
 
     assert insight.treatment == ""
     assert insight.control == ""
+
+
+def test_paired_sample_annotations_support_partial_confidence_only():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="Thalassia hemprichii sediment sample",
+    )
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="Treatment",
+            harmonized_name="treatment",
+            display_name="treatment",
+            value="Acidification",
+        ),
+        SampleAttribute(
+            name="Time",
+            harmonized_name="time",
+            display_name="time",
+            value="Day30",
+        ),
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert insight.sample_treatment == "Acidification"
+    assert insight.sample_time_point == "Day30"
+
+    # Sample annotations must not be promoted to study-level assignments.
+    assert insight.treatment == ""
+    assert insight.time_point == ""
+
+    # Both explicit sample-level annotations support partial confidence.
+    assert insight.design_confidence == "Partially characterized"
+
+
+def test_paired_sample_annotations_support_partial_confidence_with_protocol():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="Thalassia hemprichii sediment sample",
+    )
+    metadata.experiment.construction_protocol = (
+        "RNA sequencing library prepared from sediment samples."
+    )
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="Treatment",
+            harmonized_name="treatment",
+            display_name="treatment",
+            value="Acidification",
+        ),
+        SampleAttribute(
+            name="Time",
+            harmonized_name="time",
+            display_name="time",
+            value="Day30",
+        ),
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert insight.sample_treatment == "Acidification"
+    assert insight.sample_time_point == "Day30"
+    assert insight.treatment == ""
+    assert insight.time_point == ""
+    assert insight.design_confidence == "Partially characterized"
