@@ -69,6 +69,13 @@ class ExperimentalDesignInsight:
 
     time_point: str = ""
 
+    # Explicit BioSample-level annotations. These are kept separate
+    # from study-level assignments because one sample does not
+    # establish the complete experimental group structure.
+    sample_treatment: str = ""
+
+    sample_time_point: str = ""
+
     replicate_information: str = ""
 
     design_description: str = ""
@@ -693,6 +700,69 @@ def _detect_time_point(title, protocol=""):
 # Replicate Assessment
 # ==========================================================
 
+
+def _biosample_sample_design_values(metadata):
+    """
+    Return explicit sample-level treatment and time-point annotations.
+
+    These values describe the inspected BioSample only; they do not
+    establish study-level groups or the complete experimental design.
+    """
+
+    sample = _get_sample(metadata)
+    if sample is None:
+        return "", ""
+
+    treatment = ""
+    time_point = ""
+
+    ambiguous_treatments = {
+        "control",
+        "none",
+        "none (parental control)",
+        "parental control",
+        "not applicable",
+        "not specified",
+        "untreated",
+        "unknown",
+    }
+
+    for attribute in getattr(sample, "attributes", []) or []:
+        names = {
+            str(getattr(attribute, field, "") or "").strip().lower()
+            for field in ("name", "harmonized_name", "display_name")
+        }
+        value = _clean(getattr(attribute, "value", ""))
+
+        if not value:
+            continue
+
+        if (
+            not treatment
+            and names.intersection({"treatment"})
+            and value.casefold() not in ambiguous_treatments
+            and not re.search(
+                r"\b(?:control group|control samples?|parental control)\b",
+                value,
+                flags=re.IGNORECASE,
+            )
+        ):
+            treatment = value
+
+        if (
+            not time_point
+            and names.intersection({"time", "timepoint", "time point", "time_point"})
+            and re.fullmatch(
+                r"(?:day|week|month|hour|hr|h|d|week|wk)\s*[-_ ]?\s*\d+(?:\.\d+)?",
+                value,
+                flags=re.IGNORECASE,
+            )
+        ):
+            time_point = value
+
+    return treatment, time_point
+
+
 def _biosample_design_annotations(metadata):
     """
     Collect explicitly deposited experimental-design attributes
@@ -1178,6 +1248,11 @@ def generate_design_insight(metadata):
 
     insight = ExperimentalDesignInsight()
 
+    (
+        insight.sample_treatment,
+        insight.sample_time_point,
+    ) = _biosample_sample_design_values(metadata)
+
     observed = _collect_observed_metadata(
         metadata
     )
@@ -1582,13 +1657,13 @@ def generate_design_insight(metadata):
                 "Well characterized"
             )
 
-        elif established_count >= 2:
+        elif established_count >= 3:
 
             insight.design_confidence = (
                 "Substantially characterized"
             )
 
-        elif established_count >= 1:
+        elif established_count >= 2:
 
             insight.design_confidence = (
                 "Partially characterized"
@@ -1608,7 +1683,7 @@ def generate_design_insight(metadata):
                 "Substantially characterized"
             )
 
-        elif established_count >= 1:
+        elif established_count >= 2:
 
             insight.design_confidence = (
                 "Partially characterized"

@@ -146,8 +146,24 @@ def normalize_for_field(
             normalized,
         )
 
-    return normalized
+    if field == "replicate_status":
+        if normalized == "not applicable":
+            return "not_applicable"
 
+        if normalized == "not established":
+            return "not_established"
+
+        if "biological replicate status is not established" in normalized:
+            return "not_established"
+
+        if "partial evidence" in normalized or "partial replicate evidence" in normalized:
+            import re
+
+            match = re.search(r"biological replicate\s+([0-9]+)", normalized)
+            if match:
+                return f"partial_evidence:biological_replicate_{match.group(1)}"
+
+    return normalized
 
 def normalize_broad_modality(value: str) -> str:
     normalized = normalize(value)
@@ -286,6 +302,65 @@ def print_field_group(
         print(
             f"{name} total: "
             "no scorable values"
+        )
+
+
+
+def print_sample_level_summary(
+    truth_rows: dict[str, dict[str, str]],
+    observed_rows: dict[str, dict[str, str]],
+) -> None:
+    """Compare sample-level annotations separately from study-level design."""
+
+    print("\\n===== SAMPLE-LEVEL ANNOTATION VALIDATION =====")
+    print(
+        "Exploratory comparison only: the current manifest does not "
+        "contain independently curated sample-level truth columns."
+    )
+
+    for truth_field, observed_field in (
+        ("treatment", "sample_treatment"),
+        ("time_point", "sample_time_point"),
+    ):
+        comparisons = []
+        for accession, truth in truth_rows.items():
+            expected = truth.get(truth_field, "").strip()
+            if not is_scorable_truth(expected):
+                continue
+
+            observed = observed_rows.get(accession)
+            if observed is None:
+                result = "MISSING OBSERVATION"
+            elif observed.get("success", "").strip().lower() != "true":
+                result = "FAILED OBSERVATION"
+            elif not observed.get(observed_field, "").strip():
+                result = "DISAGREEMENT"
+            else:
+                result = compare(
+                    truth_field,
+                    expected,
+                    observed[observed_field],
+                )
+
+            comparisons.append(result)
+            actual = (
+                observed.get(observed_field, "")
+                if observed is not None else ""
+            )
+            print(
+                f"{accession}\\t{truth_field}\\t{result} "
+                f"(curated={expected}, sample annotation={actual})"
+            )
+
+        correct, scored = accuracy_summary(comparisons)
+        print(
+            f"{truth_field}: {correct}/{scored} agreement "
+            f"across existing curated nonblank values"
+        )
+        print(
+            "Note: this is not independent validation of sample-level "
+            "accuracy because the manifest does not distinguish "
+            "sample-level from study-level curation."
         )
 
 
@@ -451,6 +526,11 @@ def main() -> int:
         )
 
     print_modality_summary(
+        truth_rows,
+        observed_rows,
+    )
+
+    print_sample_level_summary(
         truth_rows,
         observed_rows,
     )

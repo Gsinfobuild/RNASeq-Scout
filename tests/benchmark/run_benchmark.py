@@ -49,6 +49,8 @@ OUTPUT_FIELDS = [
     "control",
     "treatment",
     "time_point",
+    "sample_treatment",
+    "sample_time_point",
     "replicate_status",
     "design_confidence",
     "suitability",
@@ -352,6 +354,18 @@ def build_observation(
             get_value(
                 design,
                 "time_point",
+            )
+        ),
+        "sample_treatment": stringify(
+            get_value(
+                design,
+                "sample_treatment",
+            )
+        ),
+        "sample_time_point": stringify(
+            get_value(
+                design,
+                "sample_time_point",
             )
         ),
         "replicate_status": stringify(

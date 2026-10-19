@@ -96,3 +96,21 @@ def test_field_group_excludes_failed_observation(capsys):
     output = capsys.readouterr().out
     assert "modality: 1/1 agreement" in output
     assert "SRR_FAILED" not in output
+
+
+def test_replicate_status_matches_not_established_explanatory_wording():
+    assert evaluator.compare(
+        'replicate_status', 'Not established', 'One sequencing run is represented by the inspected accession; biological replicate status is not established by this information alone.'
+    ) == 'AGREEMENT'
+
+
+def test_replicate_status_matches_partial_evidence_wording():
+    assert evaluator.compare(
+        'replicate_status', 'Partial evidence: biological replicate 2', "Biological replicate annotation 'biological replicate 2' is explicitly reported in the BioSample metadata. This provides partial replicate evidence; complete sample-level replicate structure is not established from the inspected accession alone."
+    ) == 'AGREEMENT'
+
+
+def test_replicate_status_keeps_not_applicable_distinct():
+    assert evaluator.compare(
+        'replicate_status', 'Not applicable', 'Biological replicate status is not established.'
+    ) == 'DISAGREEMENT'

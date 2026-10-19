@@ -1583,3 +1583,17 @@ def test_trout_control_narrative_is_not_a_treatment_assignment():
         for warning in insight.warnings
     )
 
+def test_single_design_feature_is_insufficient_for_design_confidence():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="RNA-seq under detergent stress",
+    )
+
+    insight = generate_design_insight(metadata)
+
+    assert insight.condition
+    assert not insight.control
+    assert not insight.treatment
+    assert not insight.time_point
+    assert insight.design_confidence == "Insufficient information"
+
