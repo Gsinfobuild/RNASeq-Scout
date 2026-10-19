@@ -205,7 +205,11 @@ def accuracy_summary(
     scored = 0
 
     for result in comparisons:
-        if result == "NOT SCORED":
+        if result in {
+            "NOT SCORED",
+            "MISSING OBSERVATION",
+            "FAILED OBSERVATION",
+        }:
             continue
 
         scored += 1
@@ -234,6 +238,8 @@ def print_field_group(
 
             if observed is None:
                 result = "MISSING OBSERVATION"
+            elif observed.get("success", "").strip().lower() != "true":
+                result = "FAILED OBSERVATION"
             else:
                 result = compare(
                     field,
@@ -298,6 +304,9 @@ def print_modality_summary(
         if observed is None:
             exact_result = "MISSING OBSERVATION"
             broad_result = "MISSING OBSERVATION"
+        elif observed.get("success", "").strip().lower() != "true":
+            exact_result = "FAILED OBSERVATION"
+            broad_result = "FAILED OBSERVATION"
         else:
             truth_modality = truth.get(
                 "modality",
@@ -398,6 +407,7 @@ def main() -> int:
         == "true"
         for row in observed_rows.values()
     )
+    failed = len(observed_rows) - successful
 
     print(
         "RNA-Seq Scout scientific benchmark evaluation"
@@ -423,6 +433,9 @@ def main() -> int:
     print(
         f"Successful Scout observations: "
         f"{successful}/{len(observed_rows)}"
+    )
+    print(
+        f"Failed Scout observations: {failed}"
     )
 
     if missing:
@@ -473,6 +486,11 @@ def main() -> int:
         observed = observed_rows.get(accession)
 
         if observed is None:
+            compatibility_comparisons.append("MISSING OBSERVATION")
+            continue
+
+        if observed.get("success", "").strip().lower() != "true":
+            compatibility_comparisons.append("FAILED OBSERVATION")
             continue
 
         result = compare(

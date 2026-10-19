@@ -1513,3 +1513,73 @@ def test_design_records_biosample_condition_as_observed_evidence():
 
     # Condition inference remains separate from structured observation.
     assert insight.condition == ""
+
+def test_trout_biosample_control_word_is_not_a_design_assignment():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="Liver, CG-1",
+    )
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="treatment",
+            harmonized_name="treatment",
+            display_name="treatment",
+            value="control",
+        )
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert (
+        "BioSample structured metadata explicitly reports "
+        "treatment: control"
+        in insight.observed_features
+    )
+    assert insight.control == ""
+    assert insight.treatment == ""
+    assert any(
+        "No explicit control group was identified" in warning
+        for warning in insight.warnings
+    )
+    assert any(
+        "No unambiguous treatment assignment was identified" in warning
+        for warning in insight.warnings
+    )
+
+
+def test_trout_control_narrative_is_not_a_treatment_assignment():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="CG-1",
+    )
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="treatment",
+            harmonized_name="treatment",
+            display_name="treatment",
+            value=(
+                "the control group involve placing rainbow trout "
+                "liver in 18C"
+            ),
+        )
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert any(
+        "BioSample structured metadata explicitly reports treatment:"
+        in feature
+        and "the control group" in feature
+        for feature in insight.observed_features
+    )
+    assert insight.control == ""
+    assert insight.treatment == ""
+    assert any(
+        "No explicit control group was identified" in warning
+        for warning in insight.warnings
+    )
+    assert any(
+        "No unambiguous treatment assignment was identified" in warning
+        for warning in insight.warnings
+    )
+

@@ -77,6 +77,15 @@ def parse_args() -> argparse.Namespace:
         default=DEFAULT_OUTPUT,
     )
 
+    parser.add_argument(
+        "--enrich-biosample",
+        action="store_true",
+        help=(
+            "Retrieve BioSample attributes before inspection. "
+            "This is an optional, separately evaluated run."
+        ),
+    )
+
     return parser.parse_args()
 
 
@@ -455,7 +464,8 @@ def main() -> int:
 
         try:
             result = navigator.inspect(
-                accession
+                accession,
+                enrich_biosample=args.enrich_biosample,
             )
 
             observation = build_observation(
