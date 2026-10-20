@@ -174,8 +174,20 @@ def normalize_broad_modality(value: str) -> str:
     return normalized
 
 
-def is_scorable_truth(value: str) -> bool:
-    return bool((value or "").strip())
+def is_scorable_truth(value: str, field: str = "") -> bool:
+    normalized = normalize(value)
+
+    if not normalized:
+        return False
+
+    if field in INTERPRETIVE_FIELDS and normalized in {
+        "not applicable",
+        "not established",
+        "not yet evaluated",
+    }:
+        return False
+
+    return True
 
 
 def compare(
@@ -183,7 +195,7 @@ def compare(
     truth: str,
     observed: str,
 ) -> str:
-    if not is_scorable_truth(truth):
+    if not is_scorable_truth(truth, field):
         return "NOT SCORED"
 
     if normalize_for_field(

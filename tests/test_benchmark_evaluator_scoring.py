@@ -114,3 +114,39 @@ def test_replicate_status_keeps_not_applicable_distinct():
     assert evaluator.compare(
         'replicate_status', 'Not applicable', 'Biological replicate status is not established.'
     ) == 'DISAGREEMENT'
+
+
+def test_unassessed_interpretive_truth_is_not_scored():
+    for field in (
+        "design_confidence",
+        "suitability",
+        "reanalysis_readiness",
+    ):
+        for truth in (
+            "Not applicable",
+            "Not established",
+            "Not yet evaluated",
+        ):
+            assert evaluator.compare(field, truth, "Some output") == "NOT SCORED"
+
+
+def test_real_negative_suitability_conclusion_remains_scorable():
+    assert evaluator.compare(
+        "suitability", "Not suitable", "Not suitable"
+    ) == "AGREEMENT"
+
+    assert evaluator.compare(
+        "suitability", "Not suitable", "Potentially suitable"
+    ) == "DISAGREEMENT"
+
+
+def test_placeholder_labels_remain_scorable_for_objective_fields():
+    assert evaluator.compare(
+        "organism", "Not established", "Not established"
+    ) == "AGREEMENT"
+
+
+def test_blank_interpretive_truth_remains_unscored():
+    assert evaluator.compare(
+        "design_confidence", "", "Insufficient information"
+    ) == "NOT SCORED"
