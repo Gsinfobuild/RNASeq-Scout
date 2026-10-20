@@ -149,6 +149,7 @@ The `ExperimentalDesignInsight` model currently captures:
 - Replicate information
 - Design description
 - Design confidence
+- Confidence explanation
 - Observed features
 - Inferred features
 - Warnings
@@ -157,6 +158,16 @@ The `ExperimentalDesignInsight` model currently captures:
 ### Observed versus inferred information
 
 RNASeq Scout distinguishes evidence directly supported by metadata from interpretations derived from that evidence.
+
+BioSample-level treatment and time-point annotations are retained as
+sample-level observations. They do not independently establish study-level
+treatment assignments, control groups, or the complete experimental design.
+
+The `confidence_explanation` field provides a human-readable rationale for
+the assigned design-confidence category. It identifies unresolved aspects
+of the design and, when available, describes sample-level evidence without
+promoting it to a study-level conclusion. The explanation supplements the
+confidence classification; it does not independently validate the design.
 
 ### Biological replicates
 
