@@ -82,6 +82,10 @@ class ExperimentalDesignInsight:
 
     design_confidence: str = "Insufficient information"
 
+    # Human-readable explanation of the confidence assessment.
+    # This does not replace or override the confidence classification.
+    confidence_explanation: str = ""
+
     observed_features: list[str] = field(
         default_factory=list
     )
@@ -1728,5 +1732,74 @@ def generate_design_insight(metadata):
         time_point,
         insight.replicate_information,
     )
+
+    # Explain the confidence decision without promoting sample-level
+    # annotations into study-level assignments.
+    if insight.design_confidence == "Well characterized":
+        explanation = (
+            "Multiple study-level design features are established, "
+            "including treatment/control structure and replicate "
+            "information. Confirm group assignments before analysis."
+        )
+    elif insight.design_confidence == "Substantially characterized":
+        explanation = (
+            "Several study-level design features are established, "
+            "but some aspects of the experimental structure remain "
+            "unresolved."
+        )
+    elif insight.design_confidence == "Partially characterized":
+        explanation = (
+            "Some design evidence is available, but the complete "
+            "study-level experimental structure is not established."
+        )
+    else:
+        explanation = (
+            "Available metadata does not establish enough of the "
+            "study-level experimental design for a stronger "
+            "confidence assessment."
+        )
+
+    sample_evidence = []
+    if insight.sample_treatment:
+        sample_evidence.append(
+            f"BioSample treatment observed: {insight.sample_treatment}"
+        )
+    if insight.sample_time_point:
+        sample_evidence.append(
+            f"BioSample time point observed: {insight.sample_time_point}"
+        )
+
+    if sample_evidence:
+        explanation += (
+            " Sample-level evidence: "
+            + "; ".join(sample_evidence)
+            + ". These observations do not independently establish "
+              "study-level treatment groups or the complete design."
+        )
+
+    unresolved = []
+    if not control:
+        unresolved.append("control/group structure")
+    if not treatment:
+        unresolved.append("study-level treatment assignment")
+    if not time_point:
+        unresolved.append("study-level time-point structure")
+    if (
+        not insight.replicate_information
+        or "could not be established"
+        in insight.replicate_information.lower()
+        or "not established"
+        in insight.replicate_information.lower()
+    ):
+        unresolved.append("complete replicate structure")
+
+    if unresolved:
+        explanation += (
+            " Not established from the available evidence: "
+            + ", ".join(unresolved)
+            + "."
+        )
+
+    insight.confidence_explanation = explanation
 
     return insight

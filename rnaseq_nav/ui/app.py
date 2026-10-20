@@ -2911,6 +2911,63 @@ def build_pdf(
         )
 
         # --------------------------------------------------
+        # Confidence explanation
+        # --------------------------------------------------
+
+        confidence_explanation = get_value(
+            design_insight,
+            "confidence_explanation",
+            "",
+        )
+
+        if confidence_explanation and not design_not_applicable:
+            st.subheader("Why this confidence?")
+            st.markdown(
+                escape(clean_ui_value(confidence_explanation)),
+                unsafe_allow_html=True,
+            )
+
+        # --------------------------------------------------
+        # Sample-level evidence
+        # --------------------------------------------------
+
+        sample_treatment = get_value(
+            design_insight,
+            "sample_treatment",
+            "",
+        )
+        sample_time_point = get_value(
+            design_insight,
+            "sample_time_point",
+            "",
+        )
+
+        sample_evidence = []
+        if sample_treatment:
+            sample_evidence.append(
+                ("Observed sample treatment", sample_treatment)
+            )
+        if sample_time_point:
+            sample_evidence.append(
+                ("Observed sample time point", sample_time_point)
+            )
+
+        if sample_evidence and not design_not_applicable:
+            st.subheader("BioSample-level observations")
+            st.caption(
+                "These annotations describe the inspected BioSample. "
+                "They do not, by themselves, establish study-level "
+                "treatment groups or the complete experimental design."
+            )
+
+            evidence_columns = st.columns(len(sample_evidence))
+            for column, (label, value) in zip(
+                evidence_columns, sample_evidence
+            ):
+                with column:
+                    _render_design_card(label, value, long=True)
+
+        # --------------------------------------------------
         # Interpretation
         # --------------------------------------------------
 

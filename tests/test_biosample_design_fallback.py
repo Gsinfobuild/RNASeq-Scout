@@ -148,3 +148,35 @@ def test_paired_sample_annotations_support_partial_confidence_with_protocol():
     assert insight.treatment == ""
     assert insight.time_point == ""
     assert insight.design_confidence == "Partially characterized"
+
+def test_confidence_explanation_distinguishes_sample_and_study_evidence():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="Thalassia hemprichii sediment sample",
+    )
+    metadata.sample.attributes = [
+        SampleAttribute(name="Treatment", value="Acidification"),
+        SampleAttribute(name="Time", value="Day30"),
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert insight.confidence_explanation
+    assert "sample-level evidence" in insight.confidence_explanation.lower()
+    assert "Acidification" in insight.confidence_explanation
+    assert "Day30" in insight.confidence_explanation
+    assert insight.treatment == ""
+    assert insight.time_point == ""
+
+
+def test_confidence_explanation_describes_unresolved_design():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="Uncharacterized sediment sample",
+    )
+
+    insight = generate_design_insight(metadata)
+
+    assert insight.confidence_explanation
+    assert "not established" in insight.confidence_explanation.lower()
+    assert insight.design_confidence == "Insufficient information"
