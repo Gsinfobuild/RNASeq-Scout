@@ -1,3 +1,27 @@
+## Experimental-Design Confidence and Evidence Separation
+Date: 2026-10-20
+
+### Implementation
+- Added a human-readable explanation for experimental-design confidence.
+- Kept BioSample-level treatment and time-point observations separate
+  from study-level experimental-design assignments.
+- Updated the Streamlit interface to display the confidence rationale
+  and available BioSample-level observations separately.
+- Added regression tests for confidence explanations and evidence separation.
+
+### Validation
+- Full test suite: 178 passed.
+- Python syntax checks passed.
+- Git whitespace check passed.
+- Commit: `8a2caaa` — Explain experimental design confidence and evidence.
+
+### Remaining Work
+- Validate confidence assignments against representative real RNA-seq studies.
+- Evaluate incomplete and conflicting metadata and avoid unsupported design claims.
+- Assess confidence calibration against independently curated evidence.
+
+---
+
 # RNASeq Navigator Development Log
 
 ## Version 0.4.0
