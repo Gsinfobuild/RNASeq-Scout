@@ -80,7 +80,7 @@ def patch_pipeline(monkeypatch, experiment_at_glance):
     monkeypatch.setattr(
         navigator_module,
         "generate_design_insight",
-        lambda metadata: "design",
+        lambda metadata, study_biosample_evidence=None: "design",
     )
 
     monkeypatch.setattr(

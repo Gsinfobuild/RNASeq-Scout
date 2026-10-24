@@ -180,3 +180,72 @@ def test_confidence_explanation_describes_unresolved_design():
     assert insight.confidence_explanation
     assert "not established" in insight.confidence_explanation.lower()
     assert insight.design_confidence == "Insufficient information"
+
+
+
+def test_partial_biosample_replicate_evidence_is_not_reported_missing():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="Thalassia hemprichii sediment sample",
+    )
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="biological replicate",
+            harmonized_name="biological_replicate",
+            display_name="biological replicate",
+            value="biological replicate 2",
+        )
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert "partial replicate evidence" in (
+        insight.replicate_information.lower()
+    )
+    assert "not established" in (
+        insight.replicate_information.lower()
+    )
+
+    assert any(
+        "partial biological replicate evidence" in feature.lower()
+        for feature in insight.observed_features
+    )
+
+    assert "Biological replicate annotation" not in (
+        insight.missing_information
+    )
+
+def test_non_rna_seq_strategy_is_not_applicable_to_rnaseq_replicate_assessment():
+    metadata = make_metadata(
+        strategy="WGS",
+        title="Whole genome sequencing sample",
+    )
+
+    insight = generate_design_insight(metadata)
+
+    assert insight.replicate_information.startswith("Not applicable")
+    assert "WGS" in insight.replicate_information
+
+
+def test_rna_seq_partial_biosample_replicate_evidence_is_preserved():
+    metadata = make_metadata(
+        strategy="RNA_SEQ",
+        title="Thalassia hemprichii sediment sample",
+    )
+    metadata.sample.attributes = [
+        SampleAttribute(
+            name="biological replicate",
+            harmonized_name="biological_replicate",
+            display_name="biological replicate",
+            value="biological replicate 2",
+        )
+    ]
+
+    insight = generate_design_insight(metadata)
+
+    assert "partial replicate evidence" in (
+        insight.replicate_information.lower()
+    )
+    assert "biological replicate 2" in (
+        insight.replicate_information.lower()
+    )

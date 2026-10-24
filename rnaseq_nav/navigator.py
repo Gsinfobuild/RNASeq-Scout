@@ -695,11 +695,15 @@ class RNASeqNavigator:
             # Experimental Design Intelligence
             # ------------------------------------------------
 
-            design_insight = (
-                generate_design_insight(
+            if study_biosample_evidence is not None:
+                design_insight = generate_design_insight(
+                    normalized_metadata,
+                    study_biosample_evidence=study_biosample_evidence,
+                )
+            else:
+                design_insight = generate_design_insight(
                     normalized_metadata,
                 )
-            )
 
             # ------------------------------------------------
             # Step 9

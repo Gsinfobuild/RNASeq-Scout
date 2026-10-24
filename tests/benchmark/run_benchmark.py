@@ -88,6 +88,15 @@ def parse_args() -> argparse.Namespace:
         ),
     )
 
+    parser.add_argument(
+        "--enrich-study-biosamples",
+        action="store_true",
+        help=(
+            "Retrieve BioSample evidence across the study. "
+            "This is a separate, network-intensive benchmark run."
+        ),
+    )
+
     return parser.parse_args()
 
 
@@ -480,6 +489,7 @@ def main() -> int:
             result = navigator.inspect(
                 accession,
                 enrich_biosample=args.enrich_biosample,
+                enrich_study_biosamples=args.enrich_study_biosamples,
             )
 
             observation = build_observation(

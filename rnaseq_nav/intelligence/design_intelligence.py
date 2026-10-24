@@ -477,6 +477,17 @@ def _extract_treatment_agent(value):
         flags=re.IGNORECASE,
     )
 
+    # Remove a trailing concentration clause from the treatment agent.
+    # Match longer units first and prevent M from matching the m in mg/ml.
+    value = re.sub(
+        r"\s+at\s+\d+(?:\.\d+)?\s*"
+        r"(?:(?:mg/ml|mg/l|ug/ml|µg/ml|μg/ml|ng/ml|ng/l|"
+        r"g/l|ppm|ppb|nM|uM|µM|μM|mM|pM)\b|M(?![a-z])|%).*$",
+        "",
+        value,
+        flags=re.IGNORECASE,
+    )
+
     # "stressor" describes the role of the intervention; it is
     # not part of the treatment agent itself.
     value = re.sub(
@@ -512,16 +523,21 @@ def _detect_treatment(title, protocol=""):
 
     patterns = [
         # treated with X
-        r"\btreated\s+with\s+([^,.;:\n]+)",
+        r"\btreated\s+with\s+(.+?)(?=\.(?!\d)|[,;:\n]|$)",
 
         # treatment with X
-        r"\btreatment\s+with\s+([^,.;:\n]+)",
+        r"\btreatment\s+with\s+([^,.;:\n]+?)(?=\s+was\s+(?:performed|applied|administered)\b|[,.;:\n]|$)",
 
         # exposed to X
         r"\bexposed\s+to\s+([^,.;:\n]+)",
 
         # exposure to X
         r"\bexposure\s+to\s+([^,.;:\n]+)",
+
+        # X exposure in cells/samples/cultures/plants/etc.
+        r"\b([A-Za-z0-9_/-]+(?:\s+[A-Za-z0-9_/-]+)?)"
+        r"\s+exposure\s+in\s+"
+        r"(?:cultured\s+)?(?:cells?|samples?|cultures?|organisms?|plants?|seedlings?)\b",
 
         # received X
         r"\breceived\s+([^,.;:\n]+)",
@@ -983,6 +999,7 @@ def _assess_replicates(metadata):
     experiment = _get_experiment(metadata)
 
     title = ""
+    library_strategy = ""
 
     if experiment is not None:
         title = _clean(
@@ -992,6 +1009,13 @@ def _assess_replicates(metadata):
                 "",
             )
         )
+        library_strategy = _clean(
+            getattr(
+                experiment,
+                "library_strategy",
+                "",
+            )
+        ).upper()
 
     protocol = _protocol(metadata)
 
@@ -1096,6 +1120,14 @@ def _assess_replicates(metadata):
 
     if biosample_replicate:
         return biosample_replicate
+
+    # Apply the RNA-seq-specific scope restriction only after checking
+    # explicit protocol, title, and BioSample replicate evidence.
+    if library_strategy and library_strategy != "RNA_SEQ":
+        return (
+            "Not applicable to RNA-seq experimental-design assessment "
+            f"(library strategy: {library_strategy})."
+        )
 
     # ------------------------------------------------------
     # Run metadata
@@ -1242,7 +1274,98 @@ def _build_design_description(
 # Main Layer 2 Function
 # ==========================================================
 
-def generate_design_insight(metadata):
+def _add_study_biosample_patterns(insight, evidence):
+    """Summarize explicit treatment/time attributes across BioSamples.
+
+    These summaries are observed metadata patterns, not assignments
+    of study-level groups or biological replicate structure.
+    """
+    if evidence is None:
+        return
+
+    retrieved = getattr(evidence, "retrieved_biosample_count", 0)
+    unique = getattr(evidence, "unique_biosample_count", 0)
+
+    _append_unique(
+        insight.observed_features,
+        f"Study BioSample metadata retrieved for {retrieved} of "
+        f"{unique} unique BioSamples.",
+    )
+
+    attribute_values = getattr(evidence, "attribute_values", {}) or {}
+
+    treatment_keys = {
+        "treatment",
+        "treatments",
+        "experimental treatment",
+        "experimental_treatment",
+        "treatment group",
+        "treatment_group",
+    }
+    time_keys = {
+        "time",
+        "time point",
+        "time_point",
+        "timepoint",
+        "sampling time",
+        "sampling_time",
+        "collection time",
+        "collection_time",
+    }
+
+    def normalize_key(value):
+        return " ".join(
+            str(value).strip().lower().replace("-", " ").split()
+        )
+
+    def summarize(keys, label):
+        matched = []
+        for key, values in attribute_values.items():
+            normalized_key = normalize_key(key)
+            normalized_key_underscore = normalized_key.replace(" ", "_")
+            if (
+                normalized_key not in keys
+                and normalized_key_underscore not in keys
+            ):
+                continue
+
+            if not isinstance(values, dict):
+                continue
+
+            entries = [
+                (str(value).strip(), count)
+                for value, count in values.items()
+                if str(value).strip() and isinstance(count, int) and count > 0
+            ]
+            if entries:
+                entries.sort(key=lambda item: item[0].lower())
+                pattern = ", ".join(
+                    f"{value} ({count} BioSample{'s' if count != 1 else ''})"
+                    for value, count in entries
+                )
+                matched.append(f"{key}: {pattern}")
+
+        if matched:
+            _append_unique(
+                insight.observed_features,
+                f"Observed study BioSample {label} patterns — "
+                + "; ".join(matched)
+                + ". Counts represent BioSample records, not confirmed "
+                  "independent biological replicates.",
+            )
+
+    summarize(treatment_keys, "treatment")
+    summarize(time_keys, "time-point")
+
+    for warning in getattr(evidence, "warnings", []) or []:
+        if warning:
+            _append_unique(
+                insight.warnings,
+                f"Study BioSample enrichment: {warning}",
+            )
+
+
+def generate_design_insight(metadata, study_biosample_evidence=None):
     """
     Generate an evidence-based experimental design interpretation.
 
@@ -1256,6 +1379,11 @@ def generate_design_insight(metadata):
         insight.sample_treatment,
         insight.sample_time_point,
     ) = _biosample_sample_design_values(metadata)
+
+    _add_study_biosample_patterns(
+        insight,
+        study_biosample_evidence,
+    )
 
     observed = _collect_observed_metadata(
         metadata
@@ -1537,17 +1665,29 @@ def generate_design_insight(metadata):
         metadata
     )
 
-    if (
-        "could not be established"
-        not in insight.replicate_information.lower()
-        and "not established"
-        not in insight.replicate_information.lower()
-    ):
+    replicate_text = insight.replicate_information.lower()
 
-        if protocol and (
-            "protocol"
-            in insight.replicate_information.lower()
-        ):
+    has_partial_replicate_evidence = (
+        "partial replicate evidence" in replicate_text
+    )
+
+    replicate_structure_unresolved = (
+        "could not be established" in replicate_text
+        or "not established" in replicate_text
+    )
+
+    if has_partial_replicate_evidence:
+
+        _append_unique(
+            insight.observed_features,
+            "Partial biological replicate evidence explicitly "
+            "documented in available BioSample metadata; complete "
+            "sample-level replicate structure remains unresolved.",
+        )
+
+    elif not replicate_structure_unresolved:
+
+        if protocol and "protocol" in replicate_text:
 
             _append_unique(
                 insight.observed_features,
