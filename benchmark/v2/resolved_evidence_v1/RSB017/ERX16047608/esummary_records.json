@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46120216",
+    "ExpXml": "<Summary><Title>Selective Anaerobic Enrichment and Cultivation of Anaerobes from Goat and Sheep Rumen</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"1796709\" total_bases=\"838915146\" total_size=\"284473819\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA35613312\" center_name=\"Indian Biological Data Centre\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16047608\" ver=\"1\" status=\"public\" name=\"Selective Anaerobic Enrichment and Cultivation of Anaerobes from Goat and Sheep Rumen\"/><Study acc=\"ERP188770\" name=\"Anaerobic Culturing and Whole Genome Analysis of Rumen Microbes from Small Ruminants\"/><Organism taxid=\"1423\" ScientificName=\"Bacillus subtilis\"/><Sample acc=\"ERS28810057\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME/><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>NaN</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJEB107912</Bioproject><Biosample>SAMEA121264694</Biosample>",
+    "Runs": "<Run acc=\"ERR16657236\" total_spots=\"1796709\" total_bases=\"838915146\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/07",
+    "UpdateDate": "2026/08/07"
+  }
+]

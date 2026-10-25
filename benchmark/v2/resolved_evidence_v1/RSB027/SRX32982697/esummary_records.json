@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "44016136",
+    "ExpXml": "<Summary><Title>GSM9678094: Drosphila S2 CRISPR Neg clone 1 rep 1; Drosophila melanogaster; ATAC-seq</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"41998074\" total_bases=\"4283803548\" total_size=\"1282231953\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2375651\" center_name=\"Barisic Lab, Weill Cornell\" contact_name=\"GEO Group\" lab_name=\"\"/><Experiment acc=\"SRX32982697\" ver=\"1\" status=\"public\" name=\"GSM9678094: Drosphila S2 CRISPR Neg clone 1 rep 1; Drosophila melanogaster; ATAC-seq\"/><Study acc=\"SRP577224\" name=\"GEO accession GSE294051 is currently private and is scheduled to be released on Apr 06, 2026.\"/><Organism taxid=\"7227\" ScientificName=\"Drosophila melanogaster\"/><Sample acc=\"SRS28819080\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>GSM9678094</LIBRARY_NAME><LIBRARY_STRATEGY>ATAC-seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>other</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>Omni ATAC-Seq protocol (Corces et al., 2017; Nature Methods) Amplification with Q5® High-Fidelity 2X Master Mix and Illumina dual indexes.</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJNA1247959</Bioproject><Biosample>SAMN57308675</Biosample>",
+    "Runs": "<Run acc=\"SRR38136682\" total_spots=\"41998074\" total_bases=\"4283803548\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/04/20",
+    "UpdateDate": "2026/04/16"
+  }
+]

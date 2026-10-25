@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "37048534",
+    "ExpXml": "<Summary><Title>sample info</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"27625501\" total_bases=\"8287650300\" total_size=\"2555855589\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2060897\" center_name=\"zhujiang hospital\" contact_name=\"Jiali Li\" lab_name=\"ophthalmology\"/><Experiment acc=\"SRX27475154\" ver=\"1\" status=\"public\" name=\"sample info\"/><Study acc=\"SRP559934\" name=\"3-month-old dark-reared zebrafish eye RNA sequencing\"/><Organism taxid=\"7955\" ScientificName=\"Danio rerio\"/><Sample acc=\"SRS23899204\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>library_3</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1215774</Bioproject><Biosample>SAMN46418519</Biosample>",
+    "Runs": "<Run acc=\"SRR32128864\" total_spots=\"27625501\" total_bases=\"8287650300\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2025/01/25",
+    "UpdateDate": "2025/01/25"
+  }
+]

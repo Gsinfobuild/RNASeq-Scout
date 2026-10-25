@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46693793",
+    "ExpXml": "<Summary><Title>Illumina HiSeq 2500 paired end sequencing</Title><Platform instrument_model=\"Illumina HiSeq 2500\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"38288271\" total_bases=\"11563057842\" total_size=\"4815203116\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36958118\" center_name=\"Centre for Palaeogenetics\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX17243241\" ver=\"1\" status=\"public\" name=\"Illumina HiSeq 2500 paired end sequencing\"/><Study acc=\"ERP167320\" name=\"Historic human genome from 14th century in Janakkala, Finland.\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"ERS31276487\" name=\"\"/><Instrument ILLUMINA=\"Illumina HiSeq 2500\"/><Library_descriptor><LIBRARY_NAME/><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB83731</Bioproject><Biosample>SAMEA123432233</Biosample>",
+    "Runs": "<Run acc=\"ERR17851423\" total_spots=\"38288271\" total_bases=\"11563057842\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  }
+]

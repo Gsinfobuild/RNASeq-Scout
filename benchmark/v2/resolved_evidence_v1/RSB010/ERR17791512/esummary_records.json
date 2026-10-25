@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46588260",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X Plus paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X Plus\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"8591515\" total_bases=\"2577454500\" total_size=\"721693416\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36941556\" center_name=\"Institute for Cell Biology\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX17182570\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X Plus paired end sequencing\"/><Study acc=\"ERP204832\" name=\"Structural Basis of Condensin Recruitment for X Chromosome Repression\"/><Organism taxid=\"6239\" ScientificName=\"Caenorhabditis elegans\"/><Sample acc=\"ERS31207960\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X Plus\"/><Library_descriptor><LIBRARY_NAME>PMW1297_R1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Oligo-dT</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB125085</Bioproject><Biosample>SAMEA123412334</Biosample>",
+    "Runs": "<Run acc=\"ERR17791512\" total_spots=\"8591515\" total_bases=\"2577454500\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  }
+]

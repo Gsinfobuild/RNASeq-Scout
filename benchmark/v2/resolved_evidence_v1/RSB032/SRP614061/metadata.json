@@ -1,0 +1,29 @@
+{
+  "benchmark_id": "RSB032",
+  "accession": "SRP614061",
+  "accession_type": "study",
+  "study_family": "SRP614061",
+  "source": "NCBI SRA",
+  "retrieval_method": "Entrez ESearch + ESummary",
+  "retrieved_at_utc": "2026-10-03T18:18:09.008785+00:00",
+  "uid_count": 12,
+  "uids": [
+    "40419164",
+    "40419163",
+    "40419162",
+    "40419161",
+    "40419160",
+    "40419159",
+    "40419158",
+    "40419157",
+    "40419156",
+    "40419167",
+    "40419166",
+    "40419165"
+  ],
+  "repository_evidence_only": true,
+  "scout_predictions_used": false,
+  "study_truncated": false,
+  "records_retrieved": 12,
+  "status": "retrieved"
+}

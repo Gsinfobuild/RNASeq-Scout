@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46691970",
+    "ExpXml": "<Summary><Title>GSM10042158: S4_REGSSC218_S22 plasma EV small-RNA-seq (miRNA); Homo sapiens; miRNA-Seq</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"32372317\" total_bases=\"3269604017\" total_size=\"1108575496\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2537055\" center_name=\"Pitt lab, Neurology, Yale University\" contact_name=\"GEO Group\" lab_name=\"\"/><Experiment acc=\"SRX35190960\" ver=\"1\" status=\"public\" name=\"GSM10042158: S4_REGSSC218_S22 plasma EV small-RNA-seq (miRNA); Homo sapiens; miRNA-Seq\"/><Study acc=\"SRP735465\" name=\"GEO accession GSE346895 is currently private and is scheduled to be released on Sep 25, 2026.\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30690012\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>GSM10042158</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>RNA was extracted from one 20 µl eluate generated from each GLAST-positive plasma extracellular-vesicle preparation. Small-RNA libraries were prepared with the QIAseq miRNA Library Kit (QIAGEN) using 12-nt UMIs. Libraries were sequenced on an Illumina NovaSeq 6000 at the Yale Center for Genome Analysis using single-end biological reads, 10-bp unique dual indexes and 0.3% PhiX; demultiplexing used CASAVA v1.8.2.</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJNA1526786</Bioproject><Biosample>SAMN63059759</Biosample>",
+    "Runs": "<Run acc=\"SRR40610685\" total_spots=\"32372317\" total_bases=\"3269604017\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/10"
+  }
+]

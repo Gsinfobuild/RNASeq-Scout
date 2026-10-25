@@ -1,0 +1,533 @@
+[
+  {
+    "Item": [],
+    "Id": "46611395",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P010</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"64457160\" total_bases=\"19337148000\" total_size=\"6036060395\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130427\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P010\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638296\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P010</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971968</Biosample>",
+    "Runs": "<Run acc=\"SRR40541280\" total_spots=\"64457160\" total_bases=\"19337148000\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611394",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P009</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"64621225\" total_bases=\"19386367500\" total_size=\"6064668655\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130426\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P009\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638297\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P009</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971967</Biosample>",
+    "Runs": "<Run acc=\"SRR40541281\" total_spots=\"64621225\" total_bases=\"19386367500\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611393",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P008</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"89292193\" total_bases=\"26787657900\" total_size=\"8707039493\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130425\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P008\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638295\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P008</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971966</Biosample>",
+    "Runs": "<Run acc=\"SRR40541282\" total_spots=\"89292193\" total_bases=\"26787657900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611392",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P007</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"78809526\" total_bases=\"23642857800\" total_size=\"7482586112\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130424\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P007\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638294\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P007</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971965</Biosample>",
+    "Runs": "<Run acc=\"SRR40541283\" total_spots=\"78809526\" total_bases=\"23642857800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611391",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P059</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"68503633\" total_bases=\"20551089900\" total_size=\"6655005439\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130423\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P059\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638293\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P059</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972017</Biosample>",
+    "Runs": "<Run acc=\"SRR40541284\" total_spots=\"68503633\" total_bases=\"20551089900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611390",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P058</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"64935239\" total_bases=\"19480571700\" total_size=\"6341496850\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130422\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P058\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638292\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P058</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972016</Biosample>",
+    "Runs": "<Run acc=\"SRR40541285\" total_spots=\"64935239\" total_bases=\"19480571700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611389",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P057</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"66172879\" total_bases=\"19851863700\" total_size=\"6443712567\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130421\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P057\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638291\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P057</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972015</Biosample>",
+    "Runs": "<Run acc=\"SRR40541286\" total_spots=\"66172879\" total_bases=\"19851863700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611388",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P056</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"64473685\" total_bases=\"19342105500\" total_size=\"6251285287\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130420\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P056\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638289\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P056</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972014</Biosample>",
+    "Runs": "<Run acc=\"SRR40541287\" total_spots=\"64473685\" total_bases=\"19342105500\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611387",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P055</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"79011489\" total_bases=\"23703446700\" total_size=\"7635854459\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130419\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P055\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638288\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P055</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972013</Biosample>",
+    "Runs": "<Run acc=\"SRR40541288\" total_spots=\"79011489\" total_bases=\"23703446700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611386",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P054</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"68091595\" total_bases=\"20427478500\" total_size=\"6614652394\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130418\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P054\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638287\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P054</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972012</Biosample>",
+    "Runs": "<Run acc=\"SRR40541289\" total_spots=\"68091595\" total_bases=\"20427478500\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611385",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P053</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"69756037\" total_bases=\"20926811100\" total_size=\"6780898420\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130417\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P053\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638286\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P053</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972011</Biosample>",
+    "Runs": "<Run acc=\"SRR40541290\" total_spots=\"69756037\" total_bases=\"20926811100\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611384",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P052</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"62834180\" total_bases=\"18850254000\" total_size=\"6059718287\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130416\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P052\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638290\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P052</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972010</Biosample>",
+    "Runs": "<Run acc=\"SRR40541291\" total_spots=\"62834180\" total_bases=\"18850254000\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611383",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P051</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"76977523\" total_bases=\"23093256900\" total_size=\"7088427623\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130415\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P051\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638285\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P051</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972009</Biosample>",
+    "Runs": "<Run acc=\"SRR40541292\" total_spots=\"76977523\" total_bases=\"23093256900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611382",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P006</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"59908879\" total_bases=\"17972663700\" total_size=\"5730844945\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130414\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P006\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638284\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P006</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971964</Biosample>",
+    "Runs": "<Run acc=\"SRR40541293\" total_spots=\"59908879\" total_bases=\"17972663700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611381",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P050</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"82499782\" total_bases=\"24749934600\" total_size=\"7849190968\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130413\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P050\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638283\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P050</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972008</Biosample>",
+    "Runs": "<Run acc=\"SRR40541294\" total_spots=\"82499782\" total_bases=\"24749934600\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611380",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P049</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"101471755\" total_bases=\"30441526500\" total_size=\"9617435957\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130412\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P049\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638281\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P049</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972007</Biosample>",
+    "Runs": "<Run acc=\"SRR40541295\" total_spots=\"101471755\" total_bases=\"30441526500\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611379",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P048</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"73188838\" total_bases=\"21956651400\" total_size=\"7257007095\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130411\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P048\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638282\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P048</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972006</Biosample>",
+    "Runs": "<Run acc=\"SRR40541296\" total_spots=\"73188838\" total_bases=\"21956651400\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611378",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P047</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"83596225\" total_bases=\"25078867500\" total_size=\"8113792619\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130410\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P047\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638279\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P047</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972005</Biosample>",
+    "Runs": "<Run acc=\"SRR40541297\" total_spots=\"83596225\" total_bases=\"25078867500\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611377",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P046</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"85570481\" total_bases=\"25671144300\" total_size=\"7909286578\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130409\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P046\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638280\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P046</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972004</Biosample>",
+    "Runs": "<Run acc=\"SRR40541298\" total_spots=\"85570481\" total_bases=\"25671144300\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611376",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P045</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"65618280\" total_bases=\"19685484000\" total_size=\"6262815989\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130408\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P045\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638277\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P045</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972003</Biosample>",
+    "Runs": "<Run acc=\"SRR40541299\" total_spots=\"65618280\" total_bases=\"19685484000\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611375",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P044</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"67533696\" total_bases=\"20260108800\" total_size=\"6520702195\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130407\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P044\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638278\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P044</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972002</Biosample>",
+    "Runs": "<Run acc=\"SRR40541300\" total_spots=\"67533696\" total_bases=\"20260108800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611374",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P043</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"69455743\" total_bases=\"20836722900\" total_size=\"6540655481\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130406\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P043\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638276\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P043</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972001</Biosample>",
+    "Runs": "<Run acc=\"SRR40541301\" total_spots=\"69455743\" total_bases=\"20836722900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611373",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P042</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"65114391\" total_bases=\"19534317300\" total_size=\"6133281205\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130405\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P042\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638275\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P042</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62972000</Biosample>",
+    "Runs": "<Run acc=\"SRR40541302\" total_spots=\"65114391\" total_bases=\"19534317300\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611372",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P041</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"67706434\" total_bases=\"20311930200\" total_size=\"6356080361\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130404\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P041\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638274\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P041</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971999</Biosample>",
+    "Runs": "<Run acc=\"SRR40541303\" total_spots=\"67706434\" total_bases=\"20311930200\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611371",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P005</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"59535886\" total_bases=\"17860765800\" total_size=\"5803061017\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130403\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P005\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638272\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P005</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971963</Biosample>",
+    "Runs": "<Run acc=\"SRR40541304\" total_spots=\"59535886\" total_bases=\"17860765800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611370",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P040</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"65373142\" total_bases=\"19611942600\" total_size=\"6165638043\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130402\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P040\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638271\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P040</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971998</Biosample>",
+    "Runs": "<Run acc=\"SRR40541305\" total_spots=\"65373142\" total_bases=\"19611942600\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611369",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P039</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"79753192\" total_bases=\"23925957600\" total_size=\"7304037590\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130401\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P039\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638273\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P039</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971997</Biosample>",
+    "Runs": "<Run acc=\"SRR40541306\" total_spots=\"79753192\" total_bases=\"23925957600\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611368",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P038</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"98001203\" total_bases=\"29400360900\" total_size=\"9172183719\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130400\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P038\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638269\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P038</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971996</Biosample>",
+    "Runs": "<Run acc=\"SRR40541307\" total_spots=\"98001203\" total_bases=\"29400360900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611367",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P037</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"66631707\" total_bases=\"19989512100\" total_size=\"6319830903\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130399\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P037\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638270\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P037</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971995</Biosample>",
+    "Runs": "<Run acc=\"SRR40541308\" total_spots=\"66631707\" total_bases=\"19989512100\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611366",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P036</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"67430802\" total_bases=\"20229240600\" total_size=\"6356770842\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130398\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P036\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638268\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P036</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971994</Biosample>",
+    "Runs": "<Run acc=\"SRR40541309\" total_spots=\"67430802\" total_bases=\"20229240600\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611365",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P035</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"82675428\" total_bases=\"24802628400\" total_size=\"7815097636\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130397\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P035\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638267\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P035</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971993</Biosample>",
+    "Runs": "<Run acc=\"SRR40541310\" total_spots=\"82675428\" total_bases=\"24802628400\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611364",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P034</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"68496283\" total_bases=\"20548884900\" total_size=\"6512575482\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130396\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P034\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638266\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P034</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971992</Biosample>",
+    "Runs": "<Run acc=\"SRR40541311\" total_spots=\"68496283\" total_bases=\"20548884900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611363",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P033</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"67107956\" total_bases=\"20132386800\" total_size=\"6404406590\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130395\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P033\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638264\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P033</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971991</Biosample>",
+    "Runs": "<Run acc=\"SRR40541312\" total_spots=\"67107956\" total_bases=\"20132386800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611362",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P032</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"63695706\" total_bases=\"19108711800\" total_size=\"6047314448\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130394\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P032\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638265\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P032</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971990</Biosample>",
+    "Runs": "<Run acc=\"SRR40541313\" total_spots=\"63695706\" total_bases=\"19108711800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611361",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P031</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"76380268\" total_bases=\"22914080400\" total_size=\"7235532962\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130393\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P031\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638263\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P031</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971989</Biosample>",
+    "Runs": "<Run acc=\"SRR40541314\" total_spots=\"76380268\" total_bases=\"22914080400\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611360",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P004</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"84201238\" total_bases=\"25260371400\" total_size=\"8150420133\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130392\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P004\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638262\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P004</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971962</Biosample>",
+    "Runs": "<Run acc=\"SRR40541315\" total_spots=\"84201238\" total_bases=\"25260371400\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611359",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P030</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"88146846\" total_bases=\"26444053800\" total_size=\"8374880490\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130391\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P030\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638261\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P030</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971988</Biosample>",
+    "Runs": "<Run acc=\"SRR40541316\" total_spots=\"88146846\" total_bases=\"26444053800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611358",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P029</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"63754869\" total_bases=\"19126460700\" total_size=\"6189817095\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130390\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P029\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638260\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P029</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971987</Biosample>",
+    "Runs": "<Run acc=\"SRR40541317\" total_spots=\"63754869\" total_bases=\"19126460700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611357",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P028</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"65344362\" total_bases=\"19603308600\" total_size=\"6248342301\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130389\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P028\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638259\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P028</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971986</Biosample>",
+    "Runs": "<Run acc=\"SRR40541318\" total_spots=\"65344362\" total_bases=\"19603308600\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611356",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P027</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"64979868\" total_bases=\"19493960400\" total_size=\"6192028581\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130388\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P027\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638257\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P027</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971985</Biosample>",
+    "Runs": "<Run acc=\"SRR40541319\" total_spots=\"64979868\" total_bases=\"19493960400\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611355",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P026</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"65806593\" total_bases=\"19741977900\" total_size=\"6291670258\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130387\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P026\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638256\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P026</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971984</Biosample>",
+    "Runs": "<Run acc=\"SRR40541320\" total_spots=\"65806593\" total_bases=\"19741977900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611354",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P025</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"67726288\" total_bases=\"20317886400\" total_size=\"6520775596\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130386\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P025\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638255\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P025</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971983</Biosample>",
+    "Runs": "<Run acc=\"SRR40541321\" total_spots=\"67726288\" total_bases=\"20317886400\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611353",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P024</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"67026737\" total_bases=\"20108021100\" total_size=\"6575991605\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130385\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P024\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638258\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P024</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971982</Biosample>",
+    "Runs": "<Run acc=\"SRR40541322\" total_spots=\"67026737\" total_bases=\"20108021100\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611352",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P023</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"68857750\" total_bases=\"20657325000\" total_size=\"6611718030\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130384\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P023\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638254\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P023</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971981</Biosample>",
+    "Runs": "<Run acc=\"SRR40541323\" total_spots=\"68857750\" total_bases=\"20657325000\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611351",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P022</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"67025539\" total_bases=\"20107661700\" total_size=\"6387225224\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130383\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P022\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638253\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P022</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971980</Biosample>",
+    "Runs": "<Run acc=\"SRR40541324\" total_spots=\"67025539\" total_bases=\"20107661700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611350",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P021</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"67657283\" total_bases=\"20297184900\" total_size=\"6502971864\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130382\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P021\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638252\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P021</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971979</Biosample>",
+    "Runs": "<Run acc=\"SRR40541325\" total_spots=\"67657283\" total_bases=\"20297184900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611349",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P003</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"58148335\" total_bases=\"17444500500\" total_size=\"5664584799\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130381\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P003\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638251\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P003</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971961</Biosample>",
+    "Runs": "<Run acc=\"SRR40541326\" total_spots=\"58148335\" total_bases=\"17444500500\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611348",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P020</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"68464622\" total_bases=\"20539386600\" total_size=\"6744746472\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130380\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P020\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638250\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P020</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971978</Biosample>",
+    "Runs": "<Run acc=\"SRR40541327\" total_spots=\"68464622\" total_bases=\"20539386600\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611347",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P019</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"71313152\" total_bases=\"21393945600\" total_size=\"7020721939\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130379\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P019\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638248\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P019</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971977</Biosample>",
+    "Runs": "<Run acc=\"SRR40541328\" total_spots=\"71313152\" total_bases=\"21393945600\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611346",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P018</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"80776878\" total_bases=\"24233063400\" total_size=\"7688794884\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130378\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P018\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638249\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P018</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971976</Biosample>",
+    "Runs": "<Run acc=\"SRR40541329\" total_spots=\"80776878\" total_bases=\"24233063400\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611345",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P017</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"72393256\" total_bases=\"21717976800\" total_size=\"6881586572\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130377\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P017\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638247\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P017</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971975</Biosample>",
+    "Runs": "<Run acc=\"SRR40541330\" total_spots=\"72393256\" total_bases=\"21717976800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611344",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P016</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"71431393\" total_bases=\"21429417900\" total_size=\"6887289590\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130376\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P016\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638246\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P016</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971974</Biosample>",
+    "Runs": "<Run acc=\"SRR40541331\" total_spots=\"71431393\" total_bases=\"21429417900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611343",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P015</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"82230628\" total_bases=\"24669188400\" total_size=\"8293362550\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130375\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P015\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638245\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P015</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971973</Biosample>",
+    "Runs": "<Run acc=\"SRR40541332\" total_spots=\"82230628\" total_bases=\"24669188400\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611342",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P014</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"82850483\" total_bases=\"24855144900\" total_size=\"8057057136\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130374\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P014\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638243\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P014</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971972</Biosample>",
+    "Runs": "<Run acc=\"SRR40541333\" total_spots=\"82850483\" total_bases=\"24855144900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611341",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P013</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"68353262\" total_bases=\"20505978600\" total_size=\"6660718725\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130373\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P013\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638244\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P013</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971971</Biosample>",
+    "Runs": "<Run acc=\"SRR40541334\" total_spots=\"68353262\" total_bases=\"20505978600\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611340",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P012</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"89708233\" total_bases=\"26912469900\" total_size=\"8715848117\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130372\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P012\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638241\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P012</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971970</Biosample>",
+    "Runs": "<Run acc=\"SRR40541335\" total_spots=\"89708233\" total_bases=\"26912469900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611339",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P011</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"123249628\" total_bases=\"36974888400\" total_size=\"11507445571\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130371\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P011\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638242\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P011</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971969</Biosample>",
+    "Runs": "<Run acc=\"SRR40541336\" total_spots=\"123249628\" total_bases=\"36974888400\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611338",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P002</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"85056199\" total_bases=\"25516859700\" total_size=\"8342427485\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130370\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P002\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638240\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P002</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971960</Biosample>",
+    "Runs": "<Run acc=\"SRR40541337\" total_spots=\"85056199\" total_bases=\"25516859700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  },
+  {
+    "Item": [],
+    "Id": "46611337",
+    "ExpXml": "<Summary><Title>Wholeexome sequencing library for VM patient VM_P001</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"100393174\" total_bases=\"30117952200\" total_size=\"9849962731\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2533181\" center_name=\"Tianjin First Central Hospital\" contact_name=\"xiaoqian ren\" lab_name=\"Department of Otorhinolaryngology Head and Neck Su\"/><Experiment acc=\"SRX35130369\" ver=\"1\" status=\"public\" name=\"Wholeexome sequencing library for VM patient VM_P001\"/><Study acc=\"SRP734047\" name=\"Whole-Exome Sequencing Identifies Susceptibility Genes for Vestibular Migraine: A Preliminary Study\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30638239\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>VM_P001</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1524369</Bioproject><Biosample>SAMN62971959</Biosample>",
+    "Runs": "<Run acc=\"SRR40541338\" total_spots=\"100393174\" total_bases=\"30117952200\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/08",
+    "UpdateDate": "2026/09/06"
+  }
+]

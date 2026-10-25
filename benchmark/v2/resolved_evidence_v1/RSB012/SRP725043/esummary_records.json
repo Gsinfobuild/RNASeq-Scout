@@ -1,0 +1,110 @@
+[
+  {
+    "Item": [],
+    "Id": "46104486",
+    "ExpXml": "<Summary><Title>PAO1 carrying pHERD20T-fiuI biological replicate 2</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"8241465\" total_bases=\"2468764141\" total_size=\"739135116\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708129\" ver=\"1\" status=\"public\" name=\"PAO1 carrying pHERD20T-fiuI biological replicate 2\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265272\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>PAO1-FiuI-20T-2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238879</Biosample>",
+    "Runs": "<Run acc=\"SRR40061822\" total_spots=\"8241465\" total_bases=\"2468764141\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  },
+  {
+    "Item": [],
+    "Id": "46104485",
+    "ExpXml": "<Summary><Title>PAO1 carrying pHERD20T-fiuI biological replicate 1</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"7903212\" total_bases=\"2368445805\" total_size=\"714745845\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708128\" ver=\"1\" status=\"public\" name=\"PAO1 carrying pHERD20T-fiuI biological replicate 1\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265269\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>PAO1-FiuI-20T-1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238878</Biosample>",
+    "Runs": "<Run acc=\"SRR40061823\" total_spots=\"7903212\" total_bases=\"2368445805\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  },
+  {
+    "Item": [],
+    "Id": "46104484",
+    "ExpXml": "<Summary><Title>PAO1 carrying empty pHERD20T vector biological replicate 2</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"8047177\" total_bases=\"2411450323\" total_size=\"725145969\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708127\" ver=\"1\" status=\"public\" name=\"PAO1 carrying empty pHERD20T vector biological replicate 2\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265271\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>PAO1-20T-2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238877</Biosample>",
+    "Runs": "<Run acc=\"SRR40061824\" total_spots=\"8047177\" total_bases=\"2411450323\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  },
+  {
+    "Item": [],
+    "Id": "46104483",
+    "ExpXml": "<Summary><Title>PAO1 carrying empty pHERD20T vector biological replicate 1</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"8010420\" total_bases=\"2400462373\" total_size=\"721899172\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708126\" ver=\"1\" status=\"public\" name=\"PAO1 carrying empty pHERD20T vector biological replicate 1\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265270\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>PAO1-20T-1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238876</Biosample>",
+    "Runs": "<Run acc=\"SRR40061825\" total_spots=\"8010420\" total_bases=\"2400462373\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  },
+  {
+    "Item": [],
+    "Id": "46104482",
+    "ExpXml": "<Summary><Title>PAO1 deletePA1774 mutant biological replicate 2</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"12452590\" total_bases=\"3735777000\" total_size=\"992326461\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708125\" ver=\"1\" status=\"public\" name=\"PAO1 deletePA1774 mutant biological replicate 2\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265268\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>dePA1774_2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238875</Biosample>",
+    "Runs": "<Run acc=\"SRR40061826\" total_spots=\"12452590\" total_bases=\"3735777000\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  },
+  {
+    "Item": [],
+    "Id": "46104481",
+    "ExpXml": "<Summary><Title>PAO1 deletePA1774 mutant biological replicate 1</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"10048375\" total_bases=\"3014512500\" total_size=\"812949549\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708124\" ver=\"1\" status=\"public\" name=\"PAO1 deletePA1774 mutant biological replicate 1\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265267\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>dePA1774_1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238874</Biosample>",
+    "Runs": "<Run acc=\"SRR40061827\" total_spots=\"10048375\" total_bases=\"3014512500\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  },
+  {
+    "Item": [],
+    "Id": "46104480",
+    "ExpXml": "<Summary><Title>PAO1 deletePA3351 mutant biological replicate 2</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"10511788\" total_bases=\"3153536400\" total_size=\"859754211\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708123\" ver=\"1\" status=\"public\" name=\"PAO1 deletePA3351 mutant biological replicate 2\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265266\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>dePA3351_2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238873</Biosample>",
+    "Runs": "<Run acc=\"SRR40061828\" total_spots=\"10511788\" total_bases=\"3153536400\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  },
+  {
+    "Item": [],
+    "Id": "46104479",
+    "ExpXml": "<Summary><Title>PAO1 deletePA3351 mutant biological replicate 1</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"10755217\" total_bases=\"3226565100\" total_size=\"848495523\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708122\" ver=\"1\" status=\"public\" name=\"PAO1 deletePA3351 mutant biological replicate 1\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265265\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>dePA3351_1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238872</Biosample>",
+    "Runs": "<Run acc=\"SRR40061829\" total_spots=\"10755217\" total_bases=\"3226565100\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  },
+  {
+    "Item": [],
+    "Id": "46104478",
+    "ExpXml": "<Summary><Title>PAO1 deletefiuR mutant carrying empty pHERD20T vector biological replicate 2</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"7901159\" total_bases=\"2367541137\" total_size=\"716382245\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708121\" ver=\"1\" status=\"public\" name=\"PAO1 deletefiuR mutant carrying empty pHERD20T vector biological replicate 2\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265264\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>PAO1-deFiuR-20T-2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238881</Biosample>",
+    "Runs": "<Run acc=\"SRR40061830\" total_spots=\"7901159\" total_bases=\"2367541137\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  },
+  {
+    "Item": [],
+    "Id": "46104477",
+    "ExpXml": "<Summary><Title>PAO1 deletefiuR mutant carrying empty pHERD20T vector biological replicate 1</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"8105206\" total_bases=\"2428802465\" total_size=\"733937567\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708120\" ver=\"1\" status=\"public\" name=\"PAO1 deletefiuR mutant carrying empty pHERD20T vector biological replicate 1\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265263\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>PAO1-deFiuR-20T-1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238880</Biosample>",
+    "Runs": "<Run acc=\"SRR40061831\" total_spots=\"8105206\" total_bases=\"2428802465\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  },
+  {
+    "Item": [],
+    "Id": "46104476",
+    "ExpXml": "<Summary><Title>PAO1 wild type biological replicate 2</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"10395119\" total_bases=\"3118535700\" total_size=\"814299582\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708119\" ver=\"1\" status=\"public\" name=\"PAO1 wild type biological replicate 2\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265261\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>PAO1_WT_2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238871</Biosample>",
+    "Runs": "<Run acc=\"SRR40061832\" total_spots=\"10395119\" total_bases=\"3118535700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  },
+  {
+    "Item": [],
+    "Id": "46104475",
+    "ExpXml": "<Summary><Title>PAO1 wild type biological replicate 1</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"11223948\" total_bases=\"3367184400\" total_size=\"916595668\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2505986\" center_name=\"shandong university\" contact_name=\"Can can Wu\" lab_name=\"State Key Laboratory of Microbial Technology\"/><Experiment acc=\"SRX34708118\" ver=\"1\" status=\"public\" name=\"PAO1 wild type biological replicate 1\"/><Study acc=\"SRP725043\" name=\"Transcriptomic profiling of representative sigma and anti-sigma factor mutants in Pseudomonas aeruginosa PAO1\"/><Organism taxid=\"208964\" ScientificName=\"Pseudomonas aeruginosa PAO1\"/><Sample acc=\"SRS30265262\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>PAO1_WT_1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1508295</Bioproject><Biosample>SAMN62238870</Biosample>",
+    "Runs": "<Run acc=\"SRR40061833\" total_spots=\"11223948\" total_bases=\"3367184400\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/06",
+    "UpdateDate": "2026/08/06"
+  }
+]

@@ -1,0 +1,182 @@
+[
+  {
+    "Item": [],
+    "Id": "46434381",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"978245\" total_bases=\"288324816\" total_size=\"101804503\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983416\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"584\" ScientificName=\"Proteus mirabilis\"/><Sample acc=\"SRS30505527\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJPM01_1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743012</Biosample>",
+    "Runs": "<Run acc=\"SRR40374051\" total_spots=\"978245\" total_bases=\"288324816\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434380",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"403396\" total_bases=\"118936421\" total_size=\"41598641\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983415\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"1408\" ScientificName=\"Bacillus pumilus\"/><Sample acc=\"SRS30505526\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJBP01_1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743011</Biosample>",
+    "Runs": "<Run acc=\"SRR40374052\" total_spots=\"403396\" total_bases=\"118936421\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434379",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"381251\" total_bases=\"112249485\" total_size=\"38789705\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983414\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"35841\" ScientificName=\"Caldibacillus thermoamylovorans\"/><Sample acc=\"SRS30505525\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJCT01_1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743010</Biosample>",
+    "Runs": "<Run acc=\"SRR40374053\" total_spots=\"381251\" total_bases=\"112249485\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434378",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"456061\" total_bases=\"134429752\" total_size=\"47127044\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983413\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"1423\" ScientificName=\"Bacillus subtilis\"/><Sample acc=\"SRS30505524\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJBS03_3</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743009</Biosample>",
+    "Runs": "<Run acc=\"SRR40374054\" total_spots=\"456061\" total_bases=\"134429752\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434377",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"435606\" total_bases=\"127434337\" total_size=\"44608472\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983412\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"1423\" ScientificName=\"Bacillus subtilis\"/><Sample acc=\"SRS30505523\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJBS02_2</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743008</Biosample>",
+    "Runs": "<Run acc=\"SRR40374055\" total_spots=\"435606\" total_bases=\"127434337\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434376",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"756686\" total_bases=\"221943414\" total_size=\"77009563\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983411\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"1423\" ScientificName=\"Bacillus subtilis\"/><Sample acc=\"SRS30505522\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJBS01_1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743007</Biosample>",
+    "Runs": "<Run acc=\"SRR40374056\" total_spots=\"756686\" total_bases=\"221943414\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434375",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"635736\" total_bases=\"183628023\" total_size=\"63801610\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983410\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"1402\" ScientificName=\"Bacillus licheniformis\"/><Sample acc=\"SRS30505521\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJBL05_5</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743006</Biosample>",
+    "Runs": "<Run acc=\"SRR40374057\" total_spots=\"635736\" total_bases=\"183628023\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434374",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"492362\" total_bases=\"145039624\" total_size=\"51069602\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983409\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"1402\" ScientificName=\"Bacillus licheniformis\"/><Sample acc=\"SRS30505520\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJBL04_4</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743005</Biosample>",
+    "Runs": "<Run acc=\"SRR40374058\" total_spots=\"492362\" total_bases=\"145039624\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434373",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"2675328\" total_bases=\"786870203\" total_size=\"272105136\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983408\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"546\" ScientificName=\"Citrobacter freundii\"/><Sample acc=\"SRS30505519\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJCF05_5</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743019</Biosample>",
+    "Runs": "<Run acc=\"SRR40374059\" total_spots=\"2675328\" total_bases=\"786870203\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434372",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"2089806\" total_bases=\"611721456\" total_size=\"212108407\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983407\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"546\" ScientificName=\"Citrobacter freundii\"/><Sample acc=\"SRS30505518\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJCF04_4</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743018</Biosample>",
+    "Runs": "<Run acc=\"SRR40374060\" total_spots=\"2089806\" total_bases=\"611721456\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434371",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"1688204\" total_bases=\"489411654\" total_size=\"169376921\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983406\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"546\" ScientificName=\"Citrobacter freundii\"/><Sample acc=\"SRS30505517\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJCF03_3</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743017</Biosample>",
+    "Runs": "<Run acc=\"SRR40374061\" total_spots=\"1688204\" total_bases=\"489411654\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434370",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"2575422\" total_bases=\"760406885\" total_size=\"265330258\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983405\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"546\" ScientificName=\"Citrobacter freundii\"/><Sample acc=\"SRS30505516\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJCF02_2</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743016</Biosample>",
+    "Runs": "<Run acc=\"SRR40374062\" total_spots=\"2575422\" total_bases=\"760406885\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434369",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"2466334\" total_bases=\"729729321\" total_size=\"250395981\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983404\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"546\" ScientificName=\"Citrobacter freundii\"/><Sample acc=\"SRS30505515\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJCF01_1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743015</Biosample>",
+    "Runs": "<Run acc=\"SRR40374063\" total_spots=\"2466334\" total_bases=\"729729321\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434368",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"1196663\" total_bases=\"354480047\" total_size=\"124440770\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983403\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"584\" ScientificName=\"Proteus mirabilis\"/><Sample acc=\"SRS30505514\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJPM03_3</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743014</Biosample>",
+    "Runs": "<Run acc=\"SRR40374064\" total_spots=\"1196663\" total_bases=\"354480047\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434367",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"1895324\" total_bases=\"557414740\" total_size=\"195362272\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983402\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"584\" ScientificName=\"Proteus mirabilis\"/><Sample acc=\"SRS30505513\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJPM02_2</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743013</Biosample>",
+    "Runs": "<Run acc=\"SRR40374065\" total_spots=\"1895324\" total_bases=\"557414740\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434366",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"555490\" total_bases=\"163494089\" total_size=\"57108171\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983401\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"1402\" ScientificName=\"Bacillus licheniformis\"/><Sample acc=\"SRS30505512\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJBL03_3</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743004</Biosample>",
+    "Runs": "<Run acc=\"SRR40374066\" total_spots=\"555490\" total_bases=\"163494089\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "46434365",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from Environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"588362\" total_bases=\"174020946\" total_size=\"61279989\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2525261\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX34983400\" ver=\"1\" status=\"public\" name=\"WGS of bacteria isolated from Environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"86664\" ScientificName=\"Priestia flexa\"/><Sample acc=\"SRS30505511\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJPF01_1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN62743003</Biosample>",
+    "Runs": "<Run acc=\"SRR40374067\" total_spots=\"588362\" total_bases=\"174020946\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/27",
+    "UpdateDate": "2026/08/27"
+  },
+  {
+    "Item": [],
+    "Id": "44386625",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"686986\" total_bases=\"180541693\" total_size=\"66339216\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2389930\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX33254593\" ver=\"2\" status=\"public\" name=\"WGS of bacteria isolated from environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"1402\" ScientificName=\"Bacillus licheniformis\"/><Sample acc=\"SRS29072371\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJBL02_2</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN59296014</Biosample>",
+    "Runs": "<Run acc=\"SRR38428273\" total_spots=\"686986\" total_bases=\"180541693\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/05/07",
+    "UpdateDate": "2026/05/08"
+  },
+  {
+    "Item": [],
+    "Id": "44386624",
+    "ExpXml": "<Summary><Title>WGS of bacteria isolated from environmental samples</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"899599\" total_bases=\"230958180\" total_size=\"85772713\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2389930\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX33254592\" ver=\"2\" status=\"public\" name=\"WGS of bacteria isolated from environmental samples\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"1402\" ScientificName=\"Bacillus licheniformis\"/><Sample acc=\"SRS29072370\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJBL01_1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN59296013</Biosample>",
+    "Runs": "<Run acc=\"SRR38428274\" total_spots=\"899599\" total_bases=\"230958180\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/05/07",
+    "UpdateDate": "2026/05/08"
+  },
+  {
+    "Item": [],
+    "Id": "44386623",
+    "ExpXml": "<Summary><Title>WGS Food borne pathogens</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"1001315\" total_bases=\"294389935\" total_size=\"108206230\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2389930\" center_name=\"Alagappa university\" contact_name=\"Jeyaraman Jeyakanthan\" lab_name=\"Department of Bioinformatics\"/><Experiment acc=\"SRX33254591\" ver=\"1\" status=\"public\" name=\"WGS Food borne pathogens\"/><Study acc=\"SRP698316\" name=\"WGS sequencing reads from environmental samples - Alagappa University- NPD\"/><Organism taxid=\"654\" ScientificName=\"Aeromonas veronii\"/><Sample acc=\"SRS29072369\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>ALUJJAV01_1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1462351</Bioproject><Biosample>SAMN59296012</Biosample>",
+    "Runs": "<Run acc=\"SRR38428275\" total_spots=\"1001315\" total_bases=\"294389935\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/05/07",
+    "UpdateDate": "2026/05/07"
+  }
+]

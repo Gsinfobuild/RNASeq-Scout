@@ -1,0 +1,164 @@
+[
+  {
+    "Item": [],
+    "Id": "46582107",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"39929738\" total_bases=\"11950567254\" total_size=\"4470722844\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106582\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611373\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S19</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772849</Biosample>",
+    "Runs": "<Run acc=\"SRR40515387\" total_spots=\"39929738\" total_bases=\"11950567254\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582106",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"37037088\" total_bases=\"11086790530\" total_size=\"4139027079\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106581\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611372\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S17</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772847</Biosample>",
+    "Runs": "<Run acc=\"SRR40515388\" total_spots=\"37037088\" total_bases=\"11086790530\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582105",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"38627641\" total_bases=\"11563172760\" total_size=\"4291409480\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106580\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611371\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S15</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772845</Biosample>",
+    "Runs": "<Run acc=\"SRR40515389\" total_spots=\"38627641\" total_bases=\"11563172760\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582104",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"37172401\" total_bases=\"11108176468\" total_size=\"4125823030\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106579\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611370\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S13</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772843</Biosample>",
+    "Runs": "<Run acc=\"SRR40515390\" total_spots=\"37172401\" total_bases=\"11108176468\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582103",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"58461535\" total_bases=\"17444061052\" total_size=\"6664654586\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106578\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611369\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S11</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772841</Biosample>",
+    "Runs": "<Run acc=\"SRR40515391\" total_spots=\"58461535\" total_bases=\"17444061052\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582102",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"52484906\" total_bases=\"15658498894\" total_size=\"5920353234\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106577\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611368\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S9</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772839</Biosample>",
+    "Runs": "<Run acc=\"SRR40515392\" total_spots=\"52484906\" total_bases=\"15658498894\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582101",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"49292220\" total_bases=\"14688311074\" total_size=\"5633447318\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106576\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611367\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S7</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772837</Biosample>",
+    "Runs": "<Run acc=\"SRR40515393\" total_spots=\"49292220\" total_bases=\"14688311074\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582100",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"47796365\" total_bases=\"14275882254\" total_size=\"5436799850\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106575\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611365\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S5</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772835</Biosample>",
+    "Runs": "<Run acc=\"SRR40515394\" total_spots=\"47796365\" total_bases=\"14275882254\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582099",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"40423963\" total_bases=\"11971677532\" total_size=\"4449401900\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106574\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611366\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S35</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772865</Biosample>",
+    "Runs": "<Run acc=\"SRR40515395\" total_spots=\"40423963\" total_bases=\"11971677532\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582098",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"39644306\" total_bases=\"11789356090\" total_size=\"4380960679\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106573\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611363\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S33</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772863</Biosample>",
+    "Runs": "<Run acc=\"SRR40515396\" total_spots=\"39644306\" total_bases=\"11789356090\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582097",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"45507392\" total_bases=\"13597430182\" total_size=\"5086919254\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106572\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611364\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S31</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772861</Biosample>",
+    "Runs": "<Run acc=\"SRR40515397\" total_spots=\"45507392\" total_bases=\"13597430182\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582096",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"44232456\" total_bases=\"13165460514\" total_size=\"4896679556\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106571\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611362\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S29</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772859</Biosample>",
+    "Runs": "<Run acc=\"SRR40515398\" total_spots=\"44232456\" total_bases=\"13165460514\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582095",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"43350608\" total_bases=\"12918491444\" total_size=\"4942960611\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106570\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611361\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S27</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772857</Biosample>",
+    "Runs": "<Run acc=\"SRR40515399\" total_spots=\"43350608\" total_bases=\"12918491444\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582094",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"40495132\" total_bases=\"12026323728\" total_size=\"4581828542\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106569\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611360\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S25</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772855</Biosample>",
+    "Runs": "<Run acc=\"SRR40515400\" total_spots=\"40495132\" total_bases=\"12026323728\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582093",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"37690543\" total_bases=\"11242903220\" total_size=\"4169115338\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106568\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611357\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S23</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772853</Biosample>",
+    "Runs": "<Run acc=\"SRR40515401\" total_spots=\"37690543\" total_bases=\"11242903220\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582092",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"35577509\" total_bases=\"10651248508\" total_size=\"3964108928\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106567\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611358\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S21</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772851</Biosample>",
+    "Runs": "<Run acc=\"SRR40515402\" total_spots=\"35577509\" total_bases=\"10651248508\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582091",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"48005842\" total_bases=\"14327452234\" total_size=\"5460847805\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106566\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611359\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S3</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772833</Biosample>",
+    "Runs": "<Run acc=\"SRR40515403\" total_spots=\"48005842\" total_bases=\"14327452234\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  },
+  {
+    "Item": [],
+    "Id": "46582090",
+    "ExpXml": "<Summary><Title>RNA-Seq of Candida albicans</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"52679600\" total_bases=\"15731748970\" total_size=\"5966665785\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2531744\" center_name=\"WuHan University\" contact_name=\"Gang Luo\" lab_name=\"College of Life Sciences\"/><Experiment acc=\"SRX35106565\" ver=\"1\" status=\"public\" name=\"RNA-Seq of Candida albicans\"/><Study acc=\"SRP733544\" name=\"Candida albicans Raw sequence reads\"/><Organism taxid=\"5476\" ScientificName=\"Candida albicans\"/><Sample acc=\"SRS30611356\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME>S1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Inverse rRNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1522632</Bioproject><Biosample>SAMN62772831</Biosample>",
+    "Runs": "<Run acc=\"SRR40515404\" total_spots=\"52679600\" total_bases=\"15731748970\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/04",
+    "UpdateDate": "2026/09/04"
+  }
+]

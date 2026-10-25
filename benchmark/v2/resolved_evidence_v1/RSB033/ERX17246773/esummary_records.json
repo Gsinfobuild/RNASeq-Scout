@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46702851",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"318615557\" total_bases=\"96221898214\" total_size=\"29020585720\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36964254\" center_name=\"WELLCOME SANGER INSTITUTE\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX17246773\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP204766\" name=\"Osphya bipunctata, genomic and transcriptomic data\"/><Organism taxid=\"1227470\" ScientificName=\"Osphya bipunctata\"/><Sample acc=\"ERS17056717\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_STRATEGY>Hi-C</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Restriction Digest</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED NOMINAL_LENGTH=\"450\"/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>Hi-C - Arima v2</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJEB124996</Bioproject><Biosample>SAMEA114645625</Biosample>",
+    "Runs": "<Run acc=\"ERR17854955\" total_spots=\"318615557\" total_bases=\"96221898214\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/11"
+  }
+]

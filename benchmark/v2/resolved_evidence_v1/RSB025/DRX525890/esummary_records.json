@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "44911064",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing of SAMD00763577</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"506199873\" total_bases=\"62768784252\" total_size=\"28922447510\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"DRA018373\" center_name=\"Kyoto University\" contact_name=\"\" lab_name=\"\"/><Experiment acc=\"DRX525890\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing of SAMD00763577\"/><Study acc=\"DRP018984\" name=\"Epigenomic analysis of tumor cells in Drosophila larval epithelial tissues\"/><Organism taxid=\"7227\" ScientificName=\"Drosophila melanogaster\"/><Sample acc=\"DRS744491\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>GFP 3d</LIBRARY_NAME><LIBRARY_STRATEGY>ATAC-seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>other</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>Chromium Next GEM Single Cell ATAC v2(10x Genomics)</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJDB17859</Bioproject><Biosample>SAMD00763577</Biosample>",
+    "Runs": "<Run acc=\"DRR542109\" total_spots=\"506199873\" total_bases=\"62768784252\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/06/02",
+    "UpdateDate": "2026/06/02"
+  }
+]

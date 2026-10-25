@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46710587",
+    "ExpXml": "<Summary><Title>RS1</Title><Platform instrument_model=\"Illumina Genome Analyzer II\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"29693686\" total_bases=\"5938737200\" total_size=\"2585954292\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2538199\" center_name=\"Natural Resources Canada\" contact_name=\"Riley William Ellis\" lab_name=\"Genomic Research\"/><Experiment acc=\"SRX35205116\" ver=\"1\" status=\"public\" name=\"RS1\"/><Study acc=\"SRP072133\" name=\"Pinus flexilis Raw sequence reads\"/><Organism taxid=\"151559\" ScientificName=\"Pinus flexilis\"/><Sample acc=\"SRS30702546\" name=\"\"/><Instrument ILLUMINA=\"Illumina Genome Analyzer II\"/><Library_descriptor><LIBRARY_NAME>RS1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA315892</Bioproject><Biosample>SAMN63087216</Biosample>",
+    "Runs": "<Run acc=\"SRR40625532\" total_spots=\"29693686\" total_bases=\"5938737200\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/11"
+  }
+]

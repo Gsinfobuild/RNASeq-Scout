@@ -1,0 +1,461 @@
+[
+  {
+    "Item": [],
+    "Id": "46693510",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"32970055\" total_bases=\"9891016500\" total_size=\"2955984865\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900608\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687609\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2087-10_2_Input(10 Input)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995430</Biosample>",
+    "Runs": "<Run acc=\"ERR17509191\" total_spots=\"32970055\" total_bases=\"9891016500\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693251",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"28895982\" total_bases=\"8726586564\" total_size=\"2418731339\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900636\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687570\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089_S1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995391</Biosample>",
+    "Runs": "<Run acc=\"ERR17509219\" total_spots=\"28895982\" total_bases=\"8726586564\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46692920",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"57577176\" total_bases=\"17273152800\" total_size=\"4833138136\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900646\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687581\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>G2_3440</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995402</Biosample>",
+    "Runs": "<Run acc=\"ERR17509229\" total_spots=\"57577176\" total_bases=\"17273152800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46691829",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"31241417\" total_bases=\"9372425100\" total_size=\"2842407178\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900603\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687604\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2087_1_Input (5 Input)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995425</Biosample>",
+    "Runs": "<Run acc=\"ERR17509186\" total_spots=\"31241417\" total_bases=\"9372425100\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693951",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"32276501\" total_bases=\"9682950300\" total_size=\"2846360046\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900617\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687618\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2087-10_1_ChIP (9 ChIP)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995439</Biosample>",
+    "Runs": "<Run acc=\"ERR17509200\" total_spots=\"32276501\" total_bases=\"9682950300\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693942",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"50677926\" total_bases=\"15203377800\" total_size=\"4288473542\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900645\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687580\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>G2_3431</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995401</Biosample>",
+    "Runs": "<Run acc=\"ERR17509228\" total_spots=\"50677926\" total_bases=\"15203377800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693929",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"64549989\" total_bases=\"6519548889\" total_size=\"2081850914\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900691\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687591\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089-15_2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995412</Biosample>",
+    "Runs": "<Run acc=\"ERR17509358\" total_spots=\"64549989\" total_bases=\"6519548889\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693911",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"45192267\" total_bases=\"13557680100\" total_size=\"3885397111\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900648\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687583\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>S1_3440</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995404</Biosample>",
+    "Runs": "<Run acc=\"ERR17509231\" total_spots=\"45192267\" total_bases=\"13557680100\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693900",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"30943945\" total_bases=\"9345071390\" total_size=\"2629412697\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900635\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687571\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089_G2</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995392</Biosample>",
+    "Runs": "<Run acc=\"ERR17509218\" total_spots=\"30943945\" total_bases=\"9345071390\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693883",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"28843381\" total_bases=\"8653014300\" total_size=\"2608092091\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900600\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687601\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>611_2_Input (2 Input)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995422</Biosample>",
+    "Runs": "<Run acc=\"ERR17509183\" total_spots=\"28843381\" total_bases=\"8653014300\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693870",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"63691492\" total_bases=\"6432840692\" total_size=\"2054105527\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900702\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687585\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>611_2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995406</Biosample>",
+    "Runs": "<Run acc=\"ERR17509369\" total_spots=\"63691492\" total_bases=\"6432840692\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693857",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"32014256\" total_bases=\"9604276800\" total_size=\"2915532619\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900601\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687602\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388_1_Input (3 Input)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995423</Biosample>",
+    "Runs": "<Run acc=\"ERR17509184\" total_spots=\"32014256\" total_bases=\"9604276800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693807",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"35042455\" total_bases=\"10512736500\" total_size=\"3090587410\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900611\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687612\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388_1_ChIP (3 ChIP)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995433</Biosample>",
+    "Runs": "<Run acc=\"ERR17509194\" total_spots=\"35042455\" total_bases=\"10512736500\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693806",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"31082076\" total_bases=\"9324622800\" total_size=\"2752984852\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900614\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687615\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2087_2_ChIP (6 ChIP)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995436</Biosample>",
+    "Runs": "<Run acc=\"ERR17509197\" total_spots=\"31082076\" total_bases=\"9324622800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693802",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"34578822\" total_bases=\"10373646600\" total_size=\"3112155168\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900606\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687607\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388-10_6_2_Input (8 Input)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995428</Biosample>",
+    "Runs": "<Run acc=\"ERR17509189\" total_spots=\"34578822\" total_bases=\"10373646600\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693740",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"78006653\" total_bases=\"7878671953\" total_size=\"2503592422\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900701\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687584\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>611_1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995405</Biosample>",
+    "Runs": "<Run acc=\"ERR17509368\" total_spots=\"78006653\" total_bases=\"7878671953\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693724",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"58348289\" total_bases=\"5893177189\" total_size=\"1878360881\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900700\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687587\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2450-BA_2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995408</Biosample>",
+    "Runs": "<Run acc=\"ERR17509367\" total_spots=\"58348289\" total_bases=\"5893177189\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693681",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"57366582\" total_bases=\"5794024782\" total_size=\"1841897084\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900692\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687594\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089-7_1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995415</Biosample>",
+    "Runs": "<Run acc=\"ERR17509359\" total_spots=\"57366582\" total_bases=\"5794024782\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693659",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"82809794\" total_bases=\"8363789194\" total_size=\"2675845160\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900698\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687593\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2450-19_2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995414</Biosample>",
+    "Runs": "<Run acc=\"ERR17509365\" total_spots=\"82809794\" total_bases=\"8363789194\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693643",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"63138238\" total_bases=\"6376962038\" total_size=\"2046515513\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900699\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687586\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2450-BA_1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995407</Biosample>",
+    "Runs": "<Run acc=\"ERR17509366\" total_spots=\"63138238\" total_bases=\"6376962038\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693591",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"31513692\" total_bases=\"9454107600\" total_size=\"2786771634\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900616\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687617\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388-10_6_2_ChIP (8 ChIP)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995438</Biosample>",
+    "Runs": "<Run acc=\"ERR17509199\" total_spots=\"31513692\" total_bases=\"9454107600\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693563",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"71607062\" total_bases=\"7232313262\" total_size=\"2309638790\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900694\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687588\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089-BA_1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995409</Biosample>",
+    "Runs": "<Run acc=\"ERR17509361\" total_spots=\"71607062\" total_bases=\"7232313262\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693542",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"30411489\" total_bases=\"9123446700\" total_size=\"2670971586\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900612\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687613\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388_2_ChIP (4 ChIP)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995434</Biosample>",
+    "Runs": "<Run acc=\"ERR17509195\" total_spots=\"30411489\" total_bases=\"9123446700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693536",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"30368024\" total_bases=\"9110407200\" total_size=\"2662568501\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900618\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687619\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2087-10_2_ChIP (10 ChIP)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995440</Biosample>",
+    "Runs": "<Run acc=\"ERR17509201\" total_spots=\"30368024\" total_bases=\"9110407200\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693533",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"29342950\" total_bases=\"8861570900\" total_size=\"2507126186\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900641\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687569\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>611_130524_G2</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995390</Biosample>",
+    "Runs": "<Run acc=\"ERR17509224\" total_spots=\"29342950\" total_bases=\"8861570900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693525",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"31713391\" total_bases=\"9514017300\" total_size=\"2853289217\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900605\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687606\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388-10_6_1_Input (7 Input)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995427</Biosample>",
+    "Runs": "<Run acc=\"ERR17509188\" total_spots=\"31713391\" total_bases=\"9514017300\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693517",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"88197357\" total_bases=\"8907933057\" total_size=\"2830235880\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900695\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687589\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089-BA_2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995410</Biosample>",
+    "Runs": "<Run acc=\"ERR17509362\" total_spots=\"88197357\" total_bases=\"8907933057\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693496",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"22644110\" total_bases=\"6838521220\" total_size=\"1910260060\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900640\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687572\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388_S1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995393</Biosample>",
+    "Runs": "<Run acc=\"ERR17509223\" total_spots=\"22644110\" total_bases=\"6838521220\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693429",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"31834109\" total_bases=\"9550232700\" total_size=\"2883290571\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900599\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687600\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>611_1_Input (1 Input)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995421</Biosample>",
+    "Runs": "<Run acc=\"ERR17509182\" total_spots=\"31834109\" total_bases=\"9550232700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693354",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"31521333\" total_bases=\"9456399900\" total_size=\"2799911104\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900610\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687611\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>611_2_ChIP (2 ChIP)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995432</Biosample>",
+    "Runs": "<Run acc=\"ERR17509193\" total_spots=\"31521333\" total_bases=\"9456399900\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693352",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"33349379\" total_bases=\"10004813700\" total_size=\"2992892530\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900604\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687605\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2087_2_Input (6 Input)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995426</Biosample>",
+    "Runs": "<Run acc=\"ERR17509187\" total_spots=\"33349379\" total_bases=\"10004813700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693342",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"31935498\" total_bases=\"9644520396\" total_size=\"2696907146\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900634\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687578\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089-2_S1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995399</Biosample>",
+    "Runs": "<Run acc=\"ERR17509217\" total_spots=\"31935498\" total_bases=\"9644520396\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693321",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"69876950\" total_bases=\"7057571950\" total_size=\"2249614605\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900693\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687595\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089-7_2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995416</Biosample>",
+    "Runs": "<Run acc=\"ERR17509360\" total_spots=\"69876950\" total_bases=\"7057571950\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693292",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"32789425\" total_bases=\"9902406350\" total_size=\"2796598937\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900644\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687584\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>611_1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995405</Biosample>",
+    "Runs": "<Run acc=\"ERR17509227\" total_spots=\"32789425\" total_bases=\"9902406350\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693249",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"32937289\" total_bases=\"9881186700\" total_size=\"2957399770\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900602\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687603\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388_2_Input (4 Input)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995424</Biosample>",
+    "Runs": "<Run acc=\"ERR17509185\" total_spots=\"32937289\" total_bases=\"9881186700\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693236",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"28674905\" total_bases=\"8602471500\" total_size=\"2529469709\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900615\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687616\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388-10_6_1_ChIP (7 ChIP)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995437</Biosample>",
+    "Runs": "<Run acc=\"ERR17509198\" total_spots=\"28674905\" total_bases=\"8602471500\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693216",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"37181034\" total_bases=\"11228672268\" total_size=\"3100741291\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900633\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687579\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089-2_G2</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995400</Biosample>",
+    "Runs": "<Run acc=\"ERR17509216\" total_spots=\"37181034\" total_bases=\"11228672268\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693194",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"56632401\" total_bases=\"5719872501\" total_size=\"1820895140\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900690\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687590\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089-15_1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995411</Biosample>",
+    "Runs": "<Run acc=\"ERR17509357\" total_spots=\"56632401\" total_bases=\"5719872501\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693162",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"32547303\" total_bases=\"9829285506\" total_size=\"2731728766\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900638\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687576\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388-10_S1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995397</Biosample>",
+    "Runs": "<Run acc=\"ERR17509221\" total_spots=\"32547303\" total_bases=\"9829285506\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693161",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"31368132\" total_bases=\"9473175864\" total_size=\"2643756015\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900632\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687574\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089-12_S1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995395</Biosample>",
+    "Runs": "<Run acc=\"ERR17509215\" total_spots=\"31368132\" total_bases=\"9473175864\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693096",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"31683546\" total_bases=\"9505063800\" total_size=\"2801675924\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900609\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687610\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>611_1_ChIP (1 ChIP)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995431</Biosample>",
+    "Runs": "<Run acc=\"ERR17509192\" total_spots=\"31683546\" total_bases=\"9505063800\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693075",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"54603974\" total_bases=\"16381192200\" total_size=\"4521910728\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900647\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687582\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>S1_3431</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995403</Biosample>",
+    "Runs": "<Run acc=\"ERR17509230\" total_spots=\"54603974\" total_bases=\"16381192200\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693066",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"75208822\" total_bases=\"7596091022\" total_size=\"2429053328\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900697\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687592\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2450-19_1</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995413</Biosample>",
+    "Runs": "<Run acc=\"ERR17509364\" total_spots=\"75208822\" total_bases=\"7596091022\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693054",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"32786761\" total_bases=\"9901601822\" total_size=\"2730939565\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900637\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687577\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388-10_G2</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995398</Biosample>",
+    "Runs": "<Run acc=\"ERR17509220\" total_spots=\"32786761\" total_bases=\"9901601822\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693029",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"29020667\" total_bases=\"8706200100\" total_size=\"2627980812\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900607\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687608\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2087-10_1_Input (9 Input)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995429</Biosample>",
+    "Runs": "<Run acc=\"ERR17509190\" total_spots=\"29020667\" total_bases=\"8706200100\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46693005",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"31522433\" total_bases=\"9519774766\" total_size=\"2663982841\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900631\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687575\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2089-12_G2</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995396</Biosample>",
+    "Runs": "<Run acc=\"ERR17509214\" total_spots=\"31522433\" total_bases=\"9519774766\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46692984",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"73764540\" total_bases=\"7450218540\" total_size=\"2383734301\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623612\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900696\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687596\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2450-10_2</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995417</Biosample>",
+    "Runs": "<Run acc=\"ERR17509363\" total_spots=\"73764540\" total_bases=\"7450218540\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46692980",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"33088106\" total_bases=\"9992608012\" total_size=\"2848362273\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900642\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687568\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>611_130524_S1</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995389</Biosample>",
+    "Runs": "<Run acc=\"ERR17509225\" total_spots=\"33088106\" total_bases=\"9992608012\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46692975",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"34570516\" total_bases=\"10440295832\" total_size=\"2910891725\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900639\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687573\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2388_G2</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995394</Biosample>",
+    "Runs": "<Run acc=\"ERR17509222\" total_spots=\"34570516\" total_bases=\"10440295832\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46692888",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"32437944\" total_bases=\"9731383200\" total_size=\"2868752370\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623594\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900613\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687614\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>2087_1_ChIP (5 ChIP)</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995435</Biosample>",
+    "Runs": "<Run acc=\"ERR17509196\" total_spots=\"32437944\" total_bases=\"9731383200\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  },
+  {
+    "Item": [],
+    "Id": "46692865",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"37169300\" total_bases=\"11225128600\" total_size=\"3144763295\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36623607\" center_name=\"FUNCTIONAL GENOMICS CENTER ZURICH\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16900643\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP195344\" name=\"Non-functional DNA dictates cell size and impairs cell fitness by sequestering the transcription machinery\"/><Organism taxid=\"4932\" ScientificName=\"Saccharomyces cerevisiae\"/><Sample acc=\"ERS30687567\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_NAME>611_1_G2</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB115124</Bioproject><Biosample>SAMEA122995388</Biosample>",
+    "Runs": "<Run acc=\"ERR17509226\" total_spots=\"37169300\" total_bases=\"11225128600\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/10"
+  }
+]

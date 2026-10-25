@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "43121603",
+    "ExpXml": "<Summary><Title>Pooled RNA sequencing of Plasmodium falciparum clinical isolate with uncomplicated malaria manifestation</Title><Platform instrument_model=\"HiSeq X Ten\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"22292255\" total_bases=\"6517666855\" total_size=\"2185296881\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA33250582\" center_name=\"Indian Biological Data Centre\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX14531659\" ver=\"2\" status=\"public\" name=\"Pooled RNA sequencing of Plasmodium falciparum clinical isolate with uncomplicated malaria manifestation\"/><Study acc=\"ERP173537\" name=\"Strand specific RNA sequencing of Plasmodium falciparum clinical isolates\"/><Organism taxid=\"5833\" ScientificName=\"Plasmodium falciparum\"/><Sample acc=\"ERS25049604\" name=\"\"/><Instrument ILLUMINA=\"HiSeq X Ten\"/><Library_descriptor><LIBRARY_NAME/><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PolyA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>NaN</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJEB90534</Bioproject><Biosample>SAMEA118562671</Biosample>",
+    "Runs": "<Run acc=\"ERR15126522\" total_spots=\"22292255\" total_bases=\"6517666855\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/02/25",
+    "UpdateDate": "2026/08/07"
+  }
+]

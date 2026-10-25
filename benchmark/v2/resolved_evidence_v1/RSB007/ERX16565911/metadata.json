@@ -1,0 +1,21 @@
+{
+  "benchmark_id": "RSB007",
+  "accession": "ERX16565911",
+  "accession_type": "experiment",
+  "study_family": "ERP193087",
+  "benchmark_manifest_modality": "RNA-Seq",
+  "normalized_organism_group": "Drosophila",
+  "scientific_review_decision": "RETAIN",
+  "source": "NCBI SRA",
+  "retrieval_method": "Entrez ESearch + ESummary",
+  "retrieved_at_utc": "2026-10-03T18:03:42.110104+00:00",
+  "uid_count": 1,
+  "uids": [
+    "46608864"
+  ],
+  "study_truncated": false,
+  "repository_evidence_only": true,
+  "scout_predictions_used": false,
+  "records_retrieved": 1,
+  "status": "retrieved"
+}

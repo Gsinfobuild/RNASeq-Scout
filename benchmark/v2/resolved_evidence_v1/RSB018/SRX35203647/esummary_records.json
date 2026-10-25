@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46708980",
+    "ExpXml": "<Summary><Title>Other Sequencing of E. coli</Title><Platform instrument_model=\"MiSeq i100\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"1611017\" total_bases=\"466536218\" total_size=\"133110108\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2537947\" center_name=\"USDA-FSIS\" contact_name=\"usda-fsis service\" lab_name=\"\"/><Experiment acc=\"SRX35203647\" ver=\"1\" status=\"public\" name=\"\"/><Study acc=\"SRP066916\" name=\"FSIS NARMS Escherichia coli\"/><Organism taxid=\"562\" ScientificName=\"Escherichia coli\"/><Sample acc=\"SRS30701148\" name=\"\"/><Instrument ILLUMINA=\"MiSeq i100\"/><Library_descriptor><LIBRARY_NAME>FSIS12647440 DNA Prep shotgun library</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>Illumina DNA Prep library created for FSIS12647440.</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJNA292667</Bioproject><Biosample>SAMN63083514</Biosample>",
+    "Runs": "<Run acc=\"SRR40623923\" total_spots=\"1611017\" total_bases=\"466536218\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/11"
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "benchmark_id": "RSB006",
+  "accession": "ERX17023551",
+  "accession_type": "experiment",
+  "study_family": "ERP190606",
+  "benchmark_manifest_modality": "RNA-Seq",
+  "normalized_organism_group": "Danio rerio",
+  "scientific_review_decision": "RETAIN",
+  "source": "NCBI SRA",
+  "retrieval_method": "Entrez ESearch + ESummary",
+  "retrieved_at_utc": "2026-10-03T18:03:40.497608+00:00",
+  "uid_count": 1,
+  "uids": [
+    "46608982"
+  ],
+  "study_truncated": false,
+  "repository_evidence_only": true,
+  "scout_predictions_used": false,
+  "records_retrieved": 1,
+  "status": "retrieved"
+}

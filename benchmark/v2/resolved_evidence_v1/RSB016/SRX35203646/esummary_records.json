@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46708979",
+    "ExpXml": "<Summary><Title>Other Sequencing of E. coli</Title><Platform instrument_model=\"Illumina iSeq 100\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"830342\" total_bases=\"456161799\" total_size=\"126507980\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2537941\" center_name=\"Pulsenet\" contact_name=\"pulsenet service\" lab_name=\"\"/><Experiment acc=\"SRX35203646\" ver=\"1\" status=\"public\" name=\"\"/><Study acc=\"SRP046387\" name=\"PulseNet Escherichia coli and Shigella genome sequencing\"/><Organism taxid=\"562\" ScientificName=\"Escherichia coli\"/><Sample acc=\"SRS30701146\" name=\"\"/><Instrument ILLUMINA=\"Illumina iSeq 100\"/><Library_descriptor><LIBRARY_NAME>Not Provided</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>Illumina DNA Prep</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJNA218110</Bioproject><Biosample>SAMN63083513</Biosample>",
+    "Runs": "<Run acc=\"SRR40623922\" total_spots=\"830342\" total_bases=\"456161799\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/11"
+  }
+]

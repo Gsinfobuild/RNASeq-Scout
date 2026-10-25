@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46708115",
+    "ExpXml": "<Summary><Title>Bulk RNA-seq analysis of SO1 (CRX2061534)</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"21977280\" total_bases=\"6637138560\" total_size=\"2237904040\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"DRA027216\" center_name=\"\" contact_name=\"\" lab_name=\"\"/><Experiment acc=\"DRX961098\" ver=\"1\" status=\"public\" name=\"Bulk RNA-seq analysis of SO1 (CRX2061534)\"/><Study acc=\"DRP016766\" name=\"Bulk RNA-seq analysis of electroacupuncture in a stroke model mice. (PRJCA047892)\"/><Organism taxid=\"10090\" ScientificName=\"Mus musculus\"/><Sample acc=\"DRS630098\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>missing</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RT-PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>Total RNA was extracted from the tissue using TRIzol Reagent according the manufacturer's instructions. Then RNA quality was determined by 5300 Bioanalyser and quantified using the ND-2000 (NanoDrop Technologies). Only high-quality RNA sample was used to construct sequencing library.</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJDB39541</Bioproject><Biosample>SAMD01751340</Biosample>",
+    "Runs": "<Run acc=\"DRR983596\" total_spots=\"21977280\" total_bases=\"6637138560\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/11"
+  }
+]

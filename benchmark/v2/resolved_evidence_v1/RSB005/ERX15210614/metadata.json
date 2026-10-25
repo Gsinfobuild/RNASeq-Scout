@@ -1,0 +1,21 @@
+{
+  "benchmark_id": "RSB005",
+  "accession": "ERX15210614",
+  "accession_type": "experiment",
+  "study_family": "ERP183101",
+  "benchmark_manifest_modality": "RNA-Seq",
+  "normalized_organism_group": "Arabidopsis",
+  "scientific_review_decision": "RETAIN",
+  "source": "NCBI SRA",
+  "retrieval_method": "Entrez ESearch + ESummary",
+  "retrieved_at_utc": "2026-10-03T18:03:38.245605+00:00",
+  "uid_count": 1,
+  "uids": [
+    "46683835"
+  ],
+  "study_truncated": false,
+  "repository_evidence_only": true,
+  "scout_predictions_used": false,
+  "records_retrieved": 1,
+  "status": "retrieved"
+}

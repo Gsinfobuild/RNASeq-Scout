@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "45954770",
+    "ExpXml": "<Summary><Title>WGS of Bacillus subtilis: FDA1330169-S010-001</Title><Platform instrument_model=\"Illumina MiSeq\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"1117412\" total_bases=\"543281253\" total_size=\"270843241\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2498376\" center_name=\"FDA_WEAC\" contact_name=\"Michelle Cockrell\" lab_name=\"\"/><Experiment acc=\"SRX34594403\" ver=\"1\" status=\"public\" name=\"WGS of Bacillus subtilis: FDA1330169-S010-001\"/><Study acc=\"SRP395393\" name=\"FDA medical products genome sequencing and assembly of multi-species isolates\"/><Organism taxid=\"1423\" ScientificName=\"Bacillus subtilis\"/><Sample acc=\"SRS30162376\" name=\"\"/><Instrument ILLUMINA=\"Illumina MiSeq\"/><Library_descriptor><LIBRARY_NAME>IMPL_04282026REPEAT-FDA1330169-S010-001</LIBRARY_NAME><LIBRARY_STRATEGY>WGS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA874709</Bioproject><Biosample>SAMN62074061</Biosample>",
+    "Runs": "<Run acc=\"SRR39923808\" total_spots=\"1117412\" total_bases=\"543281253\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/07/30",
+    "UpdateDate": "2026/07/30"
+  }
+]

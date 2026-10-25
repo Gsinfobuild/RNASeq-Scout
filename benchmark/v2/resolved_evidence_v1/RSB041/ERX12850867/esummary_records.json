@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46173109",
+    "ExpXml": "<Summary><Title>The 5'-3' exoribonuclease Pacman is involved in long-non-coding RNA degradation and non-canonical translation events</Title><Platform instrument_model=\"NextSeq 500\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"17995038\" total_bases=\"1367622888\" total_size=\"486022381\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA30740041\" center_name=\"European Bioinformatics Institute\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX12850867\" ver=\"1\" status=\"public\" name=\"The 5'-3' exoribonuclease Pacman is involved in long-non-coding RNA degradation and non-canonical translation events\"/><Study acc=\"ERP163123\" name=\"The 5'-3' exoribonuclease Pacman is involved in long-non-coding RNA degradation and non-canonical translation events\"/><Organism taxid=\"7227\" ScientificName=\"Drosophila melanogaster\"/><Sample acc=\"ERS20862379\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 500\"/><Library_descriptor><LIBRARY_NAME>snoRNA_Control_R2_s</LIBRARY_NAME><LIBRARY_STRATEGY>ncRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>120r male wandering L3 larvae of each genotype were collected, dissected and snap frozen in liquid nitrogen and stored at -80 until required. RNA extracted by phenol chloroform and ethanol precipitation Ribo-seq and RNA-seq performed using NEB NEXT small RNA kit. snoRNA-seq performed using Illumina TruSeq small RNA kit.</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJEB78884</Bioproject><Biosample>SAMEA115918446</Biosample>",
+    "Runs": "<Run acc=\"ERR13480856\" total_spots=\"17995038\" total_bases=\"1367622888\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/31",
+    "UpdateDate": "2026/08/12"
+  }
+]

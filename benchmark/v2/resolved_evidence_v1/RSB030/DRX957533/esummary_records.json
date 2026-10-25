@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46516062",
+    "ExpXml": "<Summary><Title>R1_ARID3B_PhaseID_DNA-seq-replicate1 (CRX1895879)</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"71568470\" total_bases=\"21470541000\" total_size=\"11813626730\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"DRA027104\" center_name=\"\" contact_name=\"\" lab_name=\"\"/><Experiment acc=\"DRX957533\" ver=\"1\" status=\"public\" name=\"R1_ARID3B_PhaseID_DNA-seq-replicate1 (CRX1895879)\"/><Study acc=\"DRP016607\" name=\"Solid-like Condensates Constrain Transcriptional Plasticity and Act As a Barrier to Cell Fate Transition (PRJCA043743)\"/><Organism taxid=\"10090\" ScientificName=\"Mus musculus\"/><Sample acc=\"DRS623644\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>missing</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>ChIP</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>For DNA capture, samples were treated with proteinase K in reverse crosslinking buffer at 60C for 4 hours. DNA was extracted by phenol:chloroform:isoamyl alcohol and precipitated with 200 mM NaCl, 30 ug glycogen, and ethanol. Biotinylated DNA was purified using Dynabeads M-270 Streptavidin beads (Invitrogen), washed with W&amp;B buffer, TSE500 buffer, and TE buffer (10 mM Tris-HCl, 10 mM EDTA, pH 8.0), and used for library construction following published protocols.</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJDB39082</Bioproject><Biosample>SAMD01747896</Biosample>",
+    "Runs": "<Run acc=\"DRR979984\" total_spots=\"71568470\" total_bases=\"21470541000\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/01",
+    "UpdateDate": "2026/09/01"
+  }
+]

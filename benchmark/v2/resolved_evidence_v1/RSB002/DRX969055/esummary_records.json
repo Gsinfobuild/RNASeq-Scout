@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "44261392",
+    "ExpXml": "<Summary><Title>Sh-3_L4 (CRX1211082)</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"23407460\" total_bases=\"7022238000\" total_size=\"3086526024\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"DRA027513\" center_name=\"\" contact_name=\"\" lab_name=\"\"/><Experiment acc=\"DRX969055\" ver=\"1\" status=\"public\" name=\"Sh-3_L4 (CRX1211082)\"/><Study acc=\"DRP017666\" name=\"Different tissues were sprayed with ABA and samples were taken on day0, day1, and day2 for RNA sequencing (PRJCA030718)\"/><Organism taxid=\"3694\" ScientificName=\"Populus trichocarpa\"/><Sample acc=\"DRS685325\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>missing</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>Total RNAs were isolated using the RNAprep Pure Plant Kit. Libraries were construction using the dUTP method, and samples with RIN values greater than 8 were used.</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJDB36327</Bioproject><Biosample>SAMD01888792</Biosample>",
+    "Runs": "<Run acc=\"DRR991622\" total_spots=\"23407460\" total_bases=\"7022238000\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/06/01",
+    "UpdateDate": "2026/05/01"
+  }
+]

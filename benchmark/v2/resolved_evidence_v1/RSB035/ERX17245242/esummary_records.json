@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46703062",
+    "ExpXml": "<Summary><Title>Raw reads: OG1326_hic_OG1326L-1_HICL_S6_lane2</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"88507963\" total_bases=\"26729404826\" total_size=\"9076448913\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36962669\" center_name=\"Minderoo OceanOmics Centre at UWA\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX17245242\" ver=\"1\" status=\"public\" name=\"Raw reads: OG1326_hic_OG1326L-1_HICL_S6_lane2\"/><Study acc=\"ERP205443\" name=\"Notolabrus parilus (Brownspotted Wrasse) genome, fNotPar2, sequence data\"/><Organism taxid=\"248063\" ScientificName=\"Notolabrus parilus\"/><Sample acc=\"ERS31275073\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_STRATEGY>Hi-C</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB125747</Bioproject><Biosample>SAMEA123431186</Biosample>",
+    "Runs": "<Run acc=\"ERR17853424\" total_spots=\"88507963\" total_bases=\"26729404826\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/11"
+  }
+]

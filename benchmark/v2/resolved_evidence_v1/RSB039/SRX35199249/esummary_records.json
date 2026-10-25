@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46704579",
+    "ExpXml": "<Summary><Title>8-tandem targeting group-1ASCL1_HBG2_IL1RN_IFNG_NANOG_NEUROD1_IL1B_RHOXF2</Title><Platform instrument_model=\"Illumina NovaSeq X Plus\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"45907248\" total_bases=\"2341269648\" total_size=\"755755499\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2537316\" center_name=\"Fudan University\" contact_name=\"Ziliang Chen\" lab_name=\"Institute for Translational Brain Research\"/><Experiment acc=\"SRX35199249\" ver=\"1\" status=\"public\" name=\"8-tandem targeting group-1ASCL1_HBG2_IL1RN_IFNG_NANOG_NEUROD1_IL1B_RHOXF2\"/><Study acc=\"SRP686131\" name=\"Miniature RNA-guided Nuclease Engineering\"/><Organism taxid=\"9606\" ScientificName=\"Homo sapiens\"/><Sample acc=\"SRS30437882\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X Plus\"/><Library_descriptor><LIBRARY_NAME>Small RNA-Seq of homo sapiens:8-tandem targeting group-1</LIBRARY_NAME><LIBRARY_STRATEGY>ncRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1441823</Bioproject><Biosample>SAMN62581128</Biosample>",
+    "Runs": "<Run acc=\"SRR40619131\" total_spots=\"45907248\" total_bases=\"2341269648\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/11"
+  }
+]

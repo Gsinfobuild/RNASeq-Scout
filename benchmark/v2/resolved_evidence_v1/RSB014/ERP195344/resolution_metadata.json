@@ -1,0 +1,19 @@
+{
+  "benchmark_id": "RSB014",
+  "accession": "ERP195344",
+  "accession_type": "study",
+  "ncbi_total_count": 51,
+  "records_requested": 51,
+  "records_retrieved": 51,
+  "max_study_records": 1000,
+  "study_truncated": false,
+  "retrieval_method": "NCBI Entrez ESearch + batched ESummary; explicit retmax=1000",
+  "manifest_sha256": "9d305ddfbd01f7cf73512ff81f4f7a3b82ebdce1b81d7f983b47cf951326fafb",
+  "resolution_version": "resolved_evidence_v1",
+  "resolution_source_path": "benchmark/annotations/repository_evidence/ERP195344",
+  "resolution_reason": "Selected packet with more saved records",
+  "resolution_record_count": 51,
+  "resolution_completeness_status": "COUNT_MATCHES_REPORTED_TOTAL",
+  "resolution_timestamp_utc": "2026-10-25T21:33:19.595523+00:00",
+  "ground_truth_approved": false
+}

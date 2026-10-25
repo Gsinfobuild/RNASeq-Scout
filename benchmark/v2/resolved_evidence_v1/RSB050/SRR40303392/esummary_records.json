@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46354992",
+    "ExpXml": "<Summary><Title>Deep-seq of adapted spacer library</Title><Platform instrument_model=\"DNBSEQ-G400\">DNBSEQ</Platform><Statistics total_runs=\"1\" total_spots=\"5106648\" total_bases=\"765997200\" total_size=\"549411113\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2520712\" center_name=\"Tel Aviv University\" contact_name=\"Anushree Haldar\" lab_name=\"Gray Faculty of Medical and Health Sciences, Depar\"/><Experiment acc=\"SRX34918854\" ver=\"1\" status=\"public\" name=\"Deep-seq of adapted spacer library\"/><Study acc=\"SRP696229\" name=\"Adaptation-coupled CRISPRi identifies antibiotic-sensitizing genes leading to a novel plasmid selection marker\"/><Organism taxid=\"562\" ScientificName=\"Escherichia coli\"/><Sample acc=\"SRS30449009\" name=\"\"/><Instrument DNBSEQ=\"DNBSEQ-G400\"/><Library_descriptor><LIBRARY_NAME>adapted_spacer_lib1_lane1_forward_read</LIBRARY_NAME><LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1460245</Bioproject><Biosample>SAMN62619106</Biosample>",
+    "Runs": "<Run acc=\"SRR40303392\" total_spots=\"5106648\" total_bases=\"765997200\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/22",
+    "UpdateDate": "2026/08/22"
+  }
+]

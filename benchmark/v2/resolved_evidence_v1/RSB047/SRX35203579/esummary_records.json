@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46708912",
+    "ExpXml": "<Summary><Title>Whole Genome Sequencing of Severe acute respiratory syndrome coronavirus 2</Title><Platform instrument_model=\"NextSeq 2000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"549528\" total_bases=\"131710000\" total_size=\"17188649\" load_done=\"true\" filtered_data_available=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2537913\" center_name=\"CDC-CORVD-Lab\" contact_name=\"cdc-pdd service\" lab_name=\"\"/><Experiment acc=\"SRX35203579\" ver=\"1\" status=\"public\" name=\"\"/><Study acc=\"SRP507374\" name=\"SARS-CoV-2 US Flu VE Network sequencing\"/><Organism taxid=\"2697049\" ScientificName=\"Severe acute respiratory syndrome coronavirus 2\"/><Sample acc=\"SRS30701080\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 2000\"/><Library_descriptor><LIBRARY_NAME>90715-1862-G7</LIBRARY_NAME><LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY><LIBRARY_SOURCE>VIRAL RNA</LIBRARY_SOURCE><LIBRARY_SELECTION>RT-PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1111120</Bioproject><Biosample>SAMN63083137</Biosample>",
+    "Runs": "<Run acc=\"SRR40623788\" total_spots=\"549528\" total_bases=\"131710000\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\" filtered_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/11"
+  }
+]

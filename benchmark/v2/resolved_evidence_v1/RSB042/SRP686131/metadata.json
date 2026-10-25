@@ -1,0 +1,12 @@
+{
+  "benchmark_id": "RSB042",
+  "accession": "SRP686131",
+  "accession_type": "study",
+  "ncbi_total_count": 3183,
+  "records_requested": 1000,
+  "records_retrieved": 1000,
+  "max_study_records": 1000,
+  "study_truncated": true,
+  "retrieval_method": "NCBI Entrez ESearch + batched ESummary; explicit retmax=1000",
+  "manifest_sha256": "9d305ddfbd01f7cf73512ff81f4f7a3b82ebdce1b81d7f983b47cf951326fafb"
+}

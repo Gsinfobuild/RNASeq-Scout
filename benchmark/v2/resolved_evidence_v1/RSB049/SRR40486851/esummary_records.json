@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46550230",
+    "ExpXml": "<Summary><Title>Reads for PlasmidSaurus</Title><Platform instrument_model=\"GridION\">OXFORD_NANOPORE</Platform><Statistics total_runs=\"1\" total_spots=\"35824\" total_bases=\"275913238\" total_size=\"229439252\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2530457\" center_name=\"University Of Saskatchewan\" contact_name=\"Sylvia Li\" lab_name=\"Computer Science\"/><Experiment acc=\"SRX35078192\" ver=\"1\" status=\"public\" name=\"Reads for PlasmidSaurus\"/><Study acc=\"SRP683570\" name=\"Genomic Analysis of E. coli Strains Circulating during Colibacillosis Outbreaks on broiler Farms\"/><Organism taxid=\"562\" ScientificName=\"Escherichia coli\"/><Sample acc=\"SRS30587456\" name=\"\"/><Instrument OXFORD_NANOPORE=\"GridION\"/><Library_descriptor><LIBRARY_NAME>2H1</LIBRARY_NAME><LIBRARY_STRATEGY>AMPLICON</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1437123</Bioproject><Biosample>SAMN56533964</Biosample>",
+    "Runs": "<Run acc=\"SRR40486851\" total_spots=\"35824\" total_bases=\"275913238\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/02",
+    "UpdateDate": "2026/09/02"
+  }
+]

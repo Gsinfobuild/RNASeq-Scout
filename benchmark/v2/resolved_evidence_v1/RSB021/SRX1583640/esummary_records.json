@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "2237001",
+    "ExpXml": "<Summary><Title>Caenorhabditis elegans genomic sequence, jf54 mutant (rmh-1) cross sample 30407</Title><Platform instrument_model=\"Illumina HiSeq 2500\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"44053488\" total_bases=\"10572837120\" total_size=\"4412715633\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA304039\" center_name=\"MFPL\" contact_name=\"Luis Paulin Paz\" lab_name=\"\"/><Experiment acc=\"SRX1583640\" ver=\"1\" status=\"public\" name=\"Caenorhabditis elegans genomic sequence, jf54 mutant (rmh-1) cross sample 30407\"/><Study acc=\"SRP064640\" name=\"Caenorhabditis elegans Genome sequencing\"/><Organism taxid=\"6239\" ScientificName=\"Caenorhabditis elegans\"/><Sample acc=\"SRS1137437\" name=\"\"/><Instrument ILLUMINA=\"Illumina HiSeq 2500\"/><Library_descriptor><LIBRARY_NAME/><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>RANDOM</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED NOMINAL_SDEV=\"0.0E0\"/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA298297</Bioproject><Biosample>SAMN04216967</Biosample>",
+    "Runs": "<Run acc=\"SRR3166212\" total_spots=\"44053488\" total_bases=\"10572837120\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2016/03/24",
+    "UpdateDate": "2016/02/12"
+  }
+]

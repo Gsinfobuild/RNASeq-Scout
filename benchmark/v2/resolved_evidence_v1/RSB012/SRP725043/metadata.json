@@ -1,0 +1,32 @@
+{
+  "benchmark_id": "RSB012",
+  "accession": "SRP725043",
+  "accession_type": "study",
+  "study_family": "SRP725043",
+  "benchmark_manifest_modality": "RNA-Seq",
+  "normalized_organism_group": "Pseudomonas aeruginosa",
+  "scientific_review_decision": "RETAIN",
+  "source": "NCBI SRA",
+  "retrieval_method": "Entrez ESearch + ESummary",
+  "retrieved_at_utc": "2026-10-03T18:03:49.951066+00:00",
+  "uid_count": 12,
+  "uids": [
+    "46104486",
+    "46104485",
+    "46104484",
+    "46104483",
+    "46104482",
+    "46104481",
+    "46104480",
+    "46104479",
+    "46104478",
+    "46104477",
+    "46104476",
+    "46104475"
+  ],
+  "study_truncated": false,
+  "repository_evidence_only": true,
+  "scout_predictions_used": false,
+  "records_retrieved": 12,
+  "status": "retrieved"
+}

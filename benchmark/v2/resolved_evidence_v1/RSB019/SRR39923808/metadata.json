@@ -1,0 +1,21 @@
+{
+  "benchmark_id": "RSB019",
+  "accession": "SRR39923808",
+  "accession_type": "run",
+  "study_family": "SRP395393",
+  "benchmark_manifest_modality": "WGS",
+  "normalized_organism_group": "Bacillus subtilis",
+  "scientific_review_decision": "RETAIN",
+  "source": "NCBI SRA",
+  "retrieval_method": "Entrez ESearch + ESummary",
+  "retrieved_at_utc": "2026-10-03T18:04:02.721826+00:00",
+  "uid_count": 1,
+  "uids": [
+    "45954770"
+  ],
+  "study_truncated": false,
+  "repository_evidence_only": true,
+  "scout_predictions_used": false,
+  "records_retrieved": 1,
+  "status": "retrieved"
+}

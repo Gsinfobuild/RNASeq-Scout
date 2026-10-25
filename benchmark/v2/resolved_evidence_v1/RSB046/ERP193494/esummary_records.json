@@ -1,0 +1,650 @@
+[
+  {
+    "Item": [],
+    "Id": "46009587",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"49002679\" total_bases=\"4949270579\" total_size=\"1727893073\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612400\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300647\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_HS_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677840</Biosample>",
+    "Runs": "<Run acc=\"ERR17228356\" total_spots=\"49002679\" total_bases=\"4949270579\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46009533",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"43127690\" total_bases=\"4355896690\" total_size=\"1443942185\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612399\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300646\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_CK_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677839</Biosample>",
+    "Runs": "<Run acc=\"ERR17228355\" total_spots=\"43127690\" total_bases=\"4355896690\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46009485",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"12708399\" total_bases=\"1283548299\" total_size=\"447160587\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612348\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300631\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_HS_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677824</Biosample>",
+    "Runs": "<Run acc=\"ERR17228304\" total_spots=\"12708399\" total_bases=\"1283548299\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46009407",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"45441202\" total_bases=\"4589561402\" total_size=\"1564606602\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612402\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300649\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_HS_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677842</Biosample>",
+    "Runs": "<Run acc=\"ERR17228358\" total_spots=\"45441202\" total_bases=\"4589561402\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46009386",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"14540992\" total_bases=\"1468640192\" total_size=\"515115220\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612349\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300638\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_CK_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677831</Biosample>",
+    "Runs": "<Run acc=\"ERR17228305\" total_spots=\"14540992\" total_bases=\"1468640192\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46009308",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"48627107\" total_bases=\"4911337807\" total_size=\"1575325991\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612411\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300658\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_CK_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677851</Biosample>",
+    "Runs": "<Run acc=\"ERR17228367\" total_spots=\"48627107\" total_bases=\"4911337807\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46009075",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"60522962\" total_bases=\"6112819162\" total_size=\"1994560702\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612406\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300653\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_HS_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677846</Biosample>",
+    "Runs": "<Run acc=\"ERR17228362\" total_spots=\"60522962\" total_bases=\"6112819162\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008986",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"52890473\" total_bases=\"5341937773\" total_size=\"1747696121\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612410\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300657\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_CK_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677850</Biosample>",
+    "Runs": "<Run acc=\"ERR17228366\" total_spots=\"52890473\" total_bases=\"5341937773\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008965",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"35517064\" total_bases=\"3587223464\" total_size=\"1210311610\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612401\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300648\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_HS_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677841</Biosample>",
+    "Runs": "<Run acc=\"ERR17228357\" total_spots=\"35517064\" total_bases=\"3587223464\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008769",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"15504641\" total_bases=\"1565968741\" total_size=\"547123947\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612352\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300641\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_HS_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677834</Biosample>",
+    "Runs": "<Run acc=\"ERR17228308\" total_spots=\"15504641\" total_bases=\"1565968741\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008678",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"13060554\" total_bases=\"1319115954\" total_size=\"455111329\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612344\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300627\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_CK_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677820</Biosample>",
+    "Runs": "<Run acc=\"ERR17228300\" total_spots=\"13060554\" total_bases=\"1319115954\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008671",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"45475000\" total_bases=\"4592975000\" total_size=\"1479629974\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612388\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300635\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_HS_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677828</Biosample>",
+    "Runs": "<Run acc=\"ERR17228344\" total_spots=\"45475000\" total_bases=\"4592975000\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008662",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"13083143\" total_bases=\"1321397443\" total_size=\"460967035\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612345\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300628\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_CK_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677821</Biosample>",
+    "Runs": "<Run acc=\"ERR17228301\" total_spots=\"13083143\" total_bases=\"1321397443\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008550",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"4600336\" total_bases=\"464633936\" total_size=\"163660794\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612367\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300656\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_CK_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677849</Biosample>",
+    "Runs": "<Run acc=\"ERR17228323\" total_spots=\"4600336\" total_bases=\"464633936\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008519",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"53911746\" total_bases=\"5445086346\" total_size=\"1750323405\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612414\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300661\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_HS_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677854</Biosample>",
+    "Runs": "<Run acc=\"ERR17228370\" total_spots=\"53911746\" total_bases=\"5445086346\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008448",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5694223\" total_bases=\"575116523\" total_size=\"201143194\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612369\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300658\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_CK_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677851</Biosample>",
+    "Runs": "<Run acc=\"ERR17228325\" total_spots=\"5694223\" total_bases=\"575116523\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008262",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"48383129\" total_bases=\"4886696029\" total_size=\"1561453325\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612409\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300656\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_CK_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677849</Biosample>",
+    "Runs": "<Run acc=\"ERR17228365\" total_spots=\"48383129\" total_bases=\"4886696029\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008176",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5326038\" total_bases=\"537929838\" total_size=\"188093492\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612372\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300661\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_HS_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677854</Biosample>",
+    "Runs": "<Run acc=\"ERR17228328\" total_spots=\"5326038\" total_bases=\"537929838\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008172",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"7041161\" total_bases=\"711157261\" total_size=\"249038268\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612376\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300653\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_HS_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677846</Biosample>",
+    "Runs": "<Run acc=\"ERR17228332\" total_spots=\"7041161\" total_bases=\"711157261\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008033",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"13539845\" total_bases=\"1367524345\" total_size=\"477612606\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612346\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300629\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_HS_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677822</Biosample>",
+    "Runs": "<Run acc=\"ERR17228302\" total_spots=\"13539845\" total_bases=\"1367524345\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46008015",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5761195\" total_bases=\"581880695\" total_size=\"203824054\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612371\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300660\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_HS_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677853</Biosample>",
+    "Runs": "<Run acc=\"ERR17228327\" total_spots=\"5761195\" total_bases=\"581880695\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007939",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"20256016\" total_bases=\"2045857616\" total_size=\"700748724\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612380\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300627\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_CK_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677820</Biosample>",
+    "Runs": "<Run acc=\"ERR17228336\" total_spots=\"20256016\" total_bases=\"2045857616\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007926",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"56926807\" total_bases=\"5749607507\" total_size=\"1936564365\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612394\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300641\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_HS_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677834</Biosample>",
+    "Runs": "<Run acc=\"ERR17228350\" total_spots=\"56926807\" total_bases=\"5749607507\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007885",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"13994965\" total_bases=\"1413491465\" total_size=\"493636486\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612353\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300642\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_HS_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677835</Biosample>",
+    "Runs": "<Run acc=\"ERR17228309\" total_spots=\"13994965\" total_bases=\"1413491465\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007789",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"16333591\" total_bases=\"1649692691\" total_size=\"573231663\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612354\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300643\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_HS_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677836</Biosample>",
+    "Runs": "<Run acc=\"ERR17228310\" total_spots=\"16333591\" total_bases=\"1649692691\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007773",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"38700158\" total_bases=\"3908715958\" total_size=\"1336833007\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612396\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300643\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_HS_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677836</Biosample>",
+    "Runs": "<Run acc=\"ERR17228352\" total_spots=\"38700158\" total_bases=\"3908715958\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007758",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"53413819\" total_bases=\"5394795719\" total_size=\"1753579588\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612408\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300655\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_HS_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677848</Biosample>",
+    "Runs": "<Run acc=\"ERR17228364\" total_spots=\"53413819\" total_bases=\"5394795719\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007571",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"48486470\" total_bases=\"4897133470\" total_size=\"1581335492\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612405\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300652\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_CK_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677845</Biosample>",
+    "Runs": "<Run acc=\"ERR17228361\" total_spots=\"48486470\" total_bases=\"4897133470\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007540",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"47642368\" total_bases=\"4811879168\" total_size=\"1616480167\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612404\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300651\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_CK_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677844</Biosample>",
+    "Runs": "<Run acc=\"ERR17228360\" total_spots=\"47642368\" total_bases=\"4811879168\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007522",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5561744\" total_bases=\"561736144\" total_size=\"197447942\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612362\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300645\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_CK_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677838</Biosample>",
+    "Runs": "<Run acc=\"ERR17228318\" total_spots=\"5561744\" total_bases=\"561736144\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007493",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"46283786\" total_bases=\"4674662386\" total_size=\"1627309958\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612385\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300632\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_CK_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677825</Biosample>",
+    "Runs": "<Run acc=\"ERR17228341\" total_spots=\"46283786\" total_bases=\"4674662386\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007467",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"32385474\" total_bases=\"3270932874\" total_size=\"1138374408\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612386\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300633\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_CK_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677826</Biosample>",
+    "Runs": "<Run acc=\"ERR17228342\" total_spots=\"32385474\" total_bases=\"3270932874\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007462",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"15405443\" total_bases=\"1555949743\" total_size=\"547002184\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612357\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300634\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_CK_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677827</Biosample>",
+    "Runs": "<Run acc=\"ERR17228313\" total_spots=\"15405443\" total_bases=\"1555949743\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007397",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"55765618\" total_bases=\"5632327418\" total_size=\"1811579517\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612412\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300659\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_HS_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677852</Biosample>",
+    "Runs": "<Run acc=\"ERR17228368\" total_spots=\"55765618\" total_bases=\"5632327418\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007388",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"52400235\" total_bases=\"5292423735\" total_size=\"1824867250\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612397\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300644\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_CK_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677837</Biosample>",
+    "Runs": "<Run acc=\"ERR17228353\" total_spots=\"52400235\" total_bases=\"5292423735\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007305",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5108655\" total_bases=\"515974155\" total_size=\"180579855\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612374\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300651\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_CK_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677844</Biosample>",
+    "Runs": "<Run acc=\"ERR17228330\" total_spots=\"5108655\" total_bases=\"515974155\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007302",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"42977974\" total_bases=\"4340775374\" total_size=\"1449714857\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612379\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300626\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_CK_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677819</Biosample>",
+    "Runs": "<Run acc=\"ERR17228335\" total_spots=\"42977974\" total_bases=\"4340775374\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007287",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"4120130\" total_bases=\"416133130\" total_size=\"146431190\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612366\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300649\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_HS_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677842</Biosample>",
+    "Runs": "<Run acc=\"ERR17228322\" total_spots=\"4120130\" total_bases=\"416133130\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007286",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"34259196\" total_bases=\"3460178796\" total_size=\"1168966067\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612389\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300636\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_HS_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677829</Biosample>",
+    "Runs": "<Run acc=\"ERR17228345\" total_spots=\"34259196\" total_bases=\"3460178796\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007252",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"12761269\" total_bases=\"1288888169\" total_size=\"452090049\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612347\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300630\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_HS_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677823</Biosample>",
+    "Runs": "<Run acc=\"ERR17228303\" total_spots=\"12761269\" total_bases=\"1288888169\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007123",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"46323071\" total_bases=\"4678630171\" total_size=\"1545923550\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612398\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300645\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_CK_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677838</Biosample>",
+    "Runs": "<Run acc=\"ERR17228354\" total_spots=\"46323071\" total_bases=\"4678630171\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007112",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5673711\" total_bases=\"573044811\" total_size=\"201122915\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612363\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300646\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_CK_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677839</Biosample>",
+    "Runs": "<Run acc=\"ERR17228319\" total_spots=\"5673711\" total_bases=\"573044811\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46007052",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5655820\" total_bases=\"571237820\" total_size=\"200858698\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612375\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300652\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_CK_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677845</Biosample>",
+    "Runs": "<Run acc=\"ERR17228331\" total_spots=\"5655820\" total_bases=\"571237820\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46006517",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5761742\" total_bases=\"581935942\" total_size=\"204704562\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612361\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300644\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_CK_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677837</Biosample>",
+    "Runs": "<Run acc=\"ERR17228317\" total_spots=\"5761742\" total_bases=\"581935942\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46006507",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"30752863\" total_bases=\"3106039163\" total_size=\"1113764380\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612383\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300630\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_HS_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677823</Biosample>",
+    "Runs": "<Run acc=\"ERR17228339\" total_spots=\"30752863\" total_bases=\"3106039163\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46006473",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"39482749\" total_bases=\"3987757649\" total_size=\"1398494998\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612393\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300640\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_CK_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677833</Biosample>",
+    "Runs": "<Run acc=\"ERR17228349\" total_spots=\"39482749\" total_bases=\"3987757649\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46006416",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5365081\" total_bases=\"541873181\" total_size=\"190625050\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612373\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300650\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_CK_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677843</Biosample>",
+    "Runs": "<Run acc=\"ERR17228329\" total_spots=\"5365081\" total_bases=\"541873181\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46006343",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"12581958\" total_bases=\"1270777758\" total_size=\"448437364\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612356\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300633\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_CK_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677826</Biosample>",
+    "Runs": "<Run acc=\"ERR17228312\" total_spots=\"12581958\" total_bases=\"1270777758\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46006305",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5872987\" total_bases=\"593171687\" total_size=\"208109450\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612370\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300659\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_HS_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677852</Biosample>",
+    "Runs": "<Run acc=\"ERR17228326\" total_spots=\"5872987\" total_bases=\"593171687\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46006199",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"4809081\" total_bases=\"485717181\" total_size=\"170792125\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612368\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300657\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_CK_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677850</Biosample>",
+    "Runs": "<Run acc=\"ERR17228324\" total_spots=\"4809081\" total_bases=\"485717181\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46006006",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"33592590\" total_bases=\"3392851590\" total_size=\"1158010681\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612384\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300631\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_HS_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677824</Biosample>",
+    "Runs": "<Run acc=\"ERR17228340\" total_spots=\"33592590\" total_bases=\"3392851590\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46005890",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"6372910\" total_bases=\"643663910\" total_size=\"225540981\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612377\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300654\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_HS_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677847</Biosample>",
+    "Runs": "<Run acc=\"ERR17228333\" total_spots=\"6372910\" total_bases=\"643663910\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46005879",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"55988323\" total_bases=\"5654820623\" total_size=\"1838090692\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612413\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300660\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Microspore_HS_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677853</Biosample>",
+    "Runs": "<Run acc=\"ERR17228369\" total_spots=\"55988323\" total_bases=\"5654820623\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/03",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46005829",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"53418209\" total_bases=\"5395239109\" total_size=\"1774008881\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612403\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300650\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_CK_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677843</Biosample>",
+    "Runs": "<Run acc=\"ERR17228359\" total_spots=\"53418209\" total_bases=\"5395239109\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46005826",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"34477622\" total_bases=\"3482239822\" total_size=\"1236974803\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612395\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300642\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_HS_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677835</Biosample>",
+    "Runs": "<Run acc=\"ERR17228351\" total_spots=\"34477622\" total_bases=\"3482239822\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/03",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46005701",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"38333860\" total_bases=\"3871719860\" total_size=\"1353102936\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612390\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300637\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_HS_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677830</Biosample>",
+    "Runs": "<Run acc=\"ERR17228346\" total_spots=\"38333860\" total_bases=\"3871719860\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46005537",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"26123975\" total_bases=\"2638521475\" total_size=\"976947006\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612381\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300628\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_CK_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677821</Biosample>",
+    "Runs": "<Run acc=\"ERR17228337\" total_spots=\"26123975\" total_bases=\"2638521475\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46005116",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"14552350\" total_bases=\"1469787350\" total_size=\"518064658\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612351\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300640\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_CK_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677833</Biosample>",
+    "Runs": "<Run acc=\"ERR17228307\" total_spots=\"14552350\" total_bases=\"1469787350\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46005110",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"15649641\" total_bases=\"1580613741\" total_size=\"555091199\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612350\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300639\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_CK_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677832</Biosample>",
+    "Runs": "<Run acc=\"ERR17228306\" total_spots=\"15649641\" total_bases=\"1580613741\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46005035",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"58385243\" total_bases=\"5896909543\" total_size=\"1933305479\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612391\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300638\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_CK_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677831</Biosample>",
+    "Runs": "<Run acc=\"ERR17228347\" total_spots=\"58385243\" total_bases=\"5896909543\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46005021",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"45852895\" total_bases=\"4631142395\" total_size=\"1503968161\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612407\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300654\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_HS_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677847</Biosample>",
+    "Runs": "<Run acc=\"ERR17228363\" total_spots=\"45852895\" total_bases=\"4631142395\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46005000",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"31034313\" total_bases=\"3134465613\" total_size=\"1053787619\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612387\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300634\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_CK_R3_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677827</Biosample>",
+    "Runs": "<Run acc=\"ERR17228343\" total_spots=\"31034313\" total_bases=\"3134465613\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46004973",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5445387\" total_bases=\"549984087\" total_size=\"192488278\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612364\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300647\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_HS_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677840</Biosample>",
+    "Runs": "<Run acc=\"ERR17228320\" total_spots=\"5445387\" total_bases=\"549984087\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46004944",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5471470\" total_bases=\"552618470\" total_size=\"191915023\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612343\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300626\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_CK_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677819</Biosample>",
+    "Runs": "<Run acc=\"ERR17228299\" total_spots=\"5471470\" total_bases=\"552618470\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46004831",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"30903564\" total_bases=\"3121259964\" total_size=\"1032554048\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612382\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300629\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Meiocyte_HS_R1_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677822</Biosample>",
+    "Runs": "<Run acc=\"ERR17228338\" total_spots=\"30903564\" total_bases=\"3121259964\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46004775",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5909346\" total_bases=\"596843946\" total_size=\"209004069\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612378\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300655\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Tetrad_HS_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677848</Biosample>",
+    "Runs": "<Run acc=\"ERR17228334\" total_spots=\"5909346\" total_bases=\"596843946\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46004761",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"18803680\" total_bases=\"1899171680\" total_size=\"664273086\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612360\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300637\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_HS_R3_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677830</Biosample>",
+    "Runs": "<Run acc=\"ERR17228316\" total_spots=\"18803680\" total_bases=\"1899171680\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46004548",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"8117371\" total_bases=\"819854471\" total_size=\"290153982\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612355\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300632\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_CK_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677825</Biosample>",
+    "Runs": "<Run acc=\"ERR17228311\" total_spots=\"8117371\" total_bases=\"819854471\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46004400",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"5294023\" total_bases=\"534696323\" total_size=\"187621599\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612365\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300648\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>CML228_Meiocyte_HS_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677841</Biosample>",
+    "Runs": "<Run acc=\"ERR17228321\" total_spots=\"5294023\" total_bases=\"534696323\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46004363",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"15452987\" total_bases=\"1560751687\" total_size=\"546714983\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612359\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300636\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_HS_R2_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677829</Biosample>",
+    "Runs": "<Run acc=\"ERR17228315\" total_spots=\"15452987\" total_bases=\"1560751687\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46004334",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"13410785\" total_bases=\"1354489285\" total_size=\"475621192\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311234\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612358\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300635\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Tetrad_HS_R1_mRNA</LIBRARY_NAME><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677828</Biosample>",
+    "Runs": "<Run acc=\"ERR17228314\" total_spots=\"13410785\" total_bases=\"1354489285\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  },
+  {
+    "Item": [],
+    "Id": "46004276",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 sequencing</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"36863055\" total_bases=\"3723168555\" total_size=\"1250864959\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36311235\" center_name=\"University of Regensburg\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX16612392\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 sequencing\"/><Study acc=\"ERP193494\" name=\"Reproductive phasiRNAs and miRNA networks respond differentially to heat stress during early maize pollen development\"/><Organism taxid=\"4577\" ScientificName=\"Zea mays\"/><Sample acc=\"ERS30300639\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>A188_Microspore_CK_R2_sRNA</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJEB113068</Bioproject><Biosample>SAMEA122677832</Biosample>",
+    "Runs": "<Run acc=\"ERR17228348\" total_spots=\"36863055\" total_bases=\"3723168555\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/08/02",
+    "UpdateDate": "2026/08/02"
+  }
+]

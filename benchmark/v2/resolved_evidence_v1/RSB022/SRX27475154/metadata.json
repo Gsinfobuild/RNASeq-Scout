@@ -1,0 +1,21 @@
+{
+  "benchmark_id": "RSB022",
+  "accession": "SRX27475154",
+  "accession_type": "experiment",
+  "study_family": "SRP559934",
+  "benchmark_manifest_modality": "WXS",
+  "normalized_organism_group": "Danio rerio",
+  "scientific_review_decision": "RETAIN",
+  "source": "NCBI SRA",
+  "retrieval_method": "Entrez ESearch + ESummary",
+  "retrieved_at_utc": "2026-10-03T18:04:08.924616+00:00",
+  "uid_count": 1,
+  "uids": [
+    "37048534"
+  ],
+  "study_truncated": false,
+  "repository_evidence_only": true,
+  "scout_predictions_used": false,
+  "records_retrieved": 1,
+  "status": "retrieved"
+}

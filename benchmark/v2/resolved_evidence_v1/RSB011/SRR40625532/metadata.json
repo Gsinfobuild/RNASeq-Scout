@@ -1,0 +1,21 @@
+{
+  "benchmark_id": "RSB011",
+  "accession": "SRR40625532",
+  "accession_type": "run",
+  "study_family": "SRP072133",
+  "benchmark_manifest_modality": "RNA-Seq",
+  "normalized_organism_group": "Pinus flexilis",
+  "scientific_review_decision": "RETAIN",
+  "source": "NCBI SRA",
+  "retrieval_method": "Entrez ESearch + ESummary",
+  "retrieved_at_utc": "2026-10-03T18:03:48.339080+00:00",
+  "uid_count": 1,
+  "uids": [
+    "46710587"
+  ],
+  "study_truncated": false,
+  "repository_evidence_only": true,
+  "scout_predictions_used": false,
+  "records_retrieved": 1,
+  "status": "retrieved"
+}

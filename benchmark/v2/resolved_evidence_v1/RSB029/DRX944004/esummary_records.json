@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46618111",
+    "ExpXml": "<Summary><Title>P12_WT_REC8_ChIP (CRX825671)</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"14584457\" total_bases=\"4200684965\" total_size=\"1764240286\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"DRA026883\" center_name=\"\" contact_name=\"\" lab_name=\"\"/><Experiment acc=\"DRX944004\" ver=\"1\" status=\"public\" name=\"P12_WT_REC8_ChIP (CRX825671)\"/><Study acc=\"DRP016554\" name=\"Identification and characterization of BEND2 as a key regulator of meiosis during mouse spermatogenesis (PRJCA019938)\"/><Organism taxid=\"10090\" ScientificName=\"Mus musculus\"/><Sample acc=\"DRS621870\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME>missing</LIBRARY_NAME><LIBRARY_STRATEGY>ChIP-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>PCR</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>Cells were binded to concanavalin A beads and histones were recognized by antibodies then combined with pA/G-MNase. DNA binds to histones were digested by pA/G-MNase and released into suspension after treated with calcium ion.Extracted DNA was used to construct libraries with the NEBNext Ultra II DNA library Prep Kit for Illumina (E7645, NEB), and qualified libraries were sequenced with an Illumina Novaseq 6000 to obtain paired-end 157-nt reads.</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJDB38296</Bioproject><Biosample>SAMD01739982</Biosample>",
+    "Runs": "<Run acc=\"DRR966357\" total_spots=\"14584457\" total_bases=\"4200684965\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/07",
+    "UpdateDate": "2026/09/07"
+  }
+]

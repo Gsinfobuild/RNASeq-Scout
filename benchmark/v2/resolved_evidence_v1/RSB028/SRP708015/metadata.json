@@ -1,0 +1,19 @@
+{
+  "benchmark_id": "RSB028",
+  "accession": "SRP708015",
+  "accession_type": "study",
+  "study_family": "SRP708015",
+  "source": "NCBI SRA",
+  "retrieval_method": "Entrez ESearch + ESummary",
+  "retrieved_at_utc": "2026-10-03T18:18:01.291263+00:00",
+  "uid_count": 2,
+  "uids": [
+    "45043307",
+    "45043306"
+  ],
+  "repository_evidence_only": true,
+  "scout_predictions_used": false,
+  "study_truncated": false,
+  "records_retrieved": 2,
+  "status": "retrieved"
+}

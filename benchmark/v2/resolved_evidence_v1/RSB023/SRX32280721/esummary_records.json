@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "43128032",
+    "ExpXml": "<Summary><Title>Whole-Exome Sequencing of adult zebrafish Danio rerio - kidney marrow</Title><Platform instrument_model=\"NextSeq 500\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"56766890\" total_bases=\"16479672866\" total_size=\"3861038302\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2340170\" center_name=\"University of Auckland\" contact_name=\"Stefan K Bohlander\" lab_name=\"Molecular Medicine and Pathology\"/><Experiment acc=\"SRX32280721\" ver=\"1\" status=\"public\" name=\"Whole-Exome Sequencing of adult zebrafish Danio rerio - kidney marrow\"/><Study acc=\"SRP679421\" name=\"Re: A Transgenic Zebrafish Leukemia Model Driven by KMT2A::MLLT3 (MLL-AF9)\"/><Organism taxid=\"7955\" ScientificName=\"Danio rerio\"/><Sample acc=\"SRS28201799\" name=\"\"/><Instrument ILLUMINA=\"NextSeq 500\"/><Library_descriptor><LIBRARY_NAME>MS01_31_8K_WES</LIBRARY_NAME><LIBRARY_STRATEGY>WXS</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Hybrid Selection</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT></Library_descriptor><Bioproject>PRJNA1428506</Bioproject><Biosample>SAMN55955562</Biosample>",
+    "Runs": "<Run acc=\"SRR37367136\" total_spots=\"56766890\" total_bases=\"16479672866\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/06/30",
+    "UpdateDate": "2026/02/26"
+  }
+]

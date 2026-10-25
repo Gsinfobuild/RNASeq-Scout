@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "44836782",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq 6000 paired end sequencing of SAMD01921146</Title><Platform instrument_model=\"Illumina NovaSeq 6000\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"10692197\" total_bases=\"3207659100\" total_size=\"1203611528\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"DRA028970\" center_name=\"Ritsumeikan University\" contact_name=\"\" lab_name=\"\"/><Experiment acc=\"DRX1028612\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq 6000 paired end sequencing of SAMD01921146\"/><Study acc=\"DRP018963\" name=\"Transcriptome of Bacillus subtilis 168 with or without selenite\"/><Organism taxid=\"224308\" ScientificName=\"Bacillus subtilis subsp. subtilis str. 168\"/><Sample acc=\"DRS742916\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq 6000\"/><Library_descriptor><LIBRARY_NAME/><LIBRARY_STRATEGY>RNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>cDNA</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>NEBNext Ultra Directional RNA Library Prep Kit for Illumina</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJDB42354</Bioproject><Biosample>SAMD01921146</Biosample>",
+    "Runs": "<Run acc=\"DRR1052950\" total_spots=\"10692197\" total_bases=\"3207659100\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/05/28",
+    "UpdateDate": "2026/05/28"
+  }
+]

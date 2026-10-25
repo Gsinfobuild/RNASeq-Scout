@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46702870",
+    "ExpXml": "<Summary><Title>Illumina NovaSeq X paired end sequencing</Title><Platform instrument_model=\"Illumina NovaSeq X\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"96963322\" total_bases=\"29282923244\" total_size=\"7955753197\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"ERA36964281\" center_name=\"WELLCOME SANGER INSTITUTE\" contact_name=\"European Nucleotide Archive\" lab_name=\"European Nucleotide Archive\"/><Experiment acc=\"ERX17246810\" ver=\"1\" status=\"public\" name=\"Illumina NovaSeq X paired end sequencing\"/><Study acc=\"ERP204912\" name=\"Protoplasa fitchii, genomic and transcriptomic data\"/><Organism taxid=\"560777\" ScientificName=\"Protoplasa fitchii\"/><Sample acc=\"ERS29096574\" name=\"\"/><Instrument ILLUMINA=\"Illumina NovaSeq X\"/><Library_descriptor><LIBRARY_STRATEGY>Hi-C</LIBRARY_STRATEGY><LIBRARY_SOURCE>GENOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>Restriction Digest</LIBRARY_SELECTION><LIBRARY_LAYOUT><PAIRED NOMINAL_LENGTH=\"450\"/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>Hi-C - Arima v2</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJEB125180</Bioproject><Biosample>SAMEA121600720</Biosample>",
+    "Runs": "<Run acc=\"ERR17854992\" total_spots=\"96963322\" total_bases=\"29282923244\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/11",
+    "UpdateDate": "2026/09/11"
+  }
+]

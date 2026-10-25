@@ -1,0 +1,11 @@
+[
+  {
+    "Item": [],
+    "Id": "46661089",
+    "ExpXml": "<Summary><Title>GSM10036863: Mus musculus hypothalamus, 3-day restraint stress, replicate 11, small RNA; Mus musculus; miRNA-Seq</Title><Platform instrument_model=\"Illumina HiSeq 2500\">ILLUMINA</Platform><Statistics total_runs=\"1\" total_spots=\"16638748\" total_bases=\"848576148\" total_size=\"278561832\" load_done=\"true\" cluster_name=\"public\"/></Summary><Submitter acc=\"SRA2535395\" center_name=\"Hebei Medical University\" contact_name=\"GEO Group\" lab_name=\"\"/><Experiment acc=\"SRX35166482\" ver=\"1\" status=\"public\" name=\"GSM10036863: Mus musculus hypothalamus, 3-day restraint stress, replicate 11, small RNA; Mus musculus; miRNA-Seq\"/><Study acc=\"SRP734942\" name=\"GEO accession GSE346592 is currently private and is scheduled to be released on Jul 01, 2029.\"/><Organism taxid=\"10090\" ScientificName=\"Mus musculus\"/><Sample acc=\"SRS30668711\" name=\"\"/><Instrument ILLUMINA=\"Illumina HiSeq 2500\"/><Library_descriptor><LIBRARY_NAME>GSM10036863</LIBRARY_NAME><LIBRARY_STRATEGY>miRNA-Seq</LIBRARY_STRATEGY><LIBRARY_SOURCE>TRANSCRIPTOMIC</LIBRARY_SOURCE><LIBRARY_SELECTION>size fractionation</LIBRARY_SELECTION><LIBRARY_LAYOUT><SINGLE/></LIBRARY_LAYOUT><LIBRARY_CONSTRUCTION_PROTOCOL>Total RNA was extracted from hypothalamic tissue using TRIzol reagent (Invitrogen, USA). RNA quality was assessed using a NanoDrop 2000 spectrophotometer and an Agilent 2100 Bioanalyzer, and samples with an RNA integrity number (RIN) &gt;= 7.0 were used for library construction. Small RNA libraries were prepared using the TruSeq Small RNA Sample Prep Kit (Illumina) and sequenced (1 x 50 bp) on the Illumina HiSeq 2500 platform by LC-Bio Technologies (Hangzhou, China).</LIBRARY_CONSTRUCTION_PROTOCOL></Library_descriptor><Bioproject>PRJNA1526034</Bioproject><Biosample>SAMN63026118</Biosample>",
+    "Runs": "<Run acc=\"SRR40579384\" total_spots=\"16638748\" total_bases=\"848576148\" load_done=\"true\" is_public=\"true\" cluster_name=\"public\" static_data_available=\"true\"/>",
+    "ExtLinks": "",
+    "CreateDate": "2026/09/10",
+    "UpdateDate": "2026/09/09"
+  }
+]

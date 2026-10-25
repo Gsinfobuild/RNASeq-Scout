@@ -1,0 +1,18 @@
+{
+  "benchmark_id": "RSB033",
+  "accession": "ERX17246773",
+  "accession_type": "experiment",
+  "study_family": "ERP204766",
+  "source": "NCBI SRA",
+  "retrieval_method": "Entrez ESearch + ESummary",
+  "retrieved_at_utc": "2026-10-03T18:18:11.445227+00:00",
+  "uid_count": 1,
+  "uids": [
+    "46702851"
+  ],
+  "repository_evidence_only": true,
+  "scout_predictions_used": false,
+  "study_truncated": false,
+  "records_retrieved": 1,
+  "status": "retrieved"
+}
