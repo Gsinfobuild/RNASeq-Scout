@@ -13,8 +13,12 @@ This layer is intentionally conservative:
 - classification is based on metadata evidence, not biological guesswork.
 """
 
+import re
 from dataclasses import dataclass, field
 from typing import List
+
+
+CELL_RESOLVED_MODALITIES = {"Single-cell RNA-seq", "Single-nucleus RNA-seq"}
 
 
 @dataclass
@@ -245,6 +249,34 @@ def generate_modality_insight(metadata) -> ModalityInsight:
     # --------------------------------------------------------
 
     if strategy == "RNA_SEQ":
+        protocol = _clean(getattr(_get_experiment(metadata), "construction_protocol", ""))
+        nuclear = r"(?:snRNA[- ]?seq|single[- ]nucle(?:us|i) RNA[- ]seq)"
+        cellular = r"(?:scRNA[- ]?seq|single[- ]cell RNA[- ]seq)"
+        for pattern, modality in ((nuclear, "Single-nucleus RNA-seq"), (cellular, "Single-cell RNA-seq")):
+            # Require a positive assay label or a statement about preparation of this library.
+            title_match = re.search(r"(?:^|:\s*)" + pattern + r"\b", title, re.I)
+            protocol_match = re.search(
+                r"(?:^|[.;]\s+)" + pattern + r"\s+(?:libraries\s+were\s+(?:prepared|generated|constructed)|\(10x)|"
+                r"\b(?:was|were) used for " + pattern + r"\b", protocol, re.I
+            )
+            if title_match or (protocol_match and not re.search(r"\bbulk\b", title, re.I)):
+                result.modality = modality
+                result.workflow_family = "specialized_rna"
+                result.compatibility_status = "Specialized workflow"
+                result.classification_confidence = "High"
+                source_label = "experiment title" if title_match else "library construction protocol"
+                result.rationale = f"The {source_label} identifies {modality}."
+                result.observed_evidence.append(result.rationale)
+                return result
+
+        if (re.search(r"\bDNA extraction\b", protocol, re.I)
+                and re.search(r"\b(?:ASV feature table|amplicon sequence variants?)\b", protocol, re.I)
+                and re.search(r"\bSILVA\b", protocol, re.I)):
+            result.modality = "Conflicting sequencing evidence"
+            result.rna_seq_compatible = None
+            result.rationale = "The RNA-Seq strategy conflicts with a DNA-based amplicon analysis in the library protocol."
+            result.warnings.append(result.rationale)
+            return result
 
         result.modality = "RNA-seq"
         result.workflow_family = "bulk_rna_seq"
@@ -281,6 +313,9 @@ def generate_modality_insight(metadata) -> ModalityInsight:
         else:
             result.modality = "Non-coding RNA sequencing"
 
+        if strategy == "MIRNA_SEQ" and re.match(r"^(?:GSM\d+:\s*)?piRNA[- ]seq\b", title, re.I):
+            result.modality = "piRNA sequencing"
+            result.observed_evidence.append("Experiment title identifies piRNA sequencing.")
         result.workflow_family = "specialized_rna"
         result.rna_seq_compatible = False
         result.compatibility_status = "Specialized workflow"

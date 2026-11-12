@@ -43,6 +43,7 @@ dataset that is valid for another purpose may therefore be
 classified as not applicable for RNA-seq planning.
 """
 
+from rnaseq_nav.intelligence.modality_intelligence import CELL_RESOLVED_MODALITIES
 from dataclasses import dataclass, field
 from typing import List
 
@@ -663,6 +664,14 @@ def generate_analysis_plan(
     compatibility = _is_rna_seq_compatible(
         modality_insight
     )
+
+    if compatibility is False and getattr(modality_insight, "modality", "") in CELL_RESOLVED_MODALITIES:
+        modality = modality_insight.modality
+        return AnalysisPlan(
+            workflow=f"{modality} analysis",
+            rationale=modality_insight.rationale,
+            recommendations=["Verify the library chemistry and barcode structure before selecting preprocessing and counting tools."],
+        )
 
     if compatibility is False:
 

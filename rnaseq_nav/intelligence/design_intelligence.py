@@ -404,6 +404,9 @@ def _detect_control(title, protocol=""):
     if protocol:
         texts.append(("protocol", protocol))
 
+    if re.search(r"(?:^|:\s*)control[-_]\d+(?=$|[;,])", title or "", re.I):
+        return "control"
+
     patterns = [
         # Mock treatment / mock control
         (
@@ -635,12 +638,17 @@ def _detect_time_point(title, protocol=""):
     """
 
     texts = []
-
-    if protocol:
-        texts.append(("protocol", protocol))
-
     if title:
         texts.append(("title", title))
+    if protocol:
+        # Incubation and sequencing durations do not establish sampling times.
+        sampling_phrase = re.compile(
+            r"\b(?:sampling|harvested|collected|sampled)\s+(?:(?:at|on|after)\s+)?"
+            r"(?:days?\s+[\d, -]+|\d+(?:\.\d+)?\s*(?:hours?|h|days?)\b)"
+            r"|\bpost\s+[\d, -]+\s+days?\b", re.I
+        )
+        for phrase in sampling_phrase.finditer(protocol):
+            texts.append(("protocol", phrase.group()))
 
     # ------------------------------------------------------
     # Protocol: sampling after X days
@@ -685,6 +693,11 @@ def _detect_time_point(title, protocol=""):
             return "Day " + _clean(match.group(1))
 
         # --------------------------------------------------
+        if source == "protocol":
+            day = re.search(r"\b(?:day\s+(\d+)|(\d+)\s+days?)\b", text, re.I)
+            if day:
+                return "Day " + (day.group(1) or day.group(2))
+
         # Hour-based time points
         # --------------------------------------------------
 
@@ -1632,7 +1645,7 @@ def generate_design_insight(metadata, study_biosample_evidence=None):
 
         insight.time_point = time_point
 
-        if protocol:
+        if not _detect_time_point(title):
 
             _append_unique(
                 insight.observed_features,

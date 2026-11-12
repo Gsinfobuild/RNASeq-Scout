@@ -1,0 +1,751 @@
+accession	metric	field	expected	reference_type	evidence
+SRX31232675	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31232675
+SRX31232675	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31232675
+SRX31232675	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31232675
+SRX31232675	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX31232675
+SRX31232675	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31232675
+SRX31232675	objective_metadata	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31232675
+SRX31232675	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31232675
+SRX31232675	objective_metadata	library_strategy	Hi-C	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31232675
+SRX31232675	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31232675
+SRX31232675	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31232675
+SRX30637676	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30637676
+SRX30637676	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30637676
+SRX30637676	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30637676
+SRX30637676	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX30637676
+SRX30637676	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX30637676
+SRX30637676	objective_metadata	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30637676
+SRX30637676	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30637676
+SRX30637676	objective_metadata	library_strategy	Bisulfite-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX30637676
+SRX30637676	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX30637676
+SRX30637676	objective_metadata	organism	Arabidopsis thaliana	repository	https://www.ncbi.nlm.nih.gov/sra/SRX30637676
+SRX31856537	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31856537
+SRX31856537	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31856537
+SRX31856537	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31856537
+SRX31856537	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX31856537
+SRX31856537	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31856537
+SRX31856537	objective_metadata	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31856537
+SRX31856537	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31856537
+SRX31856537	objective_metadata	library_strategy	Hi-C	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31856537
+SRX31856537	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31856537
+SRX31856537	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31856537
+SRX29525124	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29525124
+SRX29525124	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29525124
+SRX29525124	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29525124
+SRX29525124	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX29525124
+SRX29525124	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX29525124
+SRX29525124	objective_metadata	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29525124
+SRX29525124	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29525124
+SRX29525124	objective_metadata	library_strategy	Hi-C	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29525124
+SRX29525124	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29525124
+SRX29525124	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29525124
+SRX35984954	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35984954
+SRX35984954	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35984954
+SRX35984954	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35984954
+SRX35984954	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX35984954
+SRX35984954	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX35984954
+SRX35984954	objective_metadata	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35984954
+SRX35984954	objective_metadata	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35984954
+SRX35984954	objective_metadata	library_strategy	RNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX35984954
+SRX35984954	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX35984954
+SRX35984954	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX35984954
+SRX31884364	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31884364
+SRX31884364	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31884364
+SRX31884364	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31884364
+SRX31884364	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX31884364
+SRX31884364	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31884364
+SRX31884364	objective_metadata	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31884364
+SRX31884364	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31884364
+SRX31884364	objective_metadata	library_strategy	Hi-C	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31884364
+SRX31884364	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31884364
+SRX31884364	objective_metadata	organism	Saccharomyces cerevisiae	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31884364
+DRX1156855	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1156855
+DRX1156855	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1156855
+DRX1156855	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1156855
+DRX1156855	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/DRX1156855
+DRX1156855	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/DRX1156855
+DRX1156855	objective_metadata	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1156855
+DRX1156855	objective_metadata	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1156855
+DRX1156855	objective_metadata	library_strategy	RNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/DRX1156855
+DRX1156855	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/DRX1156855
+DRX1156855	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/DRX1156855
+SRX21642179	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX21642179
+SRX21642179	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX21642179
+SRX21642179	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX21642179
+SRX21642179	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX21642179
+SRX21642179	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX21642179
+SRX21642179	objective_metadata	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX21642179
+SRX21642179	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX21642179
+SRX21642179	objective_metadata	library_strategy	ncRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX21642179
+SRX21642179	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX21642179
+SRX21642179	objective_metadata	organism	Drosophila melanogaster	repository	https://www.ncbi.nlm.nih.gov/sra/SRX21642179
+SRX34413167	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34413167
+SRX34413167	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34413167
+SRX34413167	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34413167
+SRX34413167	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX34413167
+SRX34413167	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX34413167
+SRX34413167	objective_metadata	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34413167
+SRX34413167	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34413167
+SRX34413167	objective_metadata	library_strategy	Bisulfite-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34413167
+SRX34413167	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34413167
+SRX34413167	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34413167
+SRX22954469	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22954469
+SRX22954469	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22954469
+SRX22954469	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22954469
+SRX22954469	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX22954469
+SRX22954469	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX22954469
+SRX22954469	objective_metadata	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22954469
+SRX22954469	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22954469
+SRX22954469	objective_metadata	library_strategy	miRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX22954469
+SRX22954469	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX22954469
+SRX22954469	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX22954469
+SRX28716533	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28716533
+SRX28716533	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28716533
+SRX28716533	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28716533
+SRX28716533	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX28716533
+SRX28716533	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX28716533
+SRX28716533	objective_metadata	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28716533
+SRX28716533	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28716533
+SRX28716533	objective_metadata	library_strategy	ncRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX28716533
+SRX28716533	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX28716533
+SRX28716533	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX28716533
+SRX19323598	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19323598
+SRX19323598	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19323598
+SRX19323598	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19323598
+SRX19323598	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX19323598
+SRX19323598	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX19323598
+SRX19323598	objective_metadata	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19323598
+SRX19323598	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19323598
+SRX19323598	objective_metadata	library_strategy	ncRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX19323598
+SRX19323598	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX19323598
+SRX19323598	objective_metadata	organism	Arabidopsis thaliana	repository	https://www.ncbi.nlm.nih.gov/sra/SRX19323598
+SRX30035914	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30035914
+SRX30035914	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30035914
+SRX30035914	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30035914
+SRX30035914	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX30035914
+SRX30035914	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX30035914
+SRX30035914	objective_metadata	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30035914
+SRX30035914	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30035914
+SRX30035914	objective_metadata	library_strategy	ATAC-seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX30035914
+SRX30035914	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX30035914
+SRX30035914	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX30035914
+ERX17149451	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX17149451
+ERX17149451	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX17149451
+ERX17149451	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX17149451
+ERX17149451	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/ERX17149451
+ERX17149451	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/ERX17149451
+ERX17149451	objective_metadata	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX17149451
+ERX17149451	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX17149451
+ERX17149451	objective_metadata	library_strategy	WGS	repository	https://www.ncbi.nlm.nih.gov/sra/ERX17149451
+ERX17149451	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/ERX17149451
+ERX17149451	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/ERX17149451
+SRX32924945	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32924945
+SRX32924945	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32924945
+SRX32924945	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32924945
+SRX32924945	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX32924945
+SRX32924945	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX32924945
+SRX32924945	objective_metadata	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32924945
+SRX32924945	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32924945
+SRX32924945	objective_metadata	library_strategy	ChIP-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32924945
+SRX32924945	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32924945
+SRX32924945	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32924945
+ERX10686416	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX10686416
+ERX10686416	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX10686416
+ERX10686416	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX10686416
+ERX10686416	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/ERX10686416
+ERX10686416	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/ERX10686416
+ERX10686416	objective_metadata	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX10686416
+ERX10686416	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX10686416
+ERX10686416	objective_metadata	library_strategy	Bisulfite-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/ERX10686416
+ERX10686416	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/ERX10686416
+ERX10686416	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/ERX10686416
+SRX19237588	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19237588
+SRX19237588	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19237588
+SRX19237588	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19237588
+SRX19237588	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX19237588
+SRX19237588	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX19237588
+SRX19237588	objective_metadata	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19237588
+SRX19237588	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19237588
+SRX19237588	objective_metadata	library_strategy	miRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX19237588
+SRX19237588	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX19237588
+SRX19237588	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX19237588
+SRX34061491	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34061491
+SRX34061491	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34061491
+SRX34061491	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34061491
+SRX34061491	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX34061491
+SRX34061491	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX34061491
+SRX34061491	objective_metadata	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34061491
+SRX34061491	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34061491
+SRX34061491	objective_metadata	library_strategy	WGS	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34061491
+SRX34061491	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34061491
+SRX34061491	objective_metadata	organism	Saccharomyces cerevisiae	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34061491
+SRX29799388	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29799388
+SRX29799388	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29799388
+SRX29799388	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29799388
+SRX29799388	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX29799388
+SRX29799388	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX29799388
+SRX29799388	objective_metadata	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29799388
+SRX29799388	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29799388
+SRX29799388	objective_metadata	library_strategy	ncRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29799388
+SRX29799388	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29799388
+SRX29799388	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29799388
+ERX16536766	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX16536766
+ERX16536766	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX16536766
+ERX16536766	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX16536766
+ERX16536766	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/ERX16536766
+ERX16536766	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/ERX16536766
+ERX16536766	objective_metadata	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX16536766
+ERX16536766	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX16536766
+ERX16536766	objective_metadata	library_strategy	WGS	repository	https://www.ncbi.nlm.nih.gov/sra/ERX16536766
+ERX16536766	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/ERX16536766
+ERX16536766	objective_metadata	organism		repository	https://www.ncbi.nlm.nih.gov/sra/ERX16536766
+SRX29769895	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29769895
+SRX29769895	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29769895
+SRX29769895	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29769895
+SRX29769895	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX29769895
+SRX29769895	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX29769895
+SRX29769895	objective_metadata	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29769895
+SRX29769895	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29769895
+SRX29769895	objective_metadata	library_strategy	miRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29769895
+SRX29769895	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29769895
+SRX29769895	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29769895
+SRX31685666	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31685666
+SRX31685666	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31685666
+SRX31685666	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31685666
+SRX31685666	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX31685666
+SRX31685666	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31685666
+SRX31685666	objective_metadata	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31685666
+SRX31685666	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31685666
+SRX31685666	objective_metadata	library_strategy	ChIP-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31685666
+SRX31685666	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31685666
+SRX31685666	objective_metadata	organism	Drosophila melanogaster	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31685666
+ERX15216689	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX15216689
+ERX15216689	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX15216689
+ERX15216689	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX15216689
+ERX15216689	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/ERX15216689
+ERX15216689	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/ERX15216689
+ERX15216689	objective_metadata	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX15216689
+ERX15216689	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX15216689
+ERX15216689	objective_metadata	library_strategy	Bisulfite-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/ERX15216689
+ERX15216689	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/ERX15216689
+ERX15216689	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/ERX15216689
+SRX32086047	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32086047
+SRX32086047	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32086047
+SRX32086047	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32086047
+SRX32086047	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX32086047
+SRX32086047	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX32086047
+SRX32086047	objective_metadata	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32086047
+SRX32086047	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32086047
+SRX32086047	objective_metadata	library_strategy	ATAC-seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32086047
+SRX32086047	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32086047
+SRX32086047	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32086047
+ERX13004826	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX13004826
+ERX13004826	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX13004826
+ERX13004826	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX13004826
+ERX13004826	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/ERX13004826
+ERX13004826	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/ERX13004826
+ERX13004826	objective_metadata	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX13004826
+ERX13004826	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX13004826
+ERX13004826	objective_metadata	library_strategy	WGS	repository	https://www.ncbi.nlm.nih.gov/sra/ERX13004826
+ERX13004826	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/ERX13004826
+ERX13004826	objective_metadata	organism	Arabidopsis thaliana	repository	https://www.ncbi.nlm.nih.gov/sra/ERX13004826
+SRX34371311	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34371311
+SRX34371311	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34371311
+SRX34371311	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34371311
+SRX34371311	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX34371311
+SRX34371311	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX34371311
+SRX34371311	objective_metadata	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34371311
+SRX34371311	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34371311
+SRX34371311	objective_metadata	library_strategy	Hi-C	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34371311
+SRX34371311	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34371311
+SRX34371311	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34371311
+SRX28401884	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28401884
+SRX28401884	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28401884
+SRX28401884	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28401884
+SRX28401884	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX28401884
+SRX28401884	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX28401884
+SRX28401884	objective_metadata	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28401884
+SRX28401884	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28401884
+SRX28401884	objective_metadata	library_strategy	ATAC-seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX28401884
+SRX28401884	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX28401884
+SRX28401884	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX28401884
+SRX21898921	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX21898921
+SRX21898921	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX21898921
+SRX21898921	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX21898921
+SRX21898921	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX21898921
+SRX21898921	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX21898921
+SRX21898921	objective_metadata	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX21898921
+SRX21898921	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX21898921
+SRX21898921	objective_metadata	library_strategy	miRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX21898921
+SRX21898921	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX21898921
+SRX21898921	objective_metadata	organism	Caenorhabditis elegans	repository	https://www.ncbi.nlm.nih.gov/sra/SRX21898921
+ERX15236666	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX15236666
+ERX15236666	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX15236666
+ERX15236666	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX15236666
+ERX15236666	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/ERX15236666
+ERX15236666	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/ERX15236666
+ERX15236666	objective_metadata	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX15236666
+ERX15236666	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX15236666
+ERX15236666	objective_metadata	library_strategy	ncRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/ERX15236666
+ERX15236666	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/ERX15236666
+ERX15236666	objective_metadata	organism	Arabidopsis thaliana	repository	https://www.ncbi.nlm.nih.gov/sra/ERX15236666
+SRX32084514	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32084514
+SRX32084514	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32084514
+SRX32084514	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32084514
+SRX32084514	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX32084514
+SRX32084514	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX32084514
+SRX32084514	objective_metadata	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32084514
+SRX32084514	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32084514
+SRX32084514	objective_metadata	library_strategy	miRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32084514
+SRX32084514	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32084514
+SRX32084514	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32084514
+SRX28002020	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28002020
+SRX28002020	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28002020
+SRX28002020	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28002020
+SRX28002020	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX28002020
+SRX28002020	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX28002020
+SRX28002020	objective_metadata	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28002020
+SRX28002020	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28002020
+SRX28002020	objective_metadata	library_strategy	Hi-C	repository	https://www.ncbi.nlm.nih.gov/sra/SRX28002020
+SRX28002020	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX28002020
+SRX28002020	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX28002020
+SRX34427188	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34427188
+SRX34427188	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34427188
+SRX34427188	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34427188
+SRX34427188	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX34427188
+SRX34427188	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX34427188
+SRX34427188	objective_metadata	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34427188
+SRX34427188	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34427188
+SRX34427188	objective_metadata	library_strategy	ChIP-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34427188
+SRX34427188	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34427188
+SRX34427188	objective_metadata	organism	Caenorhabditis elegans	repository	https://www.ncbi.nlm.nih.gov/sra/SRX34427188
+SRX26757767	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX26757767
+SRX26757767	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX26757767
+SRX26757767	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX26757767
+SRX26757767	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX26757767
+SRX26757767	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX26757767
+SRX26757767	objective_metadata	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX26757767
+SRX26757767	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX26757767
+SRX26757767	objective_metadata	library_strategy	ncRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX26757767
+SRX26757767	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX26757767
+SRX26757767	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX26757767
+SRX20764562	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX20764562
+SRX20764562	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX20764562
+SRX20764562	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX20764562
+SRX20764562	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX20764562
+SRX20764562	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX20764562
+SRX20764562	objective_metadata	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX20764562
+SRX20764562	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX20764562
+SRX20764562	objective_metadata	library_strategy	miRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX20764562
+SRX20764562	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX20764562
+SRX20764562	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX20764562
+SRX22156731	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22156731
+SRX22156731	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22156731
+SRX22156731	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22156731
+SRX22156731	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX22156731
+SRX22156731	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX22156731
+SRX22156731	objective_metadata	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22156731
+SRX22156731	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22156731
+SRX22156731	objective_metadata	library_strategy	ncRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX22156731
+SRX22156731	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX22156731
+SRX22156731	objective_metadata	organism	Caenorhabditis elegans	repository	https://www.ncbi.nlm.nih.gov/sra/SRX22156731
+SRX31821935	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31821935
+SRX31821935	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31821935
+SRX31821935	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31821935
+SRX31821935	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX31821935
+SRX31821935	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31821935
+SRX31821935	objective_metadata	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31821935
+SRX31821935	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31821935
+SRX31821935	objective_metadata	library_strategy	ChIP-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31821935
+SRX31821935	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31821935
+SRX31821935	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31821935
+SRX23429614	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX23429614
+SRX23429614	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX23429614
+SRX23429614	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX23429614
+SRX23429614	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX23429614
+SRX23429614	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX23429614
+SRX23429614	objective_metadata	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX23429614
+SRX23429614	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX23429614
+SRX23429614	objective_metadata	library_strategy	ncRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX23429614
+SRX23429614	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX23429614
+SRX23429614	objective_metadata	organism	Caenorhabditis elegans	repository	https://www.ncbi.nlm.nih.gov/sra/SRX23429614
+SRX27040448	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX27040448
+SRX27040448	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX27040448
+SRX27040448	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX27040448
+SRX27040448	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX27040448
+SRX27040448	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX27040448
+SRX27040448	objective_metadata	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX27040448
+SRX27040448	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX27040448
+SRX27040448	objective_metadata	library_strategy	ChIP-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX27040448
+SRX27040448	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX27040448
+SRX27040448	objective_metadata	organism	Arabidopsis thaliana	repository	https://www.ncbi.nlm.nih.gov/sra/SRX27040448
+DRX1164344	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1164344
+DRX1164344	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1164344
+DRX1164344	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1164344
+DRX1164344	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/DRX1164344
+DRX1164344	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/DRX1164344
+DRX1164344	objective_metadata	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1164344
+DRX1164344	objective_metadata	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1164344
+DRX1164344	objective_metadata	library_strategy	RNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/DRX1164344
+DRX1164344	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/DRX1164344
+DRX1164344	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/DRX1164344
+SRX35797315	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35797315
+SRX35797315	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35797315
+SRX35797315	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35797315
+SRX35797315	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX35797315
+SRX35797315	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX35797315
+SRX35797315	objective_metadata	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35797315
+SRX35797315	objective_metadata	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35797315
+SRX35797315	objective_metadata	library_strategy	RNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX35797315
+SRX35797315	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX35797315
+SRX35797315	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX35797315
+SRX33661633	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33661633
+SRX33661633	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33661633
+SRX33661633	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33661633
+SRX33661633	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX33661633
+SRX33661633	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX33661633
+SRX33661633	objective_metadata	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33661633
+SRX33661633	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33661633
+SRX33661633	objective_metadata	library_strategy	miRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX33661633
+SRX33661633	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX33661633
+SRX33661633	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX33661633
+SRX24340138	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX24340138
+SRX24340138	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX24340138
+SRX24340138	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX24340138
+SRX24340138	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX24340138
+SRX24340138	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX24340138
+SRX24340138	objective_metadata	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX24340138
+SRX24340138	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX24340138
+SRX24340138	objective_metadata	library_strategy	ncRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX24340138
+SRX24340138	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX24340138
+SRX24340138	objective_metadata	organism	Caenorhabditis elegans	repository	https://www.ncbi.nlm.nih.gov/sra/SRX24340138
+SRX33416101	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33416101
+SRX33416101	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33416101
+SRX33416101	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33416101
+SRX33416101	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX33416101
+SRX33416101	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX33416101
+SRX33416101	objective_metadata	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33416101
+SRX33416101	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33416101
+SRX33416101	objective_metadata	library_strategy	miRNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX33416101
+SRX33416101	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX33416101
+SRX33416101	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX33416101
+SRX31955814	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31955814
+SRX31955814	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31955814
+SRX31955814	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31955814
+SRX31955814	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX31955814
+SRX31955814	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31955814
+SRX31955814	objective_metadata	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31955814
+SRX31955814	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31955814
+SRX31955814	objective_metadata	library_strategy	ATAC-seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31955814
+SRX31955814	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31955814
+SRX31955814	objective_metadata	organism	Drosophila melanogaster	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31955814
+SRX29764247	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29764247
+SRX29764247	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29764247
+SRX29764247	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29764247
+SRX29764247	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX29764247
+SRX29764247	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX29764247
+SRX29764247	objective_metadata	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29764247
+SRX29764247	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29764247
+SRX29764247	objective_metadata	library_strategy	Bisulfite-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29764247
+SRX29764247	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29764247
+SRX29764247	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX29764247
+SRX36125966	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX36125966
+SRX36125966	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX36125966
+SRX36125966	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX36125966
+SRX36125966	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX36125966
+SRX36125966	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX36125966
+SRX36125966	objective_metadata	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX36125966
+SRX36125966	objective_metadata	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX36125966
+SRX36125966	objective_metadata	library_strategy	RNA-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX36125966
+SRX36125966	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX36125966
+SRX36125966	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX36125966
+SRX32261365	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32261365
+SRX32261365	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32261365
+SRX32261365	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32261365
+SRX32261365	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX32261365
+SRX32261365	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX32261365
+SRX32261365	objective_metadata	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32261365
+SRX32261365	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32261365
+SRX32261365	objective_metadata	library_strategy	ChIP-Seq	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32261365
+SRX32261365	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32261365
+SRX32261365	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX32261365
+SRX30201725	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30201725
+SRX30201725	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30201725
+SRX30201725	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30201725
+SRX30201725	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX30201725
+SRX30201725	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX30201725
+SRX30201725	objective_metadata	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30201725
+SRX30201725	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30201725
+SRX30201725	objective_metadata	library_strategy	Hi-C	repository	https://www.ncbi.nlm.nih.gov/sra/SRX30201725
+SRX30201725	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX30201725
+SRX30201725	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX30201725
+SRX31203121	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31203121
+SRX31203121	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31203121
+SRX31203121	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31203121
+SRX31203121	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX31203121
+SRX31203121	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31203121
+SRX31203121	objective_metadata	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31203121
+SRX31203121	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31203121
+SRX31203121	objective_metadata	library_strategy	Hi-C	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31203121
+SRX31203121	objective_metadata	layout	PAIRED	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31203121
+SRX31203121	objective_metadata	organism	Mus musculus	repository	https://www.ncbi.nlm.nih.gov/sra/SRX31203121
+SRX35283149	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35283149
+SRX35283149	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35283149
+SRX35283149	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35283149
+SRX35283149	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX35283149
+SRX35283149	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX35283149
+SRX35283149	objective_metadata	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35283149
+SRX35283149	objective_metadata	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35283149
+SRX35283149	objective_metadata	library_strategy	WGS	repository	https://www.ncbi.nlm.nih.gov/sra/SRX35283149
+SRX35283149	objective_metadata	layout	SINGLE	repository	https://www.ncbi.nlm.nih.gov/sra/SRX35283149
+SRX35283149	objective_metadata	organism	Saccharomyces cerevisiae	repository	https://www.ncbi.nlm.nih.gov/sra/SRX35283149
+ERX14651341	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX14651341
+ERX14651341	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX14651341
+ERX14651341	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX14651341
+ERX14651341	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/ERX14651341
+ERX14651341	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/ERX14651341
+SRX28914982	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28914982
+SRX28914982	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28914982
+SRX28914982	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28914982
+SRX28914982	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX28914982
+SRX28914982	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX28914982
+SRX35154065	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35154065
+SRX35154065	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35154065
+SRX35154065	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35154065
+SRX35154065	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX35154065
+SRX35154065	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX35154065
+SRX25503130	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX25503130
+SRX25503130	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX25503130
+SRX25503130	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX25503130
+SRX25503130	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX25503130
+SRX25503130	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX25503130
+SRX35883241	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35883241
+SRX35883241	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35883241
+SRX35883241	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35883241
+SRX35883241	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX35883241
+SRX35883241	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX35883241
+SRX29869304	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29869304
+SRX29869304	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29869304
+SRX29869304	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29869304
+SRX29869304	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX29869304
+SRX29869304	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX29869304
+DRX728517	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX728517
+DRX728517	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX728517
+DRX728517	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX728517
+DRX728517	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/DRX728517
+DRX728517	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/DRX728517
+SRX29093391	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29093391
+SRX29093391	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29093391
+SRX29093391	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29093391
+SRX29093391	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX29093391
+SRX29093391	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX29093391
+SRX19353781	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19353781
+SRX19353781	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19353781
+SRX19353781	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX19353781
+SRX19353781	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX19353781
+SRX19353781	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX19353781
+SRX34063660	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34063660
+SRX34063660	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34063660
+SRX34063660	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34063660
+SRX34063660	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX34063660
+SRX34063660	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX34063660
+SRX35683290	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35683290
+SRX35683290	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35683290
+SRX35683290	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35683290
+SRX35683290	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX35683290
+SRX35683290	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX35683290
+DRX1201099	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1201099
+DRX1201099	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1201099
+DRX1201099	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1201099
+DRX1201099	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/DRX1201099
+DRX1201099	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/DRX1201099
+SRX33362998	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33362998
+SRX33362998	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33362998
+SRX33362998	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33362998
+SRX33362998	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX33362998
+SRX33362998	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX33362998
+SRX14329132	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX14329132
+SRX14329132	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX14329132
+SRX14329132	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX14329132
+SRX14329132	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX14329132
+SRX14329132	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX14329132
+ERX17119552	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX17119552
+ERX17119552	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX17119552
+ERX17119552	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX17119552
+ERX17119552	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/ERX17119552
+ERX17119552	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/ERX17119552
+SRX17356075	exact_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX17356075
+SRX17356075	broad_modality	modality	Non-coding RNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX17356075
+SRX17356075	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX17356075
+SRX17356075	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX17356075
+SRX17356075	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX17356075
+DRX1075700	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1075700
+DRX1075700	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1075700
+DRX1075700	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1075700
+DRX1075700	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/DRX1075700
+DRX1075700	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/DRX1075700
+SRX27736006	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX27736006
+SRX27736006	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX27736006
+SRX27736006	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX27736006
+SRX27736006	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX27736006
+SRX27736006	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX27736006
+SRX22201129	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22201129
+SRX22201129	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22201129
+SRX22201129	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX22201129
+SRX22201129	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX22201129
+SRX22201129	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX22201129
+DRX1147870	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1147870
+DRX1147870	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1147870
+DRX1147870	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1147870
+DRX1147870	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/DRX1147870
+DRX1147870	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/DRX1147870
+SRX28048667	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28048667
+SRX28048667	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28048667
+SRX28048667	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28048667
+SRX28048667	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX28048667
+SRX28048667	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX28048667
+SRX34197279	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34197279
+SRX34197279	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34197279
+SRX34197279	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34197279
+SRX34197279	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX34197279
+SRX34197279	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX34197279
+SRX31201174	exact_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31201174
+SRX31201174	broad_modality	modality	miRNA sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31201174
+SRX31201174	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31201174
+SRX31201174	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX31201174
+SRX31201174	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31201174
+SRX35831443	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35831443
+SRX35831443	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35831443
+SRX35831443	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35831443
+SRX35831443	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX35831443
+SRX35831443	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX35831443
+ERX9631862	exact_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX9631862
+ERX9631862	broad_modality	modality	Whole-genome sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX9631862
+ERX9631862	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX9631862
+ERX9631862	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/ERX9631862
+ERX9631862	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/ERX9631862
+DRX1007761	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1007761
+DRX1007761	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1007761
+DRX1007761	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1007761
+DRX1007761	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/DRX1007761
+DRX1007761	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/DRX1007761
+SRX31479019	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31479019
+SRX31479019	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31479019
+SRX31479019	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31479019
+SRX31479019	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX31479019
+SRX31479019	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31479019
+SRX30024008	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30024008
+SRX30024008	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30024008
+SRX30024008	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30024008
+SRX30024008	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX30024008
+SRX30024008	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX30024008
+SRX28343569	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28343569
+SRX28343569	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28343569
+SRX28343569	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28343569
+SRX28343569	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX28343569
+SRX28343569	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX28343569
+SRX29975620	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29975620
+SRX29975620	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29975620
+SRX29975620	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX29975620
+SRX29975620	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX29975620
+SRX29975620	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX29975620
+SRX36116418	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX36116418
+SRX36116418	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX36116418
+SRX36116418	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX36116418
+SRX36116418	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX36116418
+SRX36116418	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX36116418
+ERX10986737	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX10986737
+ERX10986737	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX10986737
+ERX10986737	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX10986737
+ERX10986737	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/ERX10986737
+ERX10986737	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/ERX10986737
+ERX13149723	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX13149723
+ERX13149723	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX13149723
+ERX13149723	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/ERX13149723
+ERX13149723	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/ERX13149723
+ERX13149723	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/ERX13149723
+SRX30634706	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30634706
+SRX30634706	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30634706
+SRX30634706	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30634706
+SRX30634706	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX30634706
+SRX30634706	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX30634706
+SRX32271701	exact_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32271701
+SRX32271701	broad_modality	modality	Hi-C	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32271701
+SRX32271701	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX32271701
+SRX32271701	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX32271701
+SRX32271701	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX32271701
+DRX992557	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX992557
+DRX992557	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX992557
+DRX992557	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX992557
+DRX992557	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/DRX992557
+DRX992557	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/DRX992557
+DRX1144356	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1144356
+DRX1144356	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1144356
+DRX1144356	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/DRX1144356
+DRX1144356	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/DRX1144356
+DRX1144356	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/DRX1144356
+SRX31229028	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31229028
+SRX31229028	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31229028
+SRX31229028	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31229028
+SRX31229028	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX31229028
+SRX31229028	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31229028
+SRX33662135	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33662135
+SRX33662135	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33662135
+SRX33662135	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX33662135
+SRX33662135	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX33662135
+SRX33662135	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX33662135
+SRX34769012	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34769012
+SRX34769012	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34769012
+SRX34769012	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX34769012
+SRX34769012	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX34769012
+SRX34769012	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX34769012
+SRX30899504	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30899504
+SRX30899504	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30899504
+SRX30899504	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30899504
+SRX30899504	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX30899504
+SRX30899504	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX30899504
+SRX27822871	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX27822871
+SRX27822871	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX27822871
+SRX27822871	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX27822871
+SRX27822871	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX27822871
+SRX27822871	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX27822871
+SRX31631045	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31631045
+SRX31631045	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31631045
+SRX31631045	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31631045
+SRX31631045	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX31631045
+SRX31631045	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31631045
+SRX35874703	exact_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35874703
+SRX35874703	broad_modality	modality	RNA-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35874703
+SRX35874703	rna_seq_compatibility	rna_seq_compatible	True	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35874703
+SRX35874703	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX35874703
+SRX35874703	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX35874703
+SRX28240256	exact_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28240256
+SRX28240256	broad_modality	modality	ATAC-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28240256
+SRX28240256	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX28240256
+SRX28240256	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX28240256
+SRX28240256	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX28240256
+SRX31393171	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31393171
+SRX31393171	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31393171
+SRX31393171	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31393171
+SRX31393171	experimental_design	condition			https://www.ncbi.nlm.nih.gov/sra/SRX31393171
+SRX31393171	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31393171
+SRX31652806	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31652806
+SRX31652806	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31652806
+SRX31652806	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX31652806
+SRX31652806	experimental_design	control			https://www.ncbi.nlm.nih.gov/sra/SRX31652806
+SRX31652806	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX31652806
+SRX30134161	exact_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30134161
+SRX30134161	broad_modality	modality	Bisulfite sequencing	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30134161
+SRX30134161	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30134161
+SRX30134161	experimental_design	treatment			https://www.ncbi.nlm.nih.gov/sra/SRX30134161
+SRX30134161	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX30134161
+SRX35205843	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35205843
+SRX35205843	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35205843
+SRX35205843	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX35205843
+SRX35205843	experimental_design	time_point			https://www.ncbi.nlm.nih.gov/sra/SRX35205843
+SRX35205843	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX35205843
+SRX30335206	exact_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30335206
+SRX30335206	broad_modality	modality	ChIP-seq	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30335206
+SRX30335206	rna_seq_compatibility	rna_seq_compatible	False	strategy_baseline	https://www.ncbi.nlm.nih.gov/sra/SRX30335206
+SRX30335206	experimental_design	replicate_status			https://www.ncbi.nlm.nih.gov/sra/SRX30335206
+SRX30335206	suitability	suitability			https://www.ncbi.nlm.nih.gov/sra/SRX30335206

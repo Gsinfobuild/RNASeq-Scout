@@ -17,6 +17,7 @@ as representative of the complete study unless the study structure
 supports that interpretation.
 """
 
+from rnaseq_nav.intelligence.modality_intelligence import CELL_RESOLVED_MODALITIES
 from rnaseq_nav.models import ReanalysisReadinessInsight
 
 
@@ -562,10 +563,27 @@ def _is_rna_seq_compatible(modality_insight):
 
 
 def _build_incompatible_result(
+    modality_insight,
+    missing_information,
     observed_evidence,
     not_established,
     warnings,
 ):
+    if getattr(modality_insight, "modality", "") in CELL_RESOLVED_MODALITIES:
+        return ReanalysisReadinessInsight(
+            verdict="Requires specialized workflow",
+            observed_evidence=observed_evidence,
+            not_established=not_established,
+            missing_information=missing_information,
+            warnings=warnings,
+            rationale=modality_insight.rationale,
+        )
+
+    _append_unique(
+        warnings,
+        "The dataset is not compatible with RNA-seq analysis.",
+    )
+
     return ReanalysisReadinessInsight(
         verdict="Not suitable",
         observed_evidence=observed_evidence,
@@ -614,12 +632,9 @@ def _build_study_result(
     compatibility = _is_rna_seq_compatible(modality_insight)
 
     if compatibility is False:
-        _append_unique(
-            warnings,
-            "The dataset is not compatible with RNA-seq analysis.",
-        )
-
         return _build_incompatible_result(
+            modality_insight,
+            missing_information,
             observed_evidence,
             not_established,
             warnings,
@@ -805,12 +820,9 @@ def generate_reanalysis_readiness(
             suitability_insight,
         )
 
-        _append_unique(
-            warnings,
-            "The dataset is not compatible with RNA-seq analysis.",
-        )
-
         return _build_incompatible_result(
+            modality_insight,
+            missing_information,
             observed_evidence,
             not_established,
             warnings,

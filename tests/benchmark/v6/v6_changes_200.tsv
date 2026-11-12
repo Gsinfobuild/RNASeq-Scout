@@ -1,0 +1,36 @@
+accession	old_modality	new_modality	new_plan	old_time	new_time	old_control	new_control
+SRX35883241	RNA-seq	RNA-seq	RNA-seq analysis				control
+DRX1144356	RNA-seq	Single-nucleus RNA-seq	Single-nucleus RNA-seq analysis				
+DRX1156855	RNA-seq	Single-cell RNA-seq	Single-cell RNA-seq analysis				
+DRX1148602	RNA-seq	Conflicting sequencing evidence	RNA-seq workflow applicability uncertain				
+DRX1169793	RNA-seq	Single-nucleus RNA-seq	Single-nucleus RNA-seq analysis				
+SRX33366903	miRNA sequencing	miRNA sequencing	RNA-seq workflow not applicable	2 hours			
+SRX21898921	miRNA sequencing	miRNA sequencing	RNA-seq workflow not applicable	64 hours			
+SRX22201129	miRNA sequencing	piRNA sequencing	RNA-seq workflow not applicable				
+SRX33870084	Non-coding RNA sequencing	Non-coding RNA sequencing	RNA-seq workflow not applicable	1h			
+SRX22156731	Non-coding RNA sequencing	Non-coding RNA sequencing	RNA-seq workflow not applicable	0h			
+ERX11679055	ATAC-seq	ATAC-seq	RNA-seq workflow not applicable	4h			
+SRX30712734	ChIP-seq	ChIP-seq	RNA-seq workflow not applicable	4 hours	3h		
+DRX1234096	ChIP-seq	ChIP-seq	RNA-seq workflow not applicable	1 hour			
+SRX31547500	ChIP-seq	ChIP-seq	RNA-seq workflow not applicable	2h			
+SRX30335206	ChIP-seq	ChIP-seq	RNA-seq workflow not applicable	2h			
+SRX30265237	ChIP-seq	ChIP-seq	RNA-seq workflow not applicable	4 hours			
+SRX34529066	ChIP-seq	ChIP-seq	RNA-seq workflow not applicable	1 hour			
+SRX33609296	ChIP-seq	ChIP-seq	RNA-seq workflow not applicable	2h			
+ERX14771666	Hi-C	Hi-C	RNA-seq workflow not applicable	1 h			
+SRX28914982	Hi-C	Hi-C	RNA-seq workflow not applicable	3 h			
+SRX34371311	Hi-C	Hi-C	RNA-seq workflow not applicable	Day 1			
+ERX14482041	Hi-C	Hi-C	RNA-seq workflow not applicable	24h			
+SRX30201725	Hi-C	Hi-C	RNA-seq workflow not applicable	1h			
+SRX30149419	Hi-C	Hi-C	RNA-seq workflow not applicable	70 h		control	control
+SRX31479019	Hi-C	Hi-C	RNA-seq workflow not applicable	4 h			
+SRX32271701	Hi-C	Hi-C	RNA-seq workflow not applicable	1 h	15h		
+ERX13004410	Whole-genome sequencing	Whole-genome sequencing	RNA-seq workflow not applicable	16 h			
+ERX13004826	Whole-genome sequencing	Whole-genome sequencing	RNA-seq workflow not applicable	16 h			
+DRX1007761	Bisulfite sequencing	Bisulfite sequencing	RNA-seq workflow not applicable	3 h			
+SRX31652806	Bisulfite sequencing	Bisulfite sequencing	RNA-seq workflow not applicable	14 h		control	control
+SRX32481774	Bisulfite sequencing	Bisulfite sequencing	RNA-seq workflow not applicable	18 hours			
+SRX31229110	Bisulfite sequencing	Bisulfite sequencing	RNA-seq workflow not applicable	18 hours			
+SRX29771823	Bisulfite sequencing	Bisulfite sequencing	RNA-seq workflow not applicable	2 hours			
+SRX30024008	Bisulfite sequencing	Bisulfite sequencing	RNA-seq workflow not applicable	5 hour			
+DRX1150801	Bisulfite sequencing	Bisulfite sequencing	RNA-seq workflow not applicable	2 h			

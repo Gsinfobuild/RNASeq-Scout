@@ -28,6 +28,7 @@ It distinguishes:
 Version: 1.1
 """
 
+from rnaseq_nav.intelligence.modality_intelligence import CELL_RESOLVED_MODALITIES
 from dataclasses import dataclass, field
 from typing import List
 
@@ -415,6 +416,9 @@ def _assess_rna_seq_compatibility(
             evidence,
             "",
         )
+
+    if compatible is False and modality in CELL_RESOLVED_MODALITIES:
+        return "incompatible", modality_insight.rationale, "A cell-resolved workflow is required."
 
     if compatible is False:
 
@@ -847,6 +851,10 @@ def generate_suitability_insight(
     if compatibility == "incompatible":
 
         insight.score = 0
+        if getattr(modality_insight, "modality", "") in CELL_RESOLVED_MODALITIES:
+            insight.overall = "Requires a specialized RNA-seq workflow"
+            insight.rationale = modality_insight.rationale
+            return insight
 
         insight.overall = (
             "Not suitable for RNA-seq analysis"
