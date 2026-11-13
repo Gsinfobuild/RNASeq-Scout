@@ -796,7 +796,7 @@ def generate_suitability_insight(
                 if (
                     "biological or technical replicate status "
                     "is not established"
-                    in replicate_lower
+                    in replicate_lower or "type unspecified" in replicate_lower
                 ):
 
                     insight.warnings.append(

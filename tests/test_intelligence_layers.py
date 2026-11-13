@@ -335,15 +335,8 @@ def test_design_does_not_treat_generic_biosample_replicate_as_biological():
 
     insight = generate_design_insight(metadata)
 
-    assert (
-        "biological replicate" in
-        insight.replicate_information.lower()
-    )
-
-    assert (
-        "One sequencing run" in
-        insight.replicate_information
-    )
+    assert insight.replicate_information == 'Replicate 2; type unspecified'
+    assert 'Biological replicate annotation' in insight.missing_information
 
 
 def test_design_marks_control_as_missing_when_not_explicit():

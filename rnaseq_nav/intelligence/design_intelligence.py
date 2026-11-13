@@ -102,6 +102,8 @@ class ExperimentalDesignInsight:
         default_factory=list
     )
 
+    sample_condition: str = ""
+
 
 # ==========================================================
 # Utility functions
@@ -378,6 +380,22 @@ def _detect_condition(title, protocol=""):
 
             if match:
                 return match.group(0).strip()
+
+    # Restrict compact genotype labels to an identified gene and sample token.
+    label = re.split(r"^GSM\d+:\s*", title or "", flags=re.I)[-1]
+    knockout = re.match(r"^([A-Za-z][A-Za-z0-9.-]*)[_ -]KO(?=$|[_ ,;])", label)
+    if knockout:
+        return knockout.group(1) + " knockout"
+    # Preserve an explicitly labeled sample group, including unexpanded group codes.
+    group = re.search(r"(?:^|[;,]\s*)(?:condition|experimental group)\s*[:=]\s*([^;,]+)", label, re.I)
+    if group:
+        return _clean(group.group(1))
+    context = re.search(r"\b([A-Za-z][\w.-]*\s+tethering)\b", label, re.I)
+    if context:
+        return context.group(1)
+    age_genotype = re.search(r"(?:^|[_ ,;])(young|aged|adult|old)[_ -]+wt(?:$|[_ ,;])", label, re.I)
+    if age_genotype:
+        return age_genotype.group(1).lower() + " wild type"
 
     return ""
 
@@ -659,6 +677,12 @@ def _detect_time_point(title, protocol=""):
             r"(?:days?\s+[\d, -]+|\d+(?:\.\d+)?\s*(?:hours?|h|days?)\b)"
             r"|\bpost\s+[\d, -]+\s+days?\b", re.I
         )
+        culture_time = re.search(
+            r"\bat (\d+ days? in vitro)\b[^.;]{0,150}\b(?:collected|harvested)\b",
+            protocol, re.I
+        )
+        if culture_time:
+            texts.append(("protocol", culture_time.group(1)))
         for phrase in sampling_phrase.finditer(protocol):
             texts.append(("protocol", phrase.group()))
 
@@ -705,10 +729,23 @@ def _detect_time_point(title, protocol=""):
             return "Day " + _clean(match.group(1))
 
         # --------------------------------------------------
-        if source == "protocol":
+        if source == "protocol" and "days in vitro" not in text.lower() and "day in vitro" not in text.lower():
             day = re.search(r"\b(?:day\s+(\d+)|(\d+)\s+days?)\b", text, re.I)
             if day:
                 return "Day " + (day.group(1) or day.group(2))
+
+        if source == "title":
+            stage = re.search(r"\b(\d+[- ]cell stage)\b", text, re.I)
+            if stage:
+                return stage.group(1)
+            day = re.search(r"(?:^|[ _,;:-])(?:day\s*|D)(\d+)(?=$|[ _,;:-])", text, re.I)
+            if day:
+                return "Day " + day.group(1)
+            developmental_time = re.search(r"\b(\d+dAE)\b", text, re.I)
+            if developmental_time:
+                return developmental_time.group(1)
+        elif re.search(r"\bdays? in vitro\b", text, re.I):
+            return text.strip()
 
         # Hour-based time points
         # --------------------------------------------------
@@ -798,7 +835,7 @@ def _biosample_sample_design_values(metadata):
             not time_point
             and names.intersection({"time", "timepoint", "time point", "time_point"})
             and re.fullmatch(
-                r"(?:day|week|month|hour|hr|h|d|week|wk)\s*[-_ ]?\s*\d+(?:\.\d+)?",
+                r"(?:(?:day|week|month|hour|hr|h|d|wk)\s*[-_ ]?\s*\d+(?:\.\d+)?|\d+(?:\.\d+)?\s*(?:minutes?|min|hours?|hrs?|h|days?|weeks?|wk|months?))",
                 value,
                 flags=re.IGNORECASE,
             )
@@ -888,6 +925,19 @@ def _biosample_design_annotations(metadata):
         )
 
     return annotations
+
+
+def _sample_attribute_values(metadata, keys):
+    """Collect distinct non-placeholder values for explicit sample attributes."""
+    values = []
+    for attribute in getattr(_get_sample(metadata), "attributes", []) or []:
+        names = {str(getattr(attribute, k, "") or "").strip().lower().replace("_", " ")
+                 for k in ("name", "display_name", "harmonized_name")}
+        value = _clean(getattr(attribute, "value", ""))
+        if names & keys and value and value.lower() not in {"unknown", "not collected", "not provided", "not applicable", "not specified", "none", "n/a", "na", "missing"} and not value.lower().startswith("missing:"):
+            if value not in values:
+                values.append(value)
+    return values
 
 
 def _biosample_replicate_annotation(metadata):
@@ -1023,25 +1073,7 @@ def _assess_replicates(metadata):
 
     experiment = _get_experiment(metadata)
 
-    title = ""
-    library_strategy = ""
-
-    if experiment is not None:
-        title = _clean(
-            getattr(
-                experiment,
-                "title",
-                "",
-            )
-        )
-        library_strategy = _clean(
-            getattr(
-                experiment,
-                "library_strategy",
-                "",
-            )
-        ).upper()
-
+    title = _clean(getattr(experiment, "title", ""))
     protocol = _protocol(metadata)
 
     # ------------------------------------------------------
@@ -1049,6 +1081,9 @@ def _assess_replicates(metadata):
     # ------------------------------------------------------
 
     if protocol:
+
+        if re.search(r"\bpooled\s+(?:as|into)\s+(?:one|a single)\s+biological replicate\b", protocol, re.I):
+            return "One pooled biological replicate per sample"
 
         patterns = [
             r"\b(\d+)\s+biological\s+replicates?\b",
@@ -1106,7 +1141,22 @@ def _assess_replicates(metadata):
     # Title: explicit biological replicate
     # ------------------------------------------------------
 
+    biosample_replicate = _biosample_replicate_annotation(metadata)
+
     if title:
+
+        # Token boundaries accommodate submitter separators, including underscores.
+        compact = re.search(
+            r"(?:^|[\s_,;:-])(?:(biological|technical)[ _-]+)?"
+            r"rep(?:licate)?[._ -]*(\d+)(?=$|[\s_,;:-])", title, re.I
+        )
+        if compact:
+            kind, label = compact.groups()
+            if kind:
+                if kind.lower() == "technical":
+                    return f"Technical replicate {label}; biological replicate status is not established."
+                return f"Biological replicate {label} is explicitly identified in the experiment title."
+            return biosample_replicate or f"Replicate {label}; type unspecified"
 
         match = re.search(
             r"\bbiological\s+replicate\s+([A-Za-z0-9_-]+)",
@@ -1139,21 +1189,18 @@ def _assess_replicates(metadata):
     # BioSample: structured biological replicate annotation
     # ------------------------------------------------------
 
-    biosample_replicate = _biosample_replicate_annotation(
-        metadata
-    )
-
     if biosample_replicate:
         return biosample_replicate
+    labels = _sample_attribute_values(metadata, {"replicate", "replication", "replicate number"})
+    if len(labels) == 1:
+        identifier = labels[0]
+        number = re.fullmatch(r"(?:rep(?:licate|lication)?[ ._:-]*)?(\d+)", identifier, re.I)
+        if number:
+            return f"Replicate {number.group(1)}; type unspecified"
+        return f"Replicate label {identifier}; type unspecified"
 
-    # Apply the RNA-seq-specific scope restriction only after checking
-    # explicit protocol, title, and BioSample replicate evidence.
-    if library_strategy and library_strategy != "RNA_SEQ":
-        return (
-            "Not applicable to RNA-seq experimental-design assessment "
-            f"(library strategy: {library_strategy})."
-        )
-
+    # Replication is meaningful for every assay. A run identifier alone
+    # leaves biological replication unresolved regardless of library strategy.
     # ------------------------------------------------------
     # Run metadata
     # ------------------------------------------------------
@@ -1260,6 +1307,8 @@ def _build_design_description(
         not in replicate_information.lower()
         and "not established"
         not in replicate_information.lower()
+        and "type unspecified" not in replicate_information.lower()
+        and "one pooled biological replicate" not in replicate_information.lower()
     ):
         established.append("replicate information")
 
@@ -1272,6 +1321,8 @@ def _build_design_description(
         not in replicate_information.lower()
         and "not established"
         not in replicate_information.lower()
+        and "type unspecified" not in replicate_information.lower()
+        and "one pooled biological replicate" not in replicate_information.lower()
     ):
         return (
             "The available metadata explicitly document key elements "
@@ -1404,6 +1455,10 @@ def generate_design_insight(metadata, study_biosample_evidence=None):
         insight.sample_treatment,
         insight.sample_time_point,
     ) = _biosample_sample_design_values(metadata)
+
+    conditions = _sample_attribute_values(metadata, {"condition", "experimental condition", "experimental group"})
+    if len(conditions) == 1:
+        insight.sample_condition = conditions[0]
 
     _add_study_biosample_patterns(
         insight,
@@ -1555,10 +1610,10 @@ def generate_design_insight(metadata, study_biosample_evidence=None):
     # Control
     # ------------------------------------------------------
 
-    control = _detect_control(
-        title,
-        protocol,
-    )
+    control = _detect_control(title, protocol)
+    if not control and observed.get("library_strategy") == "CHIP_SEQ":
+        if re.search(r"(?:^|[ _,;:(-])input(?=$|[ _,;:)-])", title or "", re.I):
+            control = "input control"
 
     if control:
 
@@ -1698,6 +1753,7 @@ def generate_design_insight(metadata, study_biosample_evidence=None):
 
     replicate_structure_unresolved = (
         "could not be established" in replicate_text
+        or "type unspecified" in replicate_text
         or "not established" in replicate_text
     )
 
@@ -1788,6 +1844,8 @@ def generate_design_insight(metadata, study_biosample_evidence=None):
         not in insight.replicate_information.lower()
         and "not established"
         not in insight.replicate_information.lower()
+        and "type unspecified" not in insight.replicate_information.lower()
+        and "one pooled biological replicate" not in insight.replicate_information.lower()
     ):
         established_count += 1
 
@@ -1807,6 +1865,8 @@ def generate_design_insight(metadata, study_biosample_evidence=None):
                 not in insight.replicate_information.lower()
                 and "not established"
                 not in insight.replicate_information.lower()
+                and "type unspecified" not in insight.replicate_information.lower()
+                and "one pooled biological replicate" not in insight.replicate_information.lower()
             )
         )
 
@@ -1925,6 +1985,8 @@ def generate_design_insight(metadata, study_biosample_evidence=None):
         )
 
     sample_evidence = []
+    if insight.sample_condition:
+        sample_evidence.append(f"BioSample condition observed: {insight.sample_condition}")
     if insight.sample_treatment:
         sample_evidence.append(
             f"BioSample treatment observed: {insight.sample_treatment}"
@@ -1953,6 +2015,7 @@ def generate_design_insight(metadata, study_biosample_evidence=None):
         not insight.replicate_information
         or "could not be established"
         in insight.replicate_information.lower()
+        or "type unspecified" in insight.replicate_information.lower()
         or "not established"
         in insight.replicate_information.lower()
     ):

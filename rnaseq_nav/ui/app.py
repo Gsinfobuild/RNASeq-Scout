@@ -2943,6 +2943,9 @@ def build_pdf(
         )
 
         sample_evidence = []
+        sample_condition = get_value(design_insight, "sample_condition", "")
+        if sample_condition:
+            sample_evidence.append(("Observed sample condition", sample_condition))
         if sample_treatment:
             sample_evidence.append(
                 ("Observed sample treatment", sample_treatment)
@@ -2952,7 +2955,7 @@ def build_pdf(
                 ("Observed sample time point", sample_time_point)
             )
 
-        if sample_evidence and not design_not_applicable:
+        if sample_evidence:
             st.subheader("BioSample-level observations")
             st.caption(
                 "These annotations describe the inspected BioSample. "

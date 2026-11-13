@@ -34,6 +34,8 @@ def _is_established(value: str) -> bool:
         return False
 
     unavailable_terms = (
+        "type unspecified",
+        "one pooled biological replicate",
         "could not be established",
         "cannot be established",
         "not established",
@@ -464,7 +466,7 @@ def _add_design_evidence(
                 if (
                     "biological or technical replicate status "
                     "is not established"
-                    in replicate_lower
+                    in replicate_lower or "type unspecified" in replicate_lower
                 ):
 
                     _append_unique(

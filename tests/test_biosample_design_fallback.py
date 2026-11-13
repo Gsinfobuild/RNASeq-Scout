@@ -215,7 +215,7 @@ def test_partial_biosample_replicate_evidence_is_not_reported_missing():
         insight.missing_information
     )
 
-def test_non_rna_seq_strategy_is_not_applicable_to_rnaseq_replicate_assessment():
+def test_genome_strategy_alone_cannot_establish_replication():
     metadata = make_metadata(
         strategy="WGS",
         title="Whole genome sequencing sample",
@@ -223,8 +223,10 @@ def test_non_rna_seq_strategy_is_not_applicable_to_rnaseq_replicate_assessment()
 
     insight = generate_design_insight(metadata)
 
-    assert insight.replicate_information.startswith("Not applicable")
-    assert "WGS" in insight.replicate_information
+    assert "established" in insight.replicate_information.lower()
+    assert "not applicable" not in insight.replicate_information.lower()
+    assert ("not established" in insight.replicate_information.lower()
+            or "could not be established" in insight.replicate_information.lower())
 
 
 def test_rna_seq_partial_biosample_replicate_evidence_is_preserved():

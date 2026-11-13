@@ -309,6 +309,8 @@ def _determine_design_formula(design_insight):
         not in replicate_information.lower()
         and "not established"
         not in replicate_information.lower()
+        and "type unspecified" not in replicate_information.lower()
+        and "one pooled biological replicate" not in replicate_information.lower()
     ):
         return "~ condition"
 
