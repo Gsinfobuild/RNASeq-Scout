@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAMPLE_SET>
+<SAMPLE accession="SAMEA122215203" alias="Pa2_314" center_name="KU">
+     <IDENTIFIERS>
+          <PRIMARY_ID>SAMEA122215203</PRIMARY_ID>
+          <SECONDARY_ID>ERS29754726</SECONDARY_ID>
+          <EXTERNAL_ID namespace="BioSample">SAMEA122215203</EXTERNAL_ID>
+          <SUBMITTER_ID namespace="KU">Pa2_314</SUBMITTER_ID>
+     </IDENTIFIERS>
+     <TITLE>Pregnancy drug exposure vs microbiome</TITLE>
+     <SAMPLE_NAME>
+          <TAXON_ID>10090</TAXON_ID>
+          <SCIENTIFIC_NAME>Mus musculus</SCIENTIFIC_NAME>
+          <COMMON_NAME>house mouse</COMMON_NAME>
+     </SAMPLE_NAME>
+     <DESCRIPTION>Mouse fecal sample</DESCRIPTION>
+     <SAMPLE_LINKS>
+    <SAMPLE_LINK>
+        <XREF_LINK>
+            <DB>ENA-FASTQ-FILES</DB>
+            <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERS29754726&result=read_run&fields=run_accession,fastq_ftp,fastq_md5,fastq_bytes]]></ID>
+        </XREF_LINK>
+    </SAMPLE_LINK>
+    <SAMPLE_LINK>
+        <XREF_LINK>
+            <DB>ENA-SUBMITTED-FILES</DB>
+            <ID><![CDATA[https://www.ebi.ac.uk/ena/portal/api/filereport?accession=ERS29754726&result=read_run&fields=run_accession,submitted_ftp,submitted_md5,submitted_bytes,submitted_format]]></ID>
+        </XREF_LINK>
+    </SAMPLE_LINK>
+</SAMPLE_LINKS>
+<SAMPLE_ATTRIBUTES>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>ENA-CHECKLIST</TAG>
+               <VALUE>ERC000011:1.3</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>organism</TAG>
+               <VALUE>Mus musculus</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>collection date</TAG>
+               <VALUE>2024-07-01</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>sex</TAG>
+               <VALUE>not determined</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>scientific_name</TAG>
+               <VALUE>Mus musculus</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>common name</TAG>
+               <VALUE>house mouse</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>geographic location (country and/or sea)</TAG>
+               <VALUE>Denmark</VALUE>
+          </SAMPLE_ATTRIBUTE>
+          <SAMPLE_ATTRIBUTE>
+               <TAG>isolation_source</TAG>
+               <VALUE>Clopidogrel</VALUE>
+          </SAMPLE_ATTRIBUTE>
+     </SAMPLE_ATTRIBUTES>
+</SAMPLE>
+</SAMPLE_SET>
+

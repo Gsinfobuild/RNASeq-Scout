@@ -1,0 +1,56 @@
+{
+  "exact_modality": {
+    "target": 100,
+    "matched": 97,
+    "pending": 0,
+    "mismatch": 3,
+    "failed_observation": 0,
+    "strategy_only_matches": 97,
+    "target_verified": false
+  },
+  "broad_modality": {
+    "target": 100,
+    "matched": 98,
+    "pending": 0,
+    "mismatch": 2,
+    "failed_observation": 0,
+    "strategy_only_matches": 98,
+    "target_verified": false
+  },
+  "objective_metadata": {
+    "target": 250,
+    "matched": 248,
+    "pending": 0,
+    "mismatch": 2,
+    "failed_observation": 0,
+    "strategy_only_matches": 98,
+    "target_verified": false
+  },
+  "experimental_design": {
+    "target": 100,
+    "matched": 0,
+    "pending": 100,
+    "mismatch": 0,
+    "failed_observation": 0,
+    "strategy_only_matches": 0,
+    "target_verified": false
+  },
+  "suitability": {
+    "target": 100,
+    "matched": 0,
+    "pending": 100,
+    "mismatch": 0,
+    "failed_observation": 0,
+    "strategy_only_matches": 0,
+    "target_verified": false
+  },
+  "rna_seq_compatibility": {
+    "target": 100,
+    "matched": 98,
+    "pending": 0,
+    "mismatch": 2,
+    "failed_observation": 0,
+    "strategy_only_matches": 98,
+    "target_verified": false
+  }
+}

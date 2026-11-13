@@ -519,6 +519,12 @@ def _detect_treatment(title, protocol=""):
     texts = []
 
     if protocol:
+        # Exclude treatment of extracted material while retaining other clauses.
+        protocol = re.sub(
+            r"\b(?:RNAs?|DNAs?|cDNAs?|libraries|lysates?|extracts?)\s+"
+            r"(?:(?:were|was|are|is)\s+)?treated\s+with\b[^.;\n]*",
+            " ", protocol, flags=re.IGNORECASE,
+        )
         texts.append(("protocol", protocol))
 
     if title:
@@ -639,6 +645,12 @@ def _detect_time_point(title, protocol=""):
 
     texts = []
     if title:
+        # Library preparation durations may appear beside a biological time point.
+        title = re.sub(
+            r"\b\d+(?:\.\d+)?\s*(?:hours?|h)\s+(?:adapter\s+)?ligation\b"
+            r"|\b(?:adapter\s+)?ligation\s+(?:for\s+)?\d+(?:\.\d+)?\s*(?:hours?|h)\b",
+            " ", title, flags=re.IGNORECASE,
+        )
         texts.append(("title", title))
     if protocol:
         # Incubation and sequencing durations do not establish sampling times.

@@ -20,6 +20,12 @@ import xml.etree.ElementTree as ET
 from rnaseq_nav.models import Metadata, StudyExperiment
 
 
+def _organism_name(element):
+    if element is None:
+        return ""
+    return (element.get("ScientificName") or "").strip() or (element.get("CommonName") or "").strip()
+
+
 class SRAParser:
     """
     Parser for NCBI SRA metadata.
@@ -124,7 +130,6 @@ class SRAParser:
             experiment_accession = ""
             experiment_title = ""
             library_strategy = ""
-            organism_name = ""
             sample_name = ""
 
             if sample is not None:
@@ -160,10 +165,7 @@ class SRAParser:
                 if strategy is not None and strategy.text:
                     library_strategy = strategy.text.strip()
 
-            if organism is not None:
-                organism_name = organism.attrib.get(
-                    "ScientificName", ""
-                )
+            organism_name = _organism_name(organism)
 
             run_accessions = []
 
@@ -304,13 +306,7 @@ class SRAParser:
 
         organism = root.find("Organism")
 
-        if organism is not None:
-            metadata.sample.organism = (
-                organism.attrib.get(
-                    "ScientificName",
-                    ""
-                )
-            )
+        metadata.sample.organism = _organism_name(organism)
 
         # ----------------------------------------------------------
         # Sample
