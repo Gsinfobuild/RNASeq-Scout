@@ -103,6 +103,10 @@ class ExperimentalDesignInsight:
     )
 
     sample_condition: str = ""
+    sample_control: str = ""
+    sample_replicate_status: str = ""
+    sample_age: str = ""
+    sample_developmental_stage: str = ""
 
 
 # ==========================================================
@@ -422,7 +426,7 @@ def _detect_control(title, protocol=""):
     if protocol:
         texts.append(("protocol", protocol))
 
-    if re.search(r"(?:^|:\s*)control[-_]\d+(?=$|[;,])", title or "", re.I):
+    if re.search(r"(?:^|:\s*)(?:control[-_]\d+|\d+\s+control)(?=$|[;,])", title or "", re.I):
         return "control"
 
     patterns = [
@@ -567,7 +571,7 @@ def _detect_treatment(title, protocol=""):
         r"(?:cultured\s+)?(?:cells?|samples?|cultures?|organisms?|plants?|seedlings?)\b",
 
         # received X
-        r"\breceived\s+([^,.;:\n]+)",
+        r"\b(?:animals?|mice|rats|subjects?|donors?|participants?|cells?|plants?|cultures?|seedlings?|samples?)\s+received\s+([^,.;:\n]+)",
 
         # X treatment was performed
         r"\b([A-Za-z0-9_/-]+(?:\s+[A-Za-z0-9_/-]+)?)"
@@ -613,6 +617,16 @@ def _detect_treatment(title, protocol=""):
 
             if not match:
                 continue
+
+            if source == "protocol" and re.search(
+                r"\b(?:RNase\s+[AH]|DNase\s+I|dsDNA\s+Fragmentase|primary antibodies)\b",
+                match.group(0), re.I
+            ):
+                # Only exclude a reagent in a library-preparation context.
+                start = max(text.rfind(".", 0, match.start()), text.rfind(";", 0, match.start())) + 1
+                clause = text[start:match.end()]
+                if re.search(r"chromatin|elut(?:ed|ion)|bisulfite|coverslip|libraries|library", clause, re.I):
+                    continue
 
             if match.lastindex:
 
@@ -735,6 +749,9 @@ def _detect_time_point(title, protocol=""):
                 return "Day " + (day.group(1) or day.group(2))
 
         if source == "title":
+            age_code = re.search(r"(?:^|:\s*|\bin\s+)((?:PN|E)\d+(?:\.\d+)?)\s+(?=[a-z])", text)
+            if age_code:
+                return age_code[1]
             stage = re.search(r"\b(\d+[- ]cell stage)\b", text, re.I)
             if stage:
                 return stage.group(1)
@@ -823,6 +840,7 @@ def _biosample_sample_design_values(metadata):
             not treatment
             and names.intersection({"treatment"})
             and value.casefold() not in ambiguous_treatments
+            and not re.search(r"\b(?:no treatment|control)\b", value, re.I)
             and not re.search(
                 r"\b(?:control group|control samples?|parental control)\b",
                 value,
@@ -835,13 +853,25 @@ def _biosample_sample_design_values(metadata):
             not time_point
             and names.intersection({"time", "timepoint", "time point", "time_point"})
             and re.fullmatch(
-                r"(?:(?:day|week|month|hour|hr|h|d|wk)\s*[-_ ]?\s*\d+(?:\.\d+)?|\d+(?:\.\d+)?\s*(?:minutes?|min|hours?|hrs?|h|days?|weeks?|wk|months?))",
+                r"(?:differentiation\s+)?(?:(?:day|week|month|hour|hr|h|d|wk)\s*[-_ ]?\s*\d+(?:\.\d+)?|\d+(?:\.\d+)?\s*(?:minutes?|min|hours?|hrs?|h|days?|weeks?|wk|months?))",
                 value,
                 flags=re.IGNORECASE,
             )
         ):
             time_point = value
 
+    if not time_point:
+        days = _sample_attribute_values(metadata, {"days in vitro"})
+        if len(days) == 1 and re.fullmatch(r"\d+(?:\.\d+)?", days[0]):
+            time_point = days[0] + " days in vitro"
+    if not time_point:
+        injection = _sample_attribute_values(metadata, {"pre or post injection"})
+        if len(injection) == 1 and injection[0].lower() in {"pre", "post"}:
+            time_point = injection[0].lower() + "-injection"
+    if not time_point and treatment:
+        duration = re.search(r"\b(\d+(?:\.\d+)?\s*(?:hours?|hrs?|h))\s*\)?$", treatment, re.I)
+        if duration:
+            time_point = duration[1]
     return treatment, time_point
 
 
@@ -934,10 +964,91 @@ def _sample_attribute_values(metadata, keys):
         names = {str(getattr(attribute, k, "") or "").strip().lower().replace("_", " ")
                  for k in ("name", "display_name", "harmonized_name")}
         value = _clean(getattr(attribute, "value", ""))
-        if names & keys and value and value.lower() not in {"unknown", "not collected", "not provided", "not applicable", "not specified", "none", "n/a", "na", "missing"} and not value.lower().startswith("missing:"):
+        if names & keys and value and value.lower() not in {"unknown", "not collected", "not provided", "not applicable", "not specified", "none", "n/a", "n.a.", "na", "missing"} and not value.lower().startswith("missing:"):
             if value not in values:
                 values.append(value)
     return values
+
+
+def _sample_design_labels(metadata):
+    """Recover accession-scoped labels; keep study-wide assignments separate."""
+    condition = ""
+    control = ""
+    replicate = ""
+    title = _clean(getattr(_get_experiment(metadata), "title", ""))
+    # Prefer a deposited group or phenotype. If the title identifies a genotype,
+    # preserve that identity separately from an intervention on the same sample.
+    for keys in ({"condition", "experimental condition", "experimental group"},
+                 {"disease state"}, {"injury"}):
+        values = _sample_attribute_values(metadata, keys)
+        if values:
+            condition = values[0] if len(values) == 1 else ""
+            break
+    else:
+        genotypes = _sample_attribute_values(metadata, {"genotype"})
+        interventions = _sample_attribute_values(metadata, {"treatment"})
+        if len(genotypes) == 1 and not interventions:
+            condition = genotypes[0]
+        for keys in ({"genotype"}, {"cell line"}, {"ecotype"}, {"dev stage", "developmental stage"}):
+            if condition:
+                break
+            values = _sample_attribute_values(metadata, keys)
+            if len(values) == 1:
+                token = re.escape(values[0]).replace(r"\-", "[-_ ]?").replace(r"\ ", "[-_ ]+")
+                if re.search(r"(?<![A-Za-z0-9])"+token+r"(?=$|[^A-Za-z]|\d)", title, re.I):
+                    condition = values[0]
+                    break
+        if not condition:
+            for keys in ({"treatment"}, {"genotype"}):
+                values = _sample_attribute_values(metadata, keys)
+                if values:
+                    condition = values[0] if len(values) == 1 else ""
+                    break
+    injection = _sample_attribute_values(metadata, {"pre or post injection"})
+    if len(injection) == 1 and injection[0].lower() in {"pre", "post"}:
+        if condition in _sample_attribute_values(metadata, {"treatment"}):
+            condition = injection[0].lower() + "-injection"
+
+    roles = _sample_attribute_values(metadata, {"sample role", "experimental group", "treatment", "genotype", "disease state"})
+    for role in roles:
+        if re.fullmatch(r"sham[- ]operated", role, re.I):
+            control = "sham-operated"
+            break
+        if re.fullmatch(r"(?:control|ctrl|no treatment\s*\(control\)|euthermic control(?:\s+\d+)?)", role, re.I):
+            control = "control"
+
+    if re.fullmatch(r"no treatment\s*\(control\)", condition, re.I):
+        condition = "Control"
+    role_labels = _sample_attribute_values(metadata, {"replicate", "replication"})
+    if len(role_labels) == 1 and re.match(r"^control[-_]", role_labels[0], re.I):
+        control = control or "control"
+        condition = condition or "Control"
+
+    for keys, prefix in (({"biological replicate"}, "Biological"), ({"technical replicate"}, "Technical"),
+                         ({"replicate", "replication", "replicate number"}, "")):
+        values = _sample_attribute_values(metadata, keys)
+        if not values:
+            continue
+        if len(values) == 1:
+            value = values[0]
+            number = re.search(r"(?:^|[-_\s])(?:rep(?:licate|lication)?[._ -]*)?(\d+)$", value, re.I)
+            # A numeric suffix on an opaque label is not itself a replicate number.
+            if number and (value.isdigit() or re.search(r"rep(?:licate|lication)?[._ -]*\d+$", value, re.I)):
+                replicate = (f"{prefix} replicate {number[1]}" if prefix
+                             else f"Replicate {number[1]}; type unspecified")
+            elif not prefix:
+                replicate = f"Replicate label {value}; type unspecified"
+            else:
+                replicate = f"{prefix} replicate {value}"
+        break
+    if not replicate:
+        for text in [title, *_sample_attribute_values(metadata, {"source name"})]:
+            typed = re.search(r"(?:^|[\s,;:_-])(biol(?:ogical)?|tech(?:nical)?)\.?[ _-]+rep(?:licate)?[ ._-]*(\d+)\b", text, re.I)
+            if typed:
+                kind = "Biological" if typed[1].lower().startswith("biol") else "Technical"
+                replicate = f"{kind} replicate {typed[2]}"
+                break
+    return condition, control, replicate
 
 
 def _biosample_replicate_annotation(metadata):
@@ -1147,7 +1258,7 @@ def _assess_replicates(metadata):
 
         # Token boundaries accommodate submitter separators, including underscores.
         compact = re.search(
-            r"(?:^|[\s_,;:-])(?:(biological|technical)[ _-]+)?"
+            r"(?:^|[.\s_,;:-])(?:(biological|technical)[ _-]+)?"
             r"rep(?:licate)?[._ -]*(\d+)(?=$|[\s_,;:-])", title, re.I
         )
         if compact:
@@ -1456,9 +1567,15 @@ def generate_design_insight(metadata, study_biosample_evidence=None):
         insight.sample_time_point,
     ) = _biosample_sample_design_values(metadata)
 
-    conditions = _sample_attribute_values(metadata, {"condition", "experimental condition", "experimental group"})
-    if len(conditions) == 1:
-        insight.sample_condition = conditions[0]
+    (insight.sample_condition, insight.sample_control,
+     insight.sample_replicate_status) = _sample_design_labels(metadata)
+
+    ages = _sample_attribute_values(metadata, {"age", "age at collection"})
+    stages = _sample_attribute_values(metadata, {"dev stage", "developmental stage"})
+    if len(ages) == 1:
+        insight.sample_age = ages[0]
+    if len(stages) == 1:
+        insight.sample_developmental_stage = stages[0]
 
     _add_study_biosample_patterns(
         insight,

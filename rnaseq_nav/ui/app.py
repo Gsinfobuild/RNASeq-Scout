@@ -2946,6 +2946,13 @@ def build_pdf(
         sample_condition = get_value(design_insight, "sample_condition", "")
         if sample_condition:
             sample_evidence.append(("Observed sample condition", sample_condition))
+        for key, label in (("sample_control", "Observed sample control"),
+                           ("sample_replicate_status", "Observed sample replicate"),
+                           ("sample_age", "Reported sample age"),
+                           ("sample_developmental_stage", "Reported developmental stage")):
+            value = get_value(design_insight, key, "")
+            if value:
+                sample_evidence.append((label, value))
         if sample_treatment:
             sample_evidence.append(
                 ("Observed sample treatment", sample_treatment)
